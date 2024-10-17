@@ -1,0 +1,31 @@
+---
+permalink: howto/analyzing-your-infrastructure.html 
+sidebar: sidebar 
+keywords:  
+summary: Os procedimentos neste tópico são aqueles que você pode usar para realizar uma análise de partes da infraestrutura em seu ambiente. As etapas, exibições e dados coletados neste exercício usam objetos de computação virtual como exemplo. A análise de outros ativos em seu ambiente seguirá etapas semelhantes usando contadores relevantes para cada ativo específico. O objetivo deste exercício é familiarizá-lo com a variedade de opções que o Insight oferece para monitorar e entender as caraterísticas dos ativos em seu data center. 
+---
+= Analisando sua infraestrutura
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os procedimentos neste tópico são aqueles que você pode usar para realizar uma análise de partes da infraestrutura em seu ambiente. As etapas, exibições e dados coletados neste exercício usam objetos de computação virtual como exemplo. A análise de outros ativos em seu ambiente seguirá etapas semelhantes usando contadores relevantes para cada ativo específico. O objetivo deste exercício é familiarizá-lo com a variedade de opções que o Insight oferece para monitorar e entender as caraterísticas dos ativos em seu data center.
+
+
+
+== Sobre esta tarefa
+
+Algumas das ações que você pode tomar para analisar o estado da sua infraestrutura podem incluir o seguinte:
+
+* Observe o comportamento de um objeto ao longo do tempo
+* Compare as métricas de um objeto com as métricas dos 10 principais como objetos
+* Compare números para objetos
+* Compare os 10 principais objetos com a média
+* Compare as Métricas A vs. B para muitos objetos para mostrar categorias e anomalias
+* Compare um intervalo de objetos com outros objetos
+* Use uma expressão para exibir métricas não disponíveis na IU da Web
+
+
+Você pode criar todas essas visualizações de objetos em sua infraestrutura em um painel usando widgets para cada análise realizada. Os painéis podem ser salvos para fornecer acesso rápido aos dados atuais da sua infraestrutura.

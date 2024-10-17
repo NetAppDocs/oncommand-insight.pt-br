@@ -1,0 +1,31 @@
+---
+permalink: config-admin/what-the-topology-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: A secção topologia permite-lhe ver como os ativos da sua rede estão ligados entre si e apresentar informações sobre os ativos relacionados. 
+---
+= Utilizando a secção topologia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A secção topologia permite-lhe ver como os ativos da sua rede estão ligados entre si e apresentar informações sobre os ativos relacionados.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize uma página de ativo fazendo uma das seguintes opções:
++
+** Na barra de ferramentas do Insight, clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]em , digite o nome do ativo e selecione-o na lista.
+** Clique em *painéis*, selecione *Painel de ativos*, localize um nome de ativo e clique nele. A página de ativos é exibida. Você pode encontrar a seção topologia no canto superior direito da página de ativos.
+
+
++
+Se a topologia do ativo for maior do que caberá na seção, clique no link *clique para ver o hiperlink topologia*.
+
+. Para ver mais informações sobre os ativos relacionados ao ativo base, posicione o cursor sobre um ativo relacionado na topologia e clique em seu nome, que exibe sua página de ativo.
+

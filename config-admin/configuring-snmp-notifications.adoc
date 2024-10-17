@@ -1,0 +1,60 @@
+---
+permalink: config-admin/configuring-snmp-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight suporta notificações SNMP para alterações de configuração e de política de caminho global, bem como violações. Por exemplo, as notificações SNMP são enviadas quando os limites da fonte de dados são excedidos. 
+---
+= Configurar notificações SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight suporta notificações SNMP para alterações de configuração e de política de caminho global, bem como violações. Por exemplo, as notificações SNMP são enviadas quando os limites da fonte de dados são excedidos.
+
+
+
+== Antes de começar
+
+O seguinte deve ter sido concluído:
+
+* Identificar o endereço IP do servidor que consolida traps para cada tipo de evento.
++
+Poderá ter de consultar o administrador do sistema para obter esta informação.
+
+* Identificar o número da porta através da qual a máquina designada obtém traps SNMP, para cada tipo de evento.
++
+A porta padrão para traps SNMP é 162.
+
+* Compilando o MIB em seu site.
++
+O MIB proprietário vem com o software de instalação para suportar OnCommand Insight traps. O MIB NetApp é compatível com todos os softwares de gerenciamento SNMP padrão e pode ser encontrado no servidor Insight em `<install dir>\SANscreen\MIBS\sanscreen.mib`.
+
+
+
+
+
+== Passos
+
+. Clique em *Admin* e selecione *notificações*.
+. Role para baixo até a seção *SNMP* da página.
+. Clique em *ações* e selecione *Adicionar fonte de armadilha*.
+. Na caixa de diálogo *Adicionar destinatários de trap SNMP*, insira estes valores:
++
+** *IP*
++
+O endereço IP para o qual o OnCommand Insight envia mensagens de intercetação SNMP.
+
+** *Porto*
++
+O número da porta para a qual o OnCommand Insight envia mensagens de intercetação SNMP.
+
+** * String da Comunidade*
++
+Use "'public'" para mensagens de intercetação SNMP.
+
+
+
+. Clique em *Salvar*.
+

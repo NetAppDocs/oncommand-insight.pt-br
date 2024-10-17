@@ -1,0 +1,58 @@
+---
+permalink: howto/viewing-data-on-a-dashboard-how-to.html 
+sidebar: sidebar 
+keywords:  
+summary: Agora que você tem seus ativos anotados e configurou políticas de desempenho para alertar sobre violações, você pode criar painéis para destacar dados específicos que deseja segmentar. 
+---
+= Destacando dados usando dashboards
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Agora que você tem seus ativos anotados e configurou políticas de desempenho para alertar sobre violações, você pode criar painéis para destacar dados específicos que deseja segmentar.
+
+
+
+== Sobre esta tarefa
+
+Neste exemplo, forneceremos uma visualização de alto nível da criação de dashboard, criando um dashboard com um único widget destacando dados de desempenho da VM. Você pode adicionar quantos widgets forem necessários em um único painel e criar quantos painéis forem necessários. Os widgets podem ser redimensionados e movidos conforme desejado.
+
+Mais informações sobre painéis e widgets podem ser encontradas em toda a documentação do OnCommand Insight.
+
+
+
+== Passos
+
+. Faça login no Insight como um usuário com permissões administrativas.
+. No menu *Dashboards*, selecione * novo painel*.
++
+Abre-se a página novo painel.
+
+. Prática recomendada: Nomeie e salve seu painel assim que você o criar. Clique no botão *Salvar* e insira um nome exclusivo para o painel no campo *Nome*. Por exemplo, ""Painel de desempenho da VM"". Clique em *Salvar*.
+. Se necessário, deslize o botão *Edit* para "'On'" para ativar o modo Edit. Isso permite que você comece a adicionar widgets ao seu painel.
+. Clique no botão * Widgets* e selecione *Tabela* para adicionar um novo widget de tabela ao painel.
++
+A caixa de diálogo Editar widget é aberta.
+
+. No campo Nome, exclua ""Widget 1"" e digite ""Tabela de desempenho da Máquina Virtual"".
+. Clique no menu suspenso tipo de ativo e altere *Storage* para *Virtual Machine*.
++
+Os dados da tabela são alterados para mostrar todas as máquinas virtuais em seu ambiente.
+
+. Para adicionar colunas adicionais à tabela, clique no botão *colunas*image:../media/column-picker-button.gif[""] e selecione as colunas desejadas, por exemplo__Centro de dados___, _Nome do armazenamento_ e _nível_.você pode classificar a tabela por qualquer uma dessas colunas.
+. Você pode definir filtros conforme necessário para destacar os dados que são importantes para você para este painel, por exemplo, você pode optar por mostrar apenas máquinas virtuais com anotação ""Tier 1 - SSD"". Clique no botão ao lado de *Filtrar por* e selecione__Tier__. Clique em *any* e digite "'Tier 1 - SSD'". Clique no image:../media/check-box-ok.gif[""] botão para guardar o filtro.
++
+A tabela agora mostra apenas máquinas virtuais no nível "SSD".
+
+. Você pode agrupar os resultados clicando no botão "agrupar por" ao lado de *agrupar por* e selecionando um campo para agrupar por, como o Data Center. O agrupamento é aplicado automaticamente à tabela.
+. Quando tiver personalizado o widget para sua satisfação, clique no botão *Salvar*.
++
+O widget da tabela é salvo no painel.
+
+. Você pode redimensionar o widget no painel arrastando o canto inferior direito.
+. Para adicionar mais widgets, clique no botão * Widget*. Cada widget é adicionado ao painel quando ele é salvo.
+. Quando tiver feito todas as alterações desejadas, certifique-se de clicar em *Salvar* para salvar o painel.
+. Você pode criar painéis adicionais para destacar dados diferentes.
+

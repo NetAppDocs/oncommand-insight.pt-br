@@ -1,0 +1,244 @@
+---
+permalink: config-admin/monitoring-oncommand-insight-system-health.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve verificar periodicamente o status atual dos componentes do sistema do Insight visualizando a página de integridade, que mostra o status de cada componente e o alerta quando houver um problema. 
+---
+= Monitoramento da integridade do sistema OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve verificar periodicamente o status atual dos componentes do sistema do Insight visualizando a página de integridade, que mostra o status de cada componente e o alerta quando houver um problema.
+
+
+
+== Passos
+
+. Faça login na IU do Insightweb.
+. Clique em *Admin* e selecione *Saúde*.
++
+É apresentada a página Saúde.
+
+. Veja o resumo do status atual dos componentes prestando atenção especial a qualquer status de atenção na coluna *Detalhes* que é precedido por um círculo vermelho, o que indica um problema que requer sua atenção imediata.
++
+A página Saúde exibe informações sobre qualquer um ou todos os seguintes componentes do Insight com base na configuração do sistema:
+
++
+|===
+
+
+| Componente | Teste | Detalhes | Apresenta 
+
+
+ a| 
+Aquisição
+ a| 
+Inventário Data Processing
+ a| 
+Estado da unidade de aquisição local
+ a| 
+"OK" se o número de fontes de dados de sondagem simultânea for inferior a 75% do máximo do conjunto de execução (o máximo padrão é 30). "A aquisição está ocupada" se a utilização for superior a 75% e recomenda aumentar o intervalo de polling ou adicionar mais unidades de aquisição remotas.
+
+
+
+ a| 
+DWH
+ a| 
+Backup
+ a| 
+Status do backup agendado do Data Warehouse
+ a| 
+"'OK'" e o último tempo de backup DWH bem-sucedido se o backup programado DWH estiver ativado. Caso contrário, exibe informações sobre qualquer erro encontrado.
+
+
+
+ a| 
+DWH
+ a| 
+ETL
+ a| 
+Status do Data Warehouse ETL
+ a| 
+"OK" e o último tempo de construção DWH bem-sucedido, se não houver erros. Caso contrário, exibe informações sobre qualquer erro encontrado.
+
+
+
+ a| 
+Servidor
+ a| 
+ASUP
+ a| 
+Status do ASUP
+ a| 
+"ASUP ativado" e o último tempo fonehome bem-sucedido, se disponível. "ASUP Failed" (Falha de ASUP) se o fonehome estiver ativado, mas tiver encontrado um problema.
+
+"Local de cópia de segurança inválido" se o diretório de cópia de segurança não for válido.
+
+Apresenta a última hora fonehome bem sucedida, bem como a hora da última tentativa falhada, se disponível.
+
+Se o fonehome estiver desativado,
+
+
+
+ a| 
+Servidor
+ a| 
+Resolução automática
+ a| 
+Estado da resolução automática do dispositivo
+ a| 
+"OK" se não houver erros. "A resolução automática é bloqueada" se os erros de identificação impedirem o progresso da resolução.
+
+"Baixa taxa de sucesso" se menos de 75% dos dispositivos genéricos pudessem ser identificados.
+
+
+
+ a| 
+Servidor
+ a| 
+Elasticsearch
+ a| 
+Status do armazenamento de dados de pesquisa elástica
+ a| 
+"OK" se não houver erros. "Serviço indisponível" se não for possível se conetar ao serviço de pesquisa elástica.
+
+"Modo de cluster detetado" se mais de um nó for detetado.
+
+"Alta utilização de memória" se o espaço de pilha utilizado for superior a 85%.
+
+"Estado: VERMELHO" indica um erro relatado pela pesquisa elástica. Exibe informações sobre o erro e recomenda contatar o suporte ao cliente.
+
+
+
+ a| 
+Servidor
+ a| 
+CPU
+ a| 
+Uso da CPU Insight
+ a| 
+"OK" se a carga da CPU for inferior a 65%. "A carga da CPU do sistema é alta. Reduza a carga da CPU."" se a carga da CPU for superior a 65%.
+
+
+
+ a| 
+Servidor
+ a| 
+Espaço em disco
+ a| 
+Estado do espaço em disco
+ a| 
+Espaço livre em disco, espaço em disco em uso pelo Insight e espaço em disco recomendado reservado para o Insight. "Low Disk Space" (espaço em disco baixo) se a utilização do disco for superior a 80%.
+
+
+
+ a| 
+Servidor
+ a| 
+EventBus
+ a| 
+Status do EventBus
+ a| 
+"'EventBus está vazio" se a fila EventBus estiver vazia, caso contrário, exibe o status da fila EventBus.
+
+
+
+ a| 
+Servidor
+ a| 
+Inventário Data Processing
+ a| 
+Status da capacidade do Data Processing de inventário do servidor Insight
+ a| 
+"OK" se o servidor Insight não estiver ocupado. "O servidor está ocupado" se o servidor estiver ocupado pelo menos 75% do tempo na última hora. Recomenda não adicionar mais fontes de dados e recomenda dividir o ambiente em vários servidores.
+
+
+
+ a| 
+Servidor
+ a| 
+MySQL
+ a| 
+Status do banco de dados MySQL
+ a| 
+"OK" se nenhum problema for detetado. "'o banco de dados está tendo problemas de desempenho. Algumas consultas demoram muito tempo para serem executadas" se o número de consultas lentas for superior a 5%.
+
+O arquivo de log do banco de dados cresceu mais do que o <size> na última hora. Verifique o arquivo de log do MySQL'" se o log de erro aumentar para mais de 20 KB.
+
+
+
+ a| 
+Servidor
+ a| 
+Arquivamento de performance
+ a| 
+Status do arquivo de performance
+ a| 
+"'o arquivo de desempenho está ativado'" ou "'o arquivo de desempenho não está ativado'".
+
+
+
+ a| 
+Servidor
+ a| 
+Memória física
+ a| 
+Estado da memória física
+ a| 
+"OK" se o uso da memória for inferior a 85%. "O uso da memória é alto. Reduza a sua pegada de memória geral para a estabilidade do sistema" se o uso da memória for superior a 85%.
+
+
+
+ a| 
+Servidor
+ a| 
+Service pack
+ a| 
+Disponibilidade do Service pack
+ a| 
+Exibe se um Service pack está disponível para o Insight. Se estiver disponível um Service pack, o apresenta as instruções.
+
+
+
+ a| 
+Servidor
+ a| 
+Informações de utilização
+ a| 
+Status do envio de informações de uso
+ a| 
+Exibe se o envio de informações de uso para o NetApp está ativado ou desativado. Recomenda ativar se estiver desativado. Apresenta a última tentativa ou a última hora de envio bem-sucedida.
+
+Exibe informações sobre quaisquer problemas encontrados.
+
+
+
+ a| 
+Servidor
+ a| 
+Violação
+ a| 
+Status de violações abertas
+ a| 
+"OK" se o número de violações abertas for inferior a 75% do limite de violações. "O número máximo de violações abertas permitidas é <number>" se o número de violações abertas for superior a 75% do limite de violações. Recomenda a revisão da configuração da política de desempenho.
+
+"O gerenciador de violações está bloqueado" se o número de violações abertas estiver no limite de violações.
+
+Observe que o gerenciador de violações não pode criar novas violações e recomenda a revisão da configuração da política de desempenho.
+
+
+
+ a| 
+Servidor
+ a| 
+Backup semanal
+ a| 
+Status do backup semanal
+ a| 
+"'OK'" se o backup semanal estiver ativado, caso contrário, exibe "'o backup semanal não está habilitado'".
+
+|===
+

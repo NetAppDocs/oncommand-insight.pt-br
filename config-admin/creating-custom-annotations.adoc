@@ -1,0 +1,99 @@
+---
+permalink: config-admin/creating-custom-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Usando anotações, você pode adicionar dados personalizados específicos de negócios que correspondem às necessidades da sua empresa aos ativos. Embora o OnCommand Insight forneça um conjunto de anotações padrão, você pode descobrir que deseja exibir dados de outras maneiras. Os dados em anotações personalizadas complementam os dados do dispositivo já coletados, como fabricante do switch, número de portas e estatísticas de desempenho. Os dados que você adiciona usando anotações não são descobertos pelo Insight. 
+---
+= Criar anotações personalizadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usando anotações, você pode adicionar dados personalizados específicos de negócios que correspondem às necessidades da sua empresa aos ativos. Embora o OnCommand Insight forneça um conjunto de anotações padrão, você pode descobrir que deseja exibir dados de outras maneiras. Os dados em anotações personalizadas complementam os dados do dispositivo já coletados, como fabricante do switch, número de portas e estatísticas de desempenho. Os dados que você adiciona usando anotações não são descobertos pelo Insight.
+
+
+
+== Passos
+
+. Faça login na IU da Web do Insight.
+. Clique em *Gerenciar* e selecione *Anotações*.
++
+A página Anotações apresenta a lista de anotações.
+
+. Clique image:../media/add-annotation-icon.gif[""]em .
++
+A caixa de diálogo *Add Annotation* (Adicionar anotação) é exibida.
+
+. Digite um nome e uma descrição nos campos *Nome* e *Descrição*.
++
+Pode introduzir até 255 carateres nestes campos.
+
++
+[NOTE]
+====
+Os nomes de anotação que começam ou terminam com um ponto "." não são suportados.
+
+====
+. Clique em *Type* e, em seguida, selecione uma das seguintes opções que representa o tipo de dados permitidos nesta anotação:
++
+** Booleano
++
+Isso cria uma lista suspensa com as opções de sim e não. Por exemplo, a anotação "Direct Attached" é booleana.
+
+** Data
++
+Isso cria um campo que contém uma data. Por exemplo, se a anotação for uma data, selecione esta.
+
+** Lista
++
+Isso pode criar uma das seguintes opções:
+
++
+*** Uma lista fixa suspensa
++
+Quando outros estão atribuindo esse tipo de anotação em um dispositivo, eles não podem adicionar mais valores à lista.
+
+*** Uma lista suspensa flexível
++
+Se selecionar a opção *Adicionar novos valores em tempo real* quando criar esta lista, quando outros estiverem a atribuir este tipo de anotação num dispositivo, poderão adicionar mais valores à lista.
+
+
+
+** Número
++
+Isto cria um campo onde o utilizador que atribui a anotação pode introduzir um número. Por exemplo, se o tipo de anotação for "Floor", o usuário poderá selecionar o valor tipo de "'Number'" e inserir o número do piso.
+
+** Texto
++
+Isso cria um campo que permite texto de forma livre. Por exemplo, você pode inserir "'Idioma'" como tipo de anotação, selecionar "'texto'" como o tipo de valor e inserir um idioma como um valor.
+
+
+
++
+[NOTE]
+====
+Depois de definir o tipo e guardar as alterações, não pode alterar o tipo da anotação. Se você precisar alterar o tipo, você terá que excluir a anotação e criar uma nova.
+
+====
+. Se selecionar **List**como tipo de anotação, faça o seguinte:
++
+.. Selecione *Adicionar novos valores em tempo real* se quiser a capacidade de adicionar mais valores à anotação quando estiver em uma página de ativo, o que cria uma lista flexível.
++
+Por exemplo, suponha que você esteja em uma página de ativo e o ativo tenha a anotação Cidade com os valores Detroit, tampa e Boston. Se você selecionou a opção *Adicionar novos valores em tempo real*, você pode adicionar valores adicionais a Cidade como são Francisco e Chicago diretamente na página do ativo em vez de ter que ir para a página Anotações para adicioná-los. Se não selecionar esta opção, não pode adicionar novos valores de anotação ao aplicar a anotação; isto cria uma lista fixa.
+
+.. Introduza um valor e um nome nos campos *valor* e *Descrição*.
+.. Cliqueimage:../media/edit-annotation-dialog-box-add-icon.gif[""] para adicionar valores adicionais.
+.. Clique image:../media/trash-can-query.gif[""] para remover um valor.
+
+
+. Clique em *Salvar*.
++
+As suas anotações aparecem na lista na página Anotações.
+
+
+
+*Informações relacionadas*
+
+link:importing-and-exporting-user-data.md#["Importar e exportar dados do utilizador"]

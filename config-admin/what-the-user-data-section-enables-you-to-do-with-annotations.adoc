@@ -1,0 +1,46 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Ao personalizar o OnCommand Insight para rastrear dados para seus requisitos corporativos, você pode definir notas especializadas, chamadas de anotações e atribuí-las aos seus ativos. A seção dados do usuário de uma página de ativo exibe anotações atribuídas a um ativo e também permite que você altere as anotações atribuídas a esse ativo. 
+---
+= Utilizar a secção dados do utilizador para atribuir ou modificar anotações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao personalizar o OnCommand Insight para rastrear dados para seus requisitos corporativos, você pode definir notas especializadas, chamadas _anotações_, e atribuí-las aos seus ativos. A seção dados do usuário de uma página de ativo exibe anotações atribuídas a um ativo e também permite que você altere as anotações atribuídas a esse ativo.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize uma página de ativo fazendo uma das seguintes opções:
++
+** Na barra de ferramentas do Insight, clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]em , digite o nome do ativo e selecione-o na lista.
+** Clique em *painéis*, selecione *Painel de ativos*, localize um nome de ativo e clique nele. A página de ativos é exibida.
+
+
+. Na seção *dados do usuário* da página de ativo, clique image:../media/add-annotation-icon.gif[""]em .
++
+A caixa de diálogo Adicionar anotação é exibida.
+
+. Clique em *Annotation* e selecione uma anotação na lista.
+. Clique em *value* e faça um dos seguintes procedimentos, dependendo do tipo de anotação selecionado:
++
+** Se o tipo de anotação for lista, data ou Booleano, selecione um valor na lista.
+** Se o tipo de anotação for texto, introduza um valor.
+
+
+. Clique em *Salvar*.
++
+A anotação é atribuída ao ativo. Você pode filtrar ativos posteriormente por anotação usando uma consulta.
+
+. Se pretender alterar o valor da anotação depois de a atribuir, clique image:../media/change-annotation-value.gif[""] em e selecione um valor diferente.
++
+Se a anotação for do tipo de lista para o qual a opção *Add values dinamicamente após a atribuição de anotações* está selecionada, você pode digitar para adicionar um novo valor além de selecionar um valor existente.
+
+

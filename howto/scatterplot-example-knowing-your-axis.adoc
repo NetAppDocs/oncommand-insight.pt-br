@@ -1,0 +1,53 @@
+---
+permalink: howto/scatterplot-example-knowing-your-axis.html 
+sidebar: sidebar 
+keywords:  
+summary: Alterar a ordem dos contadores em um widget de plotagem de dispersão altera os eixos nos quais os dados são exibidos. 
+---
+= Exemplo de scatterplot: Conhecendo seu eixo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alterar a ordem dos contadores em um widget de plotagem de dispersão altera os eixos nos quais os dados são exibidos.
+
+
+
+== Sobre esta tarefa
+
+Este exemplo criará um gráfico de dispersão que permitirá que você veja VMs de baixo desempenho que têm alta latência em comparação com IOPS baixo.
+
+
+
+== Passos
+
+. Crie ou abra um painel no modo de edição e adicione um widget *Scatter Plot Chart*.
+. Selecione um tipo de ativo, por exemplo, *Máquina Virtual*.
+. Selecione o primeiro contador que pretende traçar. Para este exemplo, selecione *latência - total*.
++
+_Latência - Total_ é mapeado ao longo do eixo X do gráfico.
+
+. Selecione o segundo contador que pretende traçar. Para este exemplo, selecione *IOPS - total*.
++
+_IOPS - Total_ é mapeado ao longo do eixo Y no gráfico. VMs com maior latência são exibidas no lado direito do gráfico. Apenas as 100 principais VMs de maior latência são exibidas, porque a configuração *Top by X-axis* é atual.
+
++
+image::../media/scatterplot1.gif[scatterplot1]
+
+. Agora inverta a ordem dos contadores definindo o primeiro contador para *IOPS - total* e o segundo para *latência - total*.
++
+_Iatency- Total_ agora é mapeado ao longo do eixo Y no gráfico, e__IOPS - Tota__l ao longo do eixo X. As VMs com IOPS mais alto agora são exibidas no lado direito do gráfico.
+
++
+Observe que, como não alteramos a configuração *Top by X-Axis*, o widget agora exibe as 100 principais VMs de IOPS mais altas, já que é o que está atualmente traçado ao longo do eixo X.
+
++
+image::../media/scatterplot2.gif[scatterplot2]
+
+. Você pode optar pelo gráfico para exibir o N superior por eixo X, N superior por eixo Y, N inferior por eixo X ou N inferior por eixo Y. Em nosso exemplo final, o gráfico está exibindo as 100 principais VMs que têm o maior _total IOPS_. Se mudarmos para Top por eixo Y, o gráfico exibirá novamente as 100 principais VMs que têm a maior latência _total_.
++
+Observe que em um gráfico de plotagem de dispersão, você pode clicar em um ponto para abrir a página de ativos para esse recurso.
+
+

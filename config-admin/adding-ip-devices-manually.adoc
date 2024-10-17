@@ -1,0 +1,34 @@
+---
+permalink: config-admin/adding-ip-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode adicionar manualmente um dispositivo IP ao OnCommand Insight usando o recurso de adição manual disponível na tela identificação IP. 
+---
+= Adicionar dispositivos IP manualmente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar manualmente um dispositivo IP ao OnCommand Insight usando o recurso de adição manual disponível na tela identificação IP.
+
+
+
+== Passos
+
+. Faça login na IU da Web do Insight.
+. Clique em *Gerenciar* > *Resolução do dispositivo*
+. Clique no separador *IP Identify*.
+. Clique no botão adicionar.
++
+É apresentada a caixa de diálogo Adicionar dispositivo
+
+. Introduza o endereço, o endereço IP e um nome de dispositivo exclusivo.
+
+
+
+
+== Resultados
+
+O dispositivo inserido é adicionado à lista de dispositivos na guia identificação IP.

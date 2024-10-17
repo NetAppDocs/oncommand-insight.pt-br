@@ -1,0 +1,31 @@
+---
+permalink: install-linux/validating-the-rau-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Para validar a instalação adequada da Unidade de aquisição remota, pode visualizar o estado das unidades de aquisição remota ligadas ao seu servidor. 
+---
+= Validar a instalação da unidade de aquisição remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para validar a instalação adequada da Unidade de aquisição remota, pode visualizar o estado das unidades de aquisição remota ligadas ao seu servidor.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *unidades de aquisição*.
+. Verifique se a nova unidade de aquisição remota foi registada corretamente e se tem um estado ligado.
++
+Se ele não tiver um status conetado, tente reiniciar o serviço. Inicie sessão no sistema da unidade de aquisição remota e execute o seguinte comando:
+
++
+ oci-service.sh restart acquisition
++
+Se ainda não se conetar, entre em Contato com o suporte técnico.
+
+

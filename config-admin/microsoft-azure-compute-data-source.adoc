@@ -1,0 +1,107 @@
+---
+permalink: config-admin/microsoft-azure-compute-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insights usa o coletor de dados de computação do Azure para adquirir dados de inventário e desempenho de instâncias de computação do Azure. 
+---
+= Fonte de dados de computação do Microsoft Azure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insights usa o coletor de dados de computação do Azure para adquirir dados de inventário e desempenho de instâncias de computação do Azure.
+
+
+
+== Requisitos
+
+Você precisa das seguintes informações para configurar este coletor de dados:
+
+* Requisito de porta: 443 HTTPS
+* IP REST do Gerenciamento do Azure (management.azure.com)
+* ID da aplicação principal do Serviço do Azure (Cliente) (conta de utilizador)
+* Chave de autenticação principal do Serviço Azure (senha do usuário)
+
+
+Você precisa configurar uma conta do Azure para a descoberta do Insight. Depois que a conta estiver configurada corretamente e você Registrar o aplicativo no Azure, você terá as credenciais necessárias para descobrir a instância do Azure com o Insight. O link a seguir descreve como configurar a conta para descoberta:https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
+
+
+
+== Configuração
+
+Insira os dados nos campos de origem de dados de acordo com a tabela abaixo:
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+ID da aplicação principal do serviço do Azure (Cliente) (função de leitor necessária)
+ a| 
+ID de início de sessão no Azure. Requer acesso à função Reader.
+
+
+
+ a| 
+ID de locatário do Azure
+ a| 
+ID de locatário da Microsoft
+
+
+
+ a| 
+Chave de autenticação principal do serviço Azure
+ a| 
+Chave de autenticação de login
+
+
+
+ a| 
+Eu entendo que a Microsoft me cobra por solicitações de API
+ a| 
+Verifique isso para verificar se a Microsoft cobra solicitações de API feitas pela polling do Insight.
+
+|===
+
+
+== Configuração avançada
+
+Insira os dados nos campos de origem de dados de acordo com a tabela abaixo:
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+A predefinição é 60
+
+
+
+ a| 
+Escolha 'Excluir' ou 'incluir' para aplicar ao filtro de VMs por Tags
+ a| 
+Especifique se deve incluir ou excluir VM por Tags ao coletar dados. Se ''include'' estiver selecionado, o campo chave de Etiqueta não pode estar vazio.
+
+
+
+ a| 
+Marque chaves e valores nos quais filtrar VMs
+ a| 
+Clique em * Tag de filtro* para escolher quais VMs (e discos associados) incluir/excluir filtrando chaves e valores que correspondem a chaves e valores de tags na VM. A chave da etiqueta é necessária, o valor da etiqueta é opcional. Quando o valor Tag está vazio, a VM é filtrada desde que corresponda à chave Tag.
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg.)|
+ a| 
+A predefinição é 300
+
+|===

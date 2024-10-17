@@ -1,0 +1,23 @@
+---
+permalink: install-windows/backing-up-databases.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de atualizar, você deve fazer backup dos bancos de dados do Data Warehouse e do OnCommand Insight. A atualização requer um backup do banco de dados do Data Warehouse para que você possa restaurar o banco de dados mais tarde no processo de atualização. A atualização no local para o Insight faz backup do banco de dados; no entanto, você deve fazer backup do banco de dados antes da atualização como uma prática recomendada. 
+---
+= Fazer backup dos bancos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de atualizar, você deve fazer backup dos bancos de dados do Data Warehouse e do OnCommand Insight. A atualização requer um backup do banco de dados do Data Warehouse para que você possa restaurar o banco de dados mais tarde no processo de atualização. A atualização no local para o Insight faz backup do banco de dados; no entanto, você deve fazer backup do banco de dados antes da atualização como uma prática recomendada.
+
+[NOTE]
+====
+*Você deve fazer backup do Vault* antes de atualizar o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+Para evitar erros de relatórios de dados, você deve fazer backup do banco de dados do Data Warehouse antes de fazer backup do banco de dados do Insight. Além disso, se você tiver um ambiente de teste, é recomendável garantir que você possa restaurar o backup antes de continuar com a atualização.

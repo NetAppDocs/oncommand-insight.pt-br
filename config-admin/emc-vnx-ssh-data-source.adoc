@@ -1,0 +1,105 @@
+---
+permalink: config-admin/emc-vnx-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Para configuração, a fonte de dados EMC VNX (SSH) requer o endereço IP da Estação de Controle e um nome de usuário e senha somente leitura.' 
+---
+= Fonte de dados EMC VNX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configuração, a fonte de dados EMC VNX (SSH) requer o endereço IP da Estação de Controle e um nome de usuário e senha _somente leitura_.
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+IP VNX
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado da Estação de Controle VNX
+
+
+
+ a| 
+Nome de utilizador VNX
+ a| 
+Nome de utilizador para a Estação de controlo VNX
+
+
+
+ a| 
+Palavra-passe VNX
+ a| 
+Palavra-passe para a Estação de controlo VNX
+
+|===
+
+
+== Requisitos
+
+* Um endereço IP da Estação de controlo
+* Nome de utilizador e palavra-passe só de leitura.
+* Validação de acesso: Verifique o acesso SSH via PuTTY.
+
+
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 40 minutos)
+
+
+
+ a| 
+Tempo limite de espera do processo SSH VNX (seg.)
+ a| 
+Tempo limite do processo VNX SSH (padrão de 600 segundos)
+
+
+
+ a| 
+Tentativas de tentativa do comando Celerra
+ a| 
+Número de tentativas de tentativa de comando do Celerra
+
+
+
+ a| 
+Tempo limite do processo Externo CLARiiON para Stock (SEC)
+ a| 
+Tempo limite do processo externo CLARiiON para inventário (padrão 1800 segundos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+
+
+ a| 
+Tempo limite do processo externo CLARiiON para desempenho (seg)
+ a| 
+Tempo limite do processo externo CLARiiON para desempenho (padrão de 1800 segundos)
+
+|===

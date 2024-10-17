@@ -1,0 +1,33 @@
+---
+permalink: dwh/forcing-an-update-of-annotations-for-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Pode iniciar uma atualização de anotações do OnCommand Insight para o Armazém de dados. 
+---
+= Forçar uma atualização de anotações para o Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode iniciar uma atualização de anotações do OnCommand Insight para o Armazém de dados.
+
+
+
+== Sobre esta tarefa
+
+Você pode atualizar anotações usando uma das duas opções:
+
+* Incluindo objetos excluídos: Isso inclui dados sobre dispositivos que não existem mais, como hosts, matrizes de armazenamento ou switches que foram removidos. Isso é necessário se você quiser construir dados do Data Warehouse com pontos de dados históricos.
+* Não incluindo objetos excluídos: Escolha esta opção se você quiser excluir objetos excluídos.
+
+
+
+
+== Passos
+
+. Inicie sessão no Portal OnCommand Insight como administrador `+https://hostname+`, onde `hostname` é o nome do sistema em que o OnCommand Insight está instalado.
+. Clique em *Admin* > *Troubleshooting*. Na parte inferior da página, clique em *solução de problemas avançada*.
+. Na guia *ações*, clique em *Atualizar anotações DWH (incluir excluídas)*.
+

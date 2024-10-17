@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-your-email-for-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Se os usuários quiserem receber relatórios do Insight em suas contas de e-mail, você precisará configurar o servidor de e-mail para habilitar esse recurso. 
+---
+= Configurando seu e-mail para o Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se os usuários quiserem receber relatórios do Insight em suas contas de e-mail, você precisará configurar o servidor de e-mail para habilitar esse recurso.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin* e selecione *notificações*.
+. Role para baixo até a seção *Email* da página.
+. Na caixa *Server*, insira o nome do servidor SMTP na sua organização, que é identificado usando um nome de host ou um endereço IP (_nnn.nnn.nnn.nnn_ format).
++
+Se você especificar um nome de host, verifique se o nome pode ser resolvido através do DNS.
+
+. Na caixa *Nome de utilizador*, introduza o seu nome de utilizador.
+. Na caixa *Senha*, insira a senha para acessar o servidor de e-mail, que é necessária somente se o servidor SMTP estiver protegido por senha. Esta é a mesma senha que você usa para fazer login no aplicativo que permite ler seu e-mail. Se for necessária uma palavra-passe, tem de a introduzir uma segunda vez para verificação.
+. Na caixa *e-mail do remetente*, insira a conta de e-mail do remetente que será identificada como remetente em todos os relatórios do OnCommand Insight.
++
+Esta conta deve ser uma conta de e-mail válida dentro da sua organização.
+
+. Na caixa *assinatura de e-mail*, insira o texto que deseja inserir em cada e-mail enviado.
+. Na caixa destinatários, clique image:../media/add-email-recipient-icon.gif[""]em , insira um endereço de e-mail e clique em *OK*.
++
+Para editar um endereço de e-mail, selecione o endereço e clique image:../media/edit-recipient-icon.gif[""]em . Para excluir um endereço de e-mail, selecione o endereço e clique image:../media/delete-recipient-icon.gif[""]em .
+
+. Para enviar um e-mail de teste para destinatários especificados, clique image:../media/test-email-icon.gif[""]em .
+. Clique em *Salvar*.
+

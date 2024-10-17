@@ -1,0 +1,53 @@
+---
+permalink: howto/compare-objects-with-the-top-10-latency-total-to-the-average-latency-for-all-like-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode querer comparar as VMs com o total de latência de 10 ms superior ao total de latência média para identificar aquelas que estão extremamente fora do intervalo médio. Essas informações podem ajudar na decisão de equilibrar workloads em VMs. 
+---
+= Compare objetos com o total de latência de 10 ms superior à latência média para todos os objetos semelhantes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode querer comparar as VMs com o total de latência de 10 ms superior ao total de latência média para identificar aquelas que estão extremamente fora do intervalo médio. Essas informações podem ajudar na decisão de equilibrar workloads em VMs.
+
+
+
+== Passos
+
+. Adicione um widget com um gráfico de área empilhada ao novo painel: *Widget* > *Gráfico de Área empilhada*
++
+.. Altere o dispositivo padrão para Virtual Machine: Clique em *Storage* > *Virtual Machine* > *Latency Total*
++
+O widget exibe o total de latência, para todas as VMs, por 24 horas em um gráfico de área empilhada.
+
+.. Crie uma segunda exibição neste widget que mostre a média total da latência para todas as VMs: *Widget* > *Gráfico de linha*
+.. Altere o dispositivo padrão para Máquina Virtual: Clique em *Máquina Virtual* > *latência total*
++
+O widget exibe o total de latência para o período padrão de 24 horas usando um gráfico de linhas.
+
+.. Clique em *X* na barra *Roll up* e selecione *Show* > *Top* > *10*
+
+
++
+O sistema exibe as 10 principais VMs com base no total da latência.
+
+. Para comparar o total de latência média de todas as VMs com o total de 10 IOPS Top, siga estas etapas:
++
+.. Clique em * Adicionar*
+.. Altere o dispositivo padrão para Virtual Machine: Clique em *Storage* > *Virtual Machine* > *IOPS total*
+.. Clique em *X* na barra *Roll up* e selecione *Show* > *Top* > *10*
+
+
++
+O sistema exibe os objetos 10 com alta latência e mostra a latência média em um gráfico de linhas.
+
++
+imagem::../media/analytics-top10-avg.gif[]
+
++
+No entanto, a latência média é de 1,6 ms, enquanto nas dez principais, as VMs estão passando por uma latência superior a 200 ms.
+
+

@@ -1,0 +1,129 @@
+---
+permalink: reporting/which-report-answers-your-question.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight inclui relatórios predefinidos que atendem a vários requisitos comuns de geração de relatórios, fornecendo insights críticos de que as partes interessadas precisam para tomar decisões conscientes sobre sua infraestrutura de storage. 
+---
+= Usando relatórios predefinidos para responder perguntas comuns
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight inclui relatórios predefinidos que atendem a vários requisitos comuns de geração de relatórios, fornecendo insights críticos de que as partes interessadas precisam para tomar decisões conscientes sobre sua infraestrutura de storage.
+
+Os seguintes relatórios predefinidos estão disponíveis em *conteúdo da equipe* > *relatórios* ou *conteúdo da equipe* > *relatórios específicos do fornecedor*.
+
+Versões mais recentes dos relatórios podem estar disponíveis no repositório de automação do storage da NetApp. Você deve verificar o Automation Store regularmente para obter relatórios.
+
+* *Dados de custo da nuvem AWS*
++
+O relatório de custo da nuvem fornece uma visão consolidada de todos os ativos, permitindo acompanhar, analisar e otimizar a utilização e o custo dos serviços baseados em nuvem, bem como serviços no local, à medida que são dimensionados dinamicamente no seu ambiente.
+
++
+O relatório fornece correlação entre infraestrutura e custo, fornecendo relatórios claros e acionáveis para garantir o dimensionamento correto por meio do Planejamento focado da capacidade e da detecção de resíduos.
+
+* *Capacidade e desempenho do nível de Serviço da aplicação*
++
+O relatório capacidade e desempenho do nível de Serviço do aplicativo fornece uma visão geral de alto nível de seus aplicativos. Você pode usar essas informações para Planejamento de capacidade ou para um plano de migração.
+
+* *Chargeback*
++
+O relatório Chargeback fornece informações de chargeback de capacidade de storage e responsabilidade por hosts, aplicações e entidades empresariais, além de incluir dados atuais e históricos.
+
++
+Para evitar a contagem dupla não inclua servidores ESX, monitore apenas as VMs.
+
++
+Uma versão atualizada deste relatório está disponível no repositório de automação do storage da NetApp.
+
+* * Fontes de dados*
++
+O relatório fontes de dados mostra todas as fontes de dados que estão instaladas no seu site, o status da fonte de dados (sucesso/falha) e as mensagens de status. O relatório fornece informações sobre onde começar a solucionar problemas de fontes de dados. As fontes de dados falhadas afetam a precisão dos relatórios do Insight e a usabilidade geral do produto.
+
+* *ESX vs desempenho da VM*
++
+O relatório de desempenho do ESX vs VM fornece uma comparação entre servidores ESX e VMs, mostrando IOPs médios e de pico, taxa de transferência e latência e utilizações para servidores e VMs ESX. Para evitar a contagem dupla, exclua os servidores ESX; inclua somente as VMs.
+
++
+Uma versão atualizada deste relatório está disponível no repositório de automação do storage da NetApp.
+
+* *Resumo da tela*
++
+O relatório Resumo da malha identifica informações de switches e switches, incluindo contagens de portas, versões de firmware e status da licença. O relatório não inclui portas de comutação NPV.
+
+* *HBAs Host*
++
+O relatório HBAs do host fornece uma visão geral dos hosts no ambiente e fornece a versão do fornecedor, modelo e firmware dos HBAs e o nível de firmware dos switches aos quais estão conetados. Este relatório pode ser usado para analisar a compatibilidade do firmware ao Planejar uma atualização de firmware para um switch ou HBA.
+
+* *Capacidade e desempenho do nível de serviço anfitrião*
++
+O relatório capacidade e desempenho de nível de serviço do host fornece uma visão geral da utilização do storage por host para aplicativos somente de bloco.
+
+* *Resumo do anfitrião*
++
+O relatório Resumo do host fornece uma visão geral da utilização do storage por cada host selecionado com informações para hosts Fibre Channel e iSCSI. O relatório permite comparar portas e caminhos, a capacidade de Fibre Channel e ISCSI e contagens de violações.
+
+* *Detalhes da licença*
++
+O relatório Detalhes da licença mostra a quantidade de recursos para os quais você está licenciado em todos os sites com licenças ativas. O relatório também mostra uma soma da quantidade real em todos os sites com licenças ativas. A soma pode incluir sobreposições de matrizes de armazenamento geridas por vários servidores.
+
+* *Volumes mapeados, mas não mascarados*
++
+O relatório volumes mapeados, mas não mascarados, lista os volumes cujo número de unidade lógica (LUN) foi mapeado para uso por um host específico, mas não está mascarado para esse host. Em alguns casos, esses LUNs podem ser desativados que foram desmascarados. Volumes desmascarados podem ser acessados por qualquer host, tornando-os vulneráveis à corrupção de dados.
+
+* *Capacidade e desempenho NetApp*
++
+O relatório capacidade e desempenho do NetApp fornece dados globais para capacidade alocada, utilizada e comprometida com dados de tendências e desempenho para a capacidade do NetApp.
+
+* *Cartão de pontuação OCI*
++
+O relatório do cartão de pontuação OCI fornece um resumo e o status geral de todos os ativos descobertos pelo OnCommand Insight. O estado é indicado com sinalizadores verde, amarelo e vermelho:
+
++
+** Verde indica a condição normal
+** Amarelo indica um problema potencial no ambiente
+** Vermelho indica um problema que requer atenção todos os campos do relatório estão descritos no Dicionário de dados fornecido com o relatório.
+
+
+* *Resumo do armazenamento*
++
+O relatório Resumo do storage fornece um resumo global dos dados de capacidade usados e não utilizados para volumes e pools de storage brutos, alocados. Este relatório fornece uma visão geral de todo o armazenamento descoberto.
+
++
+Uma versão mais recente deste relatório está disponível no repositório de automação do storage da NetApp.
+
+* *Capacidade e desempenho da VM*
++
+Descreve o ambiente de máquina virtual (VM) e seu uso de capacidade. As ferramentas de VM devem estar habilitadas para visualizar alguns dados, como quando as VMs foram desativadas.
+
+* *Caminhos da VM*
++
+O relatório de caminhos de VM fornece dados de capacidade de armazenamento de dados e métricas de desempenho para as quais a máquina virtual está sendo executada em qual host, quais hosts estão acessando quais volumes compartilhados, qual é o caminho de acesso ativo e o que compreende alocação e uso de capacidade.
+
+* *Capacidade de HDS por thin Pool*
++
+O relatório capacidade do HDS por thin Pool mostra a quantidade de capacidade utilizável em um pool de storage que é thin Provisioning.
+
+* *Capacidade NetApp por agregado*
++
+O relatório capacidade por agregado do NetApp mostra o total bruto, total, usado, disponível e comprometido dos agregados.
+
+* * Symmetrix capacidade por thick Array*
++
+O relatório Symmetrix Capacity by Thick Array mostra capacidade bruta, capacidade utilizável, capacidade livre, mapeada, mascarada e capacidade livre total.
+
+* * Symmetrix capacidade por Thin Pool*
++
+O relatório Symmetrix Capacity by Thin Pool mostra a capacidade bruta, a capacidade utilizável, a capacidade usada, a capacidade livre, a porcentagem usada, a capacidade subscrita e a taxa de assinatura.
+
+* *XIV capacidade por Array*
++
+O relatório XIV Capacity by Array mostra a capacidade usada e não utilizada para o array.
+
+* *XIV capacidade por Piscina*
++
+O relatório XIV capacidade por pool mostra a capacidade usada e não utilizada para pools de armazenamento.
+
+

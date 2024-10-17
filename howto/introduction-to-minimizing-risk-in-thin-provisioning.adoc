@@ -1,0 +1,16 @@
+---
+permalink: howto/introduction-to-minimizing-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: Nos data centers híbridos DE TI DE hoje, os administradores são pressionados a estender a utilização de recursos além dos limites físicos, empregando tecnologias de eficiência de capacidade, como provisionamento fino para controlar a alocação e aproveitar o que antes era de capacidades indisponíveis. 
+---
+= Introdução à minimização do risco no provisionamento de thin Provisioning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nos data centers híbridos DE TI DE hoje, os administradores são pressionados a estender a utilização de recursos além dos limites físicos, empregando tecnologias de eficiência de capacidade, como provisionamento fino para controlar a alocação e aproveitar o que antes era de capacidades indisponíveis.
+
+O OnCommand Insight fornece detalhes de utilização e uso da capacidade quase em tempo real historicamente em várias camadas de thin Provisioning na pilha de serviços DE TI. A não gestão adequada do risco de oversubscription pode resultar em tempo de inatividade intempestivo para a empresa.

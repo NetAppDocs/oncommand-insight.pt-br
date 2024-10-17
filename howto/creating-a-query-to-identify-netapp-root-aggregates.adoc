@@ -1,0 +1,36 @@
+---
+permalink: howto/creating-a-query-to-identify-netapp-root-aggregates.html 
+sidebar: sidebar 
+keywords:  
+summary: As consultas fornecem pesquisa em um nível granular, com base em critérios selecionados pelo usuário. O uso de uma consulta permite pesquisar volumes internos em seu ambiente que contenham o agregado raiz do NetApp. 
+---
+= Criando uma consulta para identificar agregados raiz NetApp no seu ambiente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As consultas fornecem pesquisa em um nível granular, com base em critérios selecionados pelo usuário. O uso de uma consulta permite pesquisar volumes internos em seu ambiente que contenham o agregado raiz do NetApp.
+
+
+
+== Passos
+
+. Na IU da Web do OnCommand Insight, crie uma consulta para identificar agregados de raiz NetApp no seu ambiente: *Consultas* > *Nova consulta* > *Selecionar tipo de recurso*
+. Clique em *Storage Pool*
+. Insira o nome do agregado raiz
++
+Este exemplo usa ""aggr0"" para o nome. Ao criar um agregado, somente os seguintes requisitos para o nome devem ser seguidos:
+
++
+** Deve começar com uma letra ou um sublinhado (_).
+** Ele pode conter apenas letras, dígitos e sublinhados.
+** Pode ter 250 carateres ou menos. Na maioria dos casos, o agregado é o nome aggr0, aggr_0, ou algo similar. Pode ser necessário um processo iterativo para identificar todos os agregados raiz do NetApp no seu ambiente.
+
+
+. Clique em *Salvar* e insira um nome para a nova consulta.
++
+Como mencionado anteriormente, esse pode ser um processo iterativo e exigir várias consultas para identificar todos os agregados raiz do NetApp.
+
+

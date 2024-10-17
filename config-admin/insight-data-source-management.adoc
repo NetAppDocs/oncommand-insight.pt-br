@@ -1,0 +1,28 @@
+---
+permalink: config-admin/insight-data-source-management.html 
+sidebar: sidebar 
+keywords:  
+summary: As fontes de dados são o componente mais crítico usado para manter um ambiente OnCommand Insight. Como eles são a principal fonte de informações do Insight, é essencial manter as fontes de dados em um estado em execução. 
+---
+= Gerenciamento de fontes de dados Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As fontes de dados são o componente mais crítico usado para manter um ambiente OnCommand Insight. Como eles são a principal fonte de informações do Insight, é essencial manter as fontes de dados em um estado em execução.
+
+Você pode monitorar as fontes de dados em sua rede selecionando uma fonte de dados para verificar os eventos relacionados ao seu status e observando quaisquer alterações que possam ter causado problemas.
+
+Além de examinar uma fonte de dados individual, você pode executar estas operações:
+
+* Clone uma fonte de dados para criar muitas fontes de dados semelhantes no Insight
+* Editar informações da fonte de dados
+* Alterar credenciais
+* Controlar a polling
+* Eliminar a fonte de dados
+* Instalar patches de origem de dados
+* Instale uma nova fonte de dados a partir de um patch
+* Preparar um relatório de erro para o suporte ao cliente da NetApp
+

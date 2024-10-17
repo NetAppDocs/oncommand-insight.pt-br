@@ -1,0 +1,31 @@
+---
+permalink: config-admin/viewing-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode visualizar suas consultas para monitorar seus ativos e alterar a forma como suas consultas exibem os dados relacionados aos seus ativos. 
+---
+= Visualizar consultas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar suas consultas para monitorar seus ativos e alterar a forma como suas consultas exibem os dados relacionados aos seus ativos.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *consultas* e selecione *Mostrar todas as consultas*.
+. Você pode alterar a forma como as consultas são exibidas fazendo qualquer um dos seguintes procedimentos:
++
+** Você pode inserir texto na caixa *filtro* para pesquisar para exibir consultas específicas.
+** Você pode alterar a ordem de classificação das colunas na tabela de consultas para ascendente (seta para cima) ou descendente (seta para baixo) clicando na seta no cabeçalho da coluna.
+** Para redimensionar uma coluna, passe o Mouse sobre o cabeçalho da coluna até que uma barra azul apareça. Coloque o Mouse sobre a barra e arraste-a para a direita ou para a esquerda.
+** Para mover uma coluna, clique no cabeçalho da coluna e arraste-a para a direita ou para a esquerda.
+** Ao percorrer os resultados da consulta, esteja ciente de que os resultados podem mudar à medida que o Insight faz o polling automático de suas fontes de dados. Isso pode resultar em alguns itens em falta ou alguns itens que aparecem fora de ordem, dependendo de como eles são classificados.
+
+
+

@@ -1,0 +1,26 @@
+---
+permalink: install-windows/planning-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Para garantir uma implantação bem-sucedida, você deve considerar certos elementos do sistema antes de instalar o OnCommand Insight. 
+---
+= Planejando a implantação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantir uma implantação bem-sucedida, você deve considerar certos elementos do sistema antes de instalar o OnCommand Insight.
+
+
+
+== Sobre esta tarefa
+
+Planejar sua implantação do Insight inclui considerar esses elementos do sistema:
+
+* Arquitetura Insight
+* Seus componentes de rede a serem monitorados
+* Pré-requisitos de instalação do Insight e requisitos de servidor
+* Requisitos do navegador da Web Insight
+

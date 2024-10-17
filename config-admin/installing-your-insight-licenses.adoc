@@ -1,0 +1,46 @@
+---
+permalink: config-admin/installing-your-insight-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de receber o ficheiro de licença que contém as chaves de licença Insight do NetApp, pode utilizar as funcionalidades de configuração para instalar todas as suas licenças ao mesmo tempo. 
+---
+= Instalando suas licenças do Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de receber o ficheiro de licença que contém as chaves de licença Insight do NetApp, pode utilizar as funcionalidades de configuração para instalar todas as suas licenças ao mesmo tempo.
+
+
+
+== Sobre esta tarefa
+
+As chaves de licença Insight são armazenadas em um `.txt` arquivo ou `.lcn`.
+
+
+
+== Passos
+
+. Abra o arquivo de licença em um editor de texto e copie o texto.
+. Abra o Insight em seu navegador.
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *Configuração*.
+. Clique na guia *licenças*.
+. Clique em *Atualizar licença*.
+. Copie o texto da chave de licença na caixa de texto *Licença*.
+. Selecione a operação *Update (mais comum)*.
+. Clique em *Salvar*.
+. Se você estiver usando o modelo de licenciamento do Insight Consumption, marque a caixa *Ativar o envio de informações de uso para o NetApp* na seção *Enviar informações de uso*. O proxy deve estar configurado e habilitado corretamente para o seu ambiente.
+
+
+
+
+== Depois de terminar
+
+Depois de instalar as licenças, você pode executar estas tarefas de configuração:
+
+* Configurar fontes de dados.
+* Criar contas de usuário do OnCommand Insight.
+

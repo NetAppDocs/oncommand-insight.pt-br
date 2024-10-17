@@ -1,0 +1,51 @@
+---
+permalink: howto/using-performance-policies-to-reduce-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve criar políticas de desempenho para gerar alertas quando os limites da sua infraestrutura virtual tiverem sido violados. Os alertas permitem que você responda às mudanças no ambiente antes que elas causem interrupções ou interrupções nas operações. 
+---
+= Uso de políticas de performance para reduzir os riscos no thin Provisioning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve criar políticas de desempenho para gerar alertas quando os limites da sua infraestrutura virtual tiverem sido violados. Os alertas permitem que você responda às mudanças no ambiente antes que elas causem interrupções ou interrupções nas operações.
+
+As políticas que ajudam no monitoramento da infraestrutura virtual incluem o seguinte:
+
+* *Datastore*
++
+Você pode usar as seguintes políticas no datastore:
+
++
+** Relação de capacidade - comprometer-se
+** Relação de capacidade - usado
+** Capacidade - utilizada
+** Capacidade - total
+
+
+* *Piscina de armazenamento*
++
+As políticas a seguir podem se proteger contra interrupções de capacidade relacionadas a storage em ambientes com thin Provisioning:
+
++
+** Capacidade provisionada
+** Capacidade utilizada
+** Relação de capacidade - comprometer-se
+** Relação de capacidade - usado
+
+
+
+
+Você pode expandir a partir dessas políticas para monitorar a capacidade na infraestrutura virtual, incluindo:
+
+* Volumes internos
+* LUNs
+* Discos
+* VMDKs
+* VMs
+
+
+Você pode configurar políticas usando anotações. Atribua a mesma anotação aos ativos específicos que suportam uma aplicação. Por exemplo, você pode atribuir anotações aos datastores e aos pools de armazenamento de um aplicativo com provisionamento reduzido. Você pode ter anotações nomeadas produção para o ambiente de produção, Desenvolvimento para o ambiente de desenvolvimento e assim por diante. Você pode alterar os limites e a criticidade dos avisos, dependendo do tipo de aplicação que os ativos suportam. Por exemplo, uma violação de um limite para o armazenamento de dados de um aplicativo de produção pode gerar um aviso _crítico_, enquanto a mesma violação para um ambiente de desenvolvimento pode gerar apenas um _aviso_. Incorporar anotações dentro de políticas definidas pode ajudar a reduzir ainda mais o ruído de alerta indesejado para ativos não críticos.

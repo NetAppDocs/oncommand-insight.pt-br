@@ -1,0 +1,51 @@
+---
+permalink: howto/creating-performance-policies-for-datastores.html 
+sidebar: sidebar 
+keywords: performance policy,Datastore 
+summary: Você pode criar políticas de performance com limites para métricas associadas aos datastores que se correlacionam com os pools de storage que você está monitorando. Por padrão, as políticas de desempenho se aplicam a todos os dispositivos do tipo especificado quando você os cria. Pode criar uma anotação para incluir apenas um dispositivo específico ou um conjunto de dispositivos na política de desempenho. 
+---
+= Criação de políticas de desempenho para datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar políticas de performance com limites para métricas associadas aos datastores que se correlacionam com os pools de storage que você está monitorando. Por padrão, as políticas de desempenho se aplicam a todos os dispositivos do tipo especificado quando você os cria. Pode criar uma anotação para incluir apenas um dispositivo específico ou um conjunto de dispositivos na política de desempenho.
+
+
+
+== Antes de começar
+
+Ao utilizar uma anotação numa política de desempenho, a anotação tem de existir antes de a política ser criada.
+
+
+
+== Sobre esta tarefa
+
+Você cria uma política de desempenho que fornece notificação quando um ou mais armazenamentos de dados que você está monitorando excede um limite definido. Seu sistema pode já conter uma política global que atenda às suas necessidades ou uma política usando anotações também pode funcionar se você anotar seus datastores.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, selecione *Manage* > *Performance Policies*
++
+É apresentada a página políticas de desempenho. Analise todas as políticas de desempenho existentes para identificar as políticas existentes que atendem às métricas dos limites que você deseja monitorar.
+
+. Clique em Adicionar* para adicionar uma nova política
+. Adicionar um "Nome da política"
++
+Você deve usar um nome diferente de todos os outros nomes de política para o objeto. Por exemplo, você não pode ter duas políticas chamadas "latência" para um volume interno; no entanto, você pode ter uma política de "latência" para um volume interno e outra política de "latência" para um armazenamento de dados. A melhor prática é sempre usar um nome exclusivo para qualquer política, independentemente do tipo de objeto.
+
+. Selecione "datastore" como o tipo de objeto
+. Clique em ""primeira ocorrência""
++
+A primeira opção de ocorrência aciona um alerta quando um limite é excedido na primeira amostra de dados. Todas as outras opções acionam um alerta quando o limite é cruzado uma vez e é continuamente cruzado durante pelo menos o período de tempo especificado.
+
+. Clique em "Aviso"
+. Para "'criar alerta'", selecione *taxa de capacidade - sobre commit* e defina o valor para *> 150*
++
+Você pode querer criar alertas adicionais relacionados à capacidade, como **capacidade total ** e *capacidade usada*.
+
+

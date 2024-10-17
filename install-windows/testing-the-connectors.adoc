@@ -1,0 +1,36 @@
+---
+permalink: install-windows/testing-the-connectors.html 
+sidebar: sidebar 
+keywords:  
+summary: Após a atualização, você deseja testar os conetores para garantir que você tenha uma conexão do Data Warehouse do OnCommand Insight ao servidor OnCommand Insight. 
+---
+= Testar os conetores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após a atualização, você deseja testar os conetores para garantir que você tenha uma conexão do Data Warehouse do OnCommand Insight ao servidor OnCommand Insight.
+
+
+
+== Passos
+
+. Faça login no Portal do Data Warehouse em `+https://fqdn/dwh+`.
+. No painel de navegação à esquerda, clique em *Connectors*.
+. Selecione o primeiro conetor.
++
+A página Editar conetor é exibida.
+
+. Clique em *Teste*.
+. Se o teste for bem-sucedido, clique em *Fechar*; se falhar, insira o nome do servidor Insight no campo *Nome* e seu endereço IP no campo *Host* e clique em *Teste*.
+. Quando houver uma conexão bem-sucedida entre o Data Warehouse e o servidor Insight, clique em *Salvar*.
++
+Se não for bem-sucedido, verifique a configuração da conexão e certifique-se de que o servidor Insight não tem problemas.
+
+. Clique em *Teste*.
++
+O Data Warehouse testa a conexão.
+
+

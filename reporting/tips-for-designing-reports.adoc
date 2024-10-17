@@ -1,0 +1,25 @@
+---
+permalink: reporting/tips-for-designing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Várias dicas podem ser úteis quando você está projetando relatórios. 
+---
+= Dicas para projetar relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Várias dicas podem ser úteis quando você está projetando relatórios.
+
+* Determine se você precisa usar dados atuais ou históricos.
++
+A maioria dos relatórios só precisa informar sobre os dados mais recentes disponíveis no Data Warehouse.
+
+* O Data Warehouse fornece informações históricas sobre capacidade e desempenho, mas não sobre inventário.
+* Todo mundo vê todos os dados; no entanto, você pode precisar limitar os dados a públicos específicos.
++
+Para segmentar as informações para diferentes usuários, você pode criar relatórios e definir permissões de acesso neles.
+
+

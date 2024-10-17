@@ -1,0 +1,23 @@
+---
+permalink: dwh/configuring-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve executar várias etapas para configurar contas de usuário. 
+---
+= Configurando contas de usuário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve executar várias etapas para configurar contas de usuário.
+
+
+
+== Passos
+
+. Faça login no Portal do Armazém de dados em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema onde o Armazém de dados OnCommand Insight está instalado.
+. No painel de navegação à esquerda, clique em *User Management*.
+. Configure cada conta de usuário.
+

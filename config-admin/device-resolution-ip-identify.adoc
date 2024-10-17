@@ -1,0 +1,16 @@
+---
+permalink: config-admin/device-resolution-ip-identify.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O ecrã IP Identify (identificação de IP) apresenta quaisquer compartilhamentos iSCSI e CIFS ou NFS identificados pela resolução automática do dispositivo ou pela resolução manual do dispositivo. Dispositivos não identificados também são exibidos. O ecrã inclui o endereço IP, Nome, Estado, nó iSCSI e nome de partilha para dispositivos. Também é apresentada a percentagem de dispositivos que foram identificados com sucesso.' 
+---
+= Resolução do dispositivo IP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O ecrã IP Identify (identificação de IP) apresenta quaisquer compartilhamentos iSCSI e CIFS ou NFS identificados pela resolução automática do dispositivo ou pela resolução manual do dispositivo. Dispositivos não identificados também são exibidos. O ecrã inclui o endereço IP, Nome, Estado, nó iSCSI e nome de partilha para dispositivos. Também é apresentada a percentagem de dispositivos que foram identificados com sucesso.
+
+image::../media/ipidentify.gif[ipidentify]

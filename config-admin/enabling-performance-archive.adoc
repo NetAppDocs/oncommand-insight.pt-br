@@ -1,0 +1,34 @@
+---
+permalink: config-admin/enabling-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: Para ativar o arquivamento de dados de desempenho, siga estes passos. 
+---
+= Habilitando o arquivamento de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para ativar o arquivamento de dados de desempenho, siga estes passos.
+
+
+
+== Passos
+
+. Na barra de ferramentas, clique em *Admin* > *Setup*.
+. Selecione o separador *Backup & Archive* (cópia de segurança e arquivo).
+. Na seção Arquivo de desempenho, verifique se a opção Ativar arquivo de desempenho** está marcada.
+. Especifique uma localização de arquivo válida.
++
+Não é possível especificar uma pasta na pasta de instalação do Insight.
+
++
+Prática recomendada: Não especifique a mesma pasta para o arquivo que o local de backup do Insight.
+
+. Clique em *Salvar*.
++
+O processo de arquivo é Tratado em segundo plano e não interfere com outras atividades do Insight.
+
+

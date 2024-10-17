@@ -1,0 +1,36 @@
+---
+permalink: config-admin/deleting-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode excluir uma regra de anotação quando a regra não for mais necessária para monitorar os objetos na rede. 
+---
+= Eliminar regras de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir uma regra de anotação quando a regra não for mais necessária para monitorar os objetos na rede.
+
+
+
+== Passos
+
+. Faça login na IU do OnCommand Insightweb.
+. Clique em *Manage* e selecione *Annotation rules*.
++
+A página regras de anotação exibe a lista de regras de anotação existentes.
+
+. Localize a regra que você deseja excluir:
++
+** Na página regras de anotação, pode filtrar as regras de anotação introduzindo um valor na caixa de filtro.
+** Clique em um número de página para navegar pelas regras de anotação por página se houver mais regras do que encaixar em uma única página.
+
+
+. Aponte o cursor sobre a regra que pretende eliminar e, em seguida, clique image:../media/trash-can-query.gif[""]em .
++
+Uma mensagem de confirmação é exibida, solicitando se deseja excluir a regra.
+
+. Clique em *OK*.
+

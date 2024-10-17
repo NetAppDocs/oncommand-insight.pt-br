@@ -1,0 +1,56 @@
+---
+permalink: howto/preparing-aws-for-insight-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: Sua conta da AWS deve estar configurada corretamente para permitir que o Insight colete dados de custo da nuvem. 
+---
+= Preparando a coleta de dados do AWS para o Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sua conta da AWS deve estar configurada corretamente para permitir que o Insight colete dados de custo da nuvem.
+
+
+
+== Sobre esta tarefa
+
+As etapas a seguir são feitas por meio de sua conta da AWS. Consulte a documentação da Amazon para obter mais informações https://docs.aws.amazon.com["http://docs.aws.amazon.com"]: . Se você não estiver familiarizado com a configuração de uma conta na nuvem da AWS, entre em Contato com seu provedor de nuvem para obter assistência.
+
+[NOTE]
+====
+Estes passos são fornecidos aqui como uma cortesia e acredita-se que estão corretos a partir do momento da publicação. A NetApp não garante a exatidão destas etapas. Entre em Contato com seu provedor de nuvem ou titular de conta da AWS para obter informações ou assistência sobre a configuração de sua conta da AWS.
+
+====
+Prática recomendada: A Insight recomenda que você crie um usuário principal do IAM na mesma conta que possui o bucket do S3 onde os relatórios de faturamento são carregados e use esse usuário para configurar e coletar dados de faturamento da AWS.
+
+Para configurar sua conta da AWS para permitir que o Insight colete dados, execute as seguintes etapas:
+
+
+
+== Passos
+
+. Faça login na sua conta da AWS como um usuário do Identity Access Management (IAM). Para uma coleção adequada, faça login na conta principal do IAM, em vez de uma conta do IAM do grupo.
+. Vá para *Amazon S3* para criar seu bucket. Introduza um nome de intervalo exclusivo e verifique a região correta.
+. Ative seu Relatório de custo e uso da Amazon. Consulte https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html[] para obter informações.
++
+.. Vá para o AWS **Billing and Cost Management Dashboard e escolha *Reports*.
+.. Clique em *criar relatório* e digite o Nome do relatório. Para *Time Unit*, escolha Daily (diariamente). Marque a caixa para incluir *IDs de recurso* e clique em *Avançar*.
+.. Clique no link *Política de amostra* na página Selecionar opções de entrega. Copie o texto Política de amostra na caixa para a área de transferência. Clique em *Fechar*.
+.. Volte para o bucket do S3 que foi criado, clique na guia *Permissions* e selecione o botão *Bucket Policy*.
+.. Cole o texto da Política de amostra e substitua `<bucketname>`-o pelo nome do intervalo real em cada linha que contenha o seguinte: `"Resource": "arn:aws:s3:: <bucketname>"`. *Salvar* a política.
+.. Volte para a tela criar relatório, digite seu bucket do S3 e clique no botão *Verify*. Clique em *seguinte*.
+.. Verifique suas informações e clique em *Review and Complete*.
+
+
+. Você deve conceder permissões para que o Insight colete dados da AWS. O link a seguir fornece detalhes sobre como conceder permissões para *Liste todos os buckets* (Etapa 4,1) e defina permissões nos objetos da pasta (Etapa 5,2): https://docs.aws.amazon.com/AmazonS3/latest/dev/walkthrough1.html[].
+. No console do IAM, vá para *políticas* e clique em *criar política*.
+. Digite um nome no campo *Nome da política* e clique em *criar política* na parte inferior.
+. No console do IAM, selecione seu usuário e, em seguida, selecione *Adicionar política em linha* na parte inferior da tela.
+. Clique em *escolha um serviço* e selecione S3.
+. Vá para a guia *JSON*. Copie o texto de exemplo JSON da etapa 5,1.2.g do guia passo a passo da AWS para a caixa JSON.
+. Substitua os campos _companybucket_ e _Development_ no JSON por suas informações do S3.
+. Clique em *Política de Revisão* para rever as definições da política.
+

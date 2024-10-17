@@ -1,0 +1,44 @@
+---
+permalink: howto/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ao personalizar o OnCommand Insight para rastrear dados para seus requisitos empresariais, você pode definir anotações especializadas necessárias para fornecer uma imagem completa de seus dados: Por exemplo, uma anotação pode definir o fim da vida útil de um ativo, ou o data center em que o ativo reside, ou uma camada de storage definindo o custo por GB do armazenamento.' 
+---
+= Definir anotações para uso com chargeback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao personalizar o OnCommand Insight para rastrear dados para seus requisitos corporativos, você pode definir anotações especializadas necessárias para fornecer uma imagem completa de seus dados: Por exemplo, uma anotação pode definir o fim da vida útil de um ativo, ou o data center em que o ativo reside, ou uma camada de storage definindo o custo por GB do armazenamento.
+
+
+
+== Sobre esta tarefa
+
+O exemplo de relatório de chargeback neste guia fornece dados para nível de Serviço e nível de Categoria. Você deve criar anotações para cada nível de Serviço e nível e definir custos para os níveis de Serviço e níveis de nível.
+
+
+
+== Passos
+
+. Faça login na IU da Web do Insight
+. Clique em *Gerenciar* > *Anotações*
++
+É apresentada a página de anotações.
+
+. Posicione o cursor sobre a anotação nível de Serviço ou nível e clique image:../media/edit-annotation-icon.gif[""]em .
++
+A caixa de diálogo Editar anotação é exibida.
+
+. Clique em *ADD* para adicionar novos níveis e custos.
++
+No exemplo do relatório, os nomes de nível e nível de serviço usam a analogia de metais preciosos de Ouro, Sliver e Bronze. Você pode usar qualquer convenção de nomenclatura escolhida pela sua organização, por exemplo, nível 1, nível 2, Supremo.
+
+. Insira os valores das camadas Gold-Fast, Gold, Silver e Bronze e os custos associados a cada uma.
++
+Os valores inseridos definem o custo por GB para o armazenamento usado pelos aplicativos. O custo do nível de serviço pode ser o custo da prestação do serviço ou o preço real para atender o consumidor. Estes custos serão reportados no relatório de Chargeback.
+
+. Clique em *Salvar* quando terminar.
+

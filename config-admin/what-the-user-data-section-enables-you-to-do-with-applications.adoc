@@ -1,0 +1,37 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'É possível atribuir aplicativos em execução no ambiente a determinados ativos (host, máquinas virtuais, volumes, volumes internos e hipervisores). A seção dados do usuário permite alterar o aplicativo atribuído a um ativo ou atribuir um aplicativo ou aplicativos adicionais a um ativo.' 
+---
+= Usando a seção dados do usuário para atribuir ou modificar aplicativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível atribuir aplicativos em execução no ambiente a determinados ativos (host, máquinas virtuais, volumes, volumes internos e hipervisores). A seção dados do usuário permite alterar o aplicativo atribuído a um ativo ou atribuir um aplicativo ou aplicativos adicionais a um ativo.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize uma página de ativo fazendo uma das seguintes opções:
++
+** Na barra de ferramentas do Insight, clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]em , digite o nome do ativo e selecione-o na lista.
+** Clique em *painéis*, selecione *Painel de ativos*, localize um nome de ativo e clique nele. A página de ativos é exibida.
+
+
+. Você pode fazer o seguinte:
++
+** Para exibir a página de ativos do aplicativo, clique no nome do aplicativo.
+** Para alterar o aplicativo atribuído ou atribuir um aplicativo ou aplicativos adicionais, posicione o cursor sobre o nome do aplicativo, se um aplicativo for atribuído ou sobre *nenhum*, se nenhum aplicativo for atribuído, clique image:../media/pencil-icon-landing-page-be.gif[""]em , digite para pesquisar um aplicativo ou selecione um na lista e clique image:../media/check-box-ok.gif[""]em .
++
+Se você escolher um aplicativo associado a uma entidade de negócios, a entidade de negócios será automaticamente atribuída ao ativo. Nesse caso, quando você coloca o cursor sobre o nome da entidade de negócio, a palavra _derivado_ é exibida. Se você quiser manter a entidade apenas para o ativo e não para o aplicativo associado, você pode substituir manualmente a atribuição do aplicativo.
+
+** Para remover um aplicativo, clique image:../media/trash-can-query.gif[""]em .
+
+
+

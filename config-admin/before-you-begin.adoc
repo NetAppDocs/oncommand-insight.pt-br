@@ -1,0 +1,43 @@
+---
+permalink: config-admin/before-you-begin.html 
+sidebar: sidebar 
+keywords:  
+summary: Você precisa saber como seu ambiente é configurado antes de definir as regras para identificar dispositivos. Quanto mais você souber sobre seu ambiente, mais fácil será identificar dispositivos. 
+---
+= Antes de começar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você precisa saber como seu ambiente é configurado antes de definir as regras para identificar dispositivos. Quanto mais você souber sobre seu ambiente, mais fácil será identificar dispositivos.
+
+Você precisa responder perguntas semelhantes às seguintes para ajudá-lo a criar regras precisas:
+
+* Seu ambiente tem padrões de nomenclatura para zonas ou hosts e qual porcentagem deles são precisos?
+* O seu ambiente usa um alias de switch ou alias de armazenamento e eles correspondem ao nome do host?
+* O seu ambiente utiliza uma ferramenta SRM e pode utilizá-la para identificar nomes de anfitrião? Que cobertura oferece o SRM?
+* Com que frequência os esquemas de nomenclatura mudam em seu ambiente?
+* Houve alguma aquisição ou fusão que introduziu diferentes esquemas de nomeação?
+
+
+Depois de analisar seu ambiente, você deve ser capaz de identificar quais padrões de nomenclatura existem que você pode esperar encontrar com confiabilidade. As informações coletadas podem ser representadas graficamente em uma figura semelhante à seguinte:
+
+image::../media/ar-workflow-circles.gif[círculos de fluxo de trabalho ar]
+
+Neste exemplo, o maior número de dispositivos é representado de forma confiável por aliases de armazenamento. As regras que identificam hosts usando aliases de armazenamento devem ser escritas primeiro, as regras que usam aliases de switch devem ser escritas em seguida e as últimas regras criadas devem usar aliases de zona. Devido à sobreposição do uso de aliases de zona e aliases de switch, algumas regras de alias de armazenamento podem identificar dispositivos adicionais, deixando menos regras necessárias para aliases de zona e aliases de switch.
+
+
+
+== Passos para definir dispositivos no seu ambiente
+
+Normalmente, você usaria um fluxo de trabalho semelhante ao seguinte para identificar dispositivos em seu ambiente. A identificação é um processo iterativo e pode exigir várias etapas de Planejamento e regras de refino.
+
+image::../media/ar-workflow-final.gif[fluxo de trabalho ar final]
+
+[NOTE]
+====
+Se você tiver dispositivos não identificados (também conhecidos como dispositivos genéricos ou desconhecidos) em seu ambiente e, posteriormente, configurar uma fonte de dados que identifique esses dispositivos ao polling, eles não serão mais exibidos ou contados como dispositivos genéricos.
+
+====

@@ -1,0 +1,12 @@
+---
+permalink: reporting/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guia de relatórios do OnCommand Insight 7.3.3 e posterior
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

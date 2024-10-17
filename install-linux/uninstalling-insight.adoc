@@ -1,0 +1,46 @@
+---
+permalink: install-linux/uninstalling-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode desinstalar o servidor OnCommand Insight, se necessário. 
+---
+= Desinstalar o servidor OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode desinstalar o servidor OnCommand Insight, se necessário.
+
+[NOTE]
+====
+*É altamente recomendável fazer backup do Vault* antes de desinstalar o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+
+
+== Antes de começar
+
+Prática recomendada: Antes de desinstalar o Insight, faça backup do banco de dados do OnCommand Insight.
+
+
+
+== Passos
+
+. Faça login no servidor OnCommand Insight usando uma conta com sudo Privileges.
+. Certifique-se de que todas as janelas OnCommand Insight estão fechadas.
+. Você pode exibir sintaxe, argumentos de comando e uso de parâmetros `oci-uninstall.sh` digitando o seguinte comando:
++
+`sudo /usr/bin/oci-uninstall.sh --help`
+
++
+Uma desinstalação normal não remove a licença Insight ou quaisquer backups diários. Para remover toda a instalação, use o `--purge` optioon com o``oci-install.sh`` comando.
+
+. Digite o seguinte comando:
++
+`sudo /usr/bin/oci-uninstall.sh`
+
+

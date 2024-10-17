@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-your-data-sources-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: As fontes de dados são o componente mais crítico ao tentar manter um ambiente Insight. Fontes de dados descobrem informações de rede que são usadas para análise e validação. Você precisa configurar suas fontes de dados no Insight para que elas possam ser monitoradas na sua rede. 
+---
+= Configurando suas fontes de dados no Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As fontes de dados são o componente mais crítico ao tentar manter um ambiente Insight. Fontes de dados descobrem informações de rede que são usadas para análise e validação. Você precisa configurar suas fontes de dados no Insight para que elas possam ser monitoradas na sua rede.
+
+Para cada fonte de dados, os requisitos específicos para definir essa fonte de dados dependem do fornecedor e do modelo dos dispositivos correspondentes. Antes de adicionar as fontes de dados, você precisa de endereços de rede, informações de conta e senhas para todos os dispositivos e, possivelmente, esses detalhes adicionais:
+
+* Interrutores
+* Estações de gerenciamento de dispositivos
+* Sistemas de storage que têm conetividade IP
+* Estações de gerenciamento de armazenamento
+* Servidores host que executam software de gerenciamento para dispositivos de armazenamento que não têm conetividade IP
+
+
+Para obter mais informações sobre as definições da fonte de dados, consulte as informações "Referência da fonte de dados específica do fornecedor" nesta seção.

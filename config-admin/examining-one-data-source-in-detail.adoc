@@ -1,0 +1,52 @@
+---
+permalink: config-admin/examining-one-data-source-in-detail.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você vir que uma fonte de dados falhou ou diminuiu, talvez queira examinar um resumo detalhado das informações para essa fonte de dados para determinar a causa do problema. As fontes de dados com condições que exigem sua atenção são marcadas com um círculo vermelho sólido. 
+---
+= Examinando uma fonte de dados em detalhes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você vir que uma fonte de dados falhou ou diminuiu, talvez queira examinar um resumo detalhado das informações para essa fonte de dados para determinar a causa do problema. As fontes de dados com condições que exigem sua atenção são marcadas com um círculo vermelho sólido.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
++
+A lista *fontes de dados* é aberta. Todas as fontes de dados listadas com problemas potenciais são marcadas com um círculo vermelho sólido. Os problemas mais sérios estão no topo da lista.
+
+. Selecione a fonte de dados que está causando o problema.
+. Clique no link nome da fonte de dados.
+. Na página de resumo da fonte de dados, verifique as informações em qualquer uma destas seções:
++
+** *Cronograma do evento*
++
+Lista eventos vinculados ao status atual mostrado na lista fontes de dados. Os eventos neste resumo são exibidos por dispositivo. Os erros são mostrados em vermelho. Você pode posicionar o ponteiro do Mouse sobre itens da linha do tempo para exibir informações adicionais.
+
+** *Dispositivos reportados por esta fonte de dados*
++
+Lista os tipos de dispositivos, seus endereços IP e links para informações mais detalhadas de cada dispositivo.
+
+** *Alterações relatadas por esta fonte de dados (últimas 3 semanas)*
++
+Lista todos os dispositivos que foram adicionados ou removidos ou que tiveram uma alteração na configuração.
+
+
+
+. Depois de examinar as informações da fonte de dados, você pode querer executar uma dessas operações usando os botões na parte superior da página:
++
+** *Editar* a descrição da fonte de dados para corrigir o problema.
+** *Poll novamente* força a pesquisa para revelar se o problema era persistente ou intermitente.
+** * Adiar * a sondagem de fonte de dados para 3, 7 ou 30 dias para dar-lhe tempo para pesquisar o problema e parar as mensagens de aviso.
+** *Instale um patch* na fonte de dados para corrigir o problema.
+** Prepare um *Relatório de erro* para suporte técnico.
+** *Excluir* a fonte de dados do seu ambiente de monitoramento Insight.
+
+
+

@@ -1,0 +1,16 @@
+---
+permalink: howto/using-queries-to-annotate-your-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Agora que você criou suas anotações iniciais, vamos dar uma olhada em como associar essas anotações a ativos específicos. 
+---
+= Usando consultas para anotar seus ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Agora que você criou suas anotações iniciais, vamos dar uma olhada em como associar essas anotações a ativos específicos.
+
+Nos exemplos que se seguem, vamos aplicar essas anotações a ativos específicos. Por exemplo, criaremos uma consulta para listar todos os arrays de armazenamento que residem em um data center específico e marcá-los com a anotação apropriada. Então faremos o mesmo para ativos pertencentes a um nível específico e nível de serviço.

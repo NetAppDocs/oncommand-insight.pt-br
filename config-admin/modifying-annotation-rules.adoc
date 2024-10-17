@@ -1,0 +1,38 @@
+---
+permalink: config-admin/modifying-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode modificar uma regra de anotação para alterar o nome da regra, sua anotação, o valor da anotação ou a consulta associada à regra. 
+---
+= Modificar regras de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível modificar uma regra de anotação para alterar o nome da regra, sua anotação, o valor da anotação ou a consulta associada à regra.
+
+
+
+== Passos
+
+. Faça login na IU do OnCommand Insightweb.
+. Clique em *Manage* e selecione *Annotation rules*.
++
+A página regras de anotação exibe a lista de regras de anotação existentes.
+
+. Localize a regra que você deseja modificar:
++
+** Na página regras de anotação, pode filtrar as regras de anotação introduzindo um valor na caixa de filtro.
+** Clique em um número de página para navegar pelas regras de anotação por página se houver mais regras do que ajustar em uma página.
+
+
+. Execute um dos seguintes procedimentos para exibir a caixa de diálogo *Editar regra*:
++
+** Se estiver na página regras de Anotação, posicione o cursor sobre a regra de anotação e clique image:../media/edit-annotation-icon.gif[""]em .
+** Se você estiver em uma página de ativo, posicione o cursor sobre a anotação associada à regra, posicione o cursor sobre o nome da regra quando ela for exibida e clique no nome da regra.
+
+
+. Faça as alterações necessárias e clique em *Salvar*.
+

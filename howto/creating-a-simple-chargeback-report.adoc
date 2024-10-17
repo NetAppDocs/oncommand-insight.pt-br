@@ -1,0 +1,86 @@
+---
+permalink: howto/creating-a-simple-chargeback-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Os relatórios de chargeback permitem que administradores e gerentes avaliem o uso de capacidade por aplicativo, entidade de negócios, nível de serviço e nível. Os relatórios de chargeback incluem responsabilidade de capacidade, histórico de responsabilidade de capacidade e dados de tendências. Os dados para esses relatórios são construídos e programados a partir do Armazém de dados OnCommand Insight. 
+---
+= Criar um relatório de chargeback simples
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os relatórios de chargeback permitem que administradores e gerentes avaliem o uso de capacidade por aplicativo, entidade de negócios, nível de serviço e nível. Os relatórios de chargeback incluem responsabilidade de capacidade, histórico de responsabilidade de capacidade e dados de tendências. Os dados para esses relatórios são construídos e programados a partir do Armazém de dados OnCommand Insight.
+
+
+
+== Antes de começar
+
+Para criar o relatório de exemplo, seu sistema deve estar configurado para relatar os custos das camadas de armazenamento. As seguintes tarefas precisam ser concluídas:
+
+* Definir anotações para níveis.
+* Atribuir custos a anotações.
+* Defina as aplicações para as quais pretende monitorizar os dados.
+* Atribua aplicativos aos ativos.
+
+
+
+
+== Sobre esta tarefa
+
+Este exemplo usa a ferramenta de relatório Cognos Workspace Advanced para criar o relatório Chargeback. Com o Workspace Advanced, você cria relatórios arrastando e soltando elementos de dados em uma palete de relatório.
+
+
+
+== Passos
+
+. Na IU da Web do OnCommand Insight, clique no ícone de relatório.
+. Inicie sessão no Portal de relatórios.
+. Na barra de ferramentas do IBM Cognos Connection, clique em *Launch* > *Cognos Worksapce Advanced*
++
+A tela do pacote Workspace Advanced será exibida.
+
+. Clique em *Pacotes* > *Chargeback*
++
+A tela IBM Workspace Advantace é exibida.
+
+. Clique em *novo*
+. Na caixa de diálogo *novo*, clique em *Lista* para especificar um relatório de lista.
++
+A paleta de relatórios é exibida e o Chargeback "'Simple data mart'" e "'Advanced data mart'" são exibidos sob o título fonte.
+
+. Clique nas setas ao lado de cada data mart para expandi-los.
++
+O conteúdo completo dos data marts é exibido.
+
+. Arraste o aplicativo do "Simple Data Mart" para a coluna mais à esquerda da paleta de relatórios.
++
+Quando você arrasta um item para a paleta, a coluna diminui e é realçada. Soltar os dados do aplicativo nas colunas realçadas resulta em todos os aplicativos sendo listados corretamente na coluna.
+
+. Arraste o "Tier" do "Simple Data Mart" para a próxima coluna da paleta de relatórios.
++
+A camada de storage associada a cada aplicação é adicionada à paleta.
+
+. Arraste o "Tier Cost" do "Simple Data Mart" para a próxima coluna da paleta de relatórios.
+. Arraste a "capacidade provisionada" do "Simple Data Mart" para a próxima coluna da paleta de relatórios.
+. Mantenha pressionada a tecla *Ctrl* e selecione as colunas ""custo de nível"" e ""capacidade provisionada"" na palete.
+. Clique com o botão direito do rato em qualquer uma das colunas selecionadas.
+. Clique em *Calculate* > *Tier Cost * provisioned Capacity DB*
++
+Uma nova coluna é adicionada ao palete com o título "custo de nível * capacidade de provisão GB".
+
+. Clique com o botão direito do rato na coluna *custo de nível * capacidade de provisão GB*.
+. Clique em *estilo* > *tipo de dados*
+. Clique em *tipo de formato* > *Moeda*
+. Clique em *OK*
++
+Os dados da coluna estão agora formatados como moeda dos EUA.
+
+. Clique com o botão direito em ""Tier Cost * provision Capacity GB"" e selecione *Edit Data item Label*
+. Substitua o campo Nome por ""custo de capacidade provisionada""
+. Para executar o relatório, clique em *Run* > *Run report - HTML*
++
+É apresentado um relatório semelhante ao seguinte. image:../media/insight-chargeback-report.gif[""]
+
+

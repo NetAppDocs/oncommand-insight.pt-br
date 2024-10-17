@@ -1,0 +1,45 @@
+---
+permalink: install-windows/restoring-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Se aplicável, você pode restaurar manualmente quaisquer relatórios personalizados que você fez backup antes da atualização; no entanto, você só precisa fazer isso se perder relatórios se eles tiverem sido corrompidos. 
+---
+= Restaurar relatórios personalizados do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se aplicável, você pode restaurar manualmente quaisquer relatórios personalizados que você fez backup antes da atualização; no entanto, você só precisa fazer isso se perder relatórios se eles tiverem sido corrompidos.
+
+
+
+== Passos
+
+. Abra seu relatório com um editor de texto e selecione e copie seu conteúdo.
+. Inicie sessão no portal de relatórios em `+https://fqdn/reporting+`.
+. Na barra de ferramentas Data Warehouse, clique image:../media/oci-reporting-portal-icon.gif[""] para abrir o portal Insight Reporting.
+. No menu Iniciar, selecione *Report Studio*.
+. Selecione qualquer pacote.
++
+O Report Studio é exibido.
+
+. Clique em *criar novo*.
+. Selecione *Lista*.
+. No menu Ferramentas, selecione *abrir relatório da área de transferência*.
++
+A caixa de diálogo *Open Report from Clipboard* (abrir relatório da área de transferência) é exibida.
+
+. No menu Arquivo, selecione *Salvar como* e salve o relatório na pasta relatórios personalizados.
+. Abra o relatório para verificar se ele foi importado.
++
+Repita esta tarefa para cada relatório.
+
++
+[NOTE]
+====
+Você pode ver um ""erro de análise de expressão"" quando você carrega um relatório. Isso significa que a consulta contém uma referência a pelo menos um objeto que não existe, o que significa que não há nenhum pacote selecionado na janela origem para validar o relatório. Nesse caso, clique com o botão direito do Mouse em uma dimensão data mart na janela origem, selecione Pacote de Relatório e, em seguida, selecione o pacote associado ao relatório (por exemplo, o pacote de inventário se for um relatório de inventário ou um dos pacotes de desempenho se for um relatório de desempenho) para que o Report Studio possa validá-lo e, em seguida, você pode salvá-lo.
+
+====
+

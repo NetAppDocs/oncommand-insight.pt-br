@@ -1,0 +1,14 @@
+---
+permalink: config-admin/related-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Se aplicável, uma página de ativo exibe uma seção de ativos relacionados. Por exemplo, uma página de ativos de volume pode mostrar informações sobre ativos como pools de armazenamento, portas de switch conetadas e recursos de computação. Cada seção compreende uma tabela que lista qualquer um dos ativos relacionados nessa categoria, com links para suas respetivas páginas de ativos e várias estatísticas de desempenho relacionadas ao ativo. 
+---
+= Ativos relacionados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se aplicável, uma página de ativo exibe uma seção de ativos relacionados. Por exemplo, uma página de ativos de volume pode mostrar informações sobre ativos como pools de armazenamento, portas de switch conetadas e recursos de computação. Cada seção compreende uma tabela que lista qualquer um dos ativos relacionados nessa categoria, com links para suas respetivas páginas de ativos e várias estatísticas de desempenho relacionadas ao ativo.

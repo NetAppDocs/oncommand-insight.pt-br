@@ -1,0 +1,33 @@
+---
+permalink: reporting/how-to-plan-the-results-of-your-custom-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de abrir as ferramentas de design de relatório, talvez você queira Planejar os resultados desejados no relatório. Com as ferramentas de criação de relatórios, você pode criar relatórios facilmente e pode não precisar de muito Planejamento; no entanto, é uma boa ideia ter uma ideia do solicitante do relatório sobre os requisitos do relatório. 
+---
+= Como Planejar os resultados do seu relatório personalizado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de abrir as ferramentas de design de relatório, talvez você queira Planejar os resultados desejados no relatório. Com as ferramentas de criação de relatórios, você pode criar relatórios facilmente e pode não precisar de muito Planejamento; no entanto, é uma boa ideia ter uma ideia do solicitante do relatório sobre os requisitos do relatório.
+
+* Identifique a pergunta exata que você deseja responder. Por exemplo:
++
+** Quanta capacidade tenho deixado?
+** Quais são os custos de estorno por unidade de negócios?
+** Qual é a capacidade por camada para garantir que as unidades de negócios estejam alinhadas ao nível adequado de storage?
+** Como posso prever requisitos de energia e refrigeração? (Adicione metadados personalizados adicionando anotações aos recursos.)
+
+
+* Identifique os elementos de dados que você precisa para dar suporte à resposta.
+* Identifique as relações entre os dados que você deseja ver na resposta. Não inclua relações ilógicas em sua pergunta, por exemplo, ""Eu quero ver as portas que se relacionam com a capacidade.""
+* Identifique os cálculos necessários nos dados.
+* Determine quais tipos de filtragem são necessários para limitar os resultados.
+* Determine se você precisa usar dados atuais ou históricos.
+* Determine se você precisa definir o Access Privileges em relatórios para limitar os dados a públicos específicos.
+* Identificar como o relatório será distribuído. Por exemplo, ele deve ser enviado por e-mail em um cronograma definido ou incluído na área de pasta conteúdo da equipe?
+* Determine quem manterá o relatório. Isso pode afetar a complexidade do design.
+* Crie um modelo do relatório.
+

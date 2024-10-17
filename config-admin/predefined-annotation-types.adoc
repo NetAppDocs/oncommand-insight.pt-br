@@ -1,0 +1,242 @@
+---
+permalink: config-admin/predefined-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommandInsight fornece alguns tipos de anotação padrão. Essas anotações podem ser usadas para filtrar ou agrupar dados e filtrar relatórios de dados. 
+---
+= Tipos de anotação predefinidos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommandInsight fornece alguns tipos de anotação padrão. Essas anotações podem ser usadas para filtrar ou agrupar dados e filtrar relatórios de dados.
+
+Você pode associar ativos a tipos de anotação padrão, como os seguintes:
+
+* Ciclo de vida do ativo, como aniversário, pôr do sol ou fim da vida
+* Informações de localização sobre um dispositivo, como data center, prédio ou piso
+* Classificação de ativos, como por qualidade (níveis), por dispositivos conetados (nível de switch) ou por nível de serviço
+* Status, como quente (alta utilização)
+
+
+A tabela seguinte lista os tipos de anotação predefinidos. Pode editar qualquer um destes nomes de anotação de acordo com as suas necessidades.
+
+|===
+
+
+| Tipos de anotação | Descrição | Tipo 
+
+
+ a| 
+Alias
+ a| 
+Nome amigável para um recurso.
+ a| 
+Texto
+
+
+
+ a| 
+Aniversário
+ a| 
+Data em que o dispositivo foi ou será colocado online.
+ a| 
+Data
+
+
+
+ a| 
+Edifício
+ a| 
+Localização física dos recursos de host, armazenamento, switch e fita.
+ a| 
+Lista
+
+
+
+ a| 
+Cidade
+ a| 
+Localização do município dos recursos de host, armazenamento, switch e fita.
+ a| 
+Lista
+
+
+
+ a| 
+Grupo de recursos de computação
+ a| 
+Atribuição de grupo usada pela fonte de dados de sistemas de arquivos Host e VM.
+ a| 
+Lista
+
+
+
+ a| 
+Continente
+ a| 
+Localização geográfica dos recursos de host, armazenamento, switch e fita.
+ a| 
+Lista
+
+
+
+ a| 
+País
+ a| 
+Localização nacional dos recursos de host, armazenamento, switch e fita.
+ a| 
+Lista
+
+
+
+ a| 
+Data center
+ a| 
+Localização física do recurso e está disponível para hosts, matrizes de armazenamento, switches e fitas.
+ a| 
+Lista
+
+
+
+ a| 
+Ligação direta
+ a| 
+Indica (Sim ou não) se um recurso de armazenamento estiver conetado diretamente aos hosts.
+ a| 
+Booleano
+
+
+
+ a| 
+Fim da vida
+ a| 
+Data em que um dispositivo será colocado off-line, por exemplo, se a concessão expirou ou o hardware estiver sendo retirado.
+ a| 
+Data
+
+
+
+ a| 
+Alias de tecido
+ a| 
+Nome fácil de usar para um tecido.
+ a| 
+Texto
+
+
+
+ a| 
+Piso
+ a| 
+Localização de um dispositivo em um piso de um edifício. Pode ser definido para hosts, matrizes de armazenamento, switches e fitas.
+ a| 
+Lista
+
+
+
+ a| 
+Quente
+ a| 
+Dispositivos já em uso pesado regularmente ou no limite de capacidade.
+ a| 
+Booleano
+
+
+
+ a| 
+Nota
+ a| 
+Comentários que você deseja associados a um recurso.
+ a| 
+Texto
+
+
+
+ a| 
+Rack
+ a| 
+Rack no qual o recurso reside.
+ a| 
+Texto
+
+
+
+ a| 
+Quarto
+ a| 
+Sala dentro de um prédio ou outro local de recursos de host, armazenamento, switch e fita.
+ a| 
+Lista
+
+
+
+ a| 
+SAN
+ a| 
+Partição lógica da rede. Disponível em hosts, matrizes de armazenamento, fitas, switches e aplicativos.
+ a| 
+Lista
+
+
+
+ a| 
+Nível de serviço
+ a| 
+Um conjunto de níveis de serviço compatíveis que você pode atribuir a recursos. Fornece uma lista de opções ordenadas para volumes internos, qtree e volumes. Edite níveis de serviço para definir políticas de desempenho para diferentes níveis.
+ a| 
+Lista
+
+
+
+ a| 
+Estado/Província
+ a| 
+Estado ou província em que o recurso está localizado.
+ a| 
+Lista
+
+
+
+ a| 
+Pôr do sol
+ a| 
+Limiar definido após o qual não é possível efetuar novas alocações para esse dispositivo. Útil para migrações planejadas e outras alterações de rede pendentes.
+ a| 
+Data
+
+
+
+ a| 
+Nível do interrutor
+ a| 
+Inclui opções predefinidas para configurar categorias para switches. Normalmente, essas designações permanecem durante a vida útil do dispositivo, embora você possa editá-las, se necessário. Disponível apenas para interrutores.
+ a| 
+Lista
+
+
+
+ a| 
+Nível
+ a| 
+Pode ser usado para definir diferentes níveis de serviço em seu ambiente. As camadas podem definir o tipo de nível, como a velocidade necessária (por exemplo, ouro ou prata). Esse recurso está disponível somente em volumes internos, qtrees, matrizes de armazenamento, pools de armazenamento e volumes.
+ a| 
+Lista
+
+
+
+ a| 
+Gravidade da violação
+ a| 
+Classificação (por exemplo, maior) de uma violação (por exemplo, portas de host ausentes ou redundância ausente), em uma hierarquia de maior a menor importância.
+ a| 
+Lista
+
+|===
+[NOTE]
+====
+Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Service Level, Tier e violation Severity são anotações no nível do sistema, que você não pode excluir ou renomear; você pode alterar apenas os valores atribuídos.
+
+====

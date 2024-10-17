@@ -1,0 +1,16 @@
+---
+permalink: install-windows/upgrade-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Normalmente, uma atualização deve ser realizada em todos os servidores Insight (servidor Insight, servidor Data Warehouse, unidade de aquisição remota). Você deve sempre consultar as Notas de versão para os requisitos de atualização para uma nova versão do OnCommand Insight.' 
+---
+= Atualizando o OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Normalmente, uma atualização deve ser realizada em todos os servidores Insight (servidor Insight, servidor Data Warehouse, unidade de aquisição remota). Você deve sempre consultar as Notas de versão para os requisitos de atualização para uma nova versão do OnCommand Insight.
+
+Salvo indicação em contrário, os requisitos e procedimentos aplicam-se à atualização do Insight 7.x para a versão atual do Insight. Se você estiver atualizando de uma versão anterior a 7,0, entre em Contato com o representante da sua conta.

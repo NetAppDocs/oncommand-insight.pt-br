@@ -1,0 +1,33 @@
+---
+permalink: config-admin/editing-multiple-data-sources.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Você pode editar a maioria das informações para várias fontes de dados do mesmo fornecedor e modelo ao mesmo tempo. Por exemplo, se essas fontes de dados compartilharem um nome de usuário e uma senha, você poderá alterar a senha em um só lugar e, assim, atualizar a senha para todas as fontes de dados selecionadas. 
+---
+= Editar informações para várias fontes de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar a maioria das informações para várias fontes de dados do mesmo fornecedor e modelo ao mesmo tempo. Por exemplo, se essas fontes de dados compartilharem um nome de usuário e uma senha, você poderá alterar a senha em um só lugar e, assim, atualizar a senha para todas as fontes de dados selecionadas.
+
+
+
+== Sobre esta tarefa
+
+As opções que você não pode editar para as fontes de dados selecionadas aparecem esmaecidas ou não são exibidas na caixa de diálogo Editar fonte de dados. Além disso, quando uma opção exibe um valor de *Mixed*, ela indica que o valor da opção varia entre as fontes de dados selecionadas. Por exemplo, se a opção *Timeout (seg)* para duas fontes de dados selecionadas for *Mixed*, uma fonte de dados poderia ter um valor de timeout de 60 e a outra poderia ter um valor de 90; portanto, se você alterar esse valor para 120 e salvar as alterações nas fontes de dados, a configuração de timeout para ambas as fontes de dados se torna 120.
+
+
+
+== Passos
+
+. Clique em *Admin* e navegue até a exibição da lista de fontes de dados
+. Selecione as fontes de dados que deseja modificar. As fontes de dados selecionadas devem pertencer ao mesmo fornecedor, modelo e unidade de aquisição.
+. Clique no botão *ações* e selecione a opção *Editar*.
+. Na caixa de diálogo de edição, altere qualquer uma das *Configurações* conforme necessário.
+. Clique no link *Configuração* para alterar qualquer uma das opções básicas das fontes de dados.
+. Clique no link *Configuração avançada* para alterar qualquer uma das opções avançadas para as fontes de dados.
+. Clique em *Salvar*.
+

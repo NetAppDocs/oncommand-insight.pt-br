@@ -1,0 +1,18 @@
+---
+permalink: config-admin/licenses-no-longer-compliant.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se você notar a mensagem "não compatível" na página de licenças do Insight, o Insight está gerenciando mais terabytes do que sua empresa licenciada.' 
+---
+= As licenças já não estão em conformidade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você notar a mensagem "não compatível" na página de licenças do Insight, o Insight está gerenciando mais terabytes do que sua empresa licenciada.
+
+A mensagem "não compatível" significa que sua empresa pagou por menos terabytes do que o Insight está gerenciando atualmente. A diferença entre os terabytes gerenciados e o número licenciado de terabytes é mostrada ao lado da mensagem de não conformidade.
+
+A operação do sistema Insight não é afetada, mas você deve entrar em Contato com seu representante da NetApp para aumentar a cobertura da licença e atualizar a licença apropriada.

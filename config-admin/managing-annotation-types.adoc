@@ -1,0 +1,14 @@
+---
+permalink: config-admin/managing-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O OnCommand Insight fornece alguns tipos de anotação padrão, como ciclo de vida do ativo (aniversário ou fim da vida útil), local de construção ou data center e nível, que você pode personalizar para mostrar em seus relatórios. Pode definir valores para tipos de anotação predefinidos ou criar os seus próprios tipos de anotação personalizados. Mais tarde, você pode editar esses valores.' 
+---
+= Gerir tipos de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight fornece alguns tipos de anotação padrão, como ciclo de vida do ativo (aniversário ou fim da vida útil), localização do prédio ou data center e nível, que você pode personalizar para mostrar em seus relatórios. Pode definir valores para tipos de anotação predefinidos ou criar os seus próprios tipos de anotação personalizados. Mais tarde, você pode editar esses valores.

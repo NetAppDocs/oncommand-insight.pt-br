@@ -1,0 +1,32 @@
+---
+permalink: install-windows/network-traffic-generated-by-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: O tráfego de rede gerado pelo OnCommand Insight, a quantidade de dados processados que atravessam a rede e a carga que o OnCommand Insight coloca nos dispositivos diferem com base em muitos fatores. 
+---
+= Tráfego de rede gerado pelo OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O tráfego de rede gerado pelo OnCommand Insight, a quantidade de dados processados que atravessam a rede e a carga que o OnCommand Insight coloca nos dispositivos diferem com base em muitos fatores.
+
+O tráfego, os dados e a carga diferem entre os ambientes com base nos seguintes fatores:
+
+* Os dados brutos
+* Configuração de dispositivos
+* Topologia de implantação do OnCommand Insight
+* Diferentes intervalos de sondagem de fontes de dados de inventário e desempenho, que podem ser reduzidos para permitir que dispositivos lentos sejam descobertos ou que a largura de banda seja conservada
+
+
+Os dados brutos de configuração que o OnCommand Insight coleta podem variar significativamente.
+
+O exemplo a seguir ilustra como os dados de configuração podem variar e como o tráfego, os dados e a carga são afetados por muitos fatores de configuração. Por exemplo, você pode ter dois arrays cada um com 1.000 discos:
+
+* Array 1: Tem 1.000 discos SATA todos de 1 TB de tamanho. Todos os discos 1.000 estão em um pool de storage e há 1.000 LUNs, todos apresentados (mapeados e mascarados) para os mesmos 32 nós em um cluster ESX.
+* Array 2: Tem discos de dados de 400 2 TB, discos FC de 560 600 GB e SSD de 40 GB. Existem 3 pools de storage, mas 320 discos FC são usados em grupos RAID tradicionais. Os LUNs esculpidos nos grupos RAID usam um tipo de máscara tradicional (symmaskdb), enquanto os LUNs provisionados e baseados em pool usam um tipo de máscara mais recente (symaccess). Existem 600 LUNs apresentados a 150 hosts diferentes. Existem 200 BCVs (volumes de réplica de bloco completo de 200 dos 600 LUNs). Há também 200 R2 volumes, volumes de réplica remota de volumes que existem em um array em um local diferente.
+
+
+Cada um desses arrays tem 1.000 discos e 1.000 volumes lógicos. Eles podem ser fisicamente idênticos na quantidade de espaço em rack que consomem no data center e podem até estar executando o mesmo firmware, mas o segundo array é muito mais complexo em sua configuração do que o primeiro array.

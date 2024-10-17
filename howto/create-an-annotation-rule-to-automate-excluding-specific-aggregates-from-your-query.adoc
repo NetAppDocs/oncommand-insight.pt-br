@@ -1,0 +1,40 @@
+---
+permalink: howto/create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-query.html 
+sidebar: sidebar 
+keywords:  
+summary: Como alternativa à aplicação manual de anotações a ativos individuais, você pode aplicar automaticamente anotações a vários ativos usando regras de anotação. As regras de anotação são baseadas em consultas criadas e, quando executadas no sistema, adicionam novos ativos a conjuntos de ativos existentes. Quando esses conjuntos de ativos são excluídos de um relatório, os novos ativos também são automaticamente excluídos. 
+---
+= Crie uma regra de anotação para automatizar a exclusão de agregados específicos do seu relatório de densidade de e/S.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como alternativa à aplicação manual de anotações a ativos individuais, você pode aplicar automaticamente anotações a vários ativos usando regras de anotação. As regras de anotação são baseadas em consultas criadas e, quando executadas no sistema, adicionam novos ativos a conjuntos de ativos existentes. Quando esses conjuntos de ativos são excluídos de um relatório, os novos ativos também são automaticamente excluídos.
+
+
+
+== Antes de começar
+
+Você precisa ter criado e salvo uma consulta que identifique os agregados raiz do NetApp identificados no ambiente.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *Manage* > *Annotation rules*
+. Clique em *Add*
++
+A caixa de diálogo Adicionar regra é exibida.
+
+. Faça o seguinte:
++
+.. Na caixa Nome, insira um nome exclusivo que descreva a regra: "RootAggrExclude"
+.. Clique em consulta e selecione a consulta que o Insight deve usar para aplicar a regra de anotação a:"' Aggregate0'"
+.. Clique em Anotação e selecione: "'Root agg exclude'"
+.. Clique em valor e insira verdadeiro
+
+
+

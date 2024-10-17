@@ -1,0 +1,42 @@
+---
+permalink: install-windows/installation-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de instalar o OnCommand Insight, você deve baixar a versão atual do software, adquirir a licença apropriada e configurar seu ambiente. 
+---
+= Pré-requisitos de instalação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar o OnCommand Insight, você deve baixar a versão atual do software, adquirir a licença apropriada e configurar seu ambiente.
+
+Antes de instalar o OnCommand Insight, certifique-se de que tem o seguinte:
+
+* Arquivos de software OnCommand Insight no pacote de instalação baixado para a versão atual
+* Uma licença para operar a versão OnCommand Insight baixada
+* O ambiente mínimo de hardware e software
++
+O produto atual pode consumir recursos adicionais de hardware (devido à funcionalidade aprimorada do produto OnCommand Insight) que não foram consumidos com versões anteriores do produto OnCommand Insight.
+
+* Um plano de implementação que inclui as configurações de hardware e rede para o servidor OnCommand Insight, o Armazém de dados e os relatórios e as unidades de aquisição remota.
+* Software de verificação de vírus desativado
++
+Durante a instalação do OnCommand Insight, você deve desativar completamente todos os scanners de vírus. Após a instalação, os caminhos usados pelo componente Insight (caminhos de instalação, backup e arquivamento) devem ser excluídos da verificação de vírus, além de excluir o diretório inteiro `sanscreen` da verificação.
+
++
+Além disso, você também deve excluir a pasta IBM/DB2 (por exemplo, _C: Arquivos de programas/IBM/DB2_) da verificação antivírus após a instalação.
+
+
+
+[NOTE]
+====
+Se você estiver executando uma instalação completa como uma atualização ou como uma migração para o novo hardware e o sistema existente contiver uma configuração de segurança não padrão, você deverá fazer backup da configuração de segurança antes de executar a instalação. Após a conclusão da instalação, tem de restaurar a configuração de segurança antes de restaurar o servidor (que inclui a unidade de aquisição local) ou a base de dados do Data Warehouse. Tem de restaurar a configuração de segurança para todos os seus servidores Insight antes de restaurar a base de dados DWH.
+
+Para a atualização no local (disponível apenas para o Insight Server), a configuração de segurança é tratada corretamente e você não precisa restaurá-la.
+
+Utilize a `securityadmin` ferramenta para criar uma cópia de segurança da configuração e para restaurar a configuração guardada. Para obter mais informações, procure `securityadmin` no Centro de Documentação do OnCommand Insight: http://docs.netapp.com/oci-73/index.jsp[]
+
+====

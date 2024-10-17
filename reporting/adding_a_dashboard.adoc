@@ -1,0 +1,24 @@
+---
+permalink: reporting/adding_a_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode querer exibir um grupo de relatórios do painel em uma guia para facilitar o acesso. Você pode adicionar a guia em Preferências do usuário. 
+---
+= Adicionando um painel a partir de Preferências do usuário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode querer exibir um grupo de relatórios do painel em uma guia para facilitar o acesso. Você pode adicionar a guia em Preferências do usuário.
+
+.Passos
+. Abra o Portal de relatórios do OnCommand Insight.
+. No canto superior direito, clique no ícone pessoa para exibir um menu suspenso.
+. Selecione Minhas Preferências.
+. No modo de exibição Definir preferências, clique na guia abas do Portal.
+. Na guia abas do Portal, clique no link Adicionar.
+. Na pasta pastas públicas e Dashboard, localize o painel que você deseja como guia e verifique-o.
+. Clique na seta para movê-la para a caixa entradas selecionadas e clique em OK.
+

@@ -1,0 +1,30 @@
+---
+permalink: config-admin/managing-security-on-an-rau.html 
+sidebar: sidebar 
+keywords: rekey 
+summary: A ferramenta securityadmin permite gerenciar opções de segurança em RAUs. Talvez seja necessário fazer backup ou restaurar uma configuração de cofre, alterar chaves de criptografia ou atualizar senhas para as unidades de aquisição. 
+---
+= Gerenciamento de segurança em uma RAU
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A `securityadmin` ferramenta permite gerenciar opções de segurança em RAUs. Talvez seja necessário fazer backup ou restaurar uma configuração de cofre, alterar chaves de criptografia ou atualizar senhas para as unidades de aquisição.
+
+
+
+== Sobre esta tarefa
+
+Você usa a `securityadmin` ferramenta para gerenciar a segurança:
+
+* Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+Um cenário para atualizar a configuração de segurança para o LAU/RAU é atualizar a senha do usuário 'aquisição' quando a senha para esse usuário tiver sido alterada no servidor. A LAU e todas as RAUs usam a mesma senha que a do usuário de 'aquisição' do servidor para se comunicar com o servidor.
+
+O utilizador de 'aquisição' só existe no servidor Insight. A RAU ou LAU faz login como esse usuário quando eles se conetam ao servidor.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.

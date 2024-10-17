@@ -1,0 +1,20 @@
+---
+permalink: reporting/managing-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight fornece agrupamentos de relatórios na forma de painéis dinâmicos para mostrar diferentes visualizações de dados relacionados a uma preocupação de gerenciamento específica. Clicar em elementos nos painéis exibe informações mais detalhadas. 
+---
+= Gerenciando painéis
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight fornece agrupamentos de relatórios na forma de painéis dinâmicos para mostrar diferentes visualizações de dados relacionados a uma preocupação de gerenciamento específica. Clicar em elementos nos painéis exibe informações mais detalhadas.
+
+Sobre esta tarefa os painéis agrupam informações sobre um assunto de interesse e fornecem esses recursos dinâmicos:
+
+Clique em elementos do gráfico para regenerar gráficos mostrando mais detalhes para os itens selecionados. Links para outros relatórios e informações mais detalhadas. Se você tiver um painel favorito, você pode adicionar uma guia para ele usando um destes métodos:
+
+Adicione a guia painel das pastas públicas. Adicione a guia Painel em Preferências do usuário.

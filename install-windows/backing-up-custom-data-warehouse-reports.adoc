@@ -1,0 +1,27 @@
+---
+permalink: install-windows/backing-up-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você criou relatórios personalizados e não tem os arquivos de origem .xml para eles, então você deve fazer backup desses relatórios antes da atualização. Em seguida, copie-os para um servidor diferente do servidor Data Warehouse. 
+---
+= Fazer backup de relatórios personalizados do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você criou relatórios personalizados e não tiver os `.xml` arquivos de origem para eles, então você deve fazer backup desses relatórios antes da atualização. Em seguida, copie-os para um servidor diferente do servidor Data Warehouse.
+
+
+
+== Passos
+
+. Faça login no portal Data Warehouse em `+https://fqdn/dwh+`.
+. Na barra de ferramentas Data Warehouse, clique image:../media/oci-reporting-portal-icon.gif[""] para abrir o Portal de relatórios e iniciar sessão.
+. Selecione *File* > *Open*.
+. Selecione a pasta na qual o relatório está localizado, selecione o relatório e clique em *Open*.
+. Selecione *Ferramentas* > *Copiar relatório para a área de transferência*.
+. Abra um editor de texto, cole o conteúdo do relatório e salve o arquivo como `report_name.txt`, onde `report _name` está o nome do relatório.
+. Armazene os relatórios em um servidor que não seja o servidor do Data Warehouse.
+

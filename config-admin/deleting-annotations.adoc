@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Pode querer eliminar uma anotação que já não pretende utilizar. Não é possível eliminar uma anotação no nível do sistema ou uma anotação que seja utilizada numa regra de anotação, consulta ou política de desempenho. 
+---
+= Eliminar anotações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode querer eliminar uma anotação que já não pretende utilizar. Não é possível eliminar uma anotação no nível do sistema ou uma anotação que seja utilizada numa regra de anotação, consulta ou política de desempenho.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *Gerenciar* e selecione *Anotações*.
++
+É apresentada a página Anotações.
+
+. Posicione o cursor sobre a anotação que pretende eliminar e clique image:../media/trash-can-query.gif[""]em .
++
+É apresentada uma caixa de diálogo de confirmação.
+
+. Clique em *OK*.
+

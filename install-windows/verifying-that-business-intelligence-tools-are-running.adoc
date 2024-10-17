@@ -1,0 +1,16 @@
+---
+permalink: install-windows/verifying-that-business-intelligence-tools-are-running.html 
+sidebar: sidebar 
+keywords:  
+summary: Se aplicável, você deve verificar se suas ferramentas de business intelligence estão sendo executadas e recuperando dados após a atualização. 
+---
+= Verificar se as ferramentas de business intelligence estão em execução
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se aplicável, você deve verificar se suas ferramentas de business intelligence estão sendo executadas e recuperando dados após a atualização.
+
+Verifique se ferramentas de business intelligence, como o BMC Atrium e o ServiceNow, estão em execução e são capazes de recuperar dados. Isso inclui o conetor BMC e as soluções que aproveitam O REST.

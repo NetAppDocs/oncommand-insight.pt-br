@@ -1,0 +1,26 @@
+---
+permalink: reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando você abre o Portal de relatórios, a pasta conteúdo da equipe é o ponto de partida para selecionar o tipo de informação que você precisa nos relatórios do OnCommand Insight. 
+---
+= Navegar para relatórios OnCommand Insight predefinidos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando você abre o Portal de relatórios, a pasta conteúdo da equipe é o ponto de partida para selecionar o tipo de informação que você precisa nos relatórios do OnCommand Insight.
+
+
+
+== Passos
+
+. No painel de navegação esquerdo, clique em *conteúdo da equipe* e selecione a categoria de informações que deseja usar.
++
+image::../media/cognos-menu.gif[menu cognos]
+
+. Clique em *relatórios* para acessar os relatórios predefinidos.
+. Clique em *começar*, *amostras* ou *Tutoriais* para saber como criar relatórios.
+

@@ -1,0 +1,66 @@
+---
+permalink: howto/configure-service-level-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: A anotação de nível de serviço é utilizada para associar ativos aos respetivos níveis de serviço. 
+---
+= Configurar anotações de nível de serviço
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A anotação de nível de serviço é utilizada para associar ativos aos respetivos níveis de serviço.
+
+As anotações de nível de serviço geralmente são definidas apenas em ambientes do cliente que usam a disposição automática em camadas. No data warehouse do Insight, o nível é preferido. No entanto, a prática recomendada é usar o nível de Serviço quando você deseja detalhar o custo provisionado versus o custo do Cliente. Quando ambos estiverem presentes no Data Warehouse, o nível de Serviço substituirá o nível.
+
+Passos:
+
+* Escolha a anotação *nível de serviço* e clique no ícone *Editar*.
+* Clique em Adicionar* e adicione o Nome e a Descrição do seu primeiro nível de serviço à lista de anotações.
+* Faça o mesmo para os outros níveis de serviço.
+* Quando terminar, clique em *Save*.
+
+
+Exemplo de anotações de nível de serviço:
+
+|===
+
+
+| Nome | Descrição | Custo por GB 
+
+
+ a| 
+Nível de serviço 1
+ a| 
+Controladores FAS com FC ou SAS, espelhamento local e remoto e fita
+ a| 
+0,93
+
+
+
+ a| 
+Nível de serviço 2
+ a| 
+Controladores FAS com FC ou SAS, espelhos locais e remotos
+ a| 
+0,85
+
+
+
+ a| 
+Nível de serviço 3
+ a| 
+Controladores FAS com SATA e espelhamento local
+ a| 
+0,48
+
+
+
+ a| 
+...
+ a| 
+ a| 
+
+|===

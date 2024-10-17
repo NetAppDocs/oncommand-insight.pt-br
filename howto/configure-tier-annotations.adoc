@@ -1,0 +1,80 @@
+---
+permalink: howto/configure-tier-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A anotação Tier (nível) é utilizada para associar ativos aos respetivos níveis, para utilização na contabilidade de custos, por exemplo. O Insight vem com várias anotações de nível padrão. Você pode modificá-las de acordo com suas convenções de nomenclatura em categorias ou criar suas próprias camadas conforme necessário.' 
+---
+= Configurar anotações de nível
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A anotação Tier (nível) é utilizada para associar ativos aos respetivos níveis, para utilização na contabilidade de custos, por exemplo. O Insight vem com várias anotações de nível padrão. Você pode modificá-las de acordo com suas convenções de nomenclatura em categorias ou criar suas próprias camadas conforme necessário.
+
+Ao definir anotações de nível, tenha em mente o seguinte:
+
+* O custo é por gigabyte.
+* As camadas 1, 2 e 3 são camadas padrão configuradas no nível de storage array, por tipo de disco. No entanto, muitos clientes terão vários tipos de disco dentro de uma matriz ou entre arrays do mesmo tipo.
+* A prática recomendada é criar anotações de nível com base no tipo de disco e/ou na velocidade do disco. Esta é uma metodologia típica de nível; suas próprias necessidades podem variar.
+
+
+Passos:
+
+* Escolha a anotação *Tier* e clique no ícone *Edit*.
+* Se desejar, clique em * Adicionar* e adicione o Nome e a Descrição do seu primeiro nível à lista de anotações.
+* Faça o mesmo para os outros níveis.
+* Quando terminar, clique em *Save*.
+
+
+Exemplo de anotações de nível:
+
+|===
+
+
+| Nome | Descrição | Custo por GB 
+
+
+ a| 
+Nível automático
+ a| 
+Camada automática de disposição em camadas de storage
+ a| 
+0,5
+
+
+
+ a| 
+SSD de camada 1
+ a| 
+Array all-flash
+ a| 
+0,5
+
+
+
+ a| 
+SAS de camada 2
+ a| 
+SAS
+ a| 
+0,25
+
+
+
+ a| 
+SATA Tier 3
+ a| 
+SATA
+ a| 
+0,1
+
+
+
+ a| 
+...
+ a| 
+ a| 
+
+|===

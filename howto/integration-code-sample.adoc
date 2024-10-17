@@ -1,0 +1,126 @@
+---
+permalink: howto/integration-code-sample.html 
+sidebar: sidebar 
+keywords:  
+summary: O arquivo integration.json identifica o payload . 
+---
+= Informações sobre o arquivo Integration.json
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O arquivo integration.json identifica o payload .
+
+A ilustração a seguir fornece uma representação codificada por cores de um arquivo integration.json simples. A tabela que acompanha identifica a função dos objetos no arquivo.
+
+image::../media/color-code-example.gif[exemplo de código de cor]
+
+
+
+== Sobre os arquivos integration.json
+
+Cada campo tem as seguintes caraterísticas:
+
+* A seção "identificadores" forma uma chave composta exclusiva para criar um novo "objeto" no Insight
+* Os "atributos" fornecem metadados de suporte sobre o objeto.
++
+Em ambos os casos, apenas o valor do último relatório para esse objeto (identificado pelos identificadores) é preservado.
+
+* Os "pontos de dados" são dados de séries temporais e devem ser valores numéricos. O Insight mantém todos e cada valor relatado aqui por 90 dias (por padrão) e os vincula séries temporais ao objeto identificado.
+
+
+
+
+== Expressões numéricas
+
+Por padrão, todas as expressões de valor são relatadas como strings na carga útil de integração. "identificadores" e "atributos" só podem definir valores de cadeia de carateres. "Datapoints" pode definir valores numéricos ou de cadeia de carateres. Os valores numéricos são definidos usando uma das seguintes teclas modificadoras:
+
+* num - o número total de bytes recebidos desde que o contador foi inicializado pela última vez
+* delta - o número de bytes recebidos durante o intervalo de votação
+* taxa - a taxa média de recebimento durante o intervalo de votação em bytes por segundo
++
+Uma taxa média de recebimento durante o intervalo de votação em megabytes por segundo pode ser realizada usando uma combinação de operações de taxa e matemática
+
+
+
+
+
+== Operações matemáticas
+
+O `integration.json` arquivo suporta as seguintes operações matemáticas: Adicionar, subtrair, multiplicar, dividir. O exemplo a seguir mostra as operações de multiplicação, divisão e soma em um arquivo JSON.
+
+image::../media/net-util-rhel.gif[net útil rhel]
+
+
+
+== Palavras-chave
+
+Uma palavra-chave de pacote de integração, string, é implementada para forçar strings de OCTETO ou tipos proprietários derivados de UMA STRING DE OCTETO que normalmente seria renderizada em formato hexadecimal para, em vez disso, ser renderizada como carateres ASCII.
+
+Muitas vezes, as cadeias de carateres OCTETO contêm dados binários, por exemplo endereços MAC e WWNs:
+
+[listing]
+----
+        "interface_mac": {
+                  "mibModuleName":      "IF-MIB",
+                  "objectName":         "ifPhysAddress"
+                 }
+----
+IfPhysAddress é o tipo PhysAddress, que é apenas uma CADEIA DE OCTETO:
+
+[listing]
+----
+  PhysAddress ::= TEXTUAL-CONVENTION
+                DISPLAY-HINT "1x:"
+                STATUS       current
+                DESCRIPTION
+                                "Represents media- or physical-level addresses."
+                SYNTAX       OCTET STRING
+----
+Quando ifPhysAddress é renderizado como hex por padrão, o resultado é:
+
+[listing]
+----
+"interface_mac": "00:50:56:A2:07:E7"
+----
+No entanto, se você tiver uma STRING OCTETO ou um tipo proprietário derivado da STRING OCTET que você deseja interpretar como ASCII, você pode usar a palavra-chave "string":
+
+[listing]
+----
+        "string_test_1": {
+          "string": {
+            "mibModuleName":      "IF-MIB",
+            "objectName":         "ifPhysAddress"
+          }
+        },
+
+        "string_test_2": {
+          "string": [
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            },
+            {
+              "const": "JSD"
+            },
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            }
+          ]
+        }
+----
+A palavra-chave segue as regras de concatenação de string existentes, inserindo um único espaço entre termos no exemplo a seguir:
+
+[listing]
+----
+      "string_test_1": "PV¢ç",
+              "string_test_2": "PV¢ç JSD PV¢ç"
+----
+A palavra-chave "string" age em um único termo ou uma lista de termos, mas não expressões aninhadas. Expressões aninhadas são suportadas apenas para expressões datapoint. Tentar usar uma expressão "string" em uma expressão datapoint resultará em um erro semelhante ao seguinte:
+
+_java.lang.IllegalArgumentException: Integration pack 'GenericSwitch32' index 'snmp_generic_interface_32' section 'dataPoints' key 'string_test_3' não suportado JSON expressão numérica '.string"
+
+Alguns tipos DE STRING DE OCTETO derivados, como DisplayString, SnmpAdminString têm precedência codificada sobre a palavra-chave "string". Isso ocorre porque SnmpAdminString é especificamente codificado UTF-8, e queremos manipulá-lo corretamente, enquanto a palavra-chave "string" força a representação de string padrão retornada pelo snmp_framework, que assume pontos de código ascii de byte único por caractere.

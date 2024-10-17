@@ -1,0 +1,56 @@
+---
+permalink: config-admin/enabling-the-syslog-facility.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode identificar um local para o log das violações do OnCommand Insight e alertas de desempenho, bem como mensagens de auditoria e ativar o processo de log. 
+---
+= Habilitando o recurso syslog
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode identificar um local para o log das violações do OnCommand Insight e alertas de desempenho, bem como mensagens de auditoria e ativar o processo de log.
+
+
+
+== Antes de começar
+
+* Você deve ter o endereço IP do servidor no qual armazenar o log do sistema.
+* Você deve saber o nível de instalação que corresponde ao tipo de programa que está registrando a mensagem, como LOCAL1 ou USUÁRIO.
+
+
+
+
+== Sobre esta tarefa
+
+O syslog inclui os seguintes tipos de informações:
+
+* Mensagens de violação
+* Alertas de performance
+* Opcionalmente, auditar mensagens de log
+
+
+As seguintes unidades são usadas no syslog:
+
+* Métricas de utilização: Porcentagem
+* Métricas de tráfego: MB
+* Taxa de tráfego: MB/s
+
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin* e selecione *notificações*.
+. Role para baixo até a seção *Syslog* da página.
+. Marque a caixa de seleção *Ativar syslog*.
+. Se desejar, marque a caixa de seleção *Send audit* (Enviar auditoria*). Novas mensagens de log de auditoria serão enviadas para o syslog, além de serem exibidas na página Auditoria. Observe que as mensagens de log de auditoria já existentes não serão enviadas para o syslog; somente as mensagens de log recém-geradas serão enviadas.
+. No campo *Server*, insira o endereço IP do servidor de log.
++
+Você pode especificar uma porta personalizada anexando-a após dois pontos no final do IP do servidor (por exemplo, servidor:porta). Se a porta não for especificada, a porta syslog padrão do 514 será usada.
+
+. No campo *Facility*, selecione o nível de instalação que corresponde ao tipo de programa que está a registar a mensagem.
+. Clique em *Salvar*.
+

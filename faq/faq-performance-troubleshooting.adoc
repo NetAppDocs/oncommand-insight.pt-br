@@ -1,0 +1,60 @@
+---
+permalink: faq/faq-performance-troubleshooting.html 
+sidebar: sidebar 
+keywords:  
+summary: Esta FAQ responde a perguntas comuns sobre a solução de problemas de desempenho do OnCommand Insight. 
+---
+= Solução de problemas de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta FAQ responde a perguntas comuns sobre a solução de problemas de desempenho do OnCommand Insight.
+
+
+
+== Como posso criar uma lista de todos os recursos gananciosos no meu ambiente?
+
+A análise de correlação do OCI ajuda na identificação de recursos degradados e exigentes para um caminho de serviço especificado. A análise gerada pelo recurso de correlação é realizada em tempo real enquanto visualiza cada objeto. A análise fornecida reduz muito o tempo necessário para solucionar problemas de desempenho e identificar as causas principais. Explorar violações geradas de políticas de desempenho definidas é um ponto de entrada para descobrir recursos gananciosos ou degradados. Os widgets e os painéis que usam a capacidade de consulta mais recente ajudam a filtrar, classificar e visualizar recursos com IOPS, utilização ou latência superiores ao esperado.
+
+
+
+== O OCI pode dar um lugar para diagnosticar problemas de desempenho?
+
+Sim. A solução de problemas de desempenho no OCI pode ser abordada de várias maneiras. O OCI tem uma série de métodos de alerta possíveis. SNMP, Syslog e Alertas por e-mail são comumente usados. Alertas por e-mail permitem que os usuários cliquem e iniciem rapidamente nos recursos afetados dentro do OCI. Uma janela de pesquisa global permite que os administradores simplesmente digitem um nome de recurso para começar a analisar a situação.
+
+O Painel de violação do OCI permite que os usuários priorizem os esforços com base no número de eventos, na duração e na hora do dia. Um exemplo de vários tipos de alertas seria latência, IOPS, utilização, gravidade, unidade de negócios ou até mesmo aplicativo associado.
+
+A análise de correlação do OCI ajuda os administradores a comparar objetos associados ao recurso afetado e determina seu impactos em IOPS, latência, utilização, CPU e créditos BB.
+
+A tecnologia de consulta e painéis de widgets do OCI permitem especificar detalhes específicos em visualizações organizadas que visam áreas problemáticas dentro do datacenter.
+
+
+
+== O OCI pode ajudar com minhas migrações de 7 modos para o cDOT?
+
+Sim, o OCI fornece uma compreensão inestimável para a demanda de carga de trabalho existente e validações pós-migração. O papel da OCI na modernização do data center atual permite simulações de gerenciamento de mudanças, Planejamento de otimização pré-migração e definição do nível de serviço certo. O OCI coleta e correlaciona facilmente o impacto nos negócios em milhares de compartilhamentos NFS e caminhos Fibre Channel em ambientes de vários fornecedores com apenas alguns cliques. Da migração para atualizações técnicas, o OCI está fornecendo um caminho para migrações confiáveis e de tamanho certo e mitigando interrupções de serviço não planejadas.
+
+
+
+== Como o "tempo de redimensionamento" é o monitoramento de desempenho do OCI?
+
+O OCI é considerado *quase real-time* para gerenciamento de data center na nuvem híbrida e no local. Embora a sondagem de fontes de dados possa ser configurada para ocorrer com mais frequência, a maioria dos usuários não obtém benefícios analíticos significativos ao ter um intervalo de coleta de desempenho para a maioria dos dispositivos de menos de 5 minutos. Coleta mais frequente pode colocar sobrecarga desnecessária sobre os objetos sob gestão e as análises realizadas. É claro que pode haver circunstâncias em que uma coleta mais granular é necessária e, felizmente, o OCI permite total flexibilidade, incluindo inventário de dispositivos configuráveis e intervalos de votação de desempenho para atender às necessidades específicas do ambiente de data center.
+
+
+
+== Por que o meu "total" é diferente do meu "ler" mais "escrever"?
+
+Em alguns casos, você pode notar que o _total_ para um contador não é igual à soma de _reads_ mais _writers_ para esse contador. Existem alguns casos em que isso pode acontecer.
+
+*IOPS*: Além de leituras e gravações, um storage array ou outro ativo processará operações internas não relacionadas ao fluxo de dados da carga de trabalho. Estas são algumas vezes referidas como "ystem", "metadata", ou simplesmente "outras" operações, e podem ser atribuídas a processos internos como instantâneos, deduplicação ou realocação de espaço. Nesses casos, para encontrar a quantidade de operações do sistema para um determinado ativo, subtraia a soma de _Read_ e _Write_ IOPS do _total_ IOPS. A soma de IOPS de leitura e gravação é o total de IOPS diretamente relacionado ao fluxo de dados.
+
+*Latência*: O tempo total de resposta (latência) para uma operação pode às vezes ser relatado como _menos que_ o tempo de resposta de gravação, porque o tempo total de resposta é uma média ponderada pelo tempo. Os workloads de e/S geralmente consistem em mais operações de leitura do que gravação, com as gravações em geral observando latências maiores. Por exemplo, se uma carga de trabalho executou 10 operações de leitura com uma latência média de 5ms ms e 5 operações de gravação com uma latência média de 10ms ms, a latência média ponderada total será calculada como o número de leituras vezes a latência média de leitura, mais o número de gravações vezes a latência média de gravação, dividida pelo número total de operações de e/S, por exemplo (6,33ms * 10 * 5 * 10) / (5 mais 5 * 10).
+
+
+
+== Por que o OCI e o OCUM mostram valores diferentes para o espaço sobreposto?
+
+A noção de espaço "provisionado" do Gerenciador Unificado da OnCommand (OCUM) pode incluir limites com crescimento automático aos quais os FlexVols (volumes internos da OnCommand Insight) podem crescer. A "capacidade" do OCI não reflete esses limites de crescimento automático. Como tal, em um ambiente onde o crescimento Flexvols existe, o total da capacidade provisionada OCUM excederá o total do nível de armazenamento OCI "over-committed Capacity" - o delta será a diferença entre a capacidade Flexvols e sua capacidade de crescimento automático.

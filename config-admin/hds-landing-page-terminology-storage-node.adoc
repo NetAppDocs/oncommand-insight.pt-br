@@ -1,0 +1,24 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Termos aplicáveis a objetos ou referências que você pode encontrar nas Landing pages de ativos de nó de armazenamento HDS. 
+---
+= Nó de storage do HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termos aplicáveis a objetos ou referências que você pode encontrar nas Landing pages de ativos de nó de armazenamento HDS.
+
+
+
+== Terminologia do nó de storage do HDS
+
+Os termos a seguir se aplicam a objetos ou referências que você pode encontrar nas páginas iniciais de ativos de nó de armazenamento HDS. Muitos desses termos também se aplicam a outros coletores de dados.
+
+* Nome -- o nome do diretor de front-end (FED) ou do adaptador de canal em matrizes monolíticas, ou o nome da controladora em uma matriz modular. Um determinado array do HDS terá 2 ou mais nós de storage
+* Volumes -- a tabela volume mostrará qualquer volume mapeado para qualquer porta de propriedade deste nó de armazenamento
+

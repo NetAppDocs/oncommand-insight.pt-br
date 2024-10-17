@@ -1,0 +1,72 @@
+---
+permalink: howto/creating-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Você cria políticas de desempenho para definir limites que acionam alertas para notificá-lo sobre problemas relacionados aos recursos da rede. Por exemplo, você pode criar uma política de performance para alertá-lo quando a utilização total de pools de storage for superior a 60%.' 
+---
+= Criação de políticas de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você cria políticas de desempenho para definir limites que acionam alertas para notificá-lo sobre problemas relacionados aos recursos da rede. Por exemplo, você pode criar uma política de performance para alertá-lo quando a utilização total de pools de storage for superior a 60%.
+
+
+
+== Passos
+
+. Abra o OnCommand Insight no seu navegador.
+. Selecione *Gerenciar* > *políticas de desempenho*.
++
+É apresentada a página políticas de desempenho.image:../media/performance-policies-page.gif[""]
+
++
+As políticas são organizadas por objeto e são avaliadas na ordem em que aparecem na lista para esse objeto.
+
+. Clique em *Adicionar nova política*.
++
+A caixa de diálogo Adicionar política é exibida.
+
+. No campo *Nome da política*, insira um nome para a política.
++
+Você deve usar um nome diferente de todos os outros nomes de política para o objeto. Por exemplo, você não pode ter duas políticas chamadas de latência para um volume interno; no entanto, você pode ter uma política de latência para um volume interno e outra política de latência para um volume diferente. A melhor prática é sempre usar um nome exclusivo para qualquer política, independentemente do tipo de objeto.
+
+. Na lista *Apply to Objects of type* (aplicar a objetos do tipo), selecione o tipo de objeto ao qual a política se aplica.
+. Na lista *com anotação*, selecione um tipo de anotação, se aplicável, e introduza um valor para a anotação na caixa *valor* para aplicar a política apenas a objetos que tenham este conjunto de anotações específico.
+. Se você selecionou *Port* como o tipo de objeto, na lista *Connected to*, selecione à qual a porta está conetada.
+. Na lista *Apply after a window of* (aplicar após uma janela de*), selecione quando um alerta for levantado para indicar uma violação de limite.
++
+A primeira opção de ocorrência aciona um alerta quando um limite é excedido na primeira amostra de dados. Todas as outras opções acionam um alerta quando o limite é cruzado uma vez e é continuamente cruzado durante pelo menos o período de tempo especificado.
+
+. Na lista *com gravidade*, selecione a gravidade da violação.
+. Por padrão, os alertas de e-mail sobre violações de política serão enviados aos destinatários na lista global de e-mails. Você pode substituir essas configurações para que os alertas de uma política específica sejam enviados para destinatários específicos.
++
+** Clique no link para abrir a lista destinatários e clique no botão * para adicionar destinatários. Os alertas de violação dessa política serão enviados a todos os destinatários da lista.
+
+
+. Clique no link *any* na seção *Create alert (criar alerta) se qualquer um dos itens a seguir for true* para controlar como os alertas são acionados:
++
+** * qualquer *
++
+Esta é a configuração padrão, que cria alertas quando qualquer um dos limites relacionados a uma política é cruzado.
+
+** *todos*
++
+Essa configuração cria um alerta quando todos os limites de uma política são cruzados. Quando você seleciona *All*, o primeiro limite que você cria para uma política de desempenho é chamado de regra principal. Você deve garantir que o limite de regra principal seja a violação que você está mais preocupado com a política de desempenho.
+
+
+
+. Na seção *criar alerta se*, selecione um contador de desempenho e um operador e insira um valor para criar um limite.
+. Clique em *Adicionar limite* para adicionar mais limites.
+. Para remover um limite, clique no ícone da lixeira.
+. Marque a caixa de seleção *Parar processamento de outras políticas se o alerta for gerado* se desejar que a política pare de processar quando ocorrer um alerta.
++
+Por exemplo, se você tiver quatro políticas para armazenamentos de dados e a segunda diretiva estiver configurada para interromper o processamento quando um alerta ocorrer, a terceira e a quarta políticas não serão processadas enquanto uma violação da segunda diretiva estiver ativa.
+
+. Clique em *Salvar*.
++
+A página políticas de desempenho é exibida e a política de desempenho é exibida na lista de políticas para o tipo de objeto.
+
+

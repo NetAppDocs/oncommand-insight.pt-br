@@ -1,0 +1,28 @@
+---
+permalink: config-admin/balancing-network-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Para resolver problemas de balanceamento, use as páginas de ativos para encontrar os problemas e identificar volumes de alta capacidade que estão subutilizados. 
+---
+= Equilibrando recursos de rede
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para resolver problemas de balanceamento, use as páginas de ativos para encontrar os problemas e identificar volumes de alta capacidade que estão subutilizados.
+
+
+
+== Passos
+
+. Abra o Painel de ativos no seu navegador.
+. No mapa de calor de IOPS das máquinas virtuais, você percebe o nome de uma VM em impressão muito grande que geralmente relata problemas.
+. Clique no nome da VM para exibir a página do ativo.
+. Verifique se há mensagens de erro no resumo.
+. Verifique os gráficos de desempenho e, particularmente, os principais recursos correlacionados para localizar quaisquer volumes que possam estar em disputa.
+. Adicione volumes ao gráfico de desempenho para comparar os padrões de atividade e exibir mais páginas de ativos para outros recursos envolvidos no problema.
+. Role até a parte inferior da página de ativo para ver listas de todos os recursos associados à VM. Observe qualquer VMDKs em execução com alta capacidade. Isso provavelmente está causando a disputa.
+. Para resolver o problema de balanceamento, identifique um recurso subutilizado para receber a carga de um recurso sobreutilizado ou remova um aplicativo menos exigente do recurso muito usado.
+

@@ -1,0 +1,15 @@
+---
+permalink: relnotes/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Notas de versão
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+As Notas de versão do OnCommand Insight estão disponíveis fora do Centro de Documentação. Você será solicitado a fazer login usando suas credenciais do site de suporte da NetApp.
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3328664["Notas de versão .PDF"^] (abre em uma nova janela)

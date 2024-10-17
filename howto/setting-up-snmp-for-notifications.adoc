@@ -1,0 +1,30 @@
+---
+permalink: howto/setting-up-snmp-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: O Insight pode enviar notificações SNMP em eventos de gatilho, como violações ou quando os limites da fonte de dados são excedidos. 
+---
+= Configurar o SNMP para notificações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Insight pode enviar notificações SNMP em eventos de gatilho, como violações ou quando os limites da fonte de dados são excedidos.
+
+
+
+== Sobre esta tarefa
+
+Siga estas etapas básicas para configurar o SNMP no Insight:
+
+
+
+== Passos
+
+. Clique em *Admin* > *notificações* e vá para a seção *SNMP*.
+. Clique em *ações* e selecione *Adicionar fonte de armadilha*.
+. Na caixa de diálogo *Adicionar destinatários de trap SNMP*, insira o endereço *IP* e *porta* para os quais deseja enviar mensagens de trap SNMP. Para *Community String*, use "'public'" para mensagens de intercetação SNMP.
+. Clique em *Salvar*.
+

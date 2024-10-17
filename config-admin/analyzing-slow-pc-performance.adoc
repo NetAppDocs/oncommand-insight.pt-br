@@ -1,0 +1,45 @@
+---
+permalink: config-admin/analyzing-slow-pc-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você receber chamadas de usuários da rede reclamando que seus computadores estão sendo executados lentamente, será necessário analisar o desempenho do host e identificar os recursos afetados. 
+---
+= Analisando o desempenho lento do PC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você receber chamadas de usuários da rede reclamando que seus computadores estão sendo executados lentamente, será necessário analisar o desempenho do host e identificar os recursos afetados.
+
+
+
+== Antes de começar
+
+Neste exemplo, o chamador deu o nome do host.
+
+
+
+== Passos
+
+. Abra o Insight em seu navegador.
+. Digite o nome do host na caixa *pesquisar ativos* e clique no nome do host nos resultados da pesquisa.
++
+A página _Asset_ do recurso é aberta.
+
+. Na página de ativos do host, examine os gráficos de desempenho no centro da página. Você pode querer mostrar diferentes tipos de dados, além da latência e IOPS que geralmente são pré-selecionados. Clique nas caixas de seleção para outros tipos de dados, como taxa de transferência, memória, CPU ou taxa de transferência IP, dependendo do tipo de dispositivo.
+. Para exibir uma descrição de um ponto em um gráfico, posicione o ponteiro do Mouse sobre o ponto.
+. Você também pode querer alterar o intervalo de tempo com a seleção na parte superior da página para ser de 3 horas até 7 dias ou todos os dados disponíveis.
+. Examine a lista de *principais recursos correlacionados* para ver se existem outros recursos com o mesmo padrão de atividade que o recurso base.
++
+O primeiro recurso na lista é sempre o recurso base.
+
++
+.. Clique em uma porcentagem vinculada ao lado de um recurso correlacionado para ver se o padrão de atividade correlacionada é para IOPS ou CPU para o recurso base e outro recurso.
+.. Clique na caixa de verificação de um recurso correlacionado para adicionar seus dados aos gráficos de desempenho.
+.. Clique no nome vinculado do recurso correlacionado para exibir sua página de ativo.
+
+
+. Para uma VM, como neste exemplo, localize o pool de armazenamento em *principais recursos correlacionados* e clique no nome do pool de armazenamento.
+

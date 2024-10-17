@@ -1,0 +1,24 @@
+---
+permalink: install-windows/oncommand-insight-installation-instructions.html 
+sidebar: sidebar 
+keywords:  
+summary: A instalação requer que você instale vários componentes do OnCommand Insight, incluindo o Insight Server, e o Data Warehouse e relatórios. 
+---
+= Instruções de instalação do Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A instalação requer que você instale vários componentes do OnCommand Insight, incluindo o Insight Server, e o Data Warehouse e relatórios. A instalação inclui as seguintes tarefas principais:
+
+* Transferir o instalador do OnCommand Insight
+* Instalando o servidor OnCommand Insight
+* Instalar licenças
+* Opcionalmente, a instalação do DWH e do Reporting (deve ser instalada em uma máquina separada ou máquina virtual)
+* Opcionalmente, a instalação de uma unidade de aquisição remota (RAU), que adquire informações dos recursos do dispositivo que residem atrás de um firewall, está localizada em um local remoto ou em uma rede privada
+* Para atualizações, atualizando relatórios do OnCommand Insight.
+
+
+Após a instalação, você deve configurar o Insight para adquirir informações sobre seu ambiente. As tarefas necessárias são descritas no _Guia de configuração e administração do OnCommand Insight_.

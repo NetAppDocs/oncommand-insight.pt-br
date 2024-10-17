@@ -1,0 +1,60 @@
+---
+permalink: config-admin/understanding-this-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Variáveis especiais na página customizável "dados adicionais" de um ativo permitem que você exiba facilmente informações adicionais que estão diretamente relacionadas ao ativo atual.' 
+---
+= Entendendo as variáveis "this"
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Variáveis especiais na página customizável "dados adicionais" de um ativo permitem que você exiba facilmente informações adicionais que estão diretamente relacionadas ao ativo atual.
+
+
+
+== Sobre esta tarefa
+
+Para usar as variáveis ""this"" em widgets na página de destino personalizável do seu ativo, siga as etapas abaixo. Para este exemplo, vamos adicionar um widget de tabela.
+
+[NOTE]
+====
+as variáveis são válidas apenas para a landing page customizável de um ativo. Eles não estão disponíveis para outros painéis do Insight. As variáveis disponíveis variam de acordo com o tipo de ativo.
+
+====
+
+
+== Passos
+
+. Navegue até uma página de ativo para um ativo de sua escolha. Para este exemplo, vamos escolher uma página de ativos de Máquina Virtual (VM). Consulte ou procure uma VM e clique no link para ir para a página de ativos dessa VM.
++
+A página de ativo da VM é aberta.
+
+. Clique no menu suspenso *Change view:* > *Additional Virtual Machine data* (dados adicionais da máquina virtual*) para acessar a página de destino personalizável desse ativo.
+. Clique no botão *Widget* e escolha o widget *Tabela*.
++
+O widget Tabela abre para edição. Por padrão, todos os armazenamentos são mostrados na tabela.
+
+. Queremos mostrar todas as máquinas virtuais. Clique no seletor de ativos e altere *Storage* para *Virtual Machine*.
++
+Todas as máquinas virtuais são agora mostradas na tabela.
+
+. Clique no botão * seletor de coluna*image:../media/column-picker-button.gif[""] e adicione o campo *nome do hipervisor* à tabela.
++
+O nome do hipervisor é mostrado para cada VM na tabela.
+
+. Nós nos preocupamos apenas com o hypervisor que hospeda a VM atual. Clique no botão *Filtrar por* do campo ** e selecione *nome do hipervisor*.
+. Clique em *any* e selecione a variável * this.host.name*. Clique no botão de verificação para guardar o filtro.
++
+image::../media/variable-this-example-1.gif[variável este exemplo 1]
+
+. A tabela agora mostra todas as VM hospedadas pelo hypervisor da VM atual. Clique em *Salvar*.
+
+
+
+
+== Resultados
+
+A tabela que você criou para esta página de ativos de máquina virtual será exibida para qualquer página de ativos de VM exibida. O uso da variável * USD this.host.name* no widget significa que somente a VM de propriedade do hypervisor dos ativos atuais será exibida na tabela.

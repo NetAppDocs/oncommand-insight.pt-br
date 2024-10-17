@@ -1,0 +1,29 @@
+---
+permalink: config-admin/acquisition-unit-status.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O ecrã Acquisition Unit (Unidade de aquisição) apresenta uma vista de todas as suas unidades de aquisição, incluindo o estado e quaisquer erros presentes.' 
+---
+= Estado da unidade de aquisição
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O ecrã Acquisition Unit (Unidade de aquisição) apresenta uma vista de todas as suas unidades de aquisição, incluindo o estado e quaisquer erros presentes.
+
+O status das unidades de aquisição Insight conetadas ao servidor é exibido na tabela *Admin* > *unidades de aquisição*. Esta tabela apresenta as seguintes informações para cada unidade de aquisição:
+
+* *Nome*
+* *IP*
+* *Status* é o estado de funcionamento da unidade de aquisição.
+* **Último comunicado**apresenta a última vez que uma fonte de dados ligada à unidade de aquisição é comunicada.
+* *Nota* exibe uma nota inserida pelo usuário relacionada à AU.
+
+
+Se uma unidade de aquisição na lista tiver um problema, o campo Status mostrará um círculo vermelho com informações breves sobre o problema. Deve investigar quaisquer problemas de unidade de aquisição, uma vez que estes provavelmente afetam a recolha de dados.
+
+Para reiniciar uma unidade de aquisição, passe o Mouse sobre a unidade e clique no botão _Restart Acquisition Unit_ que aparece.
+
+Para adicionar uma nota de texto, passe o Mouse sobre uma unidade de aquisição e clique no botão _Adicionar nota_ que aparece. Apenas a nota introduzida mais recentemente é apresentada.

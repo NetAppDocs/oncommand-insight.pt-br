@@ -1,0 +1,66 @@
+---
+permalink: howto/adding-the-snmp-integration-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados SNMP de integração fornece propriedades de configuração SNMP comuns semelhantes a outras fontes de dados baseadas em SNMP incluídas com as fontes de dados OnCommand Insight para Brocade e Cisco. 
+---
+= Criando uma fonte de dados de integração SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados SNMP de integração fornece propriedades de configuração SNMP comuns semelhantes a outras fontes de dados baseadas em SNMP incluídas com as fontes de dados OnCommand Insight para Brocade e Cisco.
+
+
+
+== Antes de começar
+
+Para usar com sucesso a fonte de dados SNMP de integração para coletar, o seguinte deve ser verdadeiro:
+
+* Já deve ter importado um pacote de integração que irá utilizar para esta fonte de dados SNMP.
+* Todos os dispositivos de destino compartilham as mesmas credenciais.
+* Todos os dispositivos de destino implementam os objetos SNMP referenciados pelo pacote de integração configurado.
+
+
+
+
+== Sobre esta tarefa
+
+Para criar uma fonte de dados de integração SNMP, escolha fornecedor "integração" e modelo "SNMP" no assistente de criação da fonte de dados.
+
+
+
+== Passos
+
+. Na IU da Web do OnCommand Insight, clique em *Admin* > *fontes de dados*
+. Clique em * Adicionar*
+. Introduza um nome para a fonte de dados
+. Para Fornecedor, selecione *integração*
+. Para modelo, selecione *SNMP*
++
+image::../media/add-integration-ds.gif[adicionar integração ds]
+
+. Para o que coletar, verifique *integração*
++
+Este é o único pacote nesta fonte de dados e é verificado por padrão:
+
+. Clique em *Configuração*
+. Introduza os endereços IP dos sistemas a partir dos quais irá recolher dados SNMP
+. Selecione um Pacote de integração SNMP importado
+. Defina o intervalo de enquete de integração
+. Selecione a versão SNMP
+. Introduza a cadeia de carateres da comunidade SNMP
++
+Para SNMP V1 e V2.
+
+. Adicione o nome de usuário e a senha dos sistemas dos quais você coletará dados.
++
+Para SNMP V3.
+
+. Clique em *Configuração avançada*
++
+São apresentadas as predefinições da Configuração Avançada. Faça quaisquer alterações a estas definições que sejam necessárias.
+
+

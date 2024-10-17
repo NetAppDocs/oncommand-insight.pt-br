@@ -1,0 +1,20 @@
+---
+permalink: reporting/data-model-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight fornece vários modelos de dados para uso no desenvolvimento de relatórios. Cada modelo de dados é uma agregação que resume os dados para que possam ser consultados e pesquisados. Por exemplo, relatórios sobre Planejamento de capacidade usam o modelo de dados de capacidade. 
+---
+= Visão geral do modelo de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight fornece vários modelos de dados para uso no desenvolvimento de relatórios. Cada modelo de dados é uma agregação que resume os dados para que possam ser consultados e pesquisados. Por exemplo, relatórios sobre Planejamento de capacidade usam o modelo de dados de capacidade.
+
+Os modelos de dados de relatórios empresariais da OnCommand Insight fornecem elementos de dados e relações interativas entre elementos de dados que geram visualizações de negócios dos dados. Usando os elementos de dados e relacionamentos, você pode criar relatórios usando as ferramentas de geração de relatórios do IBM Cognos Analytics recomendadas pelo NetApp.
+
+O OnCommand Insight também fornece marts de dados que podem ser usados para desenvolver suas próprias consultas SQL. Há uma distinção entre esses marts de dados de consulta SQL e os modelos de dados usados em relatórios. Os modelos individuais de dados de relatório OnCommand Insight usam o esquema de banco de dados OnCommand Insight subjacente fornecido nos data marts; no entanto, os modelos de dados usam tabelas adicionais e, às vezes, novos elementos nas tabelas. Por exemplo, o modelo de dados inclui uma tabela de fatos de capacidade mensal no modelo de dados de capacidade de armazenamento que é baseada na tabela de fatos de capacidade do esquema do banco de dados e data mart. O modelo de dados filtra os valores da tabela de esquema do banco de dados para mostrar apenas as informações do mês.
+
+Outro exemplo de diferença entre o esquema do banco de dados usado em data marts e o modelo de dados está na tabela violação e na coluna tipo de violação. O modelo de dados traduz valores com nomes programáticos no banco de dados para corresponder ao texto exibido na interface da Web do OnCommand Insight.

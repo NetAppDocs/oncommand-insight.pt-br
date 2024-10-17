@@ -1,0 +1,22 @@
+---
+permalink: howto/processing-cloud-cost-data-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: O Insight coleta dados do seu relatório de faturamento da AWS uma vez por mês no mês anterior e reflete o custo de nuvem finalizado desse mês. 
+---
+= Processamento de dados de custo da nuvem AWS no Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Insight coleta dados do seu relatório de faturamento da AWS uma vez por mês no mês anterior e reflete o custo de nuvem finalizado desse mês.
+
+Depois de configurar sua(s) fonte(s) de dados de custo do AWS Cloud, se você já teve relatórios de faturamento gerados para o S3, você receberá até três meses de dados passados imediatamente após a primeira enquete de origem de dados.
+
+O Insight coleta dados finais da AWS uma vez por mês. Essa coleta ocorre alguns dias após o fechamento do mês anterior, permitindo que a AWS Time finalize os dados reais.
+
+Os dados de faturamento da AWS são enviados ao Data Warehouse da Insight para uso em relatórios.
+
+Tenha em mente que cada fonte de dados deve ser configurada para uma única conta/usuário faturável.

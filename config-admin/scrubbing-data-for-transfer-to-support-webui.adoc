@@ -1,0 +1,46 @@
+---
+permalink: config-admin/scrubbing-data-for-transfer-to-support-webui.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Os clientes que têm ambientes seguros precisam se comunicar com o Serviço de Atendimento ao Cliente NetApp para solucionar problemas que surgem sem comprometer suas informações de banco de dados. Os utilitários OnCommand Insight Scrub permitem que você configure um dicionário abrangente de palavras-chave e padrões para que você possa "limpar" dados confidenciais e enviar arquivos limpos para o suporte ao cliente.' 
+---
+= Análise de dados para transferência para suporte
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os clientes que têm ambientes seguros precisam se comunicar com o Serviço de Atendimento ao Cliente NetApp para solucionar problemas que surgem sem comprometer suas informações de banco de dados. Os utilitários OnCommand Insight Scrub permitem que você configure um dicionário abrangente de palavras-chave e padrões para que você possa "limpar" dados confidenciais e enviar arquivos limpos para o suporte ao cliente.
+
+
+
+== Passos
+
+. Na IU da Web, clique em *Admin* e selecione *solução de problemas*.
+. Na parte inferior da página na área outras tarefas, clique no link *Scrub Utilities*.
++
+Existem várias seções de limpeza: Pesquisa em Dicionário, dados de Scrub e dicionário de compilação, palavras-chave personalizadas e expressões regulares.
+
+. 
++
+.. Na seção pesquisar no dicionário**, digite um código para exibir o valor que ele substitui ou insira um valor para ver o código que o substitui. Observação: Antes de fazer uma pesquisa, você deve *construir* o dicionário para identificar valores a serem removidos dos dados de suporte.
+
+
+. Para adicionar suas próprias palavras-chave para limpar os dados de suporte, na seção *palavras-chave personalizadas*, clique em menu:ações[Adicionar palavra-chave personalizada]. Digite uma palavra-chave e clique em *Salvar*. A palavra-chave é adicionada ao dicionário.
+. Expandir *padrões (regexp)*. Clique em *Add* para obter a caixa de diálogo para inserir um novo padrão.
+. Para usar uma expressão regular para identificar palavras ou frases a serem esfregadas, insira um padrão ou padrões na seção *expressões regulares*. Clique em menu:ações[Adicionar expressão regular], digite um Nome para o padrão e a expressão regular nos campos e clique em *Salvar*. A informação foi adicionada ao dicionário.
++
+[NOTE]
+====
+Os padrões devem ser englobados por parênteses redondos para identificar um grupo de captura de expressão regular.
+
+====
+. Na seção ** Build Dictionary**, clique em *Build* para iniciar a compilação do dicionário de todas as palavras identificadas como sensíveis do banco de dados do OnCommand Insight.
++
+Após a conclusão, você verá um aviso informando que o dicionário revisado está disponível. A descrição da base de dados inclui uma linha que indica quantas palavras-chave estão no dicionário. Verifique suas palavras-chave no dicionário para a precisão. Se você encontrar problemas e quiser reconstruir o dicionário, clique em *Redefinir* no bloco Banco de dados para remover todas as palavras-chave coletadas do banco de dados do OnCommand Insight do dicionário. Como o prompt aconselha, nenhuma outra palavra-chave será excluída. Retorne aos utilitários Scrub e insira suas palavras-chave personalizadas novamente.
+
+. Depois de criar um dicionário Scrub, você pode usá-lo para esfregar um log, XML ou outro arquivo de texto para tornar os dados anônimos.
+. Para limpar um log, XML ou outro arquivo de texto, na seção *Scrub data*, navegue para localizar o arquivo e clique em *Scrub file*.
+

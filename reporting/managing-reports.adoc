@@ -1,0 +1,16 @@
+---
+permalink: reporting/managing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Para cada relatório, você pode selecionar o link mais na coluna ações e acessar todas as operações do relatório, como definir propriedades do relatório, agendar relatórios ou enviar relatórios por e-mail. Os administradores têm mais opções de gerenciamento disponíveis do que outros usuários. 
+---
+= Gerenciamento de relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para cada relatório, você pode selecionar o link *mais* na coluna ações e acessar todas as operações do relatório, como definir propriedades do relatório, agendar relatórios ou enviar relatórios por e-mail. Os administradores têm mais opções de gerenciamento disponíveis do que outros usuários.
+
+Os administradores podem definir permissões para outros usuários de relatórios de acordo com suas funções do OnCommand Insight.

@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-a-user-account.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Qualquer utilizador com Privileges de administrador pode eliminar uma conta de utilizador, quer quando já não é utilizada (para uma definição de utilizador local), quer para forçar o OnCommand Insight a redescobrir as informações do utilizador na próxima vez que o utilizador iniciar sessão (para um utilizador LDAP).' 
+---
+= Eliminar uma conta de utilizador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Qualquer utilizador com Privileges de administrador pode eliminar uma conta de utilizador, quer quando já não for utilizada (para uma definição de utilizador local), quer para forçar o OnCommand Insight a redescobrir as informações do utilizador na próxima vez que o utilizador iniciar sessão (para um utilizador LDAP).
+
+
+
+== Passos
+
+. Faça login no OnCommand Insight com o Privileges do administrador.
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *Configuração*.
+. Clique na guia *usuários*.
+. Localize a linha que exibe a conta de usuário que deseja excluir.
+. À direita das informações do usuário, clique no ícone *Excluir conta de usuário* "*x*".
+. Clique em *Salvar*.
+

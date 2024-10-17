@@ -1,0 +1,48 @@
+---
+permalink: config-admin/assigning-business-entities-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Você pode atribuir uma entidade de negócios a um ativo ( host, porta, armazenamento, switch, máquina virtual, qtree, compartilhamento, volume ou volume interno) sem ter associado a entidade de negócios a um aplicativo; no entanto, entidades de negócios são atribuídas automaticamente a um ativo se esse ativo estiver associado a um aplicativo relacionado a uma entidade de negócios.' 
+---
+= Atribuindo entidades de negócios a ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atribuir uma entidade de negócios a um ativo ( host, porta, armazenamento, switch, máquina virtual, qtree, compartilhamento, volume ou volume interno) sem ter associado a entidade de negócios a um aplicativo; no entanto, as entidades de negócios são atribuídas automaticamente a um ativo se esse ativo estiver associado a um aplicativo relacionado a uma entidade de negócios.
+
+
+
+== Antes de começar
+
+Você já deve ter criado uma entidade de negócios.
+
+
+
+== Sobre esta tarefa
+
+Embora você possa atribuir entidades de negócios diretamente aos ativos, é recomendável atribuir aplicativos a ativos e, em seguida, atribuir entidades de negócios a ativos.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize o ativo ao qual você deseja aplicar a entidade de negócios fazendo um dos seguintes procedimentos:
++
+** Clique no ativo no Painel de ativos.
+** Clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]na barra de ferramentas para exibir a caixa *pesquisar ativos*, digite o nome do ativo e, em seguida, selecione o ativo na lista.
+
+
+. Na seção *dados do usuário* da página de ativo, posicione o cursor sobre *nenhum* ao lado de *entidades empresariais* e clique image:../media/pencil-icon-landing-page-be.gif[""]em .
++
+A lista de entidades comerciais disponíveis é exibida.
+
+. Digite a caixa *pesquisar* para filtrar a lista de uma entidade específica ou rolar a lista para baixo; selecione uma entidade de negócio na lista.
++
+Se a entidade comercial escolhida estiver associada a um aplicativo, o nome do aplicativo será exibido. Neste caso, a palavra "serived" aparece ao lado do nome da entidade comercial. Se você quiser manter a entidade apenas para o ativo e não para o aplicativo associado, você pode substituir manualmente a atribuição do aplicativo.
+
+. Para substituir um aplicativo derivado de uma entidade de negócios, coloque o cursor sobre o nome do aplicativo e clique image:../media/trash-can-query.gif[""]em , selecione outra entidade de negócios e selecione outro aplicativo na lista.
+

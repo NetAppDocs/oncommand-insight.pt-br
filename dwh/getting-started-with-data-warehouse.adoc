@@ -1,0 +1,41 @@
+---
+permalink: dwh/getting-started-with-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight Data Warehouse permite configurar as opções necessárias antes de gerar relatórios que incluam seus dados. O Data Warehouse contém muitos recursos; no entanto, você precisa usar apenas alguns deles para começar. Para configurar o Data Warehouse, você usa opções no Data Warehouse Portal. 
+---
+= Introdução ao Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight Data Warehouse permite configurar as opções necessárias antes de gerar relatórios que incluam seus dados. O Data Warehouse contém muitos recursos; no entanto, você precisa usar apenas alguns deles para começar. Para configurar o Data Warehouse, você usa opções no Data Warehouse Portal.
+
+
+
+== Sobre esta tarefa
+
+Para configurar o Armazém de dados OnCommand Insight, um administrador de armazenamento deve concluir os seguintes procedimentos:
+
+* Aceder ao portal Data Warehouse
+* Conetando o Data Warehouse aos servidores OnCommand Insight
+* Construindo o banco de dados a partir do histórico
+* Configurando processos de backup e restauração
+
+
+Além disso, um administrador de armazenamento pode querer concluir os seguintes procedimentos.
+
+* Acessando o MySQL usando a interface de linha de comando
+* Agendamento de compilações diárias
+* Configuração de alocação múltipla em relatórios
+* Solução de problemas de configuração
++
+** Por que não consigo ver minhas anotações?
+** O que devo fazer com pontos de construção históricos falhados?
+
+
+
+
+Se esta for a primeira vez que utilizar o Portal do Data Warehouse, tem de configurar o Data Warehouse antes de qualquer informação poder aparecer na página trabalhos. Você também precisa repetir esse processo de configuração após redefinir o banco de dados do Data Warehouse.

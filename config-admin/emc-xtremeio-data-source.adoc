@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-xtremeio-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Para configurar a fonte de dados do EMC XtremIO, você deve ter o endereço de host do servidor de gerenciamento XtremIO e uma conta com o administrador Privileges. 
+---
+= Fonte de dados EMC XtremIO
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar a fonte de dados do EMC XtremIO (HTTP), você deve ter o endereço de host do XtremIO Management Server (XMS) e uma conta com o administrador Privileges.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados EMC XtremIO. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Disco (SSD)
+ a| 
+Disco
+
+
+
+ a| 
+Cluster
+ a| 
+Armazenamento
+
+
+
+ a| 
+Controlador
+ a| 
+Nó de storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Mapa LUN
+ a| 
+Mapa de volume
+
+
+
+ a| 
+Iniciador, alvo
+ a| 
+Máscara de volume
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Um endereço IP de cada servidor de gerenciamento XtremIO
+* Uma conta com o Administrador Privileges
+* Acesso à porta 443 (HTTPS)
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Anfitrião XMS
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do XtremIO Management Server
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de usuário do XtremIO Management Server
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha para o XtremIO Management Server
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Porta de TCP
+ a| 
+Porta TCP usada para conetar ao XTremIO Management Server (padrão 443 )
+
+
+
+ a| 
+Intervalo de pesquisa de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 60 minutos)
+
+
+
+ a| 
+Tempo limite da ligação (seg.)
+ a| 
+Tempo limite da ligação (predefinição 60 segundos)
+
+
+
+ a| 
+Intervalo de pesquisa de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

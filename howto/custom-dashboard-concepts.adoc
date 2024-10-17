@@ -1,0 +1,48 @@
+---
+permalink: howto/custom-dashboard-concepts.html 
+sidebar: sidebar 
+keywords:  
+summary: Painéis e widgets personalizados permitem uma grande flexibilidade na forma como os dados são exibidos. Aqui estão alguns conceitos para ajudar você a aproveitar ao máximo seus painéis personalizados. Cada conceito é explicado em maior detalhe nas seções a seguir. 
+---
+= Conceitos personalizados do Dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Painéis e widgets personalizados permitem uma grande flexibilidade na forma como os dados são exibidos. Aqui estão alguns conceitos para ajudar você a aproveitar ao máximo seus painéis personalizados. Cada conceito é explicado em maior detalhe nas seções a seguir.
+
+*Variáveis*
+
+Variáveis permitem alterar os dados exibidos em alguns ou todos os widgets em um painel de uma vez. Ao definir cada widget para usar uma variável comum, as alterações feitas em um só lugar fazem com que os dados exibidos em cada widget sejam atualizados automaticamente.
+
+* Múltiplas consultas e/ou expressões*
+
+Cada widget de séries temporais (gráficos de linha, spline, área ou área empilhada) pode ter até cinco consultas e/ou expressões para determinar quais dados exibir, permitindo comparar diferentes conjuntos de dados em um único gráfico. Por exemplo, você pode ter um gráfico de linha mostrando IOPS para armazenamento e VM, ou um único gráfico comparando taxa de transferência e latência para todos os pools de armazenamento.
+
+*Rollup e agrupamento*
+
+Os dados exibidos em cada widget são agrupados a partir dos pontos de dados coletados. Você pode optar por implementar esses dados de várias maneiras:
+
+* Média: Acumula dados como a média dos dados subjacentes
+* Max: Amplia os dados até o máximo dos dados subjacentes
+* Min: Acumula dados ao mínimo dos dados subjacentes
+* Soma: Acumula dados como a soma dos dados subjacentes
+
+
+Por padrão, todos os dados subjacentes são agrupados em uma única entrada (todos) no gráfico ou tabela. Em vez disso, você pode optar por implantar dados para um atributo específico, como Data Center ou Tier, para distribuir os dados subjacentes aos grupos desejados. Seu widget exibirá dados somente para os atributos selecionados.
+
+Você pode agrupar dados em um widget de tabela de acordo com o atributo que você escolher. Por exemplo, você pode optar por agrupar sua tabela por data center. Os grupos podem ser expandidos ou colapsados à vontade. Os dados de desempenho em uma tabela são agrupados no cabeçalho do grupo de acordo com o método de rollup definido no widget (média, máx, mín ou soma).
+
+Os widgets de tabela podem ser classificados por qualquer coluna e as colunas podem ser movidas ou redimensionadas conforme necessário.
+
+* Superior / inferior *
+
+Use isso para limitar o conjunto de resultados em widgets de gráfico, para selecionar se deseja exibir os resultados N superiores em seu widget ou os resultados N inferiores. Você pode escolher essa opção quando os dados não são agrupados ou são agrupados por um atributo específico.
+
+*Substituir o tempo do painel*
+
+Por padrão, a maioria dos widgets que você adiciona a um painel mostra dados de acordo com a configuração de intervalo de tempo do painel (3h, 24h, 3D, 7D, 30d ou intervalo personalizado). No entanto, você pode substituir essa configuração de hora em widgets individuais para forçá-los a mostrar dados em um contexto de tempo específico, independentemente da configuração de hora do painel.
+
+Esses conceitos são explicados em maior detalhe na seção a seguir.

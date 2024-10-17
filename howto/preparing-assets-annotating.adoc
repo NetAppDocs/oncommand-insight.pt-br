@@ -1,0 +1,14 @@
+---
+permalink: howto/preparing-assets-annotating.html 
+sidebar: sidebar 
+keywords:  
+summary: Anotar permite associar etiquetas ou rótulos específicos aos ativos que você escolher, o que auxilia no gerenciamento e relatórios desses ativos. 
+---
+= Preparar ativos: Anotar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anotar permite associar etiquetas ou rótulos específicos aos ativos que você escolher, o que auxilia no gerenciamento e relatórios desses ativos.

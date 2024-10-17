@@ -1,0 +1,40 @@
+---
+permalink: config-admin/rolling-back-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Se um patch de origem de dados não estiver funcionando da maneira que você esperava, você pode revertê-lo. Reverter um patch exclui-o e restaura a versão anterior como era antes que esse patch fosse aplicado. 
+---
+= Reverter um patch de origem de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se um patch de origem de dados não estiver funcionando da maneira que você esperava, você pode revertê-lo. Reverter um patch exclui-o e restaura a versão anterior como era antes que esse patch fosse aplicado.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *patches*.
+. Em *patches atualmente em revisão*, clique no nome vinculado do patch que parece não ter êxito.
+. Na página patches da fonte de dados, examine estas informações:
++
+** *Resumo* descreve quando o patch foi aplicado, as fontes de dados afetadas e comentários sobre o patch de você ou de outros membros da sua equipe.
+** *Fontes de dados afetadas* lista todas as fontes de dados que estão sendo corrigidas e inclui uma comparação do status antes e depois de patches.
+
+
+. Para exibir os detalhes de uma fonte de dados que não está processando o patch com êxito, clique no link *Nome*.
++
+.. Verifique as informações resumidas.
+.. Verifique a linha do tempo *evento* para ver qualquer configuração ou dados de desempenho que possam estar afetando essa fonte de dados.
+
+
+. Se você concluir que o patch não será bem-sucedido, clique na seta de volta do navegador para retornar à página de resumo dos patches.
+. Clique em *Retroceder* para remover esse patch.
++
+Se você souber de um patch diferente que é mais provável que seja bem-sucedido, clique em *Substituir patch* e faça o upload do novo patch.
+
+

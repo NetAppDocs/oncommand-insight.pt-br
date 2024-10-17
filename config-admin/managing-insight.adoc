@@ -1,0 +1,42 @@
+---
+permalink: config-admin/managing-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight monitora seu ambiente, permitindo que você pesquise possíveis problemas antes que uma crise seja relatada. O Painel de ativos fornece gráficos de pizza resumidos, mapas de calor para IOPS e um gráfico interativo dos 10 principais pools de armazenamento utilizados. 
+---
+= Gerenciando o Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight monitora seu ambiente, permitindo que você pesquise possíveis problemas antes que uma crise seja relatada. O Painel de ativos fornece gráficos de pizza resumidos, mapas de calor para IOPS e um gráfico interativo dos 10 principais pools de armazenamento utilizados.
+
+
+
+== Passos
+
+. Abra o Insight**Assets Dashboard** e mova o cursor sobre os gráficos de pizza para examinar a distribuição de ativos nesses três gráficos:
++
+** A capacidade por fornecedor mostra a capacidade bruta total de storage de cada fornecedor.
+** Capacidade por camada mostra a capacidade total utilizável para cada camada de storage.
+** O gráfico de pizza de portas de switch mostra os fabricantes de portas e mostra a porcentagem de portas usadas.
+
+
+. Veja *fatos sobre o seu ambiente* para ver informações sobre a capacidade usada do seu ambiente, a eficiência da capacidade, os recursos FC consumidos e as estatísticas de infraestrutura virtual.
+. Posicione o cursor sobre uma barra de pool de armazenamento no gráfico *Top 10 pools utilizados* para visualizar a capacidade usada e não utilizada do pool de armazenamento.
+. Clique em qualquer nome de ativo que apareça em texto grande (o que indica que o ativo tem problemas) no mapa de calor *Storage IOP* para exibir uma página resumindo o estado atual desse ativo.
+. No canto inferior direito do Painel *Assets*, clique em qualquer nome de ativo que apareça em texto grande (o que indica que o ativo tem problemas) no mapa de calor *Virtual Machine IOPS* para exibir uma página resumindo o estado atual do ativo.
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Observe quaisquer áreas que mostrem círculos vermelhos sólidos.
++
+Na IU do OnCommand Insightweb, problemas potenciais são marcados com um círculo vermelho sólido.
+
+. Clique em *fontes de dados* para examinar uma lista de todas as fontes de dados monitoradas.
++
+Examine qualquer fonte de dados com uma coluna *Status* contendo uma mensagem com um círculo vermelho sólido e com um *Impact* listado como High ou Medium. Estes estão no topo da mesa. Os problemas com essas fontes de dados afetam uma parte significativa da sua rede, que você precisa abordar.
+
+. Clique em *unidades de aquisição* para anotar o estado de cada endereço IP que executa o Insight e reiniciar uma unidade de aquisição, se necessário
+. Clique em *Saúde* para ver o monitoramento de instâncias de alto nível dos servidores Insight.
+

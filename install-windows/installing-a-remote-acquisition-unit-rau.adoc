@@ -1,0 +1,79 @@
+---
+permalink: install-windows/installing-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: Instale uma ou mais RAUs em seu ambiente OnCommand Insight. 
+---
+= Instalar uma unidade de aquisição remota (RAU)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instale uma ou mais RAUs em seu ambiente OnCommand Insight.
+
+
+
+== Antes de começar
+
+Você deve ter concluído todos os pré-requisitos de instalação.
+
+Pelo menos uma porta precisa estar aberta e disponível entre o servidor RAU e o servidor OnCommand Insight para encaminhar as informações de alteração para o servidor. Se você não tiver certeza sobre isso, valide-o abrindo um navegador da Web no computador RAU e direcionando-o para o servidor OnCommand Insight:
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+A porta de aquisição é padrão para 443, mas pode ter sido alterada durante a instalação do servidor. Se a conexão for bem-sucedida, você verá uma página de resposta do OnCommand Insight indicando uma porta aberta e disponível entre a RAU e o servidor OnCommand Insight.
+
+
+
+== Passos
+
+. Faça login no servidor RAU usando uma conta com o administrador Privileges.
+. Abra o Windows Explorer e navegue até o diretório onde o arquivo de instalação RAU está localizado.
+. Clique duas vezes `.MSI` em ficheiro para iniciar a instalação.
+. Clique em *Next* (seguinte) para continuar para a janela que mostra o Contrato de Licença. Leia isto e aceite os termos do Contrato de Licença e clique em *seguinte*.
+. Selecione para instalar a RAU em um disco rígido local ou todo o recurso em um disco rígido local. (Você pode verificar o link uso do disco para garantir que você tenha espaço suficiente - 116MB é necessário.) Clique em *seguinte*.
+. Na janela Configurar, defina estes parâmetros específicos do seu site:
++
+** *OnCommand Insight* *Nome ou Endereço do servidor* - nome de host ou endereço IP para identificar o servidor OnCommand Insight. A RAU usa esse nome/IP para abrir um link de comunicação com o servidor. Se você especificar um nome de host, verifique se ele pode ser resolvido através do DNS.
+** *Nome da unidade de aquisição* - nome exclusivo que identifica a RAU.
+** *OnCommand Insight Secured Remote Acquisition Port (HTTPS)* - porta utilizada pelas unidades de aquisição remota para enviar informações de alteração de ambiente para o servidor OnCommand Insight. Essa configuração deve corresponder ao valor digitado ao instalar o servidor OnCommand Insight e deve ser o mesmo em todas as RAUs.
+** Introduza a palavra-passe do utilizador _acquisition_.
+
+
+. Reveja as suas seleções. Clique em *voltar* para voltar e fazer alterações. Clique em *seguinte*.
+. Clique em *Instalar* para iniciar a instalação.
++
+Aguarde até que a instalação seja concluída. Isso deve levar aproximadamente 5 a 10 minutos.
+
+
+
+
+
+== Depois de terminar
+
+Quando a instalação estiver concluída, é apresentada uma janela final. Clique na caixa *Start Remote Acquisition Service* (Iniciar serviço de aquisição remota) para iniciar a RAU e clique em *Finish* (concluir) para terminar esta operação.
+
+Se seus dados começarem a adquirir, você estará tudo definido; _não_ precisará sincronizar o servidor e a RAU conforme indicado abaixo.
+
+
+
+== Sincronizar servidor e RAU
+
+
+IMPORTANT: Se os dados não começarem a adquirir após a instalação da Unidade de aquisição Remota, sincronize a RAU com o servidor OnCommand Insight. Siga estes passos:
+
+. No sistema servidor OnCommand Insight, inicie a ferramenta *SecurityAdmin* no modo interativo
++
+ securityadmin -i
+. Altere a senha do usuário _acquisition_ do Insight Server para uma senha de sua escolha. *Tome nota desta senha*, pois você a exigirá abaixo.
+. Reinicie o servidor/LAU.
+. No sistema de Unidade de aquisição Remota (RAU), inicie a ferramenta *SecurityAdmin* no modo interativo. Você precisará da senha anotada no passo 2 acima.
++
+ securityadmin -i
+. Altere a senha do usuário _acquisition_ para a senha usada na etapa 2.
+. Reinicie a RAU.
+

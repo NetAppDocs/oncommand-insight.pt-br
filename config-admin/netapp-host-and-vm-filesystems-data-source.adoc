@@ -1,0 +1,119 @@
+---
+permalink: config-admin/netapp-host-and-vm-filesystems-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Você pode usar a fonte de dados de sistemas de arquivos NetApp e VM para recuperar detalhes do sistema de arquivos e mapeamentos de recursos de armazenamento para todos os sistemas de arquivos de host e VM (máquina virtual) e para todas as VMs Linux suportadas (aquelas que são virtualmente mapeadas apenas) existentes no servidor Insight que são anotadas com o grupo de recursos de computação configurado (CRG).' 
+---
+= Fonte de dados dos sistemas de arquivos VM e host NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a fonte de dados de sistemas de arquivos NetApp e VM para recuperar detalhes do sistema de arquivos e mapeamentos de recursos de armazenamento para todos os sistemas de arquivos de host e VM (máquina virtual) do Microsoft Windows e para todas as VMs Linux suportadas (aquelas que são mapeadas virtualmente somente) existentes no servidor Insight que são anotadas com o grupo de recursos de computação (CRG) configurado.
+
+
+
+== Requisitos gerais
+
+* Esse recurso deve ser adquirido separadamente.
++
+Pode contactar o seu representante da Insight para obter assistência.
+
+* Você deve verificar a matriz de suporte do Insight para verificar se o sistema operacional do host ou da máquina virtual é suportado.
++
+Para verificar se os links de sistemas de arquivos para recursos de storage são criados, verifique se o tipo e a versão relevantes do fornecedor de storage ou virtualização relatam os dados de identificação de volume ou disco virtual necessários.
+
+
+
+
+
+== Requisitos do Microsoft Windows
+
+* Esta fonte de dados usa estruturas de dados WMI (Window Management Instrumentation) para recuperar dados.
++
+Este serviço deve estar operacional e disponível remotamente. Em particular, a porta 135 deve estar acessível e deve ser aberta se estiver atrás de um firewall.
+
+* Os usuários de domínio do Windows devem ter as permissões apropriadas para acessar estruturas WMI.
+* As permissões de administrador são necessárias.
+* Portas TCP dinâmicas atribuídas 1024-65535 para Windows 2003 e mais antigas
+* Portas 49152--65535 para Windows 2008
+
+
+[NOTE]
+====
+Como regra geral, ao tentar usar um firewall entre o Insight, uma AU e essa fonte de dados, você deve consultar sua equipe da Microsoft para identificar as portas que eles acreditam que serão necessárias.
+
+====
+
+
+== Requisitos do Linux
+
+* Esta fonte de dados usa uma conexão Secure Shell (SSH) para executar comandos em VMs Linux.
++
+O serviço SSH deve estar operacional e disponível remotamente. Em particular, a porta 22 deve estar acessível e deve ser aberta se estiver atrás de um firewall.
+
+* Os usuários SSH devem ter permissões sudo para executar comandos somente leitura em VMs Linux.
++
+Você deve usar a mesma senha para fazer login no SSH e responder a qualquer desafio de senha sudo.
+
+
+
+
+
+== Recomendações de utilização
+
+* Você deve anotar um grupo de hosts e máquinas virtuais que tenham credenciais de sistema operacional comuns usando a mesma anotação Compute Resource Group.
++
+Cada grupo tem uma instância dessa fonte de dados descobrindo detalhes do sistema de arquivos desses hosts e máquinas virtuais.
+
+* Se você tiver uma instância dessa fonte de dados para a qual a taxa de sucesso é baixa (por exemplo, o OnCommand Insight está descobrindo detalhes do sistema de arquivos para apenas 50 de hosts 1000 e máquinas virtuais em um grupo), você deve mover os hosts e máquinas virtuais para as quais a descoberta é bem-sucedida em um grupo de recursos de computação separado.
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Nome de utilizador
+ a| 
+Usuário do sistema operacional com direitos apropriados para recuperar dados do sistema de arquivos para usuários do sistema operacional Windows, isso deve incluir o prefixo do domínio.
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe para o utilizador do sistema operativo
+
+
+
+ a| 
+Grupo de recursos de computação
+ a| 
+O valor de anotação usado para sinalizar máquinas virtuais e host para a fonte de dados descobre sistemas de arquivos. Um valor em branco indica que a fonte de dados descobre sistemas de arquivos para todos os hosts e máquinas virtuais não anotados atualmente com qualquer Compute Resource Group.
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de pesquisa de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 360 minutos)
+
+|===

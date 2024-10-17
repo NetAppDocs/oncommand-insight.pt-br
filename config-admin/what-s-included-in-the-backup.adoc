@@ -1,0 +1,49 @@
+---
+permalink: config-admin/what-s-included-in-the-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: Backups semanais e sob demanda podem ser usados para solução de problemas ou migração. 
+---
+= O que está incluído no backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Backups semanais e sob demanda podem ser usados para solução de problemas ou migração.
+
+O backup semanal ou sob demanda inclui o seguinte:
+
+* Dados de inventário
+* Dados de desempenho (se selecionados para inclusão no backup)
+* Fontes de dados e configurações de fonte de dados
+* Pacotes de integração
+* Unidades de aquisição remota
+* Configurações ASUP/proxy
+* Definições de localização de cópia de segurança
+* Definições de localização de arquivo
+* Definições de notificação
+* Usuários
+* Políticas de performance
+* Entidades e aplicações empresariais
+* Regras e definições de resolução do dispositivo
+* Painéis e widgets
+* Painéis e widgets de página de ativos personalizados
+* Consultas
+* Anotações e regras de anotação
+
+
+O backup semanal não inclui:
+
+* Configurações da ferramenta de segurança / informações do Vault (backup via processo CLI separado)
+* Logs (podem ser salvos em um arquivo .zip sob demanda)
+* Dados de desempenho (se não forem selecionados para inclusão no backup)
+* Licenças
+
+
+[NOTE]
+====
+Se você optar por incluir dados de desempenho no backup, o backup dos últimos sete dias de dados será feito. Os dados restantes estarão no arquivo se você tiver esse recurso ativado.
+
+====

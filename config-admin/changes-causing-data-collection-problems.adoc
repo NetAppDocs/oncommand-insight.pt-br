@@ -1,0 +1,29 @@
+---
+permalink: config-admin/changes-causing-data-collection-problems.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você estiver enfrentando problemas de coleta de dados no OnCommand Insight, as alterações no ambiente provavelmente serão uma causa. Como regra geral de manutenção, você também deve acomodar quaisquer alterações em seu ambiente no Insight. 
+---
+= Alterações que causam problemas de coleta de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você estiver enfrentando problemas de coleta de dados no OnCommand Insight, as alterações no ambiente provavelmente serão uma causa. Como regra geral de manutenção, você também deve acomodar quaisquer alterações em seu ambiente no Insight.
+
+Você pode usar esta lista de verificação para identificar alterações na rede que possam estar causando problemas:
+
+* Você alterou alguma senha? Essas senhas foram alteradas no Insight?
+* Você removeu um dispositivo da rede? Você também deve remover o dispositivo do OnCommand Insight para evitar que ele seja redescoberto e reintroduzido.
+* Você atualizou o software de infraestrutura (como HP CommandView EVA ou EMC Solutions Enabler)?
++
+Certifique-se de que as versões apropriadas das ferramentas do cliente estão instaladas na unidade de aquisição. Se as falhas na fonte de dados persistirem, você precisa entrar em Contato com o suporte técnico para solicitar assistência e, possivelmente, um patch de origem de dados.
+
+* Todas as suas unidades de aquisição OnCommand Insight estão a utilizar a mesma versão OnCommand Insight? Se as unidades de aquisição remota e a unidade de aquisição local estiverem a executar versões diferentes do OnCommand Insight, instale a mesma versão em todas as unidades para corrigir o problema de recolha de dados.
++
+Se necessitar de instalar uma nova versão do OnCommand Insight em todas as unidades de aquisição, aceda ao site de suporte e transfira a versão correta.
+
+* Você alterou algum nome de domínio ou adicionou um novo domínio? Tem de atualizar os métodos de Resolução do dispositivo (anteriormente Auto Resolution).
+

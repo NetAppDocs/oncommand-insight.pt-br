@@ -1,0 +1,26 @@
+---
+permalink: reporting/enabling-security-headers.html 
+sidebar: sidebar 
+keywords:  
+summary: Os cabeçalhos HTTP podem ser configurados para melhorar a segurança geral do aplicativo da Web Cognos Analytics. 
+---
+= Ativar cabeçalhos de segurança
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os cabeçalhos HTTP podem ser configurados para melhorar a segurança geral do aplicativo da Web Cognos Analytics.
+
+Para adicionar os cabeçalhos de resposta:
+
+* Faça login na IU do Cognos Analytics e navegue até *Manage
+* Adicione a seguinte chave/valor e aplique:
++
+** Chave: `BIHeaderFilter.responseHeaders`
+** Valor: `[{"name":"X-FRAME-OPTIONS","value":"SAMEORIGIN"},{"name":"X-XSS-Protection","value":"1"},{"name":"X-Content-Type-Options","value":"nosniff"}]`
+
+
+* Atualize seu navegador para ativar os cabeçalhos.
+

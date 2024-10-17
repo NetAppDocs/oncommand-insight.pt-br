@@ -1,0 +1,54 @@
+---
+permalink: dwh/setting-email-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode fazer com que o Data Warehouse envie e-mail para um endereço de e-mail específico quando os trabalhos do Data Warehouse não forem concluídos com êxito. 
+---
+= Definir notificações por e-mail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode fazer com que o Data Warehouse envie e-mail para um endereço de e-mail específico quando os trabalhos do Data Warehouse não forem concluídos com êxito.
+
+
+
+== Passos
+
+. Faça login no Portal do Armazém de dados em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema onde o Armazém de dados OnCommand Insight está instalado.
+. No painel de navegação à esquerda, clique em *notificação por e-mail*.
+. Introduza o seguinte:
++
+** Endereço do servidor SMTP
++
+Especifica o servidor que está agindo como servidor SMTP na sua organização, identificado usando um nome de host ou um endereço IP usando o formato nnn.nnn.nnn.nnn.nnn. Se você especificar um nome de host, verifique se o DNS pode resolvê-lo.
+
+** Nome de usuário e senha do servidor SMTP
++
+Especifica o nome de usuário para acessar o servidor de e-mail e é necessário somente se o servidor SMTP exigir que um usuário faça login no servidor. Esse é o mesmo nome de usuário que você usa para fazer login no aplicativo e acessar seu e-mail.
+
+** Notificações ativadas
++
+*Sim* ativa as notificações; *não* desativa as notificações.
+
+** E-mail do remetente
++
+Especifica o endereço de e-mail usado para enviar as notificações. Este deve ser um endereço de e-mail válido na sua organização.
+
+** E-mail do destinatário
++
+Especifica o endereço de e-mail ou endereços da pessoa ou pessoas que sempre receberão o e-mail. Separe vários endereços com vírgulas.
+
+** Assunto do e-mail
++
+Especifica o assunto da notificação.
+
+** Assinatura de e-mail
++
+Especifica as informações exibidas na parte inferior do e-mail, por exemplo, o nome do departamento.
+
+
+
+

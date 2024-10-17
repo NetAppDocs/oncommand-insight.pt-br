@@ -1,0 +1,51 @@
+---
+permalink: install-windows/overview-of-insight-upgrade-process.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de começar a atualizar o Insight, é importante entender o processo de atualização. O processo de atualização é o mesmo para a maioria das versões do Insight. 
+---
+= Visão geral do processo de atualização do OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de começar a atualizar o Insight, é importante entender o processo de atualização. O processo de atualização é o mesmo para a maioria das versões do Insight.
+
+[NOTE]
+====
+*Você deve fazer backup do Vault* antes de atualizar o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+O processo de atualização do Insight inclui as seguintes tarefas de alto nível:
+
+* Transferir os pacotes de instalação
+* Fazer backup do banco de dados do Data Warehouse
++
+Para evitar a possibilidade de gerar relatórios incorretos de dados, tem de efetuar uma cópia de segurança da base de dados do Data Warehouse antes de efetuar uma cópia de segurança da base de dados do Insight.
+
+* Fazer backup do banco de dados Insight
++
+O backup do banco de dados Insight é feito automaticamente quando você realiza a atualização no local. É uma prática recomendada fazer backup do banco de dados antes da atualização e colocar o backup em um local diferente do servidor Insight. Durante o processo de atualização, o Insight não coleta novos dados. Para minimizar a quantidade de dados que não são coletados, você deve iniciar o backup do banco de dados dentro de uma ou duas horas do tempo de atualização planejado.
+
+* Faça backup da configuração de segurança Data Warehouse e Remote Acquisition Unit se a configuração tiver sido alterada a partir da configuração padrão.
++
+A configuração de segurança não predefinida tem de ser restaurada para o Data Warehouse e servidor RAU após a conclusão da atualização e antes de a base de dados do Data Warehouse ser restaurada para o sistema.
+
+* Fazer backup de quaisquer relatórios personalizados do Data Warehouse
++
+Quando você faz backup do banco de dados do Data Warehouse, relatórios personalizados são incluídos. O arquivo de backup é criado no servidor Data Warehouse. É uma prática recomendada fazer backup dos relatórios personalizados para um local diferente do servidor Data Warehouse.
+
+* Desinstalar o Data Warehouse e o software da unidade de aquisição remota, se aplicável
++
+O servidor Insight tem uma atualização no local; você não precisa desinstalar o software. A atualização no local faz backup do banco de dados, desinstala o software, instala a nova versão e restaura o banco de dados.
+
+* Atualizar o software no servidor Insight, no Data Warehouse e na(s) unidade(s) de aquisição remota(s)
++
+Todas as licenças aplicadas anteriormente permanecem no Registro; você não precisa reaplicar essas licenças.
+
+* Concluir as tarefas pós-atualização
+

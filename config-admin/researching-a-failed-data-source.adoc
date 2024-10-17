@@ -1,0 +1,38 @@
+---
+permalink: config-admin/researching-a-failed-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se uma fonte de dados tiver a mensagem "Inventory failed !" ou "Performance failed !" (Falha no desempenho !) e um High ou Medium Impact (impacto elevado ou Médio), é necessário pesquisar este problema utilizando a página de resumo da fonte de dados com as informações associadas.' 
+---
+= Pesquisar uma fonte de dados com falha
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se uma fonte de dados tiver a mensagem "*Inventory failed !*" ou "*Performance failed !*" e um High ou Medium Impact, você precisará pesquisar esse problema usando a página de resumo da fonte de dados com suas informações vinculadas.
+
+
+
+== Passos
+
+. Clique no *Nome* vinculado da fonte de dados para abrir a página Resumo.
+. Na página Resumo, verifique a área *Comentários* para ler as notas deixadas por outro engenheiro que também possa estar investigando essa falha.
+. Anote todas as mensagens de desempenho.
+. Se houver um patch sendo aplicado a essa fonte de dados, clique em link para verificar a *página de patch* para ver se isso causou o problema.
+. Mova o ponteiro do Mouse sobre os segmentos do gráfico *cronograma do evento* para exibir informações adicionais.
+. Selecione uma mensagem de erro para um dispositivo e exibida abaixo da linha do tempo do evento e clique no ícone *Detalhes do erro* exibido à direita da mensagem.
++
+Os detalhes do erro incluem o texto da mensagem de erro, causas mais prováveis, informações em uso e sugestões do que pode ser tentado para corrigir o problema.
+
+. Nos dispositivos reportados por esta área de origem de dados, você pode filtrar a lista para exibir apenas os dispositivos de interesse e pode clicar no *Nome* vinculado de um dispositivo para exibir a página _ativo_ desse dispositivo.
+. Para retornar às páginas exibidas anteriormente, use uma destas técnicas:
++
+** Clique na seta para trás do navegador.
+** Clique com o botão direito do rato na seta para trás para apresentar uma lista das páginas e selecionar a página pretendida.
+
+
+. Para exibir informações detalhadas sobre outros recursos, clique em outros nomes vinculados.
+. Quando você retornar à página de resumo da fonte de dados, verifique a área *alterações* na parte inferior da página para ver se as alterações recentes causaram o problema.
+

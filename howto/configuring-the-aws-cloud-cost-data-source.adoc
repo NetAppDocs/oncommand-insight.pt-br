@@ -1,0 +1,50 @@
+---
+permalink: howto/configuring-the-aws-cloud-cost-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Você configura a fonte de dados de custo do AWS Cloud como faria para qualquer fonte de dados do Insight. 
+---
+= Configurando a fonte de dados de custo do AWS Cloud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você configura a fonte de dados de custo do AWS Cloud como faria para qualquer fonte de dados do Insight.
+
+
+
+== Antes de começar
+
+Você deve ter sua conta do Amazon AWS já configurada e preparada para a coleta de dados do Insight e ter as informações a seguir à mão.
+
+* Nome do relatório
+* S3 Nome do balde
+* Região da AWS onde reside o bucket do S3.
+* Prefixo do caminho do relatório
+
+
+
+
+== Sobre esta tarefa
+
+Depois que sua conta da AWS estiver pronta e tiver as permissões adequadas definidas, você estará pronto para configurar o OnCommand Insight para coletar dados do relatório de faturamento.
+
+[NOTE]
+====
+Você precisará adicionar uma fonte de dados separada do custo do AWS Cloud para cada usuário/conta faturável da qual deseja recuperar dados de faturamento.
+
+====
+
+
+== Passos
+
+. Inicie sessão no OnCommand Insight como administrador.
+. Clique em *Admin* > *fontes de dados* para abrir a página Insight Data Source.
+. Clique em Adicionar* para adicionar uma nova fonte de dados. Escolha *Amazon* e selecione *AWS Cloud Cost*.
+. Na seção *Configuração*, preencha o _Nome do relatório_, _Nome do repositório S3_, _região S3_ (deve ser a região onde o bucket S3 reside), _prefixo do caminho do relatório_, _ID da chave de acesso do AWS IAM_ e _chave de acesso secreta do AWS IAM_. Se você não tiver certeza de qualquer um desses, consulte seu provedor de nuvem ou titular de conta da AWS.
+. Clique na caixa de seleção para verificar se a AWS cobrará por solicitações de API e transferências de dados feitas pela fonte de dados do Insight.
+. Em *Advanced Configuration*, insira a conexão HTTP e o tempo limite do soquete. O padrão é 300 segundos.
+. Clique em *Salvar*.
+

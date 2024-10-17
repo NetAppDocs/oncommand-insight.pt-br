@@ -1,0 +1,43 @@
+---
+permalink: dwh/assigning-users-to-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Você deve concluir uma série de etapas para atribuir usuários a entidades de negócios. O Data Warehouse acomoda vários clientes (geralmente abreviados para "alocação a vários clientes" ou "alocação a vários clientes") em relatórios, permitindo que você associe usuários a uma ou mais entidades de negócios. Isso permite que os administradores separem dados ou relatórios de acordo com os atributos do usuário ou afiliação do usuário.' 
+---
+= Atribuindo usuários a entidades de negócios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve concluir uma série de etapas para atribuir usuários a entidades de negócios. O Data Warehouse acomoda alocação múltipla (muitas vezes abreviada para "locação múltipla" ou "locação múltipla") em relatórios, permitindo que você associe usuários a uma ou mais entidades de negócios. Isso permite que os administradores separem dados ou relatórios de acordo com os atributos do usuário ou afiliação do usuário.
+
+
+
+== Passos
+
+. Faça login no Portal do Armazém de dados como administrador em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema onde o Armazém de dados OnCommand Insight está instalado.
+. Na barra de ferramentas Data Warehouse, clique image:../media/oci-reporting-portal-icon.gif[""] para abrir o Portal de relatórios.
+. Digite seu nome de usuário e senha e clique em *Login*.
+. No menu Iniciar, selecione *IBM Cognos Administration*.
+. Clique na guia *Segurança*:
+. No diretório, selecione *Cognos*.
+. Crie uma nova subpasta na pasta Cognos chamada "BES", para entidades empresariais.
+. Abra a pasta BES.
+. Clique no ícone *novo grupo* para adicionar grupos que correspondem a diferentes níveis de permissão.
++
+Esses níveis de permissão podem ser o nome completo da entidade empresarial (por exemplo, NetApp.N/A) ou um prefixo (por exemplo, NetApp.N/A.Finance). Qualquer um desses formatos permite o acesso a todos os projetos dentro da entidade empresarial (NetApp.N/A.Finance).
+
++
+O assistente novo grupo é exibido.
+
+. Complete as páginas do assistente.
+. Selecione uma entidade de negócio e clique em *mais*.
+. Clique em *Definir membros*.
+. Clique em *Add*.
+. Selecione o diretório SANscreen.
+. Na lista de usuários, selecione cada usuário que você deseja incluir na entidade de negócios e adicione o usuário à caixa entradas selecionadas.
+. Clique em *OK*.
+. Repita o processo de adição de membros a cada um dos grupos de entidades empresariais.
+

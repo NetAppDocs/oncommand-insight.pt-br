@@ -1,0 +1,55 @@
+---
+permalink: install-windows/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando você faz backup do banco de dados do Data Warehouse, o Data Warehouse cria um arquivo .zip que você pode usar posteriormente para restaurar esse mesmo banco de dados. 
+---
+= Restaurar a base de dados do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando você faz backup do banco de dados do Data Warehouse, o Data Warehouse cria um `.zip` arquivo que você pode usar posteriormente para restaurar esse mesmo banco de dados.
+
+
+
+== Sobre esta tarefa
+
+Ao restaurar a base de dados do Data Warehouse, também pode restaurar as informações da conta de utilizador a partir da cópia de segurança. As tabelas de gerenciamento de usuários são usadas pelo mecanismo de relatório do Data Warehouse em uma instalação somente do Data Warehouse.
+
+
+
+== Passos
+
+. Faça login no Portal do Data Warehouse em `+https://fqdn/dwh+`.
+. No painel de navegação à esquerda, clique em *Backup/Restore*.
+. Na seção *Restaurar banco de dados e relatórios*, clique em *Procurar* e localize o `.zip` arquivo que contém o backup do Data Warehouse.
+. É uma prática recomendada deixar ambas as seguintes opções selecionadas:
++
+** *Restaurar banco de dados*
++
+Inclui configurações do Data Warehouse, data marts, conexões e informações de conta de usuário.
+
+** *Restaurar relatórios*
++
+Inclui relatórios personalizados, relatórios pré-projetados, alterações nos relatórios pré-projetados que você fez e configurações de relatórios feitas na conexão de relatórios.
+
+
+
+. Clique em *Restaurar*.
++
+Não navegue para longe do status de restauração. Se o fizer, o estado de restauro deixa de ser apresentado e não recebe qualquer indicação quando a operação de restauro estiver concluída.
+
+. Para verificar o processo de atualização, exiba o `dwh_upgrade.log` arquivo, que está no seguinte local: `<install directory>\SANscreen\wildfly\standalone\log`.
++
+Depois que o processo de restauração terminar, uma mensagem aparece logo abaixo do botão *Restore*. Se o processo de restauração for bem-sucedido, a mensagem indica sucesso. Se o processo de restauração falhar, a mensagem indica a exceção específica que ocorreu para causar a falha. Nesse caso, entre em Contato com o suporte técnico e forneça `dwh_upgrade.log` o arquivo. Se ocorrer uma exceção e a operação de restauração falhar, o banco de dados original será automaticamente redefinido.
+
++
+[NOTE]
+====
+Se a operação de restauração falhar com uma mensagem "Falha ao atualizar o armazenamento de conteúdo do cognos", restaure o banco de dados do Data Warehouse sem seus relatórios (somente banco de dados) e use seus backups de relatórios XML para importar seus relatórios.
+
+====
+

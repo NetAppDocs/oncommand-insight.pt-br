@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-an-application.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode querer excluir um aplicativo quando ele não atende mais a uma necessidade em seu ambiente. 
+---
+= Eliminar aplicações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode querer excluir um aplicativo quando ele não atende mais a uma necessidade em seu ambiente.
+
+
+
+== Passos
+
+. Faça login na IU da Web do Insight.
+. Clique em *Gerenciar* e selecione *aplicativos*.
+. Posicione o cursor sobre a aplicação que pretende eliminar e clique image:../media/trash-can-query.gif[""]em .
++
+É apresentada uma caixa de diálogo de confirmação, perguntando se pretende eliminar a aplicação.
+
+. Clique em *OK*.
+

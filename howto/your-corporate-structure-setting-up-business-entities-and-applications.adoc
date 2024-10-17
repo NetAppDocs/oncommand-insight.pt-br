@@ -1,0 +1,14 @@
+---
+permalink: howto/your-corporate-structure-setting-up-business-entities-and-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: Entender os elementos da sua estrutura corporativa ajuda você a acompanhar o uso dos ativos e relatar os custos. 
+---
+= Sua estrutura corporativa: Configurando entidades e aplicativos de negócios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entender os elementos da sua estrutura corporativa ajuda você a acompanhar o uso dos ativos e relatar os custos.

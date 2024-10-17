@@ -1,0 +1,123 @@
+---
+permalink: config-admin/dell-emc-ecs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Este coletor de dados adquire dados de inventário e desempenho dos sistemas de armazenamento EMC ECS. Para a configuração, o coletor de dados requer um endereço IP do servidor ECS e uma conta de domínio de nível administrativo. 
+---
+= Fonte de dados ECS da Dell EMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este coletor de dados adquire dados de inventário e desempenho dos sistemas de armazenamento EMC ECS. Para a configuração, o coletor de dados requer um endereço IP do servidor ECS e uma conta de domínio de nível administrativo.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados EMC ECS. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Cluser
+ a| 
+Armazenamento
+
+
+
+ a| 
+Locatário
+ a| 
+Pool de storage
+
+
+
+ a| 
+Balde
+ a| 
+Volume interno
+
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Um endereço IP da consola de gestão ECS
+* Conta de domínio de nível administrativo para o sistema ECS
+* Porta 443 (HTTPS). Requer conetividade de saída à porta TCP 443 no sistema ECS.
+* Para desempenho, nome de usuário e senha somente leitura para acesso ssh/scp.
+* Para o desempenho, a porta 22 é necessária.
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Anfitrião ECS
+ a| 
+Endereços IP ou nomes de domínio totalmente qualificados do sistema ECS
+
+
+
+ a| 
+Porta de host ECS
+ a| 
+Porta utilizada para comunicação com o ECS Host
+
+
+
+ a| 
+ID do fornecedor ECS
+ a| 
+ID do fornecedor para ECS
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe utilizada para ECS
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (minutos)
+ a| 
+Intervalo entre sondagens de inventário. O padrão é 360 minutos.
+
+|===

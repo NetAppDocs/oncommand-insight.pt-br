@@ -1,0 +1,59 @@
+---
+permalink: config-admin/creating-rules-for-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O uso de regras para identificar dispositivos em seu ambiente geralmente é um processo iterativo que requer uma análise completa do seu ambiente e a criação de várias regras para identificar o maior número possível de dispositivos. O melhor cenário é definir uma meta para identificar 100% dos dispositivos em seu ambiente.' 
+---
+= Planejando regras de resolução de dispositivos para o seu ambiente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O uso de regras para identificar dispositivos em seu ambiente geralmente é um processo iterativo que requer uma análise completa do seu ambiente e a criação de várias regras para identificar o maior número possível de dispositivos. O melhor cenário é definir uma meta para identificar 100% dos dispositivos em seu ambiente.
+
+A ordem mais eficiente para regras é colocar as regras mais restritivas em primeiro lugar, resultando na maioria das entradas não correspondência de padrões, com o processo a avançar para regras menos restritivas. Isso permite que o Insight aplique mais padrões a cada entrada, aumentando a possibilidade de correspondência de padrões e de identificação positiva do host.
+
+Quando você cria regras, seu objetivo deve ser criar regras que abordem o maior número de dispositivos não identificados possível. Por exemplo, criar regras que seguem um padrão de cobertura semelhante ao seguinte é muito mais eficiente do que criar regras 30 com menores porcentagens de cobertura:
+
+|===
+
+
+| Regra | Porcentagem de cobertura 
+
+
+ a| 
+Regra 1
+ a| 
+60%
+
+
+
+ a| 
+Regra 2
+ a| 
+25%
+
+
+
+ a| 
+Regra 3
+ a| 
+8%
+
+
+
+ a| 
+Regra 4
+ a| 
+4%
+
+
+
+ a| 
+Regra 5
+ a| 
+1%
+
+|===

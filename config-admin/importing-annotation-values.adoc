@@ -1,0 +1,173 @@
+---
+permalink: config-admin/importing-annotation-values.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se você manter anotações em objetos SAN (como armazenamento, hosts e máquinas virtuais) em um arquivo CSV, você poderá importar essas informações para o OnCommand Insight. Você pode importar aplicativos, entidades de negócios ou anotações, como camada e construção.' 
+---
+= Importar valores de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você mantiver anotações em objetos SAN (como armazenamento, hosts e máquinas virtuais) em um arquivo CSV, poderá importar essas informações para o OnCommand Insight. Você pode importar aplicativos, entidades de negócios ou anotações, como camada e construção.
+
+
+
+== Sobre esta tarefa
+
+Aplicam-se as seguintes regras:
+
+* Se um valor de anotação estiver vazio, essa anotação será removida do objeto.
+* Ao anotar volumes ou volumes internos, o nome do objeto é uma combinação de nome de armazenamento e nome do volume usando o traço e o separador de seta (->):
++
+[listing]
+----
+<storage_name>-><volume_name>
+----
+* Quando o armazenamento, os switches ou as portas são anotados, a coluna da aplicação é ignorada.
+* As colunas de Tenant, Line_of_Business, Business_Unit e Project compõem uma entidade de negócio.
++
+Qualquer um dos valores pode ser deixado vazio. Se um aplicativo já estiver relacionado com uma entidade de negócios diferente dos valores de entrada, o aplicativo será atribuído à nova entidade de negócios.
+
+
+
+Os seguintes tipos de objeto e chaves são suportados no utilitário de importação:
+
+|===
+
+
+| Tipo | Chave 
+
+
+ a| 
+Host
+ a| 
+`+id-><id>+` ou ou `<Name>` `<IP>`
+
+
+
+ a| 
+VM
+ a| 
+`+id-><id>+` ou `<Name>`
+
+
+
+ a| 
+Pool de storage
+ a| 
+`+id-><id>+` ou `<Storage_name>`'->``<Storage_Pool_name>``
+
+
+
+ a| 
+Volume interno
+ a| 
+`+id-><id>+` ou `<Storage_name>`'->``<Internal_volume_name>``
+
+
+
+ a| 
+Volume
+ a| 
+`+id-><id>+` ou `<Storage_name>`'->``<Volume_name>``
+
+
+
+ a| 
+Armazenamento
+ a| 
+`+id-><id>+` ou ou `<Name>` `<IP>`
+
+
+
+ a| 
+Interrutor
+ a| 
+`+id-><id>+` ou ou `<Name>` `<IP>`
+
+
+
+ a| 
+Porta
+ a| 
+`+id-><id>+` ou `<WWN>`
+
+
+
+ a| 
+Partilhar
+ a| 
+`+id-><id>+` ou `+<Storage Name>-><Internal Volume Name>-><Share Name>-><Protocol>+` [`+-><Qtree Name >+`]`<Qtree>` é opcional se houver uma qtree padrão.
+
+
+
+ a| 
+Qtree
+ a| 
+`+id-><id>+` ou `+<Storage Name>-><Internal Volume Name>-><Qtree Name>+`
+
+|===
+O arquivo CSV deve usar o seguinte formato:
+
+[listing]
+----
+, , <Annotation Type> [, <Annotation Type> ...]
+[, Application] [, Tenant] [, Line_Of_Business] [,
+Business_Unit] [, Project]
+
+<Object Type Value 1>, <Object Key 1>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+
+...
+
+<Object Type Value N>, <Object Key N>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+----
+
+
+== Passos
+
+. Faça login na IU da Web do Insight.
+. Clique em *Admin* e selecione *Troubleshooting*.
++
+É apresentada a página Resolução de problemas.
+
+. Na seção *outras tarefas* da página, clique no link *Portal OnCommand Insight*.
+. Clique em *Insight Connect API*.
+. Inicie sessão no portal.
+. Clique em *Utilitário de importação de anotação*.
+. Salve o `.zip` arquivo, descompacte-o e leia o `readme.txt` arquivo para obter informações adicionais e amostras.
+. Coloque o arquivo CSV na mesma pasta que o `.zip` arquivo.
+. Na janela da linha de comando, digite o seguinte:
++
+[listing]
+----
+java -jar rest-import-utility.jar [-uusername] [-ppassword]
+[-aserver name or IP address] [-bbatch size] [-ccase sensitive:true/false]
+[-lextra logging:true/false] csv filename
+----
++
+A opção -l, que permite o Registro extra, e a opção -c, que permite a sensibilidade do caso, são definidas como false por padrão. Portanto, você deve especificá-los somente quando quiser usar os recursos.
+
++
+[NOTE]
+====
+Não há espaços entre as opções e seus valores.
+
+====
++
+[NOTE]
+====
+As palavras-chave a seguir são reservadas e impedem que os usuários as especifiquem como nomes de anotação: - Aplicação - prioridade_aplicação - Tenant - Line_of_Business - Business_Unit - erros de projeto são gerados se você tentar importar um tipo de anotação usando uma das palavras-chave reservadas. Se você criou nomes de anotação usando essas palavras-chave, você deve modificá-los para que a ferramenta de utilitário de importação possa funcionar corretamente.
+
+====
++
+
+NOTE: O utilitário de importação de anotações requer Java 8 ou Java 11. Certifique-se de que um deles está instalado antes de executar o utilitário de importação. Recomenda-se usar o OpenJDK 11 mais recente.
+
+

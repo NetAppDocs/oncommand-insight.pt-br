@@ -1,0 +1,43 @@
+---
+permalink: howto/use-an-expression-to-identify-alternate-metrics.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode usar expressões para exibir métricas não fornecidas pela IU da Web, como as IOPS geradas pela sobrecarga do sistema. 
+---
+= Use uma expressão para identificar métricas alternativas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar expressões para exibir métricas não fornecidas pela IU da Web, como as IOPS geradas pela sobrecarga do sistema.
+
+
+
+== Sobre esta tarefa
+
+Você pode querer usar uma expressão para mostrar o total de IOPS gerado por operações não lidas ou não gravadas, como operações de sobrecarga para um volume interno.
+
+
+
+== Passos
+
+. Adicione um widget ao painel. Escolha *Gráfico de área*.
+. Altere o dispositivo padrão para volume interno: Clique em *Storage* > *Internal volume* > *IOPS Write*
+. Clique no botão *Converter para expressão*.
+. A métrica *IOPS - Write* está agora no campo da variável alfabética "'*a*".
+. No campo variável "'*b*", clique em *Select* e escolha *IOPS - Read*.
+. No campo *expression*, digite *a b*. Na seção *Display*, escolha**Gráfico de área** para a expressão.
+. No campo *Filtrar por*, introduza o nome do volume interno que está a analisar.
+. O campo *Label* identifica a expressão. Altere o rótulo para algo significativo como "'R e W IOPS".
+. Clique em Adicionar ** para adicionar uma linha para o total de IOPS ao widget.
+. Altere o dispositivo padrão para volume interno: Clique em *Storage* > *Internal volume* > *IOPS total*
+. No campo *Filtrar por*, introduza o nome do volume interno que está a analisar.
++
+image::../media/expression-anl-how-to.gif[expressão anl como fazer]
+
++
+O gráfico exibe o total de IOPS como uma linha, com o gráfico mostrando a combinação de IOPS de leitura e gravação em azul. A lacuna entre o 9:30 e o 9:45 mostra operações de e/S (sobrecarga) não lidas e não gravadas.
+
+

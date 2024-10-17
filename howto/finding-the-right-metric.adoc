@@ -1,0 +1,116 @@
+---
+permalink: howto/finding-the-right-metric.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight adquire contadores e métricas usando nomes que às vezes diferem da fonte de dados para a fonte de dados. 
+---
+= Melhor prática: Encontrar a métrica certa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight adquire contadores e métricas usando nomes que às vezes diferem da fonte de dados para a fonte de dados.
+
+Ao procurar a métrica ou o contador certo para o widget do seu painel, tenha em mente que a métrica que você deseja pode estar sob um nome diferente daquele que você está pensando. Embora as listas suspensas no OnCommand Insight sejam geralmente alfabéticas, às vezes um termo pode não aparecer na lista onde você acha que deveria. Por exemplo, termos como "capacidade bruta" e "capacidade usada" não aparecem juntos na maioria das listas.
+
+Prática recomendada: Use o recurso de pesquisa em campos como *Filtrar por* ou locais como o seletor de colunas image:../media/column-picker-button.gif[""]para encontrar o que você está procurando. Por exemplo, a busca por "CAP" mostrará todas as métricas com "capacidade" em seus nomes, não importa onde ela ocorra. Em seguida, você pode selecionar facilmente as métricas que deseja nessa lista curta.
+
+Aqui estão algumas frases alternativas que você pode tentar ao procurar métricas:
+
+|===
+
+
+| Quando você quiser encontrar: | Tente também procurar: 
+
+
+ a| 
+CPU
+ a| 
+Processador
+
+
+
+ a| 
+Capacidade
+ a| 
+Capacidade usada capacidade de raw
+
+Capacidade provisionada
+
+Capacidade de pools de storage
+
+capacidade do outro tipo de ativo
+
+Capacidade escrita
+
+
+
+ a| 
+Velocidade do disco
+ a| 
+Velocidade mais baixa do disco Least executando o tipo de disco
+
+
+
+ a| 
+Host
+ a| 
+HypervisorHosts
+
+
+
+ a| 
+Hipervisor
+ a| 
+Hipervisor de hostis
+
+
+
+ a| 
+Microcódigo
+ a| 
+Firmware
+
+
+
+ a| 
+Nome
+ a| 
+Nome do AliasHypervisor
+
+Nome de armazenamento
+
+outro tipo de ativo> nome
+
+Nome simples
+
+Nome do recurso
+
+Alias de tecido
+
+
+
+ a| 
+Ler / escrever
+ a| 
+Gravações R/WPending parciais
+
+IOPS - gravação
+
+Capacidade escrita
+
+Latência - leitura
+
+Utilização de cache - leitura
+
+
+
+ a| 
+Máquina virtual
+ a| 
+VMIs virtuais
+
+|===
+Esta não é uma lista abrangente. Estes são exemplos de termos de pesquisa possíveis apenas.

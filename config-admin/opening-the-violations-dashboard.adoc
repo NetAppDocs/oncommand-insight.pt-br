@@ -1,0 +1,64 @@
+---
+permalink: config-admin/opening-the-violations-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando o Insight gera violações devido aos limites definidos nas políticas de desempenho, você pode visualizá-las usando o Painel de violações. O painel lista todas as violações que ocorrem na rede e permite localizar e resolver problemas. 
+---
+= Monitorando as violações em sua rede
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando o Insight gera violações devido aos limites definidos nas políticas de desempenho, você pode visualizá-las usando o Painel de violações. O painel lista todas as violações que ocorrem na rede e permite localizar e resolver problemas.
+
+
+
+== Passos
+
+. Abra o OnCommand Insight no seu navegador.
+. Na barra de ferramentas do Insight, clique em *painéis* e selecione *Painel de violações*.
++
+O Painel de violações é exibido.
+
+. Você pode usar o gráfico de pizza *violações por políticas* das seguintes maneiras:
++
+** Você pode posicionar o cursor sobre qualquer fatia de um gráfico para exibir a porcentagem do total de violações que ocorreram para uma determinada política ou métrica.
+** Você pode clicar em um corte de um gráfico para "ampliar", o que permite enfatizar e estudar com mais cuidado esse corte, afastando-o do resto do gráfico.
+** Você pode clicar no image:../media/oci-widget-open-full-screen.gif[""] ícone no canto superior direito para exibir o gráfico de pizza no modo de tela cheia e clicar image:../media/oci-restore-size-icon.gif[""] novamente para minimizar o gráfico de pizza. Um gráfico de pizza pode conter um máximo de cinco fatias; portanto, se você tiver seis políticas que geram violações, o Insight combina o quinto e o sexto fatias em uma fatia "'outros'". O Insight atribui o maior número de violações à primeira fatia, à segunda maior número de violações à segunda fatia, e assim por diante.
+
+
+. Você pode usar o gráfico *Histórico de violações* das seguintes maneiras:
++
+** Você pode posicionar o cursor sobre o gráfico para exibir o número total de violações que ocorreram em um determinado momento e o número que ocorreu fora do total para cada métrica especificada.
+** Você pode clicar em um rótulo de legenda para remover os dados associados à legenda do gráfico.
++
+Clique na legenda para exibir os dados novamente.
+
+** Você pode clicar no image:../media/oci-widget-open-full-screen.gif[""] ícone no canto superior direito para exibir o gráfico no modo de tela cheia e clicar image:../media/oci-restore-size-icon.gif[""] novamente para minimizar o gráfico de pizza.
+
+
+. Você pode usar a Tabela *violações* das seguintes maneiras:
++
+** Você pode clicar no image:../media/oci-widget-open-full-screen.gif[""] ícone no canto superior direito para exibir a tabela no modo de tela cheia e clicar image:../media/oci-restore-size-icon.gif[""] novamente para minimizar o gráfico de pizza.
++
+Se o tamanho da janela for muito pequeno, a Tabela de violações exibirá apenas três colunas; no entanto, quando você clicar image:../media/oci-widget-open-full-screen.gif[""]em , colunas adicionais (até sete) serão exibidas.
+
+** Você pode exibir violações para um determinado período de tempo (*1h*, *3h*, *24h*, *3D*, *7D* e *30d*), com o Insight mostrando um número máximo de 1000 violações para o período de tempo selecionado.
+** Você pode usar a caixa *filtro* para mostrar apenas as violações desejadas.
+** Você pode alterar a ordem de classificação das colunas em uma tabela para ascendente (seta para cima) ou descendente (seta para baixo) clicando na seta no cabeçalho da coluna; para retornar à ordem de classificação padrão, clique em qualquer outro cabeçalho de coluna.
++
+Por padrão, a tabela exibe as violações em ordem decrescente.
+
+** Você pode clicar em uma violação na coluna ID para exibir a página de ativo durante a duração da violação.
+** Você pode clicar nos links de recursos (por exemplo, pool de armazenamento e volume de armazenamento) na coluna Descrição para exibir as páginas de ativos associadas a esses recursos.
+** Você pode clicar no link da política de desempenho na coluna Política para exibir a caixa de diálogo Editar política.
++
+Você pode querer ajustar os limites de uma política se achar que ela gera muito poucas ou muitas violações.
+
+** Você pode clicar em um número de página para navegar pelos dados por página se houver mais dados do que se encaixa em uma única página.
+** Você pode clicar image:../media/oci-delete-policy-threshold-icon.gif[""] para ignorar a violação.
+
+
+

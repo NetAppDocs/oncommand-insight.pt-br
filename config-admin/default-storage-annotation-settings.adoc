@@ -1,0 +1,28 @@
+---
+permalink: config-admin/default-storage-annotation-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Para agilizar a atribuição de anotações de storage aos seus recursos, o OnCommand Insight inclui 21 regras de anotação padrão, que associam um nível de camada a um modelo de camada de storage. Todos os seus recursos de storage são automaticamente associados a uma categoria após a aquisição dos ativos em seu ambiente. 
+---
+= Regras de anotação de armazenamento predefinidas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para agilizar a atribuição de anotações de storage aos seus recursos, o OnCommand Insight inclui 21 regras de anotação padrão, que associam um nível de camada a um modelo de camada de storage. Todos os seus recursos de storage são automaticamente associados a uma categoria após a aquisição dos ativos em seu ambiente.
+
+As regras de anotação padrão aplicam anotações de nível da seguinte forma:
+
+* Camada 1, camada de qualidade de storage
++
+A anotação Tier 1 é aplicada aos seguintes fornecedores e suas famílias especificadas: EMC (Symmetrix), HDS (HDS9500V, HDS9900, HDS9900V, R600, R700, USP r, USP V), IBM (DS8000), NetApp (FAS6000 ou FAS6200) e Violino (memória).
+
+* Camada 2, camada de qualidade de storage
++
+A anotação Tier 2 é aplicada aos seguintes fornecedores e suas famílias especificadas: HP (3PARPAR StoreServ ou EVA), EMC (CLARiiON), HDS (AMS ou D800), IBM (XIV) e NetApp (FAS3000, FAS3100 e FAS3200).
+
+
+
+Você pode editar as configurações padrão dessas regras para corresponder aos requisitos de nível ou removê-las se não precisar delas.

@@ -1,0 +1,263 @@
+---
+permalink: config-admin/advanced-asset-search-techniques-new.html 
+sidebar: sidebar 
+keywords:  
+summary: Várias técnicas de pesquisa podem ser usadas para pesquisar dados ou objetos em seu ambiente monitorado. 
+---
+= Técnicas de pesquisa avançada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Várias técnicas de pesquisa podem ser usadas para pesquisar dados ou objetos em seu ambiente monitorado.
+
+
+
+== Pesquisa curinga
+
+Você pode realizar a pesquisa de carateres curinga múltiplos usando o caractere *. Por exemplo, _applic*n_ retornaria a aplicação.
+
+
+
+== Frases usadas na busca
+
+Uma frase é um grupo de palavras cercado por aspas duplas; por exemplo, "PAW VNX LUN 5". Você pode usar aspas duplas para procurar documentos que contenham espaços em seus nomes ou atributos.
+
+
+
+== Operadores booleanos
+
+Usando operadores booleanos, você pode combinar vários termos para formar uma consulta mais complexa.
+
+* *OU*
++
+** O OPERADOR OU é o operador de conjunção predefinido.
++
+Se não houver um operador booleano entre dois termos, o OPERADOR OR será usado.
+
+** O OPERADOR OR vincula dois termos e encontra um documento correspondente se algum dos termos existir em um documento.
++
+Por exemplo, "'storage OR NetApp'" procura documentos que contenham "storage" ou "NetApp".
+
+** Pontuações altas são dadas a documentos que correspondem à maioria dos termos.
+
+
+* *E*
++
+Pode utilizar o operador E para localizar documentos nos quais existem ambos os termos de pesquisa num único documento. Por exemplo, "aurora E NetApp" procura documentos que contenham tanto "torage" como "NetApp".
+
++
+Pode utilizar o símbolo && em vez da palavra e.
+
+* *NÃO*
++
+Quando você usa o operador NOT, todos os documentos que contêm o termo depois DE NÃO são excluídos dos resultados da pesquisa. Por exemplo, "storage not NetApp" procura documentos que contenham apenas "storage" e não "NetApp".
+
++
+Pode utilizar o símbolo ! em vez da palavra NOT.
+
+
+
+
+
+== Pesquisa de prefixo e sufixo
+
+* Assim que você começar a digitar uma string de pesquisa, o motor de busca faz uma pesquisa de prefixo e sufixo para encontrar a melhor correspondência.
+* As correspondências exatas recebem uma pontuação mais alta do que uma correspondência de prefixo ou sufixo. A pontuação é calculada com base na distância do termo de pesquisa a partir do resultado de pesquisa real. Por exemplo, temos três armazenamentos: "aurora", ""aurora1"" e ""aurora11"". Procurar "aur" retornará todos os três armazenamentos. No entanto, o resultado da pesquisa para "aurora" terá a maior pontuação, porque tem a distância mais próxima da cadeia de pesquisa de prefixo.
+* O motor de busca também procura termos em ordem inversa, o que permite realizar uma pesquisa de sufixo. Por exemplo, quando você digita "'345'" na caixa de pesquisa, o mecanismo de pesquisa procura "'345".
+* A pesquisa é insensível a maiúsculas e minúsculas.
+
+
+
+
+== Pesquisar usando termos indexados
+
+Pesquisas que correspondem a mais dos termos indexados resultam em pontuações mais altas.
+
+A cadeia de pesquisa é dividida em termos de pesquisa separados por espaço. Por exemplo, a cadeia de pesquisa "aurora NetApp" é dividida em três palavras-chave: "Torage", "aurora" e "NetApp". A pesquisa é realizada usando todos os três termos. Os documentos que correspondem à maioria destes termos terão a pontuação mais alta. Quanto mais informações você fornecer, melhores são os resultados da pesquisa. Por exemplo, você pode procurar um armazenamento por seu nome e modo.
+
+A IU exibe os resultados da pesquisa entre categorias, com os três melhores resultados por categoria. Se você não encontrou um documento que estava esperando, você pode incluir mais termos na cadeia de pesquisa para melhorar os resultados da pesquisa.
+
+A tabela a seguir fornece uma lista de termos indexados que podem ser adicionados à cadeia de carateres de pesquisa.
+
+|===
+
+
+| Categoria | Termos indexados 
+
+
+ a| 
+Armazenamento
+ a| 
+* "toragem"
+* nome
+* fornecedor
+* modelo
+
+
+
+
+ a| 
+StoragePool
+ a| 
+* "toragepool"
+* nome
+* nome do armazenamento
+* Endereços IP do armazenamento
+* número de série do armazenamento
+* fornecedor de storage
+* modelo de storage
+* nomes para todos os volumes internos associados
+* nomes para todos os discos associados
+
+
+
+
+ a| 
+Volume interno
+ a| 
+* "volume internacional"
+* nome
+* nome do armazenamento
+* Endereços IP do armazenamento
+* número de série do armazenamento
+* fornecedor de storage
+* modelo de storage
+* nome do pool de armazenamento
+* nomes de todas as ações associadas
+* nomes de todas as aplicações associadas e entidades empresariais
+
+
+
+
+ a| 
+Volume
+ a| 
+* "volume"
+* nome
+* etiqueta
+* nomes de todos os volumes internos
+* nome do pool de armazenamento
+* nome do armazenamento
+* Endereços IP do armazenamento
+* número de série do armazenamento
+* fornecedor de storage
+* modelo de storage
+
+
+
+
+ a| 
+Nó de storage
+ a| 
+* "toragenode"
+* nome
+* nome do armazenamento
+* Endereços IP do armazenamento
+* serialnumber do armazenamento
+* fornecedor de storage
+* modelo de storage
+
+
+
+
+ a| 
+Host
+ a| 
+* "anfitrião"
+* nome
+* Endereços IP
+* nomes de todas as aplicações associadas e entidades empresariais
+
+
+
+
+ a| 
+Armazenamento de dados
+ a| 
+* "datastore"
+* nome
+* IP do centro virtual
+* nomes de todos os volumes
+* nomes de todos os volumes internos
+
+
+
+
+ a| 
+Máquinas virtuais
+ a| 
+* "virtualmachine"
+* nome
+* Nome DNS
+* Endereços IP
+* nome do anfitrião
+* Endereços IP do host
+* nomes de todos os datastores
+* nomes de todas as aplicações associadas e entidades empresariais
+
+
+
+
+ a| 
+Interrutores (regular e NPV)
+ a| 
+* "bruxa"
+* Endereço IP
+* wwn
+* nome
+* número de série
+* modelo
+* ID do domínio
+* nome do tecido
+* wwn do tecido
+
+
+
+
+ a| 
+Aplicação
+ a| 
+* "aplicação"
+* nome
+* locatário
+* linha de negócios
+* unidade de negócios
+* projeto
+
+
+
+
+ a| 
+Fita
+ a| 
+* "fita"
+* Endereço IP
+* nome
+* número de série
+* fornecedor
+
+
+
+
+ a| 
+Porta
+ a| 
+* "porto"
+* wwn
+* nome
+
+
+
+
+ a| 
+Malha
+ a| 
+* "tecido"
+* wwn
+* nome
+
+
+|===

@@ -1,0 +1,130 @@
+---
+permalink: install-windows/data-warehouse-and-reporting-server-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve executar o Data Warehouse e o servidor de relatórios em um computador compatível com os requisitos estabelecidos de hardware e software, garantindo que o servidor web Apache ou o software de relatório ainda não esteja instalado nesta máquina. 
+---
+= Requisitos do Data Warehouse e do servidor de relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve executar o Data Warehouse e o servidor de relatórios em um computador compatível com os requisitos estabelecidos de hardware e software, garantindo que o servidor web Apache ou o software de relatório ainda não esteja instalado nesta máquina.
+
+[NOTE]
+====
+O dimensionamento do OnCommand Insight tem várias dependências, como número de ativos no seu ambiente, quantidade de dados históricos retidos e muito mais. Os exemplos de dimensionamento de data warehouse a seguir são apenas diretrizes; eles representam alguns dos ambientes em que o Insight foi testado. Alterar qualquer um desses ou outros fatores no ambiente pode alterar os requisitos de dimensionamento do Insight.
+
+====
+Recomenda-se entrar em Contato com seu engenheiro de vendas para obter orientações detalhadas sobre o dimensionamento antes de instalar ou atualizar o Insight.
+
+*Exemplos:*
+
+|===
+
+
+| Fatores ambientais: | Espaço em disco, CPUs e memória testadas: 
+
+
+ a| 
+18 storage arrays3.400 VMs
+
+4.500 portas do switch
+ a| 
+200 GB de disco rígido de disk8 núcleos
+
+32 GB DE RAM
+
+
+
+ a| 
+110 storage arrays11.500 VMs
+
+14.500 portas do switch
+ a| 
+300 GB de disco rígido de disk8 núcleos
+
+48 GB DE RAM
+
+|===
+* Requisitos: *
+
+|===
+
+
+| Componente | Obrigatório 
+
+
+ a| 
+Sistema operacional
+ a| 
+Um computador executando o Microsoft Windows Server 2016, 2019 ou 2022 de 64 bits com o Service pack mais recente. É necessário instalar a versão 3,5 da estrutura Windows .NET antes de instalar o OnCommand Insight.
+
+
+
+ a| 
+Máquina virtual (VM)
+ a| 
+Esse componente pode ser executado em um ambiente virtual, desde que os recursos de CPU e memória da instância estejam reservados.
+
+
+
+ a| 
+CPU
+ a| 
+8 - 40 núcleos de CPU
+
+
+
+ a| 
+Memória
+ a| 
+32 GB - 2 TB RAM melhor prática: É altamente recomendável definir o tamanho do arquivo de paginação para "'Windows Managed'". Pequenos arquivos de paginação de tamanho fixo podem interferir no armazenamento bem-sucedido dos dados de desempenho do Insight.
+
+
+
+ a| 
+Espaço disponível em disco
+ a| 
+200 GB - espaço em disco de 2 TB a instalação requer um mínimo de 20 GB grátis na unidade C:.
+
+
+NOTE: No Windows, o Insight Data Warehouse com relatórios requer que o suporte de criação de nomes 8dot3 seja ativado na unidade de instalação antes da instalação. A unidade C: Normalmente tem isso habilitado por padrão. Você pode validar se a criação de nomes 8dot3 está ativada na unidade de instalação de destino executando o seguinte comando (substitua D: Com unidade de instalação de destino):
+
+Função 8dot3name query D:
+
+Para ativar a criação de nomes 8dot3, execute o seguinte comando (substitua D: Com unidade de instalação de destino):
+
+Função 8dot3name set D: 0
+
+
+
+ a| 
+Rede
+ a| 
+* Conexão Ethernet de 100 Mbps ou 1 Gbps
+* Endereço IP estático
+* A porta 50000 deve estar disponível antes de instalar o Data Warehouse com relatórios no Windows
+* Para o processo do servidor DWH OnCommand Insight, portas 80, 443, 1098, 1099, 3873, 8083 e 4444 até 4446
+* Para o mecanismo de relatório, portas 1527, 9362, 9300 e 9399
+* Para MySQL, porta 3306
+* Certifique-se de que o DNS está funcionando corretamente fazendo um `nslookup` contra o host
+
+
+
+
+ a| 
+Verificação de vírus
+ a| 
+Durante a instalação deste componente do OnCommand Insight, você deve desativar completamente todos os scanners de vírus. Após a instalação, os caminhos usados pelo componente Insight (caminhos de instalação, backup e arquivamento) e todos os caminhos de instalação de componentes DWH (SANscreen, DB2 e caminhos de backup) devem ser excluídos da verificação de vírus.
+
+
+
+ a| 
+Visual Studio
+ a| 
+O Visual Studio 2019 https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist["redistribuíveis"] deve ser instalado antes de instalar o Data Warehouse com relatórios no Windows.
+
+|===

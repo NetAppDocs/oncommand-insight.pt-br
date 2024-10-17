@@ -1,0 +1,37 @@
+---
+permalink: config-admin/restoring-the-insight-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Para restaurar seu banco de dados Insight a partir de um arquivo de backup verificado, use as opções solução de problemas. Esta operação substitui completamente seus dados atuais do OnCommand Insight. 
+---
+= Restaurar a base de dados Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para restaurar seu banco de dados Insight a partir de um arquivo de backup verificado, use as opções solução de problemas. Esta operação substitui completamente seus dados atuais do OnCommand Insight.
+
+
+
+== Antes de começar
+
+**Prática recomendada: **Antes de restaurar o banco de dados do OnCommand Insight, use o processo de backup manual para criar uma cópia do banco de dados atual. Verifique o arquivo de backup que você pretende restaurar tenha certeza de que foi um backup bem-sucedido contendo os arquivos que você deseja restaurar.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *Troubleshooting*.
++
+image::../media/oci-7-backup-restore-gif.gif[página de backup e restauração]
+
+. Na seção Restaurar um banco de dados, selecione o arquivo de backup que deseja restaurar no menu *Selecionar backup*.
+. Clique em *Restaurar*.
+. No aviso de que todos os dados serão substituídos, clique em *OK*
++
+O status da atividade de restauração é exibido na página de restauração.
+
+

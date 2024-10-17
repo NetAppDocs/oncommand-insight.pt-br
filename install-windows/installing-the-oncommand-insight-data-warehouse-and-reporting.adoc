@@ -1,0 +1,99 @@
+---
+permalink: install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A instalação é auto-suficiente e inclui os elementos necessários para executar e operar o Armazém de dados OnCommand Insight (DWH) e os utilitários de relatórios.' 
+---
+= Instalação do Armazém de dados e relatórios do OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A instalação é auto-suficiente e inclui os elementos necessários para executar e operar o Armazém de dados OnCommand Insight (DWH) e os utilitários de relatórios.
+
+
+
+== Antes de começar
+
+Tenha em atenção o seguinte antes de instalar ou atualizar.
+
+* Se estiver a atualizar, faça uma cópia de segurança da DWH.
+* Você deve ter __administrator__permissions locais para instalar o Armazém de dados do OnCommand Insight com relatórios.
+* Certifique-se de que o serviço Instalador de módulos do Windows está ativado (automaticamente ou manualmente).
+* Se estiver instalando em uma unidade não C:, nomes de arquivo curtos devem ser ativados. Se não estiver ativado, o instalador irá ativá-lo.
+* Para o componente DB2, o usuário DB2 pode ser um usuário _domain_ ou _local_.
++
+** Se o usuário DB2 for um usuário _domain_, você deve ter o seguinte:
++
+*** DB2 o usuário já deve ter sido criado e você deve saber o nome de usuário e a senha
+*** Como utilizador que está a instalar a DWH com relatórios, tem de poder consultar o Utilizador DB2. Você pode validar isso usando o comando:
++
+**** `net user <db2 user name> /domain`
+
+
+
+
+** Se DB2 User for um usuário _local_, você deve ter o seguinte:
++
+*** Nome de usuário e senha para o usuário que serão usados para executar como DB2 usuário. Se este utilizador não existir, a instalação irá criá-lo.
+
+
+** [NOTA]
+
+
+
+
+[]
+====
+O nome de usuário DB2, bem como o nome de login do Windows, têm as seguintes restrições: * Os carateres válidos são: 'A' a 'Z'; 'a' a 'z'; '0' a '9'; '_'; '_'; '!'; '('; ')'; ''; '-' e '.'. * Se estiver usando os carateres especiais '!'; '('; ')'; ''; ''; '-'; e '.' você deve usar todas as letras maiúsculas para o nome de usuário. * O primeiro caractere na cadeia deve ser um caractere alfabético, em, no ou em dólares; não pode ser um número ou as sequências de letras _SYS_, _DBM_ ou _IBM_ * não pode exceder 128 bytes de comprimento. * Não pode ser USUÁRIOS, ADMINISTRADORES, CONVIDADOS, PÚBLICO, LOCAL ou qualquer palavra SQL reservada.
+
+====
+* O usuário DB2 não pode ser o mesmo que o usuário que executa a instalação.
+
+
+
+
+== Passos
+
+. Faça login no servidor de Armazém de dados usando uma conta com o administrador Privileges.
+. Baixe o arquivo Data Warehouse com Reporting .zip e extraia os arquivos para uma pasta de instalação.
+. Navegue até a pasta _<download location>_dwh_installer_ e execute o script _install_oci_dwh.bat_.
++
+[NOTE]
+====
+Com o OnCommand Insight 7.3.10 e posterior, você deve executar o script para a instalação adequada do DWH/Reporting. Não execute o executável de instalação .msi.
+
+====
+. Introduza o domínio DB2 ou prima Enter para o domínio local.
+. Introduza o nome de utilizador DB2. Veja acima para restrições de nome de usuário.
+. Introduza a palavra-passe para o utilizador DB2. Digite novamente a senha quando solicitado.
+. Introduza o caminho de instalação do componente DB2 ou prima Enter para predefinição.
+. Você é apresentado com as informações que você inseriu. Verifique cuidadosamente todas as definições. Pressione Enter para iniciar a instalação.
+. Se solicitado, permita que o Windows prossiga com a instalação do DB2.
+. Após a instalação do DB2, o assistente de instalação do DWH será executado. Siga as instruções para instalar o DWH com o Reporting.
++
+O Data Warehouse com Instalação de relatórios pode levar até uma hora para ser concluído.
+
+
+
+
+
+== Sincronizar servidor e DWH
+
+
+IMPORTANT: Depois de instalar o Data Warehouse, você *deve* sincronizar o Data Warehouse com o servidor OnCommand Insight. Siga estes passos:
+
+. No sistema servidor OnCommand Insight, inicie a ferramenta *SecurityAdmin* no modo interativo
++
+ securityadmin -i
+. Altere a senha para os usuários _inventário_ e _dwh_internal_ para senhas de sua escolha. *Tome nota destas palavras-passe*, pois irá exigir as mesmas abaixo.
+. Reinicie o serviço DWH.
+. Em *cada conetor* inicie a ferramenta *SecurityAdmin* no modo interativo. Você precisará das senhas anotadas no passo 2 acima.
++
+ securityadmin -i
+. Altere as senhas dos usuários _inventory_ e _dwh_internal_ para as senhas usadas na etapa 2.
+. Reinicie os serviços nos conetores.
+. Adicione os conetores ao DWH, usando as senhas para os usuários _inventário_ e _dwh_internal_ da etapa 2
+

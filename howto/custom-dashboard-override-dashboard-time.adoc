@@ -1,0 +1,20 @@
+---
+permalink: howto/custom-dashboard-override-dashboard-time.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode substituir a configuração principal do quadro de tempo do painel em widgets individuais. Esses widgets exibirão dados com base no período de tempo definido, não no período de tempo do painel. 
+---
+= Substituindo o tempo do painel para widgets individuais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir a configuração principal do quadro de tempo do painel em widgets individuais. Esses widgets exibirão dados com base no período de tempo definido, não no período de tempo do painel.
+
+Para substituir o tempo do painel e forçar um widget a usar um próprio período de tempo, no modo de edição do widget, defina o *Override Dashboard time* como *On* e selecione um período de tempo para o widget. *Salvar* o widget no painel.
+
+O widget exibirá seus dados de acordo com o tempo definido, independentemente do período de tempo selecionado no próprio painel.
+
+O período de tempo definido para um widget não afetará nenhum outro widget no painel.

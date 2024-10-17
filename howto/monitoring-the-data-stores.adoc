@@ -1,0 +1,44 @@
+---
+permalink: howto/monitoring-the-data-stores.html 
+sidebar: sidebar 
+keywords:  
+summary: A página de destino do datastore identifica taxas de excesso de assinatura, utilização de LUN e disco, recursos correlacionados e mostra breeches de políticas e violações que ocorreram com o datastore. 
+---
+= Monitorando os datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página de destino do datastore identifica taxas de excesso de assinatura, utilização de LUN e disco, recursos correlacionados e mostra breeches de políticas e violações que ocorreram com o datastore.
+
+Use esta página inicial para identificar problemas com sua infraestrutura virtual. Você pode acompanhar a tendência da taxa de capacidade e capacidade para antecipar mudanças na sua capacidade.
+
+* *Resumo*
++
+Use esta seção para entender:
+
++
+** Informações sobre a capacidade do datastore, incluindo a capacidade física e a capacidade sobrecomprometida.
+** A porcentagem de capacidade supercomprometida.
+** Métricas de latência, IOPS e taxa de transferência.
+
+
+* *VMDKs*
++
+A seção VMDKs mostra a capacidade e o desempenho do disco virtual.
+
+* *Recursos de armazenamento*
++
+Esta seção mostra a capacidade usada e as métricas de desempenho do volume interno correlacionadas ao datastore.
+
+* *Recursos*
++
+Use esta seção para entender a correlação de VMDKs com LUNs e entender o caminho da aplicação de storage para VM.
+
+* * Seção de violações*
++
+A seção violações identifica quaisquer violações às políticas de desempenho que foram definidas para o armazenamento de dados.
+
+

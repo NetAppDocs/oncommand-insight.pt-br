@@ -1,0 +1,40 @@
+---
+permalink: install-windows/installing-data-source-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: Se aplicável, você deve instalar os patches mais recentes disponíveis para suas fontes de dados para aproveitar os recursos e aprimoramentos mais recentes. Depois de carregar um patch de origem de dados, você pode instalá-lo em todas as fontes de dados do mesmo tipo. 
+---
+= Instalando patches de origem de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se aplicável, você deve instalar os patches mais recentes disponíveis para suas fontes de dados para aproveitar os recursos e aprimoramentos mais recentes. Depois de carregar um patch de origem de dados, você pode instalá-lo em todas as fontes de dados do mesmo tipo.
+
+
+
+== Antes de começar
+
+Você deve ter contatado o suporte técnico e obtido o `.zip` arquivo que contém os patches de origem de dados mais recentes, fornecendo-lhes a versão que você está atualizando e a versão para a qual deseja atualizar.
+
+
+
+== Passos
+
+. Coloque o arquivo de patch no servidor Insight.
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *patches*.
+. No botão ações, selecione *aplicar patch*.
+. Na caixa de diálogo *aplicar patch de origem de dados*, clique em *Procurar* para localizar o arquivo de patch carregado.
+. Revise os tipos de fonte de dados *Patch name*, *Description* e *impactados*.
+. Se o patch selecionado estiver correto, clique em *aplicar Patch*.
++
+Todas as fontes de dados do mesmo tipo são atualizadas com este patch. O Insight força automaticamente a aquisição a reiniciar quando você adiciona uma fonte de dados. A descoberta inclui a deteção de alterações na topologia da rede, incluindo a adição ou exclusão de nós ou interfaces.
+
+. Para forçar o processo de descoberta manualmente, clique em *fontes de dados* e clique em *Poll novamente* ao lado da fonte de dados para forçá-lo a coletar dados imediatamente.
++
+Se a fonte de dados já estiver em um processo de aquisição, o Insight ignora a solicitação de pesquisa novamente.
+
+

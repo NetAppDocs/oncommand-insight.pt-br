@@ -1,0 +1,65 @@
+---
+permalink: config-admin/examining-network-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode examinar a performance do ambiente de storage, identificar recursos subutilizados e sobreutilizados, além de identificar riscos antes que eles se transformem em problemas. 
+---
+= Examinando o desempenho da rede
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode examinar a performance do ambiente de storage, identificar recursos subutilizados e sobreutilizados, além de identificar riscos antes que eles se transformem em problemas.
+
+O Insight ajuda você a resolver ou prevenir problemas de desempenho e disponibilidade revelados por meio dos dados de armazenamento coletados.
+
+Você pode usar o Insight para executar essas tarefas de gerenciamento de desempenho:
+
+* Monitore a performance em todo o seu ambiente
+* Identificar recursos que influenciam o desempenho de outros dispositivos
+
+
+
+
+== A importância dos portos
+
+O servidor Insight Server and Data Warehouse (DWH) pode exigir que várias portas TCP sejam livres para funcionar de forma confiável. Algumas dessas portas são utilizadas apenas para processos vinculados ao adaptador localhost (127,0.0,1), mas ainda são necessárias para que os serviços centrais operem de forma confiável. O número de portas necessárias é um superconjunto de quais portas são usadas em toda a rede.
+
+
+
+== Portas do Insight Server
+
+Os servidores Insight podem ter firewalls de software instalados. Os "buracos" que precisariam ser abertos seriam como descrito abaixo.
+
+*Inbound HTTPS 443* - supondo que você tenha o Insight WebUI em execução no TCP 443, você deve expor isso para permitir todos e quaisquer dos seguintes consumidores:
+
+* Insight usuários da WebUI
+* Unidades de aquisição remota que procuram estabelecer ligação ao servidor Insight
+* Servidores OCI DWH com conetores para este servidor Insight.
+* Quaisquer interações programáticas com a API REST do Insight
+
+
+Nossa recomendação geral para quem deseja implementar o firewall no nível do host do servidor Insight é permitir o acesso HTTPS a todos os blocos IP da rede corporativa.
+
+*MySQL incorporado (TCP 3306)*. Esta porta só precisa ser exposta a qualquer servidor Insight DWH com um conetor
+
+Embora o Insight tenha dezenas de coletores de dados, todos eles são baseados em enquetes - o Insight fará com que suas unidades de aquisição (AUS) iniciem a comunicação de saída para vários dispositivos. Desde que o firewall baseado no host seja "com estado" de modo que permita que o tráfego de retorno seja permitido através do firewall, os firewalls baseados no host no Insight Server não devem afetar a aquisição de dados.
+
+
+
+== Portas do Data Warehouse
+
+Para servidores Insight DWH:
+
+*Inbound HTTPS 443* - supondo que você tenha o Insight WebUI em execução no TCP 443, você deve expor isso para permitir os seguintes consumidores:
+
+* Insight usuários administrativos do portal de administração DWH
+
+
+*HTTPS de entrada (TCP 9300)* - esta é a interface de relatórios do Cognos. Se você tiver usuários interagindo com a interface de relatórios do Cognos, isso deve ser exposto remotamente.
+
+Podemos imaginar ambientes onde a DWH pode não precisar ser exposta - talvez os autores do relatório apenas façam conexões RDP ao servidor DWH e elaborem e programem relatórios lá, enquanto todos os relatórios programados para serem entregues via SMTP, ou gravados em um sistema de arquivos remoto.
+
+*MySQL incorporado (TCP 3306)*. Essa porta só precisa ser exposta se sua organização tiver integrações baseadas em MySQL com dados DWH - você está extraindo dados dos vários marts de dados DWH para ingestão em outros aplicativos, como CMDBs, sistemas de chargeback, etc.

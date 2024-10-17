@@ -1,0 +1,46 @@
+---
+permalink: howto/reporting-on-cloud-cost-data-task.html 
+sidebar: sidebar 
+keywords:  
+summary: Os dados mensais de custo da nuvem coletados no Insight são enviados para o data warehouse e estão disponíveis no Cloud Cost datamart para uso em relatórios. 
+---
+= Relatórios sobre dados de custo da nuvem no Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os dados mensais de custo da nuvem coletados no Insight são enviados para o data warehouse e estão disponíveis no Cloud Cost datamart para uso em relatórios.
+
+
+
+== Antes de começar
+
+Você precisa ter fontes de dados configuradas para coletar dados de custo de nuvem da AWS. Cada usuário/conta faturável deve ter uma fonte de dados separada.
+
+Permita que o Insight comece a coletar dados pelo menos 36 horas.
+
+Permitir que o ETL seja executado pelo menos uma vez após esse período, para enviar os dados para o data warehouse.
+
+
+
+== Sobre esta tarefa
+
+Depois que seus dados forem coletados e enviados para o data warehouse, você poderá visualizá-los em qualquer um dos vários relatórios pré-configurados ou criar relatórios personalizados. O Insight armazena os dados em seu próprio Cloud Cost datamart.
+
+Para visualizar os dados de custo da nuvem em um dos relatórios pré-configurados:
+
+
+
+== Passos
+
+. Abra o Insight Reporting por um destes métodos:
++
+** Clique no ícone do Portal de relatórios image:../media/oci-reporting-portal-icon.gif[""]na IU da Web do servidor Insight ou na IU do Data Warehouse.
+** Inicie o Reporting diretamente inserindo o seguinte URL: `https://<dwh_server_name\>:9300/p2pd/servlet/dispatch` Ou `https://<dwh_server_name\>:9300/bi (7.3.3 and later)`
+
+
+. Depois de iniciar sessão no Reporting, clique em *Public Folders* e selecione *Cloud Cost*.
+. Você pode exibir seus dados de faturamento da AWS nos relatórios disponíveis localizados na pasta *custo da nuvem* ou criar seu próprio relatório personalizado usando o *datamart de custo da nuvem* disponível na pasta *Pacotes*.
+

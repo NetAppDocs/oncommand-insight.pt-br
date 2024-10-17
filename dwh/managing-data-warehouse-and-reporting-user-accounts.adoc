@@ -1,0 +1,22 @@
+---
+permalink: dwh/managing-data-warehouse-and-reporting-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'As contas de usuário, autenticação de usuário e autorização de usuário para as ferramentas de relatório do OnCommand Insight são definidas e gerenciadas a partir do Armazém de dados (DWH). Com base nessas configurações, os usuários e administradores obtêm acesso a alguns ou a todos os relatórios do OnCommand Insight disponíveis.' 
+---
+= Gerenciando contas de usuário do Data Warehouse e Reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As contas de usuário, autenticação de usuário e autorização de usuário para as ferramentas de relatório do OnCommand Insight são definidas e gerenciadas a partir do Data Warehouse (DWH). Com base nessas configurações, os usuários e administradores obtêm acesso a alguns ou a todos os relatórios do OnCommand Insight disponíveis.
+
+O acesso à Gestão de utilizadores no Armazém de dados requer uma conta com o Administrador de sistema Privileges. Isso inclui:
+
+* Capacidades administrativas completas para o Data Warehouse
+* Configuração e manutenção de todas as contas de usuário
+* Leia o acesso ao banco de dados
+* Capacidade para configurar conetores no ETL, agendar trabalhos de Data Warehouse, redefinir o banco de dados, atribuir ou alterar funções e adicionar e remover contas de usuário
+

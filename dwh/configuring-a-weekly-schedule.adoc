@@ -1,0 +1,34 @@
+---
+permalink: dwh/configuring-a-weekly-schedule.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Embora você possa construir manualmente o Data Warehouse usando o controle Build Now a qualquer momento, é melhor prática agendar compilações automáticas, definindo quando e com que frequência construir o banco de dados Data Warehouse. O Data Warehouse executa um trabalho de construção para cada conetor e para cada data mart. O Data Warehouse executa um trabalho de compilação para cada conetor para licenças e inventário e todos os outros trabalhos de compilação (por exemplo, capacidade) são executados no banco de dados consolidado. Com uma programação semanal, você pode especificar o horário que deseja que a compilação seja executada para cada dia da semana.' 
+---
+= Configurar uma programação semanal
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Embora você possa construir manualmente o Data Warehouse usando o controle Build Now a qualquer momento, é melhor prática agendar compilações automáticas, definindo quando e com que frequência construir o banco de dados Data Warehouse. O Data Warehouse executa um trabalho de construção para cada conetor e para cada data mart. O Data Warehouse executa um trabalho de compilação para cada conetor para licenças e inventário e todos os outros trabalhos de compilação (por exemplo, capacidade) são executados no banco de dados consolidado. Com uma programação semanal, você pode especificar o horário que deseja que a compilação seja executada para cada dia da semana.
+
+
+
+== Passos
+
+. Faça login no Portal do Armazém de dados em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema onde o Armazém de dados OnCommand Insight está instalado.
+. No painel de navegação à esquerda, clique em *Edit Schedule*.
+. Escolha a frequência - semanal.
+. Escolha a hora do dia para cada dia que você deseja que o trabalho seja executado.
+. Escolha N/A para dias que você não deseja executar a compilação.
+. Para ativar a programação, selecione *Enabled*.
++
+[NOTE]
+====
+Se você não verificar isso, a compilação de agendamento não ocorre.
+
+====
+. Clique em *Salvar*.
+. Para construir o Data Warehouse fora da compilação agendada automática, clique em *Build Now*.
+

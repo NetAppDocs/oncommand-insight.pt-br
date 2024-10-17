@@ -1,0 +1,87 @@
+---
+permalink: config-admin/emc-recoverpoint-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados EMC RecoverPoint coleta informações de inventário do armazenamento EMC RecoverPoint. Para a configuração, a fonte de dados requer o endereço IP dos processadores de armazenamento e um nome de usuário e senha somente leitura. 
+---
+= Fonte de dados EMC RecoverPoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados EMC RecoverPoint coleta informações de inventário do armazenamento EMC RecoverPoint. Para a configuração, a fonte de dados requer o endereço IP dos processadores de armazenamento e um nome de usuário e senha _somente leitura_.
+
+A fonte de dados do EMC RecoverPoint reúne as relações de replicação de volume para volume que o RecoverPoint coordena entre outros arrays de armazenamento. O OnCommand Insight mostra um storage array para cada cluster de ponto de recoverpoint e coleta dados de inventário de nós e portas de storage nesse cluster. Nenhum pool de armazenamento ou dados de volume são coletados.
+
+
+
+== Requisitos
+
+* Endereço IP ou nome de domínio totalmente qualificado do processador de armazenamento
+* Nome de utilizador e palavra-passe só de leitura
+* Acesso à API REST via porta 443
+* Acesso SSH via PuTTY
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Endereço do RecoverPoint
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do cluster RecoverPoint
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador para o cluster RecoverPoint
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe para o cluster RecoverPoint
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Porta TCP
+ a| 
+Porta TCP utilizada para ligar ao cluster RecoverPoint
+
+
+
+ a| 
+Intervalo de enquete de inventário (minutos)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Clusters excluídos
+ a| 
+Lista separada por vírgulas de IDs ou nomes de cluster a excluir ao fazer polling
+
+|===

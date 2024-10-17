@@ -1,0 +1,16 @@
+---
+permalink: dwh/what-to-do-with-failing-historical-build-points.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode criar a partir do histórico, omitindo qualquer compilação com falha ao ativar a opção Ignorar falhas de compilação do histórico. 
+---
+= O que fazer com pontos de construção históricos falhados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar a partir do histórico, omitindo qualquer compilação com falha, ativando a opção *Skip history build failures*.
+
+Se você fizer isso, a construção da história continua. Se uma compilação falhar e esta opção estiver ativada, o Data Warehouse continua a construir e ignora quaisquer compilações falhadas. Nesses casos, não há ponto de dados nos dados históricos para quaisquer compilações ignoradas. Se não ativar esta opção e a compilação falhar, todos os trabalhos subsequentes serão abortados.

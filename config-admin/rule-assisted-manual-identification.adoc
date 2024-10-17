@@ -1,0 +1,57 @@
+---
+permalink: config-admin/rule-assisted-manual-identification.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Este recurso é usado para casos especiais em que você deseja executar uma regra específica ou uma lista de regras (com ou sem um reordenamento único) para resolver hosts desconhecidos, armazenamento e dispositivos de fita ou grupo deles.' 
+---
+= Identificação manual assistida por regra
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esse recurso é usado para casos especiais em que você deseja executar uma regra específica ou uma lista de regras (com ou sem um reordenamento único) para resolver hosts desconhecidos, armazenamento e dispositivos de fita ou grupo deles.
+
+
+
+== Antes de começar
+
+Você tem vários dispositivos que não foram identificados e você também tem várias regras que identificaram com êxito outros dispositivos.
+
+
+
+== Sobre esta tarefa
+
+[NOTE]
+====
+Se a origem contiver apenas parte do nome de um host ou dispositivo, use uma regra de expressão regular e formate-a para adicionar o texto em falta.
+
+====
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *Gerenciar* > *Resolução do dispositivo*
+. Clique na guia *identificação FC*.
++
+O sistema apresenta os dispositivos identificados e não identificados.
+
+. Selecione vários dispositivos não identificados.
+. Clique em *Identify* > *Set host resolution* ou *> Set tape resolution*
++
+O sistema exibe a tela identificar que contém uma lista de todas as regras que identificaram dispositivos com êxito.
+
+. Altere a ordem das regras para uma ordem que atenda às suas necessidades.
++
+A ordem das regras é alterada na tela identificar, mas não é alterada globalmente.
+
+. Selecione o método que atenda às suas necessidades.
++
+O OnCommand Insight executa o processo de resolução do host na ordem em que os métodos aparecem, começando com os no topo.
+
++
+Quando as regras aplicáveis são encontradas, os nomes das regras são mostrados na coluna regras e identificados como manual.
+
+

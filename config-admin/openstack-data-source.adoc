@@ -1,0 +1,195 @@
+---
+permalink: config-admin/openstack-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A fonte de dados OpenStack (API REST / KVM) coleta informações sobre instâncias de hardware OpenStack. Essa fonte de dados coleta dados de inventário para todas as instâncias do OpenStack e, opcionalmente, dados de performance de VM.' 
+---
+= Fonte de dados OpenStack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados OpenStack (REST API / KVM) coleta informações sobre instâncias de hardware OpenStack. Essa fonte de dados coleta dados de inventário para todas as instâncias do OpenStack e, opcionalmente, dados de performance de VM.
+
+
+
+== Requisitos
+
+A seguir estão os requisitos para configurar a fonte de dados OpenStack.
+
+* Endereço IP do controlador OpenStack
+* As credenciais de função de administrador do OpenStack e o acesso sudo ao hipervisor Linux KVM são recomendados.
++
+[NOTE]
+====
+Se você não estiver usando uma conta de administrador ou um Privileges equivalente ao administrador, ainda poderá adquirir dados da fonte de dados. Você precisará modificar o arquivo de configuração de política (ou seja, etc/nova/policy.json) para permitir que usuários com função não admin chamem a API:
+
+====
++
+** "os_compute_api:os-availability-zone:detail": ""
+** "os_compute_api:os-hypervisors": ""
+** os_compute_api:servers:detail:get_all_tenants": ""
+
+
+* Para a coleta de desempenho, o módulo OpenStack Ceilometer deve ser instalado e configurado. A configuração do Ceilometer é feita editando o `nova.conf` arquivo para cada hypervisor e, em seguida, reinicie o serviço Nova Compute em cada hypervisor. O nome da opção muda para diferentes versões do OpenStack:
++
+** Icehouse
+** Juno
+** Quilo
+** Liberdade
+** Mitaka
+** Newton
+** Ocata
+
+
+* Para estatísticas de CPU, "ComputeDriverCPUMonitor" precisa ser ativado em /etc/nova/nova.conf em nós de computação.
+* Requisitos do porto:
++
+** 5000 para http e 13000 para https, para o serviço Keystone
+** 22 para KVM SSH
+** 8774 para Nova Compute Service
+** 8776 para o serviço do bloco do Cinder
+** 8777 para o Serviço de desempenho da Ceilometer
+** 9292 para o Serviço de imagens Glance
++
+[NOTE]
+====
+A porta se liga ao serviço específico e o serviço pode ser executado no controlador ou em outro host em ambientes maiores.
+
+====
+
+
+
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Endereço IP do controlador OpenStack
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do controlador OpenStack
+
+
+
+ a| 
+Administrador do OpenStack
+ a| 
+Nome de usuário para um administrador OpenStack
+
+
+
+ a| 
+Senha do OpenStack
+ a| 
+Senha usada para o administrador do OpenStack
+
+
+
+ a| 
+Locatário do administrador do OpenStack
+ a| 
+Locatário do administrador do OpenStack
+
+
+
+ a| 
+KVM sudo usuário
+ a| 
+Nome de usuário do sudo KVM
+
+
+
+ a| 
+Escolha 'Senha' ou 'Arquivo de chave OpenSSH' para especificar o tipo de credencial
+ a| 
+O tipo de credencial usado para se conetar ao dispositivo via SSH
+
+
+
+ a| 
+Caminho completo para chave privada de inventário
+ a| 
+Caminho completo para chave privada de inventário
+
+
+
+ a| 
+KVM sudo Password
+ a| 
+KVM sudo Password
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Habilite a descoberta de inventário do hipervisor por meio de SSH
+ a| 
+Verifique isto para ativar a descoberta de inventário do hipervisor através de SSH
+
+
+
+ a| 
+Porta de URL do OpenStack Admin
+ a| 
+Porta de URL do OpenStack Admin
+
+
+
+ a| 
+Use HTTPS
+ a| 
+Verifique para usar HTTP seguro
+
+
+
+ a| 
+Tempo limite da conexão HTTP (seg)
+ a| 
+Tempo limite para conexão HTTP (padrão de 300 segundos)
+
+
+
+ a| 
+Porta SSH
+ a| 
+Porta usada para SSH
+
+
+
+ a| 
+Tempo limite de espera do processo SSH (seg.)
+ a| 
+Tempo limite do processo SSH (padrão de 30 segundos)
+
+
+
+ a| 
+Geometrias de processo SSH
+ a| 
+Número de tentativas de tentativa de inventário
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+|===

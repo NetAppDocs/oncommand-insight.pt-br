@@ -1,0 +1,35 @@
+---
+permalink: install-linux/uninstalling-mariadb.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve desinstalar o MariaDB nos servidores Insight ou Data Warehouse antes de instalar o OnCommand Insight ou o Data Warehouse; caso contrário, você não pode prosseguir com a instalação. MySQL não é compatível com MariaDB. Se você tentar uma instalação em qualquer servidor sem remover MariaDB, a instalação termina com uma mensagem de erro instruindo você a desinstalar MariaDB. 
+---
+= Desinstalar o MariaDB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve desinstalar o MariaDB nos servidores Insight ou Data Warehouse antes de instalar o OnCommand Insight ou o Data Warehouse; caso contrário, você não pode prosseguir com a instalação. MySQL não é compatível com MariaDB. Se você tentar uma instalação em qualquer servidor sem remover MariaDB, a instalação termina com uma mensagem de erro instruindo você a desinstalar MariaDB.
+
+
+
+== Antes de começar
+
+Você deve ter sudo Privileges.
+
+
+
+== Passos
+
+. Inicie sessão no servidor Insight.
+. Obtenha uma lista de componentes MariaDB:
++
+`rpm -qa | grep mariadb`
+
+. Digite o seguinte para cada componente MariaDB instalado no servidor:
++
+`yum remove component_name`
+
+

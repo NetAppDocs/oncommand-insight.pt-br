@@ -1,0 +1,79 @@
+---
+permalink: howto/configure-insight-for-filesystem-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: Para configurar o Insight para coleta de dados de utilização do sistema de arquivos, você deve instalar a licença do Pacote de utilização do host e configurar a fonte de dados do sistema de arquivos NetApp e VM. 
+---
+= Configure o Insight para a coleção do sistema de arquivos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar o Insight para coleta de dados de utilização do sistema de arquivos, você deve instalar a licença do Pacote de utilização do host e configurar a fonte de dados do sistema de arquivos NetApp e VM.
+
+
+
+== Antes de começar
+
+Se você ainda não o fez, instale a licença do Pacote de utilização do host. Você pode verificar a licença na página *Admin* > *Setup*, na guia *Licenses*.
+
+A fonte de dados do Host e VM File Systems informa somente a utilização do sistema de arquivos e os metadados do sistema de arquivos para *Compute Resources* (hosts e VMs) conhecidos atualmente sendo coletados ou descobertos no Insight:
+
+* As máquinas virtuais são coletadas por fontes de dados do hipervisor, como Hyper-V e VMware.
+* Os hosts são descobertos através da resolução do dispositivo.
+
+
+As anotações de nível adequadas devem estar presentes nos recursos de storage apropriados.
+
+São suportados os seguintes dispositivos de armazenamento em bloco ligado:
+
+* NetApp Clustered Data ONTAP (cDOT)
+* Modo NetApp 7
+* CLARiiON
+* Windows: Discos virtuais VMware (VMDKs) para FC, iSCSI
+* Linux: VMware VMDKs (iSCSI e FC não suportados)
+
+
+Um *Compute Resource Group* é uma anotação que permite o agrupamento de hosts e/ou máquinas virtuais que compartilham uma credencial administrativa comum.
+
+
+
+== Passos
+
+. Primeiro, anote os hosts e/ou máquinas virtuais a serem incluídos no seu *Compute Resource Group*. Vá para *consultas* > * Nova consulta* e procure por ativos _Máquina Virtual_.
++
+Você precisará repetir essas etapas para _Host_ Assets.
+
+. Clique no seletor de coluna à direita da tabela e selecione a coluna *Compute Resource Group* para exibi-la na tabela de resultados da consulta.
+. Selecione as máquinas virtuais que deseja adicionar ao grupo de recursos de computação desejado. Você pode usar um filtro para procurar ativos específicos.
+. Clique no botão *ações* e escolha *Editar anotação*.
+. Selecione a anotação _Compute Resource Group_ e escolha o nome do grupo de recursos desejado no campo _Value_.
++
+A anotação do grupo de recursos é adicionada às VMs selecionadas. O nome do grupo de recursos deve corresponder ao nome que você configurará na fonte de dados Host e VM File Systems mais tarde.
+
+. Para configurar a fonte de dados de sistemas de arquivos de host e VM para um grupo de recursos de computação, clique em *Admin* > *fontes de dados* e *Adicionar* a fonte de dados _NetApp Host e VM File Systems_.
++
+image::../media/hostutil-dsconfig.gif[mais informações sobre dsconfig]
+
+. Na seção *Configuração*, digite *Nome de usuário* e *Senha* para um usuário do sistema operacional com direitos apropriados para recuperar dados do sistema de arquivos. Para usuários do sistema operacional Windows, isso deve incluir o prefixo de domínio se o ambiente Windows o usar.
++
+Observe que uma Unidade de aquisição do Insight (AU) instalada no Linux pode relatar recursos de computação do Linux, enquanto uma AU instalada no Windows pode falar com recursos de computação do Linux ou do Windows.
+
+. Digite o nome do *Compute Resource Group* para os ativos dos quais você deseja coletar dados de utilização do sistema de arquivos. Esse nome deve corresponder ao nome do grupo de recursos que você usou para anotar os ativos acima.
++
+Se você deixar o campo Compute Resource Group vazio, a fonte de dados coletará dados para hosts ou VMs que não têm anotação Compute Resource Group.
+
+. Na seção **Advanced Configuration**, insira o intervalo de polling desejado para essa fonte de dados. O padrão de 6 horas é geralmente adequado.
+. Recomenda-se *testar* a conexão da fonte de dados antes de salvá-la. Um resultado de conexão bem-sucedido também mostrará quantos destinos de recursos de computação estão contidos no grupo.
+. Clique em *Salvar*. A fonte de dados Host e VM File Systems começará a coletar dados em sua próxima enquete.
+. Depois que os dados do sistema de arquivos estiverem sendo coletados, você poderá visualizá-los na página de ativos do host ou da VM, no widget sistema de arquivos:
++
+image::../media/hostutil-vmlpfstable.gif[o que é vmlpfstable]
+
+. Repita essas etapas para cada Grupo de recursos de computação que você terá. Cada grupo de recursos de computação deve estar associado à sua própria fonte de dados Host e VM File Systems.
++
+Observe que as informações do sistema de arquivos serão coletadas para hosts e VMs que já estão sendo adquiridas por quaisquer fontes de dados tradicionais VMware ou Hyper-V em seu ambiente.
+
+

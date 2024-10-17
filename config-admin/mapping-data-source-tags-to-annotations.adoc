@@ -1,0 +1,18 @@
+---
+permalink: config-admin/mapping-data-source-tags-to-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando uma fonte de dados é configurada para poll dados de tag, o Insight define automaticamente valores de anotação para uma anotação Insight existente com o mesmo nome de uma tag. 
+---
+= Mapeando tags de origem de dados para anotações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando uma fonte de dados é configurada para poll dados de tag, o Insight define automaticamente valores de anotação para uma anotação Insight existente com o mesmo nome de uma tag.
+
+Quando a anotação Insight existe antes de as etiquetas serem ativadas na fonte de dados, os dados da etiqueta da fonte de dados são adicionados automaticamente à anotação Insight.
+
+Quando você cria uma anotação depois que a tag é ativada, a sondagem inicial da fonte de dados não atualiza automaticamente a anotação. Há um atraso no tempo que leva para substituir ou preencher a anotação Insight. Para evitar o atraso, você pode forçar a tag a atualizar a anotação adiando e, em seguida, retomando a fonte de dados.

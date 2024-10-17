@@ -1,0 +1,49 @@
+---
+permalink: install-windows/upgrading-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de concluir todas as tarefas de pré-requisito, faça login no servidor Insight e execute o pacote de instalação para concluir a atualização. O processo de atualização desinstala o software existente, instala o novo software e reinicia o servidor. 
+---
+= Atualizando o Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de concluir todas as tarefas de pré-requisito, faça login no servidor Insight e execute o pacote de instalação para concluir a atualização. O processo de atualização desinstala o software existente, instala o novo software e reinicia o servidor.
+
+
+
+== Antes de começar
+
+O pacote de instalação do Insight deve estar localizado no servidor.
+
+[NOTE]
+====
+*Você deve fazer backup do Vault* antes de atualizar o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+
+
+== Passos
+
+. Faça login no servidor Insight usando uma conta que tenha permissões de administrador local do Windows.
+. Localize o pacote de instalação do Insight (`SANscreenServer-x64-version_number-build_number.msi`) usando o Windows Explorer e clique duas vezes nele.
++
+É apresentado o assistente OnCommand InsightSetup.
+
+. Afaste a janela de progresso do centro da tela e da janela do assistente *Setup* para que os erros gerados não fiquem ocultos da visualização.
+. Siga as instruções do assistente de configuração.
++
+É uma prática recomendada deixar todas as predefinições selecionadas.
+
+
+
+
+
+== Depois de terminar
+
+Para verificar se a atualização foi bem-sucedida ou se erros são gerados, verifique o log de atualização no seguinte local: `<install directory>\SANscreen\wildfly\standalone\log`.

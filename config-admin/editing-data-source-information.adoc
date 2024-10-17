@@ -1,0 +1,29 @@
+---
+permalink: config-admin/editing-data-source-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode editar rapidamente as informações de configuração da fonte de dados. 
+---
+= Editar informações da fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar rapidamente as informações de configuração da fonte de dados.
+
+
+
+== Passos
+
+. Clique em *Admin* e navegue até a exibição da lista de fontes de dados
+. Localize a fonte de dados que você deseja editar.
+. Use um desses métodos para iniciar as alterações:
++
+** Clique em *Editar fonte de dados* à direita da fonte de dados selecionada.
+** Clique no nome vinculado da fonte de dados selecionada e clique em *Editar*. Qualquer um dos métodos abre a caixa de diálogo Editar fonte de dados.
+
+
+. Faça as alterações desejadas e clique em *Salvar*.
+

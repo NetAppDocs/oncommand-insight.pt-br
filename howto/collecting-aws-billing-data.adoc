@@ -1,0 +1,22 @@
+---
+permalink: howto/collecting-aws-billing-data.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados de custo do Amazon AWS Cloud importa os dados de faturamento gerados pela Amazon para o Insight como dados de integração, tornando-os disponíveis para o data warehouse para geração de relatórios. 
+---
+= Coleta e geração de relatórios de dados de faturamento da AWS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados de custo do Amazon AWS Cloud importa os dados de faturamento gerados pela Amazon para o Insight como dados de integração, tornando-os disponíveis para o data warehouse para geração de relatórios.
+
+Há três partes para disponibilizar os dados de cobrança da nuvem para o Insight:
+
+Verificando as informações da sua conta da AWS.
+
+Configurando a fonte de dados de custo da nuvem AWS no Insight para coletar os dados.
+
+Enviar os dados para o Data Warehouse via ETL para uso em relatórios.

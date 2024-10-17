@@ -1,0 +1,73 @@
+---
+permalink: howto/configuring-data-center-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: A anotação do data center é normalmente usada para associar um storage array, switch ou ativo físico de host a um local de data center. Você também pode optar por associar a anotação do Data Center a outros ativos em seu ambiente. 
+---
+= Configurar anotações do data center
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A anotação do data center é normalmente usada para associar um storage array, switch ou ativo físico de host a um local de data center. Você também pode optar por associar a anotação do Data Center a outros ativos em seu ambiente.
+
+Passos:
+
+* Faça login no Insight como um usuário com permissões administrativas.
+* Selecione *Gerenciar* > *Anotações*.
+* Escolha a anotação *Data Center* e clique no ícone *Edit*.
+* Clique em Adicionar* e adicione o Nome e a Descrição do seu primeiro data center à lista de anotações.
+* Faça o mesmo para os outros data centers.
+* Quando terminar, clique em *Save*.
+
+
+Exemplo de anotações do data center:
+
+|===
+
+
+| Nome | Descrição 
+
+
+ a| 
+DC1_SVL
+ a| 
+Sunnyvale Bldg 1
+
+
+
+ a| 
+DC2_SVLb3
+ a| 
+SVL Bldg3 por
+
+
+
+ a| 
+DC3_NY
+ a| 
+Nova York
+
+
+
+ a| 
+DC4_London
+ a| 
+Londres
+
+
+
+ a| 
+...
+ a| 
+
+|===
+O Insight vem com vários tipos de anotação prontos para uso que permitem que os usuários definam ou modifiquem valores de acordo com suas necessidades. Esses tipos de anotação padrão estarão sempre disponíveis para a IU da Web do Insight, bem como para relatórios. As anotações personalizadas recém-criadas são visíveis na IU da Web do Insight, mas exigem medidas adicionais para disponibilizá-las para relatórios. Para obter informações sobre como incluir anotações personalizadas nos relatórios. Entre em Contato com o representante do suporte ao cliente da NetApp.
+
+[NOTE]
+====
+Alguns usuários podem estar inclinados a usar a anotação país para definir locais de ativos, em vez de, ou em conjunto com, a anotação do Data Center. No entanto, você deve ter em mente que a anotação país é tratada como um tipo de anotação personalizada no data warehouse do Insight e, portanto, pode não aparecer nos relatórios com a mesma granularidade que o Data Center.
+
+====

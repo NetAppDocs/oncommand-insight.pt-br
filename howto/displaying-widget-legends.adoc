@@ -1,0 +1,24 @@
+---
+permalink: howto/displaying-widget-legends.html 
+sidebar: sidebar 
+keywords:  
+summary: Widgets em painéis podem ser exibidos com ou sem legendas. 
+---
+= Exibindo legendas de widget
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Widgets em painéis podem ser exibidos com ou sem legendas.
+
+Legendas em widgets podem ser ativadas ou desativadas em um painel por um de dois métodos:
+
+. Ao criar ou editar o próprio widget, marque a caixa de seleção Legends e salve o widget.
+. Com o painel no modo Editar, clique no botão Opções no widget e marque a caixa de seleção Legends no menu.
+
+
+À medida que você edita e altera os dados exibidos no widget, a legenda desse widget é atualizada dinamicamente.
+
+Quando legendas são exibidas, se a página de destino do ativo indicado pela legenda puder ser navegada, a legenda será exibida como um link para essa página de ativo.

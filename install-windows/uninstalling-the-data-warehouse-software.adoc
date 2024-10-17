@@ -1,0 +1,48 @@
+---
+permalink: install-windows/uninstalling-the-data-warehouse-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Tem de desinstalar o software Data Warehouse antes de poder atualizar. 
+---
+= Desinstalar o software Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tem de desinstalar o software Data Warehouse antes de poder atualizar.
+
+[NOTE]
+====
+*É altamente recomendável fazer backup do Vault* antes de desinstalar o OnCommand Insight. *Você deve fazer o backup do Vault* se estiver atualizando o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+
+
+== Antes de começar
+
+Se você fez alterações nos relatórios que deseja manter, é fundamental que você crie um backup antes de desinstalar o Data Warehouse. A desinstalação do Data Warehouse exclui permanentemente todos os dados coletados anteriormente e remove todos os relatórios, incluindo quaisquer relatórios recém-criados ou editados.
+
+
+
+== Passos
+
+. Faça login no servidor do Data Warehouse.
+. Certifique-se de que todas as janelas do Insight no servidor estão fechadas.
+. Para desinstalar usando o Painel de Controle:
++
+.. Abra *Uninstall a Program* no painel de controle e selecione o aplicativo OnCommand Insight para remoção. Clique em *Uninstall* e siga as instruções.
+.. Selecione o aplicativo IBM DB2 para remoção. Clique em *Uninstall* e siga as instruções.
+.. Exclua a pasta de instalação do DB2 (por exemplo _C: /Program Files/IBM/DB2_) para remover completamente o banco de dados do DB2.
+
+
+. Para desinstalar usando o script fornecido:
++
+.. Navegue até a pasta _<download location>_dwh_uninstall_ e execute o script _uninstall_oci_dwh.bat_.
+
+
+. Reinicie o servidor.
+

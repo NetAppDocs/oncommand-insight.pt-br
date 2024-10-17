@@ -1,0 +1,14 @@
+---
+permalink: howto/best-practices-for-dashboards-and-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: Dicas e truques para ajudá-lo a aproveitar ao máximo os recursos poderosos de painéis e widgets. 
+---
+= Melhores práticas para painéis e Widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dicas e truques para ajudá-lo a aproveitar ao máximo os recursos poderosos de painéis e widgets.

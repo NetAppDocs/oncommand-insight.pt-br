@@ -1,0 +1,16 @@
+---
+permalink: config-admin/vendor-specific-data-source-reference.html 
+sidebar: sidebar 
+keywords:  
+summary: Os detalhes de configuração variam dependendo do fornecedor e do modelo da fonte de dados que está sendo adicionada. 
+---
+= Referência de fonte de dados específica do fornecedor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os detalhes de configuração variam dependendo do fornecedor e do modelo da fonte de dados que está sendo adicionada.
+
+Se a fonte de dados de um fornecedor exigir instruções avançadas de configuração do Insight, como requisitos especiais e comandos específicos, essas informações serão incluídas nesta seção.

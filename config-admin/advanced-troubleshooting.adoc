@@ -1,0 +1,20 @@
+---
+permalink: config-admin/advanced-troubleshooting.html 
+sidebar: sidebar 
+keywords: Legacy portal 
+summary: Para concluir a configuração do OnCommand Insight, use as ferramentas avançadas de solução de problemas. Essas ferramentas são executadas no navegador e são abertas a partir da página Admin. 
+---
+= Solução de problemas avançada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para concluir a configuração do OnCommand Insight, use as ferramentas avançadas de solução de problemas. Essas ferramentas são executadas no navegador e são abertas a partir da página *Admin* > *solução de problemas*.
+
+Para abrir as ferramentas avançadas de solução de problemas no navegador, clique no link *solução de problemas avançada* na parte inferior da página.
+
+As ferramentas avançadas de resolução de problemas permitem visualizar vários relatórios, informações do sistema, pacotes instalados e registos, bem como executar várias acões, tais como reiniciar o servidor ou unidades de aquisição, atualizar anotações DWH e importar anotações.
+
+Consulte a página solução de problemas avançada para obter todas as opções disponíveis.

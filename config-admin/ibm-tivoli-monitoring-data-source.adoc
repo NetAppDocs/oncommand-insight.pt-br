@@ -1,0 +1,107 @@
+---
+permalink: config-admin/ibm-tivoli-monitoring-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Esta fonte de dados é usada exclusivamente para utilização do sistema de arquivos. Ele se comunica diretamente com o Tivoli Monitoring Database, também conhecido como Tivoli Monitoring Data Warehouse. Os bancos de dados Oracle e DB2 são compatíveis. 
+---
+= Fonte de dados IBM Tivoli Monitoring
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta fonte de dados é usada exclusivamente para utilização do sistema de arquivos. Ele se comunica diretamente com o Tivoli Monitoring Database, também conhecido como Tivoli Monitoring Data Warehouse. Os bancos de dados Oracle e DB2 são compatíveis.
+
+
+
+== Mensagem de erro Oracle
+
+[NOTE]
+====
+Este coletor de dados já não está disponível a partir do OnCommand Insight 7,3.11.
+
+====
+Se o SID especificado resultar na mensagem de erro contendo "ORA-12154" ao tentar conetar-se, verifique duas vezes a configuração do serviço de rede Oracle DB. Se a configuração do Access especificar um nome de host totalmente qualificado (por exemplo, "NAMES.DEFAULT_DOMAIN"), tente inserir o nome do serviço totalmente qualificado no campo SID. Um exemplo simples seria que a conexão com o SID `testdb` está falhando e sua configuração Oracle especifica um domínio``company.com`` de . A seguinte cadeia de carateres pode ser usada em vez do SID base para tentar conetar `testdb.company.com`: .
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Tivoli Monitoring Database IP
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do servidor Tivoli Monitoring
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de usuário do servidor Tivoli Monitoring
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha para o servidor Tivoli Monitoring
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Porta do banco de dados Tivoli Monitoring
+ a| 
+Porta usada para o banco de dados de monitoramento Tivoli
+
+
+
+ a| 
+Nome do banco de dados Oracle SID ou DB2
+ a| 
+ID de serviço do ouvinte Oracle ou nome de banco de dados DB2
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 60 minutos)
+
+
+
+ a| 
+Controlador de base de dados a utilizar
+ a| 
+Escolha Driver de banco de dados para usar
+
+
+
+ a| 
+Protocolo utilizado para ligar à base de dados
+ a| 
+Protocolo utilizado para ligar à base de dados
+
+
+
+ a| 
+Esquema da base de dados
+ a| 
+Introduza Esquema base dados
+
+|===

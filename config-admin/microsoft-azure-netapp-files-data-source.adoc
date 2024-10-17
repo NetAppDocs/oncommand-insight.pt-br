@@ -1,0 +1,87 @@
+---
+permalink: config-admin/microsoft-azure-netapp-files-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Essa fonte de dados adquire dados de inventário e performance do Azure NetApp Files. 
+---
+= Fonte de dados Azure NetApp Files
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Essa fonte de dados adquire dados de inventário e performance do Azure NetApp Files (ANF).
+
+
+
+== Requisitos
+
+A seguir estão os requisitos para configurar esta fonte de dados:
+
+* Requisito de porta: 443 HTTPS
+* IP REST do Gerenciamento do Azure (management.azure.com)
+* ID da aplicação principal do Serviço do Azure (Cliente) (conta de utilizador)
+* Chave de autenticação principal do Serviço Azure (senha do usuário)
+* Você precisa configurar uma conta do Azure para a descoberta do Cloud Insights.
++
+Depois que a conta estiver configurada corretamente e você Registrar o aplicativo no Azure, você terá as credenciais necessárias para descobrir a instância do Azure com o Cloud Insights. O link a seguir descreve como configurar a conta para descoberta:
+
++
+https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+ID da aplicação principal do Serviço do Azure (Cliente)
+ a| 
+ID de início de sessão no Azure
+
+
+
+ a| 
+ID do Locatário do Azure
+ a| 
+ID do Locatário do Azure
+
+
+
+ a| 
+Chave de autenticação principal do serviço Azure
+ a| 
+Chave de autenticação de login
+
+
+
+ a| 
+Eu entendo que a Microsoft me cobra por solicitações de API
+ a| 
+Verifique isso para verificar se a Microsoft cobra solicitações de API feitas pela polling do Insight.
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+O padrão é de 60 minutos
+
+|===

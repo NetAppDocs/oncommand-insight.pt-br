@@ -1,0 +1,200 @@
+---
+permalink: reporting/oncommand-insight-data-model-descriptions.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight inclui vários modelos de dados a partir dos quais você pode selecionar relatórios predefinidos ou criar seu próprio relatório personalizado. 
+---
+= Modelos de dados OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight inclui vários modelos de dados a partir dos quais você pode selecionar relatórios predefinidos ou criar seu próprio relatório personalizado.
+
+Cada modelo de dados contém um data mart simples e um data mart avançado:
+
+* O Simple data mart fornece acesso rápido aos elementos de dados mais comumente usados e inclui apenas o último snapshot dos dados do Data Warehouse; ele não inclui dados históricos.
+* O Advanced data mart fornece todos os valores e detalhes disponíveis a partir do simples data mart e inclui acesso a valores históricos de dados.
+* *Modelo de dados de capacidade*
++
+Permite que você responda a perguntas sobre capacidade de storage, utilização do sistema de arquivos, capacidade de volume interno, capacidade da porta, capacidade de qtree e capacidade de máquina virtual (VM). O modelo de dados de capacidade é um contêiner para vários modelos de dados de capacidade. Você pode criar relatórios respondendo a vários tipos de perguntas usando este modelo de dados:
+
++
+** * Modelo de dados de capacidade do pool de armazenamento e armazenamento*
++
+Permite que você responda a perguntas sobre o Planejamento de recursos de capacidade de storage, incluindo pools de storage e storage, além de incluir dados de pool de storage físico e virtual. Esse modelo de dados simples pode ajudar você a responder a perguntas relacionadas à capacidade física e ao uso da capacidade de pools de storage por camada e data center ao longo do tempo.
+
++
+Se você é novo no relatório de capacidade, deve começar com esse modelo de dados porque é um modelo de dados mais simples e direcionado. Você pode responder perguntas semelhantes às seguintes usando este modelo de dados:
+
++
+*** Qual é a data projetada para atingir o limite de capacidade de 80% do meu storage físico?
+*** Qual é a capacidade de storage físico em um array para uma determinada camada?
+*** Qual é a minha capacidade de armazenamento por fabricante e família, bem como por data center?
+*** Qual é a tendência de utilização do storage em um array para todas as camadas?
+*** Quais são os meus 10 principais sistemas de storage com maior utilização?
+*** Qual é a tendência de utilização do storage dos pools de storage?
+*** Quanta capacidade já está alocada?
+*** Que capacidade está disponível para alocação?
+
+
+** *Modelo de dados de utilização do sistema de arquivos*
++
+Permite que você responda a perguntas sobre a utilização do sistema de arquivos. Esse modelo de dados fornece visibilidade sobre a utilização de capacidade por hosts no nível do sistema de arquivos. Os administradores podem determinar a capacidade alocada e usada por sistema de arquivos, determinar o tipo de sistema de arquivos e identificar estatísticas de tendências por tipo de sistema de arquivos. Você pode responder às seguintes perguntas usando este modelo de dados:
+
++
+*** Qual é o tamanho do sistema de arquivos?
+*** Onde os dados são mantidos e como eles são acessados, por exemplo, local ou SAN?
+*** Quais são as tendências históricas para a capacidade do sistema de arquivos? Então, com base nisso, o que podemos prever para as necessidades futuras?
+
+
+** *Modelo de dados de capacidade de volume interno*
++
+Permite que você responda a perguntas sobre o volume interno usado, a capacidade alocada e o uso da capacidade ao longo do tempo:
+
++
+*** Que volumes internos têm uma utilização superior a um limite predefinido?
+*** Que volumes internos correm o risco de ficar sem capacidade com base numa tendência?
+*** Qual é a capacidade usada versus a capacidade alocada em nossos volumes internos?
+
+
+** * Modelo de dados de capacidade de porta*
++
+Permite que você responda perguntas sobre conetividade da porta do switch, status da porta e velocidade da porta ao longo do tempo. Você pode responder perguntas semelhantes às seguintes para ajudá-lo a Planejar compras de novos switches:
+
++
+*** Como posso criar uma previsão de consumo de porta que preveja a disponibilidade do recurso (porta) (de acordo com o data center, o fornecedor do switch e a velocidade da porta)?
+*** Quais portas provavelmente ficarão sem capacidade, fornecendo velocidade de dados, data center, fornecedor e número de portas de host e storage?
+*** Quais são as tendências de capacidade da porta do switch ao longo do tempo?
+*** Quais são as velocidades da porta?
+*** Que tipo de capacidade de porta é necessária e que organização está prestes a ficar sem um determinado tipo de porta ou fornecedor?
+*** Qual é o momento ideal para comprar essa capacidade e disponibilizá-la?
+
+
+** *Modelo de dados de capacidade Qtree*
++
+Permite que você reduza a utilização de qtree (com dados como a capacidade usada versus a capacidade alocada) ao longo do tempo. Você pode visualizar as informações por dimensões diferentes - por exemplo, por entidade de negócios, aplicativo, nível e nível de serviço. Você pode responder às seguintes perguntas usando este modelo de dados:
+
++
+*** Qual é a capacidade usada para qtrees versus os limites definidos por aplicativo ou entidade de negócios?
+*** Quais são as tendências da nossa capacidade usada e livre para que possamos fazer o Planejamento de capacidade?
+*** Quais entidades de negócios estão usando mais capacidade?
+*** Quais aplicações consomem mais capacidade?
+
+
+** *Modelo de dados de capacidade da VM*
++
+Permite que você comunique seu ambiente virtual e seu uso de capacidade. Esse modelo de dados permite gerar relatórios sobre alterações no uso da capacidade ao longo do tempo para VMs e armazenamentos de dados. O modelo de dados também fornece thin Provisioning e dados de chargeback da máquina virtual.
+
++
+*** Como posso determinar o chargeback de capacidade com base na capacidade provisionada para VMs e armazenamentos de dados?
+*** Que capacidade não é usada pelas VMs e que parte do não utilizado é livre, órfão ou outra?
+*** O que precisamos comprar com base nas tendências de consumo?
+*** Quais são as minhas economias em eficiência de storage obtidas com o uso de tecnologias de thin Provisioning e deduplicação de storage? As capacidades no modelo de dados de capacidade da VM são retiradas de discos virtuais (VMDKs). Isso significa que o tamanho provisionado de uma VM usando o modelo de dados de capacidade da VM é o tamanho de seus discos virtuais. Isso é diferente da capacidade provisionada na exibição máquinas virtuais no OnCommand Insight, que mostra o tamanho provisionado para a própria VM.
+
+
+** *Modelo de dados de capacidade de volume*
++
+Permite analisar todos os aspectos dos volumes em seu ambiente e organizar os dados por fornecedor, modelo, categoria, nível de serviço e data center. Você pode visualizar a capacidade relacionada a volumes órfãos, volumes não utilizados e volumes de proteção (usados para replicação). Você também pode ver diferentes tecnologias de volume (iSCSI ou FC) e comparar volumes virtuais com volumes não virtuais para problemas de virtualização de storage. Você pode responder perguntas semelhantes às seguintes com este modelo de dados:
+
++
+*** Que volumes têm uma utilização superior a um limite predefinido?
+*** Qual é a tendência no meu data center para capacidade de volume órfã?
+*** Quanto da capacidade do meu data center é virtualizada ou thin Provisioning?
+*** Quanto da capacidade do meu data center deve ser reservada para replicação?
+
+
+
+
+* *Modelo de dados de chargeback*
++
+Permite que você responda perguntas sobre a capacidade usada e a capacidade alocada em recursos de armazenamento (volumes, volumes internos e qtrees). Esse modelo de dados fornece informações de chargeback de capacidade de storage e responsabilidade por hosts, aplicações e entidades de negócios, além de incluir dados atuais e históricos. Os dados do relatório podem ser categorizados por nível de serviço e camada de storage.
+
++
+Você pode usar esse modelo de dados para gerar relatórios de chargeback encontrando a quantidade de capacidade usada por uma entidade de negócios. Esse modelo de dados permite criar relatórios unificados de vários protocolos (incluindo nas, SAN, FC e iSCSI).
+
++
+** Para storage sem volumes internos, os relatórios de chargeback mostram chargeback por volumes.
+** Para armazenamento com volumes internos:
++
+*** Se as entidades empresariais forem atribuídas a volumes, os relatórios de chargeback mostrarão chargeback por volumes.
+*** Se as entidades de negócios não forem atribuídas a volumes, mas atribuídas a qtrees, os relatórios de chargeback mostram chargeback por qtrees.
+*** Se as entidades de negócios não forem atribuídas a volumes e não forem atribuídas a qtrees, os relatórios de chargeback mostrarão o volume interno.
+*** A decisão de mostrar o chargeback por volume, qtree ou volume interno é tomada por cada volume interno, portanto, é possível que diferentes volumes internos no mesmo pool de storage mostrem o chargeback em diferentes níveis. Os factos da capacidade são eliminados após um intervalo de tempo predefinido. Para obter detalhes, consulte processos de Data Warehouse.
+
+
+
+
++
+Os relatórios que usam o modelo de dados Chargeback podem exibir valores diferentes dos relatórios que usam o modelo de dados de capacidade de armazenamento.
+
++
+** Para storage arrays que não são sistemas de storage NetApp, os dados de ambos os modelos de dados são os mesmos.
+** Para sistemas de armazenamento NetApp e Celerra, o modelo de dados de chargeback usa uma única camada (de volumes, volumes internos ou qtrees) para basear suas cobranças, enquanto o modelo de dados de capacidade de armazenamento usa várias camadas (de volumes e volumes internos) para basear suas cobranças.
+
+
+* *Modelo de dados de inventário*
++
+Permite que você responda perguntas sobre recursos de inventário, incluindo hosts, sistemas de armazenamento, switches, discos, fitas, qtrees, cotas, máquinas e servidores virtuais e dispositivos genéricos. O modelo de dados de inventário inclui vários sub-marts que permitem visualizar informações sobre replicações, caminhos FC, caminhos iSCSI, caminhos NFS e violações. O modelo de dados de inventário não inclui dados históricos. As perguntas que você pode responder com este data mart podem incluir o seguinte:
+
++
+** Que ativos tenho e onde estão?
+** Quem está usando os ativos?
+** Que tipos de dispositivos tenho e quais são os componentes desses dispositivos?
+** Quantos hosts por SO tenho e quantas portas existem nesses hosts?
+** Quais arrays de storage por fornecedor existem em cada data center?
+** Quantos switches por fornecedor tenho em cada data center?
+** Quantas portas não são licenciadas?
+** Quais fitas de fornecedores estamos usando e quantas portas existem em cada fita?
+** Todos os dispositivos genéricos são identificados antes de começarmos a trabalhar em relatórios?
+** Quais são os caminhos entre hosts e volumes ou fitas de armazenamento?
+** Quais são os caminhos entre dispositivos genéricos e volumes ou fitas de armazenamento?
+** Quantas violações de cada tipo tenho por data center?
+** Para cada volume replicado, quais são os volumes de origem e destino?
+** Tenho alguma incompatibilidade de firmware ou incompatibilidade de velocidade de porta entre HBAs de host Fibre Channel e switches?
+
+
+* *Modelo de dados de desempenho*
++
+Permite responder a perguntas sobre a performance de volumes, volumes de aplicações, volumes internos, switches, aplicações, VMs, VMDKs, ESX versus VM, hosts e nós de aplicações. Usando esse modelo de dados, você pode criar relatórios que respondem a vários tipos de perguntas de gerenciamento de desempenho:
+
++
+** Que volumes ou volumes internos não foram usados ou acessados durante um período específico?
+** Podemos identificar qualquer potencial configuração incorreta para armazenamento de um aplicativo (não utilizado)?
+** Qual foi o padrão geral de comportamento de acesso para um aplicativo?
+** Os volumes em camadas são atribuídos apropriadamente para um determinado aplicativo?
+** Poderíamos usar um storage mais barato para uma aplicação atualmente em execução sem afetar a performance da aplicação?
+** Quais são os aplicativos que estão produzindo mais acessos ao armazenamento configurado atualmente? Quando você usa as tabelas de desempenho do switch, você pode obter as seguintes informações:
+** O tráfego do meu host por meio de portas conetadas é equilibrado?
+** Quais switches ou portas estão exibindo um grande número de erros?
+** Quais são os switches mais usados com base no desempenho da porta?
+** Quais são os switches subutilizados com base no desempenho da porta?
+** Qual é a taxa de transferência de tendências do host com base no desempenho da porta?
+** Qual é a utilização de performance dos últimos X dias para um host, sistema de storage, fita ou switch especificados?
+** Quais dispositivos estão produzindo tráfego em um switch específico (por exemplo, quais dispositivos são responsáveis pelo uso de um switch altamente utilizado)?
+** Qual é a taxa de transferência para uma unidade de negócios específica em nosso ambiente? Ao usar as tabelas de desempenho do disco, você pode obter as seguintes informações:
+** Qual é a taxa de transferência para um pool de storage especificado com base em dados de desempenho de disco?
+** Qual é o pool de storage mais usado?
+** Qual é a utilização média de disco para um storage específico?
+** Qual é a tendência de uso para um sistema de storage ou pool de storage com base em dados de desempenho de disco?
+** Qual é a tendência de uso do disco para um pool de storage específico? Ao usar tabelas de desempenho VM e VMDK, você pode obter as seguintes informações:
+** O meu ambiente virtual está a funcionar de forma ideal?
+** Quais VMDKs relatam as cargas de trabalho mais altas?
+** Como posso usar o desempenho relatado de VMDs mapeados para diferentes datastores para tomar decisões sobre a redisposição em camadas. O modelo de dados de performance inclui informações que ajudam a determinar a adequação das camadas, configurações incorretas de storage das aplicações e últimos tempos de acesso de volumes e volumes internos. Esse modelo de dados fornece dados como tempos de resposta, IOPs, taxa de transferência, número de gravações pendentes e status acessado.
+
+
+* *Modelo de dados de eficiência de armazenamento*
++
+Permite controlar a pontuação e o potencial de eficiência de storage ao longo do tempo. Este modelo de dados armazena medições não apenas da capacidade provisionada, mas também da quantidade que é usada ou consumida (a medição física). Por exemplo, quando o provisionamento de thin está ativado, o OnCommand Insight indica a quantidade de capacidade obtida do dispositivo. Você também pode usar esse modelo para determinar a eficiência quando a deduplicação está ativada. Você pode responder a várias perguntas usando o data mart de eficiência de storage:
+
++
+** Quais são nossas economias em eficiência de storage como resultado da implementação de tecnologias de thin Provisioning e deduplicação?
+** Quais são as economias de storage nos data centers?
+** Com base nas tendências históricas de capacidade, quando precisamos adquirir armazenamento adicional?
+** Qual seria o ganho de capacidade se habilitássemos tecnologias como thin Provisioning e deduplicação?
+** Quanto à capacidade de armazenamento, estou em risco agora?
+
+
+

@@ -1,0 +1,58 @@
+---
+permalink: config-admin/defining-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: Se quiser rastrear dados associados a aplicativos específicos em execução no ambiente, é necessário definir esses aplicativos. 
+---
+= Definindo aplicativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se quiser rastrear dados associados a aplicativos específicos em execução no ambiente, é necessário definir esses aplicativos.
+
+
+
+== Antes de começar
+
+Se você quiser associar o aplicativo a uma entidade de negócios, você já deve ter criado a entidade de negócios.
+
+
+
+== Sobre esta tarefa
+
+Você pode associar aplicativos aos seguintes ativos: Hosts, máquinas virtuais, volumes, volumes internos, qtrees, compartilhamentos e hipervisores.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *Gerenciar* e selecione *aplicativos*.
++
+Depois de definir um aplicativo, a página aplicativos exibe o nome do aplicativo, sua prioridade e, se aplicável, a entidade comercial associada ao aplicativo.
+
+. Clique em *Add*.
++
+A caixa de diálogo Adicionar aplicativo é exibida.
+
+. Insira um nome exclusivo para o aplicativo na caixa *Nome*.
+. Clique em *Priority* (prioridade) e selecione a prioridade (crítica, alta, média ou baixa) para a aplicação no seu ambiente.
+. Se você planeja usar este aplicativo com uma entidade de negócios, clique em *entidade de negócio* e selecione a entidade na lista.
+. *Opcional*: Se você não usar compartilhamento de volume, clique para desmarcar a caixa *Validar compartilhamento de volume*.
++
+Isso requer a licença assure. Defina isso quando quiser garantir que cada host tenha acesso aos mesmos volumes em um cluster. Por exemplo, os hosts em clusters de alta disponibilidade geralmente precisam ser mascarados para os mesmos volumes para permitir o failover; no entanto, os hosts em aplicativos não relacionados geralmente não têm necessidade de acessar os mesmos volumes físicos. Além disso, as políticas regulatórias podem exigir que você impeça explicitamente que aplicativos não relacionados acessem os mesmos volumes físicos por motivos de segurança.
+
+. Clique em *Salvar*.
++
+A aplicação é apresentada na página aplicações. Se você clicar no nome do aplicativo, o Insight exibirá a página de ativos do aplicativo.
+
+
+
+
+
+== Depois de terminar
+
+Depois de definir um aplicativo, você pode ir para uma página de ativos para host, máquina virtual, volume, volume interno ou hipervisor para atribuir um aplicativo a um ativo.

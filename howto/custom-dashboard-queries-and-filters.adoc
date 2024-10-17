@@ -1,0 +1,57 @@
+---
+permalink: howto/custom-dashboard-queries-and-filters.html 
+sidebar: sidebar 
+keywords:  
+summary: A consulta em um widget de painel é uma ferramenta poderosa para gerenciar a exibição de seus dados. Aqui estão algumas coisas a observar sobre consultas de widget. 
+---
+= Consultas e filtros de widgets do painel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A consulta em um widget de painel é uma ferramenta poderosa para gerenciar a exibição de seus dados. Aqui estão algumas coisas a observar sobre consultas de widget.
+
+Alguns widgets podem ter até cinco consultas. Cada consulta plotará seu próprio conjunto de linhas ou gráficos no widget. A configuração de rollup, agrupamento, resultados de cima/baixo, etc. em uma consulta não afeta nenhuma outra consulta para o widget.
+
+Você pode clicar no ícone de olho para ocultar temporariamente uma consulta. O widget exibe atualizações automaticamente quando você oculta ou mostra uma consulta. Isso permite que você verifique seus dados exibidos para consultas individuais à medida que você cria seu widget.
+
+Os seguintes tipos de widget podem ter várias consultas:
+
+* Gráfico de área
+* Gráfico de área empilhada
+* Gráfico de linhas
+* Gráfico de estrias
+* Widget de valor único
+
+
+Os restantes tipos de widget podem ter apenas uma única consulta:
+
+* Tabela
+* Gráfico de barras
+* Gráfico de caixa
+* Gráfico de dispersão
+
+
+
+
+== Filtragem em consultas de dashboard
+
+Você pode filtrar usando qualquer uma das seguintes opções para refinar sua pesquisa em qualquer *campo de texto* na consulta:
+
+* Um asterisco permite que você procure por tudo. Por exemplo, `vol*rhel` exibe todos os recursos que começam com "vol" e terminam com "rhel".
+* O ponto de interrogação permite procurar um número específico de carateres. Por exemplo, `BOS-PRD??-S12` exibe BOS-PRD12-S12, BOS-PRD13-S12 e assim por diante.
+* O OPERADOR OU permite especificar várias entidades. Por exemplo, `FAS2240 OR CX600 OR FAS3270` encontra vários modelos de armazenamento.
+* O operador NOT permite excluir texto dos resultados da pesquisa. Por exemplo, `NOT EMC*` encontra tudo o que não começa com ""EMC"". Você pode usar `NOT *` para exibir campos que contêm valores nulos.
+
+
+Se você incluir uma string de filtro em aspas duplas, o Insight trata tudo entre a primeira e a última citação como uma correspondência exata. Quaisquer carateres especiais ou operadores dentro das aspas serão tratados como literais. Por exemplo, a filtragem para "'*" retornará resultados que são um asterisco literal; o asterisco não será Tratado como um curinga neste caso. Os operadores E, OU, e NÃO também serão tratados como strings literais quando incluídos em aspas duplas.
+
+
+
+== Identificar objetos retornados por consultas e filtros
+
+Os objetos retornados por consultas e filtros são semelhantes aos mostrados na ilustração a seguir. Objetos com 'tags' atribuídos a eles são anotações enquanto os objetos sem tags são contadores de desempenho ou atributos de objeto.
+
+image::../media/query-filter-objects.gif[consultar objetos de filtro]

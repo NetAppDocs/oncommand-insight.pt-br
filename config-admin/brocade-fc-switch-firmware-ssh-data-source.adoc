@@ -1,0 +1,270 @@
+---
+permalink: config-admin/brocade-fc-switch-firmware-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight usa a fonte de dados do switch Brocade FC para descobrir o inventário de dispositivos de switch Brocade ou rebranded que executam o firmware 4,2 e posterior do sistema operacional fatorado. Os dispositivos nos modos de switch FC e Gateway de acesso são suportados. 
+---
+= Fonte de dados do switch Brocade FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight usa a fonte de dados do switch FC Brocade (SSH) para descobrir o inventário para dispositivos de switch Brocade ou rebranded que executam o firmware 4,2 do sistema operacional fatorado (FOS) e posterior. Os dispositivos nos modos de switch FC e Gateway de acesso são suportados.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados do comutador FC Brocade. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Interrutor
+ a| 
+Interrutor
+
+
+
+ a| 
+Porta
+ a| 
+Porta
+
+
+
+ a| 
+Malha virtual, malha física
+ a| 
+Malha
+
+
+
+ a| 
+Zona
+ a| 
+Zona
+
+
+
+ a| 
+Comutador lógico
+ a| 
+Comutador lógico
+
+
+
+ a| 
+Zona LSAN
+ a| 
+Zona IVR
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* A Unidade de aquisição (local ou remoto) iniciará conexões com a porta TCP 22 nos switches Brocade para coletar dados de inventário. A AU também iniciará conexões com a porta UDP 161 para coleta de dados de desempenho.
+* Deve haver conectividade IP para todos os switches na malha. Se você selecionar a caixa de seleção descobrir todos os switches na malha, o OCI identificará todos os switches na malha; no entanto, ele precisará de conectividade IP com esses switches adicionais para detectá-los.
+* Globalmente, a mesma conta é necessária em todos os switches da malha. Você pode usar PuTTY (emulador de terminal de código aberto) para confirmar o acesso.
+* Se a licença Perform estiver instalada, as portas 161 e 162 devem estar abertas a todos os switches da malha para polling de desempenho SNMP.
+* Cadeia de Comunidade somente leitura SNMP
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+IP do switch
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do switch
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador do comutador
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe utilizada para o interrutor
+
+
+
+ a| 
+Versão SNMP
+ a| 
+Versão SNMP
+
+
+
+ a| 
+SNMP Community String
+ a| 
+String de comunidade SNMP somente leitura usada para acessar o switch
+
+
+
+ a| 
+Nome de utilizador SNMP
+ a| 
+Nome de utilizador do protocolo da versão SNMP (aplica-se apenas ao SNMP v3)
+
+
+
+ a| 
+Palavra-passe SNMP
+ a| 
+Palavra-passe do protocolo da versão SNMP (aplica-se apenas ao SNMP v3)
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Nome da malha
+ a| 
+O nome do malha a ser informado pela fonte de dados. Deixe em branco para relatar o nome da tela como WWN.
+
+
+
+ a| 
+Excluir dispositivos
+ a| 
+Lista separada por vírgulas de IDs de dispositivo a excluir da sondagem
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 15 minutos)
+
+
+
+ a| 
+Tempo limite (seg.)
+ a| 
+Tempo limite da ligação (predefinição 30 segundos)
+
+
+
+ a| 
+Tempo limite de espera da faixa (seg.)
+ a| 
+Tempo limite de espera do banner SSH (padrão de 5 segundos)
+
+
+
+ a| 
+Domínios Admin ativos
+ a| 
+Selecione se estiver usando domínios Admin
+
+
+
+ a| 
+Recuperar dados MPR
+ a| 
+Selecione para adquirir dados de encaminhamento a partir do router multiprotocolo (MPR)
+
+
+
+ a| 
+Ativar trapping
+ a| 
+Selecione para ativar a aquisição ao receber uma trap SNMP do dispositivo. Se você selecionar Ativar trapping, você também deve ativar o SNMP.
+
+
+
+ a| 
+Tempo mínimo entre armadilhas (seg)
+ a| 
+Tempo mínimo entre tentativas de aquisição acionadas por armadilhas (padrão de 10 segundos)
+
+
+
+ a| 
+Descubra todos os switches na malha
+ a| 
+Selecione para descobrir todos os switches na malha
+
+
+
+ a| 
+Escolha favorecendo HBA vs. Aliases de zona
+ a| 
+Escolha se prefere HBA ou aliases de zona
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+
+
+ a| 
+Protocolo Auth SNMP
+ a| 
+Protocolo de autenticação SNMP (apenas SNMP v3)
+
+
+
+ a| 
+Protocolo de privacidade SNMP
+ a| 
+Protocolo de privacidade SNMP (apenas SNMP v3)
+
+
+
+ a| 
+Palavra-passe de privacidade SNMP
+ a| 
+Palavra-passe de privacidade SNMP (apenas SNMP v3)
+
+
+
+ a| 
+Geometrias SNMP
+ a| 
+Número de tentativas de tentativa SNMP
+
+
+
+ a| 
+Tempo limite SNMP (ms)
+ a| 
+Tempo limite SNMP (padrão de 5000 ms)
+
+|===

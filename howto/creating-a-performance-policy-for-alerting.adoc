@@ -1,0 +1,57 @@
+---
+permalink: howto/creating-a-performance-policy-for-alerting.html 
+sidebar: sidebar 
+keywords:  
+summary: As políticas de desempenho permitem monitorar e enviar alertas quando condições específicas forem atendidas. 
+---
+= Criação de políticas de desempenho para alertas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As políticas de desempenho permitem monitorar e enviar alertas quando condições específicas forem atendidas.
+
+
+
+== Sobre esta tarefa
+
+Agora que anotamos nossos ativos, vamos criar uma Política de desempenho que podemos usar para nos alertar quando a latência é superior a 2ms em qualquer storage array em nosso data center Sunnyvale (DC1_SVL). Quando essas condições ocorrerem, enviaremos um e-mail para os destinatários selecionados.
+
+
+
+== Passos
+
+. Selecione *Gerenciar* > *políticas de desempenho*.
++
+A página políticas de desempenho é aberta. Existem várias políticas predefinidas já definidas, que podem ser modificadas de acordo com as suas necessidades. No entanto, criaremos uma nova política.
+
+. Clique no botão * Adicionar *.
++
+A caixa de diálogo *Add Policy* (Adicionar política) é aberta.
+
+. No campo *Nome da política*, digite ""política de latência do data center SVL"".
++
+Você deve usar um nome diferente de todos os outros nomes de política para o objeto. Por exemplo, você não pode ter duas políticas chamadas "latência" para um volume interno; no entanto, você pode ter uma política de "latência" para um volume interno e outra política de "latência" para um volume diferente. A melhor prática é sempre usar um nome exclusivo para qualquer política, independentemente do tipo de objeto.
+
+. Para *aplicar a objetos do tipo*, selecione *armazenamento*.
+. No campo *com anotação*, selecione *Data Center* é "'DC1_SVL'" (ou escolha o nome do data center desejado aqui).
+. Aplicar após uma janela de *primeira ocorrência* .
++
+A primeira opção de ocorrência aciona um alerta quando um limite é excedido na primeira amostra de dados. Todas as outras opções acionam um alerta quando o limite é cruzado uma vez e é continuamente cruzado durante pelo menos o período de tempo especificado.
+
+. Na lista *com gravidade*, selecione *Aviso*.
+. Em *destinatários de e-mail*, clique para substituir a lista global de destinatários. Clique em ** para adicionar o endereço de e-mail do seu primeiro destinatário de alerta desejado e clique em *OK*. Repita para qualquer destinatário de e-mail desejado adicional.
+. Deixe a opção padrão para criar alerta se *qualquer* das seguintes opções for verdadeira. Isso enviará um alerta se qualquer um dos limites definidos for atendido. Você também pode optar por alertar apenas se *todos* dos limites definidos forem atendidos.
+. Para definir seu primeiro limite, selecione *latência - total* na lista suspensa e defina-o para maior que 2 ms.
+. Se desejar, adicione limites adicionais para alertar clicando no botão *Adicionar limite*. Quando a política for personalizada da maneira que você quiser, clique em *Salvar*.
+. Você também pode optar por *Parar de processar outras políticas se o alerta for gerado*. Isso interromperá o alerta de política adicional se as condições dessa política forem atendidas.
+. Você pode adicionar quantas novas políticas quiser, definindo alertas para outros destinatários com base em diferentes condições, de acordo com a necessidade da empresa. Quaisquer políticas configuradas sem destinatários específicos enviarão alertas para a lista global de destinatários definida na página *Admin* > *notificações*
+
+
+
+
+== Depois de terminar
+
+Cada nova política é ativada automaticamente quando é salva, e os destinatários começarão a receber alertas quando as condições da política forem atendidas (conhecida como _violação_). Você também pode monitorar essas violações no *Dashboards* > *Painel de violações*.

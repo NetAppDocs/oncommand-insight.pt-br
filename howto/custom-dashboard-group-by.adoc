@@ -1,0 +1,24 @@
+---
+permalink: howto/custom-dashboard-group-by.html 
+sidebar: sidebar 
+keywords:  
+summary: Os dados em um widget de tabela podem ser agrupados por qualquer atributo disponível, permitindo que você veja uma visão geral de seus dados e detalhe-os para mais detalhes. As métricas na tabela são agrupadas para facilitar a visualização em cada linha colapsada. 
+---
+= Agrupamento em widgets de tabela
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os dados em um widget de tabela podem ser agrupados por qualquer atributo disponível, permitindo que você veja uma visão geral de seus dados e detalhe-os para mais detalhes. As métricas na tabela são agrupadas para facilitar a visualização em cada linha colapsada.
+
+Os widgets da tabela permitem agrupar os dados com base nos atributos definidos. Por exemplo, talvez você queira que sua tabela mostre o IOPS total do armazenamento agrupado pelos data centers em que esses armazenamentos estão ativos. Ou você pode querer exibir uma tabela de máquinas virtuais agrupadas de acordo com o hipervisor que as hospeda. Na lista, você pode expandir cada grupo para exibir os ativos nesse grupo.
+
+O agrupamento só está disponível no tipo de widget *Tabela*.
+
+
+
+== Implementação de dados de desempenho
+
+Se você incluir uma coluna para dados de desempenho (por exemplo, _IOPS - Total_) em um widget de tabela, quando você optar por agrupar os dados, poderá escolher um método de rolagem para essa coluna. O método de rolagem padrão é exibir a _média_ dos dados subjacentes na linha do grupo. Ou também pode optar por exibir _soma_, _mínimo_ ou _máximo_ dos dados.

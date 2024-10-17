@@ -1,0 +1,30 @@
+---
+permalink: dwh/sending-oncommand-insight-logs-to-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode enviar logs do ASUP para o suporte técnico para obter assistência na solução de problemas. ASUP para Data Warehouse é configurado para ser executado automaticamente. No portal Data Warehouse, você pode desativar o processo de envio automático, optar por incluir um backup do banco de dados Data Warehouse ou iniciar uma transmissão para ASUP. Quando você solicita um relatório ASUP, a solicitação de relatório aparece como uma tarefa na página tarefas do portal Data Warehouse. 
+---
+= Enviando logs do Insight para o ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode enviar logs do ASUP para o suporte técnico para obter assistência na solução de problemas. ASUP para Data Warehouse é configurado para ser executado automaticamente. No portal Data Warehouse, você pode desativar o processo de envio automático, optar por incluir um backup do banco de dados Data Warehouse ou iniciar uma transmissão para ASUP. Quando você solicita um relatório ASUP, a solicitação de relatório aparece como uma tarefa na página tarefas do portal Data Warehouse.
+
+
+
+== Sobre esta tarefa
+
+O trabalho é gerido pela fila de trabalhos semelhante ao processamento de outros trabalhos. Se uma tarefa ASUP já estiver em um estado pendente ou em execução, uma mensagem de erro será exibida indicando que a solicitação de relatório ASUP não pode ser adicionada à solicitação de tarefa, porque a fila de trabalhos contém solicitações pendentes ou em execução.
+
+
+
+== Passos
+
+. Faça login no portal do Data Warehouse em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema onde o Data Warehouse do OnCommand Insight está instalado.
+. No painel de navegação à esquerda, clique em *solução de problemas*.
+. Na seção *OnCommand Insight ASUP* da página *solução de problemas*, clique em *Baixar o relatório de solução de problemas DWH* para recuperar o relatório de solução de problemas.
+. Para enviar o relatório para o servidor OnCommand Insight listado como o primeiro conetor na página *conetores* do portal de armazém de dados, clique em *Enviar agora*.
+

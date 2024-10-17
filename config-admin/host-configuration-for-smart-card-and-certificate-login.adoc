@@ -1,0 +1,68 @@
+---
+permalink: config-admin/host-configuration-for-smart-card-and-certificate-login.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve fazer modificações na configuração do host do OnCommand Insight para oferecer suporte a logins de cartão inteligente e certificado. 
+---
+= Configurando hosts para Smart Card e login de certificado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve fazer modificações na configuração do host do OnCommand Insight para oferecer suporte a logins de cartão inteligente (CAC) e certificado.
+
+
+
+== Antes de começar
+
+* O LDAP tem de estar ativado no sistema.
+* O atributo LDAP `User principal account name` deve corresponder ao campo LDAP que contém a ID de um usuário.
+
+
+
+NOTE: Se você alterou as senhas _Server.keystore_ e/ou _Server.trustore_ usando link:../config-admin/security-management.html["administrador de segurança"]o , reinicie o serviço _SANscreen_ antes de importar o certificado LDAP.
+
+[NOTE]
+====
+Para obter as instruções de CAC e certificado mais atualizadas, consulte os seguintes artigos da base de conhecimento (login de suporte necessário):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["Como configurar a autenticação de cartão de acesso comum (CAC) para o OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Como configurar a autenticação de cartão de acesso comum (CAC) para o armazém de dados OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Como criar e importar um certificado assinado pela autoridade de certificação (CA) para o OnComand Insight e o Data Warehouse 7,3.x do OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["Como criar um certificado autoassinado no OnCommand Insight 7,3.X instalado em um host Windows"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Como importar um certificado assinado pela autoridade de certificação (CA) do Cognos para o datawarehouse 7.3.3 e posterior do OnCommand"]
+
+
+====
+
+
+== Passos
+
+. Use o `regedit` utilitário para modificar os valores do Registro no `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Apache Software Foundation\Procrun2.0\SANscreen Server\Parameters\Java`:
++
+.. Altere a opção JVM_Option `DclientAuth=false` para `DclientAuth=true.`
+
+
+. Faça backup do arquivo keystore: `C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. Abra um prompt de comando especificando `Run as administrator`
+. Excluir o certificado gerado automaticamente: `C:\Program Files\SANscreen\java64\bin\keytool.exe -delete -alias "ssl certificate" -keystore C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. Gerar um novo certificado: `C:\Program Files\SANscreen\java64\bin\keytool.exe -genkey -alias "alias_name" -keyalg RSA -sigalg SHA1withRSA -keysize 2048 -validity 365 -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -dname "CN=commonName,OU=orgUnit,O=orgName,L=localityNameI,S=stateName,C=countryName"`
+. Gerar uma solicitação de assinatura de certificado (CSR): `C:\Program Files\SANscreen\java64\bin\keytool.exe -certreq -sigalg SHA1withRSA -alias "alias_name" -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file C:\temp\server.csr"`
+. Depois que o CSR for devolvido na etapa 6, importe o certificado e, em seguida, exporte o certificado no formato base-64 e coloque-o em `"C:\temp" named servername.cer`.
+. Extraia o certificado do keystore:``C:\Program Files\SANscreen\java64\bin\keytool.exe -v -importkeystore -srckeystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -srcalias "alias_name" -destkeystore "C:\temp\file.p12" -deststoretype PKCS12``
+. Extraia uma chave privada do arquivo p12: `openssl pkcs12 -in "C:\temp\file.p12" -out "C:\temp\servername.private.pem"`
+. Mesclar o certificado base-64 que você exportou na etapa 7 com a chave privada: `openssl pkcs12 -export -in "<folder>\<certificate>.cer" -inkey "C:\temp\servername.private.pem" -out "C:\temp\servername.new.p12" -name "servername.abc.123.yyy.zzz"`
+. Importe o certificado mesclado para o keystore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -destkeystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -srckeystore "C:\temp\servername.new.p12" -srcstoretype PKCS12 -alias "alias_name"`
+. Importar o certificado raiz: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file "C:\<root_certificate>.cer" -trustcacerts -alias "alias_name"`
+. Importe o certificado raiz para o Server.trustore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore" -file "C:\<email_certificate>.cer" -trustcacerts -alias "alias_name"`
+. Importar o certificado intermédio: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore" -file "C:\<intermediate_certificate>.cer" -trustcacerts -alias "alias_name"`
++
+Repita esta etapa para todos os certificados intermediários.
+
+. Especifique o domínio no LDAP para corresponder a este exemplo.
+
+
+. Reinicie o servidor.
+

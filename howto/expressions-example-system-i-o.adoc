@@ -1,0 +1,57 @@
+---
+permalink: howto/expressions-example-system-i-o.html 
+sidebar: sidebar 
+keywords:  
+summary: As expressões dão a você a liberdade de traçar dados que podem ser calculados a partir de outras métricas. 
+---
+= Expressões exemplo: I/o "System"
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As expressões dão a você a liberdade de traçar dados que podem ser calculados a partir de outras métricas.
+
+
+
+== Sobre esta tarefa
+
+Exemplo 2: O OnCommand Insight adquire muitas métricas de fontes de dados. Entre eles estão leitura, gravação e IOPS total. No entanto, o número total de IOPS relatado pela aquisição às vezes inclui IOPS do "sistema", que são as operações de e/S que não são parte direta da leitura ou gravação de dados. Esta e/S do sistema também pode ser considerada como e/S "overhead", necessária para uma operação adequada do sistema, mas não diretamente relacionada com as operações de dados.
+
+Para mostrar essas I/os do sistema, você pode subtrair IOPS de leitura e gravação do total de IOPS relatado da aquisição. A fórmula pode ser assim:
+
+* IOPS do sistema: Total de IOPS - (leitura IOPS e gravação IOPS)
+
+
+Esses dados podem ser exibidos em um gráfico de linha no painel. Para fazer isso, siga estas etapas:
+
+
+
+== Passos
+
+. Crie um novo painel ou abra um painel existente no *modo de edição*.
+. Adicione um widget ao painel. Escolha *Gráfico de linha*.
++
+O widget abre no modo de edição. Por padrão, uma consulta é exibida mostrando *IOPS - Total* para ativos *Storage*. Se desejar, selecione um tipo de ativo diferente.
+
+. Clique no botão para criar uma cópia da consulta.
++
+Uma cópia da consulta é adicionada abaixo do original.
+
+. Na segunda consulta, clique no botão *Converter para expressão*.
++
+A consulta atual é convertida em modo de expressão. Clique em *Revert to Query* se desejar voltar para o modo Query a qualquer momento. Esteja ciente de que alternar entre modos irá redefinir os campos para seus padrões.
+
++
+Por enquanto, permaneça no modo *Expression*.
+
+. A métrica *IOPS - total* está agora no campo variável alfabética "'a'". Clique em *IOPS - Total* e altere-o para *IOPS - leitura*. .
+. No campo variável "'b'", clique em *Select* e escolha *IOPS - Write*.
+. No campo *expression*, você usa as letras correspondentes a cada variável para construir sua expressão. Nós escreveríamos nossa expressão simplesmente como: `a + b`. Na seção *Display*, escolha **Gráfico de Área** para essa expressão.
+. O campo *Label* identifica a expressão. Altere o rótulo para ""System IOPS"", ou algo igualmente significativo para você.
++
+O gráfico exibe o total de IOPS como um gráfico de linha, com um gráfico de área mostrando a combinação de IOPS de leitura e gravação abaixo disso. A lacuna entre os dois mostra as IOPS que não estão diretamente relacionadas às operações de leitura ou gravação de dados.
+
+. Clique em *Salvar* para salvar o gráfico em seu painel.
+

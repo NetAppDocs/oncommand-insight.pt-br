@@ -1,0 +1,37 @@
+---
+permalink: config-admin/applying-a-service-pack.html 
+sidebar: sidebar 
+keywords:  
+summary: Periodicamente, estão disponíveis Service packs, que podem ser aplicados para aproveitar as correções e melhorias do OnCommand Insight. 
+---
+= Aplicar um Service pack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Periodicamente, estão disponíveis Service packs, que podem ser aplicados para aproveitar as correções e melhorias do OnCommand Insight.
+
+
+
+== Antes de começar
+
+* Você deve ter baixado o arquivo do Service pack (por exemplo, `7.2service_pack_1.patch`) do site NOW.
+* Você deve ter aprovado todos os patches.
+
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *patches*.
+. No botão ações, selecione *aplicar patch*.
+. Na caixa de diálogo *aplicar patch de origem de dados*, clique em *Procurar* para localizar o arquivo do Service pack.
+. Inspecione os *Nome do patch*, *Descrição*, *tipos de fonte de dados afetados*, que mostram se alguma fonte de dados é afetada e *Detalhes*, que descreve os aprimoramentos que o Service pack contém.
+. Se o Service pack selecionado estiver correto, clique em *aplicar Patch*.
++
+Os Service packs são aprovados automaticamente; nenhuma ação adicional é necessária.
+
+

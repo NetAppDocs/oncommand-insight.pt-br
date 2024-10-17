@@ -1,0 +1,50 @@
+---
+permalink: config-admin/setting-up-weekly-backups-for-your-oci-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode querer configurar backups semanais automáticos para seu banco de dados Insight para proteger seus dados. Esses backups automáticos substituem os arquivos no diretório de backup especificado. 
+---
+= Configuração de backups semanais para seu banco de dados Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode querer configurar backups semanais automáticos para seu banco de dados Insight para proteger seus dados. Esses backups automáticos substituem os arquivos no diretório de backup especificado.
+
+
+
+== Sobre esta tarefa
+
+*Prática recomendada*: Quando você está configurando o backup semanal do banco de dados OCI, você precisa armazenar os backups em um servidor diferente do que o Insight está usando, caso esse servidor falhe. Não armazene backups manuais no diretório de backup semanal, pois cada backup semanal substitui os arquivos no diretório.
+
+O arquivo de backup conterá o seguinte:
+
+* Dados de inventário
+* Até 7 dias de dados de performance
+
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin* > *Setup*.
+. Clique no separador *Backup & Archive* (cópia de segurança e arquivo).
+. Na seção Backup semanal, selecione *Ativar backup semanal*.
+. Introduza o caminho para o *local de cópia de segurança*. Isso pode estar no no servidor Insight local ou em um servidor remoto acessível a partir do servidor Insight.
++
+[NOTE]
+====
+A configuração do local de backup está incluída no próprio backup, portanto, se você restaurar o backup em outro sistema, esteja ciente de que o local da pasta de backup pode ser inválido no novo sistema. Verifique duas vezes as definições de local de cópia de segurança depois de restaurar uma cópia de segurança.
+
+====
+. Selecione a opção *Limpeza* para manter os dois últimos ou os cinco últimos backups.
+. Clique em *Salvar*.
+
+
+
+
+== Resultados
+
+Você também pode ir para *Admin* > *Troubleshooting* para criar um backup sob demanda.

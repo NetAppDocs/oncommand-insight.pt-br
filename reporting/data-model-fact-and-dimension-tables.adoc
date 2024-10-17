@@ -1,0 +1,22 @@
+---
+permalink: reporting/data-model-fact-and-dimension-tables.html 
+sidebar: sidebar 
+keywords:  
+summary: Cada modelo de dados inclui tabelas de fato e dimensão. 
+---
+= Tabelas de fato e dimensões do modelo de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada modelo de dados inclui tabelas de fato e dimensão.
+
+* Tabelas de fatos: Contêm dados medidos, por exemplo, quantidade, capacidade bruta e utilizável. Contém chaves estrangeiras para tabelas de dimensões.
+* Tabelas dimensionais: Contêm informações descritivas sobre fatos, por exemplo, data center e unidades de negócios. Uma dimensão é uma estrutura, muitas vezes composta de hierarquias, que categoriza os dados. Atributos dimensionais ajudam a descrever os valores dimensionais.
+
+
+Usando atributos de dimensão diferentes ou múltiplos (vistos como colunas nos relatórios), você constrói relatórios que acessam dados para cada dimensão descrita no modelo de dados.
+
+Para obter explicações sobre todos os elementos de dados usados na criação de relatórios, consulte o Glossário de dados.

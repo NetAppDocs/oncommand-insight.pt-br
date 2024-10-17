@@ -1,0 +1,103 @@
+---
+permalink: dwh/connecting-data-warehouse-to-oncommand-insight-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: Os conetores estabelecem conexões do Data Warehouse do OnCommand Insight para os servidores OnCommand Insight. Você pode conetar o Data Warehouse com um ou mais servidores OnCommand Insight. Você pode adicionar ou remover conexões de ou para bancos de dados do OnCommand Insight. 
+---
+= Conetando o Data Warehouse aos servidores OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os conetores estabelecem conexões do Data Warehouse do OnCommand Insight para os servidores OnCommand Insight. Você pode conetar o Data Warehouse com um ou mais servidores OnCommand Insight. Você pode adicionar ou remover conexões de ou para bancos de dados do OnCommand Insight.
+
+
+
+== Sobre esta tarefa
+
+O Data Warehouse atribui um ID exclusivo global ao conetor que é usado em conjunto com o nome do conetor. Depois de adicionar um conetor, o Data Warehouse consulta o banco de dados do OnCommand Insight para obter o nome e a versão do site do OnCommand Insight.
+
+Você pode optar por se conetar a uma fonte de dados com ou sem SSL. Escolher a fonte de dados segura força a conexão a usar SSL ao se comunicar com o banco de dados remoto OnCommand Insight.
+
+O Data Warehouse pode fornecer uma visão consolidada dos dados de várias instalações do OnCommand Insight. Este banco de dados consolidado fornece as seguintes informações:
+
+* Identificadores únicos globalmente
++
+A cada objeto é atribuído um ID globalmente exclusivo que é independente dos IDs usados por sites individuais, para evitar IDs conflitantes e habilitar a deteção duplicada. Esses IDs são compartilhados entre todos os marts de dados. Este ID é o GUID (globalmente exclusivo) na coluna comentário das tabelas de data mart de inventário.
+
+* Sem duplicação
++
+Entidades que existem em vários bancos de dados OnCommand Insight são registradas apenas uma vez no banco de dados consolidado.
+
+* Registo atual
++
+Os dados na base de dados consolidada (Inventory data mart) são sempre os mais atualizados possível.
+
+
+
+Quando você adiciona ou edita uma conexão, você também pode testar a conexão. O teste faz o seguinte:
+
+* Verifica o endereço IP do host, o nome de usuário e a senha e garante que uma conexão possa ser estabelecida.
++
+As ligações inválidas aparecem a vermelho.
+
+* Compara a versão do OnCommand Insight com a versão do Data Warehouse.
++
+Se as versões não forem compatíveis, é apresentada uma mensagem de erro.
+
+* Verifica se o banco de dados OnCommand Insight não foi alterado ou restaurado para um banco de dados diferente, como visto pelo último processamento do Depósito de dados. Se tiver ocorrido uma alteração, é apresentada uma mensagem de erro.
+
+
+
+
+== Passos
+
+. Faça login no Portal do Armazém de dados em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema onde o Armazém de dados OnCommand Insight está instalado.
+. No painel de navegação à esquerda, clique em *Connectors*.
++
+A tabela conetores aparece em branco no início e mostra as informações do conetor depois de adicionar um conetor.
+
+. Clique em *novo* para adicionar um novo conetor.
+. Introduza o seguinte:
++
+** *Encriptação*
++
+Para ativar as solicitações do Data Warehouse a serem feitas usando criptografia SSL, `Enabled` selecione .
+
+** *Nome*
++
+Um nome do conetor que identificará o conetor na vista conetores.
+
+** *Anfitrião*
++
+Endereço IP do host
+
+** *Nome de utilizador*
++
+"inventário"
+
++
+[NOTE]
+====
+Usando esse nome de usuário e senha, você pode fazer login no banco de dados remoto do OnCommand Insight e realizar consultas nos dados.
+
+====
+** *Senha*
++
+"SANscreen"
+
+
+
+. Para especificar a porta a ser usada para conexões TCP com o host, clique em *Avançado* e insira o número da porta TCP.
+. Para especificar a porta (diferente da porta padrão) a ser usada para conexões HTTPS com o host, clique em *Avançado* e insira o número da porta.
+. Clique em *Teste*.
++
+O Data Warehouse testa a conexão.
+
+. Clique em *Salvar*.
++
+Se você inserir várias conexões para várias instalações, o Data Warehouse invocará processos de compilação independentes, um para cada banco de dados a partir do qual os dados devem ser extraídos. Cada processo de compilação extrai dados de um banco de dados OnCommand Insight e os carrega no banco de dados consolidado.
+
+

@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-annotations-job-in-the-jobs-list.html 
+sidebar: sidebar 
+keywords:  
+summary: Pode visualizar o trabalho Anotações na lista de trabalhos e aplicar as alterações de anotação aos dados do Data Warehouse. 
+---
+= Visualizar o trabalho Anotações na lista de trabalhos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode visualizar o trabalho Anotações na lista de trabalhos e aplicar as alterações de anotação aos dados do Data Warehouse.
+
+
+
+== Passos
+
+. Faça login como administrador no Portal do Armazém de dados em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema em que o Armazém de dados OnCommand Insight está instalado.
+. No painel de navegação à esquerda, clique em *trabalhos*.
+

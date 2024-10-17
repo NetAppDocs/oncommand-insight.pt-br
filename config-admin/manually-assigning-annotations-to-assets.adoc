@@ -1,0 +1,52 @@
+---
+permalink: config-admin/manually-assigning-annotations-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: A atribuição de anotações a ativos ajuda a classificar, agrupar e gerar relatórios sobre ativos de maneiras relevantes para o seu negócio. Embora seja possível atribuir anotações a ativos de um tipo específico automaticamente, usando regras de anotação, você pode atribuir anotações a um ativo individual usando sua página de ativo. 
+---
+= Atribuir manualmente anotações a ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A atribuição de anotações a ativos ajuda a classificar, agrupar e gerar relatórios sobre ativos de maneiras relevantes para o seu negócio. Embora seja possível atribuir anotações a ativos de um tipo específico automaticamente, usando regras de anotação, você pode atribuir anotações a um ativo individual usando sua página de ativo.
+
+
+
+== Antes de começar
+
+Tem de ter criado a anotação que pretende atribuir.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize o ativo ao qual deseja aplicar a anotação, fazendo uma das seguintes opções:
++
+** Clique no ativo no Painel de ativos.
+** Clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]na barra de ferramentas para exibir a caixa *pesquisar ativos*, digite o tipo ou o nome do ativo e selecione o ativo na lista exibida.
++
+A página de ativos é exibida.
+
+
+
+. Na seção *dados do usuário* da página de ativo, clique image:../media/add-annotation-icon.gif[""]em .
++
+A caixa de diálogo Adicionar anotação é exibida.
+
+. Clique em *Annotation* e selecione uma anotação na lista.
+. Clique em *value* e faça um dos seguintes procedimentos, dependendo do tipo de anotação selecionado:
++
+** Se o tipo de anotação for lista, data ou Booleano, selecione um valor na lista.
+** Se o tipo de anotação for texto, introduza um valor.
+
+
+. Clique em *Salvar*.
+. Se pretender alterar o valor da anotação depois de a atribuir, clique image:../media/change-annotation-value.gif[""] em e selecione um valor diferente.
++
+Se a anotação for do tipo de lista para o qual a opção *Add values dinamicamente após a atribuição de anotações* está selecionada, você pode digitar para adicionar um novo valor além de selecionar um valor existente.
+
+

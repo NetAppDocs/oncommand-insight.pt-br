@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-database-build-from-history-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode criar o banco de dados do Data Warehouse usando dados históricos no seu servidor OnCommand Insight. O Data Warehouse extrai dados dos servidores OnCommand Insight e constrói os data marts do Data Warehouse de acordo com a compilação do cronograma do histórico. 
+---
+= Criação de banco de dados do Data Warehouse a partir da visão geral do histórico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar o banco de dados do Data Warehouse usando dados históricos no seu servidor OnCommand Insight. O Data Warehouse extrai dados dos servidores OnCommand Insight e constrói os data marts do Data Warehouse de acordo com a compilação do cronograma do histórico.
+
+Esta opção não requer uma licença especial e os dados de inventário estão incluídos na compilação. No entanto, para criar informações de capacidade, as licenças do Plano OnCommand Insight e do OnCommand Insight Perform são necessárias.
+
+Se alguma compilação (do histórico ou atual) já tiver sido executada, a compilação não pode ser feita em datas anteriores à última tarefa. Isso significa que se você executar uma compilação atual, você não pode construir a partir do histórico. Mais especificamente, se você executou compilações do histórico que terminou em 1 de janeiro de 2012, você não pode executar nenhuma compilação no ano de 2011.
+
+Se a compilação do histórico não incluir um dia ou dois de quaisquer processos ETL malsucedidos, não tente construir o histórico por apenas esses dias. Os dados históricos são para períodos mais longos e um ou dois dias não vão mudar significativamente a tendência. Se você quiser reconstruir a partir da história, reconstrua toda a história.
+
+A vista Build from History (criar a partir do histórico) apresenta todos os trabalhos de compilação de todos os conetores. Por exemplo, a vista pode apresentar um trabalho de inventário para cada conetor, um trabalho de capacidade de porta para cada execução de compilação e um trabalho de anotações.
+
+Antes de configurar a compilação a partir do Histórico, deve ocorrer o seguinte:
+
+* Os conetores devem ser configurados.
+* As anotações devem ser inseridas no OnCommand Insight e podem ser atualizadas manualmente usando a opção *forçar Atualização de Anotações para DWH* no antigo Portal OnCommand Insight ou serão atualizadas automaticamente 15 minutos após serem definidas.
+

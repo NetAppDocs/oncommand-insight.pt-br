@@ -1,0 +1,46 @@
+---
+permalink: howto/collecting-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode importar dados de integração para o seu sistema OnCommand Insight. Os dados podem ser importados usando collectd, software de código aberto que é executado como um daemon para coletar dados de desempenho, ou usando a fonte de dados SNMP de integração que permite coletar dados SNMP genéricos. 
+---
+= Coleta de dados de integração
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode importar dados de integração para o seu sistema OnCommand Insight. Os dados podem ser importados usando collectd, software de código aberto que é executado como um daemon para coletar dados de desempenho, ou usando a fonte de dados SNMP de integração que permite coletar dados SNMP genéricos.
+
+
+
+== Fluxo de dados para dados de integração
+
+O seguinte se aplica à quantidade total de dados de integração que pode ser apresentada ao servidor OnCommand Insight:
+
+* É mantida uma fila de 100 chamadas.
++
+Quando um cliente espera na fila por mais de um minuto, ocorre um erro de tempo limite.
+
+* A taxa de ingestão recomendada para os dados de integração é uma vez por minuto, por cliente.
+* Há um limite de 300 tipos de objeto de integração permitidos.
+
+
+
+
+== Acessando o software e a documentação collectd
+
+Você pode acessar o software de plug-in do gravador de saída e a documentação do collectd no site GitHub do NetApp: https://github.com/NetApp/OCI_collectd[]
+
+
+
+== Backup e restauração de dados de integração
+
+O backup e a restauração dos dados de integração são modelados de acordo com as políticas de performance de backup e restauração de dados da OnCommand Insight. Quando um backup é configurado para dados de desempenho, os dados de integração também são incluídos no backup. Assim como no backup de desempenho, os últimos sete dias de dados de integração estão incluídos no backup. Todos os dados de integração presentes em um backup são restaurados em uma operação de restauração.
+
+
+
+== Licenças
+
+É necessária uma licença Perform para que os dados de integração sejam comunicados. Se uma licença Perform não estiver presente, ocorre um erro com a mensagem "Perform license required to report integration data" (Executar licença necessária para relatar dados de integração).

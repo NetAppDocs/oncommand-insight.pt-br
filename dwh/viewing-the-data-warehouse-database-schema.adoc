@@ -1,0 +1,31 @@
+---
+permalink: dwh/viewing-the-data-warehouse-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode querer ver o esquema do banco de dados para entender como usar os dados em outra API ou desenvolver consultas SQL. A opção de esquema lista todos os bancos de dados, tabelas e colunas no esquema. Você também pode revisar os diagramas de esquema do banco de dados mostrando as relações da tabela. 
+---
+= Exibindo o esquema do banco de dados do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode querer ver o esquema do banco de dados para entender como usar os dados em outra API ou desenvolver consultas SQL. A opção de esquema lista todos os bancos de dados, tabelas e colunas no esquema. Você também pode revisar os diagramas de esquema do banco de dados mostrando as relações da tabela.
+
+
+
+== Passos
+
+. Faça login no Portal do Armazém de dados em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema onde o Armazém de dados OnCommand Insight está instalado.
+. Clique image:../media/oci-7-help-icon-gif.gif[""]na barra de ferramentas Data Warehouse e selecione *Documentação*.
+. Selecione *Esquema de base de dados*.
+. Por exemplo, no painel *bancos de dados*, clique em *DWH_INVENTORY*.
+. No painel *todas as tabelas*, role para baixo até a seção *DWH_INVENTORY* e clique na tabela *annotation_value*.
++
+image::../media/oci-dwh-databaseschema-inventory-annotation-gif.gif[Tabela de valores de anotação inteligente de dados de inventário]
+
++
+É apresentada a tabela dwh_inventory.annotation.
+
+

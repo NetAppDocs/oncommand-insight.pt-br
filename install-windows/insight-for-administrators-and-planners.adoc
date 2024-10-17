@@ -1,0 +1,32 @@
+---
+permalink: install-windows/insight-for-administrators-and-planners.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight fornece informações essenciais para que administradores de storage, gerentes e arquitetos de storage realizem a solução de problemas e análises. 
+---
+= Como o Insight é usado por administradores, gerentes e planejadores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight fornece informações essenciais para que administradores de storage, gerentes e arquitetos de storage realizem a solução de problemas e análises.
+
+Administradores de storage experientes usam o OnCommand Insight juntamente com seu conhecimento de storage de rede para realizar estas tarefas típicas:
+
+* Gerenciar o ambiente SAN e nas.
+* Trabalhe com engenheiros de SAN em problemas de rede.
+* Avalie, teste e integre novas tecnologias de storage ao ambiente.
+* Solucionar problemas de desempenho, alertas, violações de políticas, violações e vulnerabilidades.
+
+
+Os gerentes e planejadores de rede usam o OnCommand Insight para executar estas tarefas de negócios:
+
+* Planejamento de capacidade
+* Desenvolva orçamentos e cronogramas de projetos.
+* Avalie e revise os planos de projeto para atender às demandas de projetos em constante mudança. 
+* Gerenciar o Planejamento e as despesas do projeto.
+* Compre hardware e software.
+* Forneça relatórios de negócios para gerenciamento de capacidade, cobrança de cobrança, dimensionamento correto e contratos de nível de serviço.
+

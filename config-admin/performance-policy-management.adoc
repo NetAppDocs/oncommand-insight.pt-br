@@ -1,0 +1,44 @@
+---
+permalink: config-admin/performance-policy-management.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight permite que você crie políticas de desempenho para monitorar sua rede em busca de vários limites e gerar alertas quando esses limites forem ultrapassados. Usando políticas de desempenho, você pode detetar uma violação de um limite imediatamente, identificar a implicação e analisar o impactos e a causa raiz do problema de uma maneira que permita uma correção rápida e eficaz. 
+---
+= Gerenciamento de políticas de performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight permite que você crie políticas de desempenho para monitorar sua rede em busca de vários limites e gerar alertas quando esses limites forem ultrapassados. Usando políticas de desempenho, você pode detetar uma violação de um limite imediatamente, identificar a implicação e analisar o impactos e a causa raiz do problema de uma maneira que permita uma correção rápida e eficaz.
+
+Uma política de desempenho permite definir limites em quaisquer objetos (armazenamento de dados, disco, hipervisor, volume interno, porta, armazenamento, nó de storage, pool de armazenamento, VMDK, máquina virtual e volume) com contadores de desempenho relatados (por exemplo, IOPS total). Quando ocorre uma violação de um limite, o Insight a deteta e reporta na página de ativos associados, exibindo um círculo sólido vermelho; por alerta por e-mail, se configurado; e no Painel de violações ou em qualquer painel personalizado que denuncie violações.
+
+O Insight fornece algumas políticas de desempenho padrão, que podem ser modificadas ou excluídas se não forem aplicáveis ao seu ambiente, para os seguintes objetos:
+
+* Hipervisor
++
+Há políticas de troca do ESX e utilização do ESX.
+
+* Volume e volume internos
++
+Há duas políticas de latência para cada recurso, uma anotada para a camada 1 e outra anotada para a camada 2.
+
+* Porta
++
+Há uma política para BB crédito zero.
+
+* Nó de storage
++
+Existe uma política para a utilização de nós.
+
+* Máquina virtual
++
+Há troca de VM e políticas de CPU e memória ESX.
+
+* Volume
++
+Há latência por camada e políticas de volume desalinhadas.
+
+

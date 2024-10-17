@@ -1,0 +1,43 @@
+---
+permalink: config-admin/setting-up-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de projetar a hierarquia de entidades de negócios para sua empresa, você pode configurar aplicativos e, em seguida, associar as entidades de negócios aos aplicativos. Esse processo cria a estrutura de entidades de negócios em seu banco de dados do OnCommand Insight. 
+---
+= Criação de entidades empresariais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de projetar a hierarquia de entidades de negócios para sua empresa, você pode configurar aplicativos e, em seguida, associar as entidades de negócios aos aplicativos. Esse processo cria a estrutura de entidades de negócios em seu banco de dados do OnCommand Insight.
+
+
+
+== Sobre esta tarefa
+
+Associar aplicativos a entidades de negócios é opcional; no entanto, é uma prática recomendada.
+
+
+
+== Passos
+
+. Faça login na IU da Web do Insight.
+. Clique em *Gerenciar* e selecione *entidades empresariais*.
++
+A página entidades empresariais é exibida.
+
+. Clique image:../media/add-annotation-icon.gif[""] para começar a construir uma nova entidade.
++
+A caixa de diálogo *Add Business Entity* é exibida.
+
+. Para cada nível de entidade (locatário, linha de negócio, Unidade de negócio e Projeto), você pode fazer qualquer um dos seguintes procedimentos:
++
+** Clique na lista nível de entidade e selecione um valor.
+** Digite um novo valor e pressione Enter.
+** Deixe o valor do nível da entidade como N/A se você não quiser usar o nível da entidade para a entidade de negócio.
+
+
+. Clique em *Salvar*.
+

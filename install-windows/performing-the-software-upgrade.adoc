@@ -1,0 +1,14 @@
+---
+permalink: install-windows/performing-the-software-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de concluir todas as tarefas de pré-requisito, você pode atualizar todos os componentes do Insight para uma nova versão baixando e executando o pacote de instalação aplicável em cada servidor. 
+---
+= Realizar a atualização de software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de concluir todas as tarefas de pré-requisito, você pode atualizar todos os componentes do Insight para uma nova versão baixando e executando o pacote de instalação aplicável em cada servidor.

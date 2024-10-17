@@ -1,0 +1,59 @@
+---
+permalink: faq/faq-insight-licensing.html 
+sidebar: sidebar 
+keywords:  
+summary: Respostas a perguntas comuns sobre licenciamento OnCommand Insight. 
+---
+= Licenciamento do OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Respostas a perguntas comuns sobre licenciamento OnCommand Insight.
+
+
+
+== Visão geral do licenciamento do OCI
+
+O OCI é licenciado por capacidade. Os clientes devem adquirir uma licença para cada módulo que desejam ativar:
+
+*Discover* é um pré-requisito para assegurar, executar e Planejar e não é oferecido por conta própria. O Discover é licenciado por TB de capacidade gerenciada.
+
+*Assure* é licenciado por TB de capacidade gerenciada (como uma única unidade de carga para toda a infraestrutura de armazenamento: FC, nas, iSCSI, FCoE).
+
+*Perform* é licenciado por TB de capacidade gerenciada.
+
+*Plan* é licenciado por TB de capacidade gerenciada.
+
+"Capacidade gerenciada" é definida como a capacidade bruta dos discos físicos, discos virtuais e fitas antes da formatação. Isso se aplica a todo o storage descoberto pelo Insight, tanto no local quanto na nuvem.
+
+A maioria das fontes de dados está analisando a capacidade de 2 TB da base bruta de disco. Não há consideração para a função de disco, como um disco sobressalente, disco não atribuído ou disco RAID.
+
+Existem dois tipos de licenças Insight disponíveis: *Perpetual* e *Subscription*.
+
+*Licenças perpétuas* permitem que você use indefinidamente a versão/versão específica do software obtido sujeito aos termos de licença aplicáveis. Se você adquiriu um Plano de suporte a software (SSP), a NetApp fornecerá acesso a atualizações de software disponíveis comercialmente pelo site de suporte da NetApp quando e se houver atualizações disponíveis de acordo com os termos dos Serviços de suporte. O NetApp também fornece acesso a patches especiais, conforme determinado pelo Centro de suporte Técnico da NetApp.
+
+*Assinatura* é uma licença de software de prazo fixo que concede o direito de:
+
+* Use o software no local por um período limitado apenas (mais comumente 12 meses) sujeito aos termos de licença aplicáveis
+* Receber suporte a Software (anteriormente referido como SSP) durante o período do prazo
+* Enquanto estiver em vigor, o Licenciado pode usar a versão, versão ou atualização mais atual comercialmente disponível, caso qualquer um seja disponibilizado, bem como receber suporte para o software
+
+
+No final de cada prazo fixo (mais comumente 12 meses), a licença pode ser renovada por um prazo fixo adicional (mais comumente 12 meses). Se a licença não for renovada, o Licenciado deixará de ter os direitos de utilização do software, deixará de ter direito aos benefícios do SSP e o Licenciado deverá destruir todas as cópias do software.
+
+
+
+== Mais sobre os módulos de Licença OCI
+
+O OCI tem 4 módulos de licença principais para atender às necessidades atuais do ambiente de data center. Estes módulos são *Discover, Perform, assure and Plan*. Discover é o módulo base e é necessário para todas as outras compras de módulos.
+
+O módulo *Discover* permite que o OCI localize os ativos no datacenter e mapeie dinamicamente os caminhos de serviço do dispositivo. Informações como capacidade, informações do fornecedor, modelo, firmware e números de série são fornecidas.
+
+*Perform* é o módulo de coleta de desempenho da OCI. O Perform captura IOPS, taxa de transferência, latência e informações de CPU e memória, além de fornecer outras análises.
+
+*Assure* está posicionado para ambientes Fibre Channel e tecnologias de eficiência. Ele ajuda a identificar e gerenciar riscos em ambientes Fibre Channel e iSCSI. O assure também ajuda com informações sobre identificação, mapeamento e alerta de entradas de caminho de serviço de mascaramento, mapeamento e zoneamento e políticas de práticas recomendadas de eficiência, como redundância de malha, saltos de switch, taxas de fan-out e provisionamento thin.
+
+*Plan* fornece a capacidade de identificar e prever tendências em computação, malha e vários tipos de storage (cDOT, 7 modos, 3rd partes) em ambientes híbridos on-premise e de data center dispersos globalmente. Permite tempos de retenção mais longos. O Data Warehouse consiste em uma Inteligência integrada para permitir a criação de relatórios e evitar a dupla contagem de métricas em ambientes de armazenamento compartilhado corporativos. Ele tem a capacidade de gerar e agendar um elogio de relatórios produzidos "fora da caixa", ou criar seus próprios relatórios usando suas ferramentas integradas de criação de relatórios "arrastar e soltar".

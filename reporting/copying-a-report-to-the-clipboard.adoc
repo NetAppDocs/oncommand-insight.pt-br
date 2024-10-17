@@ -1,0 +1,32 @@
+---
+permalink: reporting/copying-a-report-to-the-clipboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Use este processo para copiar um relatório para a área de transferência. 
+---
+= Copiar um relatório para a área de transferência
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use este processo para copiar um relatório para a área de transferência.
+
+
+
+== Passos
+
+. Abra o Portal de relatórios do Cognos 11: https://server-name:9300/bi/[]
+. Na barra de ferramentas, clique em image:../media/new-report.gif[""]
+. Clique em *Relatório*
+. Clique no ícone *Pages*image:../media/pages-icon.gif[""]
++
+O ícone *Report* image:../media/report-icon.gif[""]é exibido
+
+. Clique com o botão esquerdo do rato no ícone *Report*
++
+As opções de relatório são exibidas.
+
+. Clique em *Copiar relatório para a área de transferência*.
+

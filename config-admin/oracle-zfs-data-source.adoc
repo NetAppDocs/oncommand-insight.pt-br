@@ -1,0 +1,210 @@
+---
+permalink: config-admin/oracle-zfs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados Oracle ZFS suporta inventário e coleta de desempenho. 
+---
+= Fonte de dados Oracle ZFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados Oracle ZFS suporta inventário e coleta de desempenho.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário desta fonte de dados. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Disco (SDD)
+ a| 
+Disco
+
+
+
+ a| 
+Cluster
+ a| 
+Armazenamento
+
+
+
+ a| 
+Controlador
+ a| 
+Nó de storage
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+
+
+ a| 
+Mapa LUN
+ a| 
+Mapa de volume
+
+
+
+ a| 
+Iniciador, alvo
+ a| 
+Máscara de volume
+
+
+
+ a| 
+Partilhar
+ a| 
+Volume interno
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+A seguir estão os requisitos para configurar esta fonte de dados:
+
+* Nomes de host para o controlador ZFS-1 e o controlador ZFS-2
+* Nome de usuário e credenciais do administrador
+* Requisito de porta: 215 HTTP/HTTPS
+
+
+
+
+== Configuração
+
+|===
+
+
+|  |  
+
+
+ a| 
+Nome do host ZFS Controller-1
+ a| 
+Nome de host para controlador de storage 1
+
+
+
+ a| 
+Nome do host ZFS Controller-2
+ a| 
+Nome de host para controlador de storage 2
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador da conta de utilizador do administrador do sistema de armazenamento
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe para a conta de utilizador administrador
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Porta de TCP
+ a| 
+Porta TCP usada para conetar ao ZFS (padrão 215 )
+
+
+
+ a| 
+Tipo de ligação
+ a| 
+HTTP ou HTTPS
+
+
+
+ a| 
+Intervalo de pesquisa de inventário
+ a| 
+Intervalo de pesquisa de inventário (padrão 60 minutos)
+
+
+
+ a| 
+Tempo limite da ligação
+ a| 
+O padrão é de 60 segundos
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===
+
+
+== Solução de problemas
+
+Algumas coisas para tentar se você encontrar problemas com este coletor de dados:
+
+|===
+
+
+| Problema: | Tente isto: 
+
+
+ a| 
+"Credenciais de início de sessão inválidas"
+ a| 
+Valide a conta de usuário e a senha do ZFS
+
+
+
+ a| 
+"Erro de configuração" com a mensagem de erro ""O serviço REST está desativado""
+ a| 
+Verifique se o serviço REST está ativado neste dispositivo.
+
+
+
+ a| 
+"Erro de configuração " com mensagem de erro ""Usuário não autorizado para comando""
+ a| 
+Provavelmente devido a certas funções (por exemplo, 'Advanced_analytics') não estão incluídas para o usuário configurado <userName>.possível solução:
+
+* Corrija o escopo do Analytics (estatística) para o usuário com a função somente leitura:- na tela Configuração → usuários, coloque o Mouse sobre a função e clique duas vezes para permitir a edição
+* Selecione "Analytics" (análise) no menu pendente Scope (Escopo). É apresentada uma lista das propriedades possíveis.
+* Clique na caixa de seleção mais alta e ela selecionará todas as três propriedades.- clique no botão Adicionar no lado direito.
+* Clique no botão aplicar no canto superior direito da janela pop-up. A janela pop-up será fechada.
+
+
+|===

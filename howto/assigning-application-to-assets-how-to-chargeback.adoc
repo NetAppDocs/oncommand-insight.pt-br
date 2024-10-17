@@ -1,0 +1,14 @@
+---
+permalink: howto/assigning-application-to-assets-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de definir seus aplicativos, você precisa associar os aplicativos a ativos específicos. Você pode usar um método ad hoc simples para aplicar aplicativos a um ativo. Os usuários que desejam aplicar aplicativos em massa devem usar um método de consulta para identificar os ativos que desejam atribuir a um aplicativo. 
+---
+= Atribuindo aplicativos aos ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de definir seus aplicativos, você precisa associar os aplicativos a ativos específicos. Você pode usar um método ad hoc simples para aplicar aplicativos a um ativo. Os usuários que desejam aplicar aplicativos em massa devem usar um método de consulta para identificar os ativos que desejam atribuir a um aplicativo.

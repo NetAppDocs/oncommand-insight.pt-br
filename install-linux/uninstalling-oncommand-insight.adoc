@@ -1,0 +1,23 @@
+---
+permalink: install-linux/uninstalling-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode desinstalar os componentes do OnCommand Insight, se necessário. Você deve desinstalar os componentes do OnCommand Insight separadamente. 
+---
+= Desinstalar o OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode desinstalar os componentes do OnCommand Insight, se necessário. Você deve desinstalar os componentes do OnCommand Insight separadamente.
+
+[NOTE]
+====
+*É altamente recomendável fazer backup do Vault* antes de desinstalar o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+Cada componente é desinstalado separadamente.

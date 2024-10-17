@@ -1,0 +1,52 @@
+---
+permalink: howto/servicenow-integration-install-python-and-libraries.html 
+sidebar: sidebar 
+keywords:  
+summary: O Python pode ser instalado no servidor Insight ou em um host ou VM autônomo. 
+---
+= Instale Python e bibliotecas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Python pode ser instalado no servidor Insight ou em um host ou VM autônomo.
+
+
+
+== Passos
+
+. Em sua VM ou host, baixe Python 3,6 ou posterior.
+. Escolha a instalação personalizada e escolha as seguintes opções. Estes são necessários para a operação correta do script do conetor ou são altamente recomendados.
++
+** Instale o Launcher para todos os usuários
+** Adicione Python ao CAMINHO
+** Instale o PIP (que permite que o Python instale outros pacotes)
+** Instale tk/tcl e OCIOSO
+** Instale o conjunto de testes Python
+** Instale o py Launcher para todos os usuários
+** Associe arquivos com Python
+** Crie atalhos para aplicativos instalados
+** Adicione Python às variáveis de ambiente
+** Biblioteca padrão Precompile
+
+
+. Depois que o Python é instalado, instale as bibliotecas Python "requests" e "psnow". Execute o seguinte comando: `python -m pip install requests pysnow`
++
+*OBSERVAÇÃO:* este comando pode falhar quando você estiver operando em um ambiente proxy. Para contornar esse problema, você precisa baixar manualmente cada uma das bibliotecas Python e executar as solicitações de instalação uma a uma e na ordem correta.
+
++
+O comando instalará vários arquivos.
+
+. Verifique se as bibliotecas Python estão instaladas corretamente. Inicie o Python usando um dos seguintes métodos:
++
+** Abra um prompt cmd e digite `python`
+** No Windows, abra *Iniciar* e escolha *Python* > *Python-<version>.exe*
+
+
+. No prompt do Python, digite `modules`
++
+Python irá pedir-lhe para esperar um momento enquanto ele reúne uma lista de módulos, que ele irá então exibir.
+
+

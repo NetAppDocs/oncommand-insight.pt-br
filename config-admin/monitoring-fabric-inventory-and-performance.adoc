@@ -1,0 +1,26 @@
+---
+permalink: config-admin/monitoring-fabric-inventory-and-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Usando as páginas de ativos Fibre Channel da OnCommand Insight, você pode monitorar o desempenho e o inventário das malhas do seu ambiente e estar ciente de quaisquer alterações que possam causar problemas. 
+---
+= Monitoramento de ambiente Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usando as páginas de ativos Fibre Channel da OnCommand Insight, você pode monitorar o desempenho e o inventário das malhas em seu ambiente e estar ciente de quaisquer alterações que possam causar problemas.
+
+
+
+== Páginas de ativos Fibre Channel
+
+As páginas de ativos do Insight apresentam informações resumidas sobre o recurso, sua topologia (o dispositivo e suas conexões), gráficos de desempenho e tabelas de recursos associados. Você pode usar as páginas de ativos de malha, switch e porta para monitorar seu ambiente Fibre Channel. Particularmente útil ao solucionar um problema de Fibre Channel é o gráfico de desempenho para cada ativo de porta, que mostra o tráfego para a porta de maior contribuinte selecionada. Além disso, você também pode mostrar métricas de crédito de buffer a buffer e erros de porta neste gráfico, com o Insight exibindo um gráfico de desempenho separado para cada métrica.
+
+
+
+== Políticas de desempenho para métricas de porta
+
+O Insight permite que você crie políticas de desempenho para monitorar sua rede em busca de vários limites e gerar alertas quando esses limites são ultrapassados. Você pode criar políticas de desempenho para portas com base nas métricas de porta disponíveis. Quando ocorre uma violação de um limite, o Insight deteta e reporta-o na página de ativos associados exibindo um círculo sólido vermelho; por alerta por e-mail, se configurado; e no Painel de violações ou em qualquer painel personalizado que denuncie violações.

@@ -1,0 +1,21 @@
+---
+permalink: reporting/process-of-creating-custom-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: O processo de criação de relatórios ad hoc envolve várias tarefas. 
+---
+= Processo de criação de relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O processo de criação de relatórios ad hoc envolve várias tarefas.
+
+* Planeje os resultados do seu relatório.
+* Identifique dados para apoiar seus resultados.
+* Selecione o modelo de dados (por exemplo, modelo de dados de Chargeback, modelo de dados de inventário, etc.) que contenha os dados.
+* Selecione elementos de dados para o relatório.
+* Opcionalmente, formate, ordene e filtre os resultados do relatório.
+

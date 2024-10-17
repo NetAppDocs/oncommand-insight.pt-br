@@ -1,0 +1,38 @@
+---
+permalink: howto/custom-dashboard-roll-up.html 
+sidebar: sidebar 
+keywords:  
+summary: Os dados exibidos nos widgets do painel são agrupados a partir de pontos de dados adquiridos, permitindo flexibilidade e concisão em seus painéis. 
+---
+= Roll up e agregação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os dados exibidos nos widgets do painel são agrupados a partir de pontos de dados adquiridos, permitindo flexibilidade e concisão em seus painéis.
+
+Os dados exibidos em cada widget são agrupados a partir dos pontos de dados subjacentes coletados durante a aquisição. Por exemplo, se você tiver um widget de gráfico de linha mostrando Storage IOPS ao longo do tempo, talvez queira ver uma linha separada para cada um dos seus data centers, para uma comparação rápida. Você pode optar por implementar esses dados de várias maneiras:
+
+* *AVG*: Exibe cada linha como a _média_ dos dados subjacentes.
+* *Max*: Exibe cada linha como _maximum_ dos dados subjacentes.
+* *Min*: Exibe cada linha como _minimum_ dos dados subjacentes.
+* *Soma*: Exibe cada linha como _soma_ dos dados subjacentes.
+
+
+Para fazer isso, na consulta do seu widget, primeiro escolha um tipo de ativo (por exemplo, _Storage_) e métrica (como __IOPS - Tota__l). Para *Roll up*, escolha um método de rollup (como _AVG_) e selecione um atributo ou anotação para rolar os dados (por exemplo, _Data Center_). O widget é atualizado automaticamente e mostra uma linha para cada um dos seus data centers.
+
+Você também pode optar por implantar _todos_ dos dados subjacentes no gráfico ou tabela. Nesse caso, você receberá uma única linha para cada consulta no widget, que mostrará a média, min, Max ou soma da métrica escolhida para todos os ativos subjacentes.
+
+Se você definiu um filtro para a consulta, os dados que são agrupados são baseados nos dados filtrados.
+
+Observe que quando você optar por rolar um widget por qualquer campo (por exemplo, _Model_), você ainda precisará *Filtrar por* esse campo para exibir corretamente os dados desse campo no gráfico ou tabela.
+
+*Agregando dados:* você pode alinhar ainda mais seus gráficos de séries temporais (linha, área, etc.) agregando pontos de dados em intervalos de minuto, hora ou dia antes que esses dados sejam posteriormente agrupados por atributo (se escolhido). Você pode optar por agregar pontos de dados de acordo com a média, Máx, Mín ou soma, ou pelo último ponto de dados coletado durante o intervalo escolhido. Para escolher um método de agregação, clique em *mais opções* na seção de consulta do widget.
+
+O intervalo mínimo permitido é de dez minutos. Um pequeno intervalo combinado com um longo intervalo de tempo pode resultar em um aviso de "intervalo de agregação resultou em muitos pontos de dados." Você pode ver isso se tiver um intervalo pequeno e aumentar o período de tempo do painel para 7 dias. Neste caso, o Insight aumentará temporariamente o intervalo de agregação para 1 hora até selecionar um período de tempo menor.
+
+Você também pode agregar dados no widget de gráfico de barras e no widget de valor único.
+
+A maioria dos contadores de ativos se agrega a _AVG_ por padrão. Alguns contadores se agregam a _Max_, _min_ ou _sum_ por padrão. Por exemplo, erros de porta se agregam a _sum_ por padrão, onde as IOPS de armazenamento se agregam a _AVG_.

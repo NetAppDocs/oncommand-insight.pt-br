@@ -1,0 +1,42 @@
+---
+permalink: dwh/resetting-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode excluir o conteúdo dos data marts do Data Warehouse e excluir todos os conetores configurados. Você pode querer fazer isso se uma instalação ou atualização não foi concluída com sucesso e deixou o banco de dados do Data Warehouse em um estado intermediário. Você também pode excluir apenas o modelo de dados de inventário ou o modelo de dados do Cognos Reporting. 
+---
+= Repor a base de dados do Data Warehouse ou o servidor de relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir o conteúdo dos data marts do Data Warehouse e excluir todos os conetores configurados. Você pode querer fazer isso se uma instalação ou atualização não foi concluída com sucesso e deixou o banco de dados do Data Warehouse em um estado intermediário. Você também pode excluir apenas o modelo de dados de inventário ou o modelo de dados do Cognos Reporting.
+
+
+
+== Passos
+
+. Faça login no Portal do Armazém de dados em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema onde o Armazém de dados OnCommand Insight está instalado.
+. No painel de navegação à esquerda, clique em *Redefinir base de dados DWH*.
+. Clique em uma das seguintes opções:
++
+** *Repor base de dados DWH*
++
+Isso exclui o conteúdo de todos os marts de dados do Data Warehouse e todos os conetores configurados e coloca o Data Warehouse no estado instalado padrão sem configurações personalizadas. Você pode escolher essa opção, por exemplo, se você alterou seus servidores conetados, mas restaurou um banco de dados diferente do Data Warehouse acidentalmente em seu servidor e precisa retornar a um estado instalado padrão. Isso não exclui nenhum relatório. (Os relatórios são salvos no Cognos Content Store.)
+
+** *Redefinir apenas inventário*
++
+Isto elimina apenas o conteúdo do modelo de dados de inventário. Isso não exclui nenhum dado histórico.
+
+** *Redefinir conteúdo de relatórios*
++
+Isso redefine o conteúdo do servidor de relatórios. Isso exclui todos os relatórios personalizados que você possa ter. Faça backup de seus relatórios antes de escolher essa opção.
+
+
+
++
+É apresentada uma mensagem de aviso.
+
+. Para continuar, clique em *Yes*.
+

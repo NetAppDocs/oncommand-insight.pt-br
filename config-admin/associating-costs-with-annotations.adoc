@@ -1,0 +1,35 @@
+---
+permalink: config-admin/associating-costs-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de executar relatórios relacionados aos custos, você deve associar os custos às anotações em nível de serviço, nível de switch e nível do sistema, o que permite o chargeback para os usuários de storage com base no uso real da produção e na capacidade replicada. Por exemplo, para o nível de nível, você pode ter valores de nível de ouro e prata e atribuir um custo mais alto ao nível de ouro do que ao nível de prata. 
+---
+= Associar custos com anotações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de executar relatórios relacionados aos custos, você deve associar os custos às anotações em nível de serviço, nível de switch e nível do sistema, o que permite o chargeback para os usuários de storage com base no uso real da produção e na capacidade replicada. Por exemplo, para o nível de nível, você pode ter valores de nível de ouro e prata e atribuir um custo mais alto ao nível de ouro do que ao nível de prata.
+
+
+
+== Passos
+
+. Faça login na IU do Insightweb.
+. Clique em Gerenciar e selecione *Anotações*.
++
+É apresentada a página Annotation (Anotação).
+
+. Posicione o cursor sobre a anotação nível de serviço, nível de comutação ou nível e clique image:../media/edit-annotation-icon.gif[""]em .
++
+A caixa de diálogo Editar anotação é exibida.
+
+. Insira os valores de todos os níveis existentes no campo *custo*.
++
+As anotações nível e nível de serviço têm valores de nível automático e armazenamento de objetos, respetivamente, que não é possível remover.
+
+. Clique image:../media/edit-annotation-add-icon.gif[""] para adicionar níveis adicionais.
+. Clique em *Salvar* quando terminar.
+

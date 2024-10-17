@@ -1,0 +1,43 @@
+---
+permalink: howto/monitoring-the-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Cada página inicial do pool de storage fornece taxas de excesso de assinatura, identifica recursos correlacionados, utilização de LUN e disco, bem como violações e violações de políticas ocorridas com o pool de storage. 
+---
+= Monitoramento do pool de storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada página inicial do pool de storage fornece taxas de excesso de assinatura, identifica recursos correlacionados, utilização de LUN e disco, bem como violações e violações de políticas ocorridas com o pool de storage.
+
+Use a página inicial do pool de storage para identificar possíveis problemas com os ativos físicos que oferecem suporte à sua infraestrutura virtual. Você pode acompanhar tendências das taxas de capacidade e capacidade em 30 dias ou usar um período de tempo personalizado. Preste atenção aos dados nas seções a seguir para monitorar o status do pool de armazenamento.
+
+* *Resumo*
++
+Use esta seção para entender:
+
++
+** Informações sobre a capacidade do pool de storage, incluindo capacidade física e capacidade sobrecomprometida.
+** Se o agregado está sobrinscrito e por quanto.
+** Quaisquer violações de política que tenham ocorrido.
+
+
+* * Seções de recursos de armazenamento e discos*
++
+A seção recursos de armazenamento mostra a utilização do LUN.
+
++
+A seção discos mostra os discos individuais que compõem o pool de armazenamento.
+
+* *Recursos*
++
+Use esta seção para entender a correlação de VMDKs com LUNs e entender o caminho do aplicativo de storage para VM.
+
+* * Seção de violações*
++
+A seção violações identifica quaisquer violações às políticas de desempenho definidas para o pool de armazenamento.
+
+

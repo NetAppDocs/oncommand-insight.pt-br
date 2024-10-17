@@ -1,0 +1,195 @@
+---
+permalink: reporting/reporting-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: Cada conta de usuário recebe uma função com um conjunto de permissões. O número de usuários é limitado pelo número de licenças de relatórios associadas a cada função. 
+---
+= Reportando funções de usuário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada conta de usuário recebe uma função com um conjunto de permissões. O número de usuários é limitado pelo número de licenças de relatórios associadas a cada função.
+
+Cada função pode executar as seguintes ações:
+
+* *Destinatário*
++
+O portal de relatórios do OnCommand Insight exibe relatórios e define preferências pessoais, como as de idiomas e fusos horários.
+
++
+[NOTE]
+====
+Os destinatários não podem criar relatórios, executar relatórios, agendar relatórios, exportar relatórios nem executar tarefas administrativas.
+
+====
+* *Consumidor de Negócios*
++
+Executa relatórios e executa todas as opções de destinatários.
+
+* * Autor de negócios*
++
+Exibe relatórios programados, executa relatórios interativamente, cria histórias, além de executar todas as opções de consumidores de negócios.
+
+* *Autor profissional*
++
+Cria relatórios, cria pacotes e módulos de dados, além de executar todas as opções do Business Author.
+
+* *Administrador*
++
+Executa tarefas administrativas de relatórios, como a importação e exportação de definições de relatórios, configuração de relatórios, configuração de fontes de dados e encerramento e reinício de tarefas de relatórios.
+
+
+
+A tabela a seguir mostra o Privileges e o número máximo de usuários permitidos para cada função:
+
+|===
+
+
+| Recurso | Destinatário | Consumidor de negócios | Autor do negócio | Autor profissional | Administrador 
+
+
+ a| 
+Exibir relatórios na guia conteúdo da equipe
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Execute relatórios
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Agendar relatórios
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Carregar ficheiros externos
+ a| 
+Não
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+Crie histórias
+ a| 
+Não
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+Crie relatórios
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+Crie Pacotes e módulos de dados
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+Executar tarefas administrativas
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Sim
+
+
+
+ a| 
+Número de usuários
+ a| 
+Número de usuários do OnCommand Insight
+ a| 
+20
+ a| 
+2
+ a| 
+1
+ a| 
+1
+
+|===
+Quando você adiciona um novo usuário Data Warehouse e Reporting, se você exceder o limite em uma função, o usuário é adicionado como "ativado" e você precisa desativar ou remover outro usuário com essa função para dar uma nova associação de usuário.
+
+[NOTE]
+====
+Os recursos de criação de relatórios exigem licença do Insight Plan. Você pode adicionar outros usuários do Business Author e do Pro Author comprando o ARAP (Pacote de criação de relatórios adicionais). Contacte o seu representante da OnCommand Insight para obter assistência.
+
+====
+Essas funções de usuário de relatório não afetam o acesso direto ao banco de dados. Essas funções de usuário de relatórios não afetam sua capacidade de criar consultas SQL usando os data marts.

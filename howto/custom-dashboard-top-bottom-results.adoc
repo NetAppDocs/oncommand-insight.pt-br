@@ -1,0 +1,32 @@
+---
+permalink: howto/custom-dashboard-top-bottom-results.html 
+sidebar: sidebar 
+keywords:  
+summary: Em um widget de gráfico em um painel personalizado, você pode mostrar os resultados superior ou inferior dos dados acumulados e escolher o número de resultados mostrados. Em um widget de tabela, você pode selecionar o número de linhas exibidas e classificar por qualquer coluna. 
+---
+= Mostrando resultados superiores/inferiores em widgets do painel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Em um widget de gráfico em um painel personalizado, você pode mostrar os resultados superior ou inferior dos dados acumulados e escolher o número de resultados mostrados. Em um widget de tabela, você pode selecionar o número de linhas exibidas e classificar por qualquer coluna.
+
+
+
+== Widget Gráfico superior/inferior
+
+Em um widget de gráfico, quando você escolhe agrupar dados por um atributo específico, você tem a opção de exibir os resultados N superior ou N inferior. Observe que você não pode escolher os resultados superiores ou inferiores quando optar por rollup por atributos _all_.
+
+Você pode escolher os resultados a serem exibidos escolhendo *Top* ou *Bottom* no campo *Show* da consulta e selecionando um valor na lista fornecida.
+
+
+
+== Widget de tabela mostra entradas
+
+Em um widget de tabela, você pode selecionar o número de resultados mostrados nos resultados da tabela. Você pode escolher entre 5, 10, 20 ou 50 resultados. Não é dada a opção de escolher resultados superiores ou inferiores porque a tabela permite classificar ascendente ou descendente por qualquer coluna sob demanda.
+
+Você pode escolher o número de resultados a serem exibidos na tabela no painel selecionando um valor no campo *Mostrar entradas* da consulta.
+
+Observe que quanto mais resultados você escolher exibir, mais alto será o seu widget quando você salvá-lo no painel. Você não será capaz de redimensionar o widget menor do que o número de linhas exibidas.

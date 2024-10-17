@@ -1,0 +1,32 @@
+---
+permalink: config-admin/managing-security-on-the-local-acquisition-unit.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A ferramenta securityadmin permite gerenciar opções de segurança no usuário de aquisição local (LAU). O gerenciamento de segurança inclui o gerenciamento de chaves e senhas, salvar e restaurar configurações de segurança que você cria ou restaura as configurações padrão.' 
+---
+= Gestão da segurança na unidade de aquisição local
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A `securityadmin` ferramenta permite gerenciar opções de segurança no usuário de aquisição local (LAU). O gerenciamento de segurança inclui o gerenciamento de chaves e senhas, salvar e restaurar configurações de segurança que você cria ou restaura as configurações padrão.
+
+
+
+== Antes de começar
+
+Você deve ter `admin` o Privileges para executar tarefas de configuração de segurança.
+
+
+
+== Sobre esta tarefa
+
+Você usa a `securityadmin` ferramenta para gerenciar a segurança:
+
+* Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.

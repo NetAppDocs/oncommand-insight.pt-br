@@ -1,0 +1,55 @@
+---
+permalink: config-admin/assigning-annotations-using-a-query.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: A atribuição de uma anotação a um grupo de ativos ajuda a identificar ou utilizar mais facilmente esses ativos relacionados em consultas ou painéis. 
+---
+= Atribuindo anotações a vários ativos usando uma consulta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A atribuição de uma anotação a um grupo de ativos ajuda a identificar ou utilizar mais facilmente esses ativos relacionados em consultas ou painéis.
+
+
+
+== Antes de começar
+
+As anotações que você deseja atribuir a ativos devem ter sido criadas anteriormente.
+
+
+
+== Sobre esta tarefa
+
+Você pode simplificar a tarefa de atribuir uma anotação a vários ativos usando uma consulta. Por exemplo, se pretender atribuir uma anotação de endereço personalizado a todas as suas matrizes numa localização específica do centro de dados.
+
+
+
+== Passos
+
+. Crie uma nova consulta para identificar os ativos nos quais você deseja atribuir uma anotação. Clique em *consultas* > * Nova consulta*.
+. Na lista suspensa *Search for...*, escolha *Storage*. Você pode definir filtros para restringir ainda mais a lista de armazenamentos exibida.
+. Na lista de armazenamentos exibida, selecione um ou mais clicando na caixa de seleção ao lado do nome de armazenamento. Você também pode selecionar todos os armazenamentos exibidos clicando na caixa de seleção principal na parte superior da lista.
+. Quando tiver selecionado todos os armazenamentos desejados, clique em *ações* > *Editar anotação*.
++
+O sistema exibe a caixa de diálogo Adicionar anotação.
+
+. Selecione *Anotação* e *valor* que deseja atribuir aos armazenamentos e clique em *Salvar*.
++
+Se estiver a apresentar a coluna para essa anotação, esta será apresentada em todos os armazenamentos selecionados.
+
+. Agora você pode usar a anotação para filtrar armazenamentos em um widget ou consulta. Em um widget, você pode fazer o seguinte:
++
+.. Crie um dashboard ou abra um já existente. Adicione uma *variável* e escolha a anotação que você definiu nos armazenamentos acima. A variável é adicionada ao painel de instrumentos.
+.. No campo variável que você acabou de adicionar, clique em *any* e insira o valor apropriado para filtrar. Clique na marca de verificação para guardar o valor da variável.
+.. Adicione um widget. Na consulta do widget, clique no botão**Filter by**** e selecione a anotação apropriada na lista.
+.. Clique em *any* e selecione a variável de anotação que você adicionou acima. As variáveis que você criou começam com "" e são exibidas na lista suspensa.
+.. Defina quaisquer outros filtros ou campos que desejar e clique em *Salvar* quando o widget for personalizado de acordo com o seu gosto.
+
+
++
+O widget no painel apresenta os dados apenas para os armazenamentos aos quais atribuiu a anotação.
+
+

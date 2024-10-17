@@ -1,0 +1,87 @@
+---
+permalink: config-admin/generic-emc-ecc-storagescope-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O dispositivo EMC ECC StorageScope tem três tipos de fontes de dados: 5.x, 6,0 e 6,1.' 
+---
+= Fonte de dados EMC ECC StorageScope
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O dispositivo EMC ECC StorageScope tem três tipos de fontes de dados: 5.x, 6,0 e 6,1.
+
+
+
+== Configuração
+
+[NOTE]
+====
+Este coletor de dados já não está disponível a partir do OnCommand Insight 7,3.11.
+
+====
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Servidor ECC
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do servidor ECC
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador para o servidor ECC
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha r servidor ECC
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Porta ECC
+ a| 
+Porta utilizada para o servidor ECC
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 30 minutos)
+
+
+
+ a| 
+Protocolo para ligar à base de dados
+ a| 
+Protocolo utilizado para ligar à base de dados
+
+
+
+ a| 
+Consultar informações do sistema de ficheiros
+ a| 
+Selecione para recuperar detalhes de aliases WWN e sistemas de arquivos.
+
+|===

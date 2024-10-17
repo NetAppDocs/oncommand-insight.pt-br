@@ -1,0 +1,20 @@
+---
+permalink: config-admin/performance-data-archiving.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight 7,3 apresenta a capacidade de arquivar dados de performance diariamente. Isso complementa a configuração e os backups de dados de desempenho limitado. 
+---
+= Arquivamento de dados de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight 7,3 apresenta a capacidade de arquivar dados de performance diariamente. Isso complementa a configuração e os backups de dados de desempenho limitado.
+
+A OnCommand Insight retém até 90 dias de dados de desempenho e violação. No entanto, ao criar um backup desses dados, apenas as informações mais recentes são incluídas no backup. O arquivamento permite salvar o restante dos dados de desempenho e carregá-los conforme necessário.
+
+Quando a localização do arquivo estiver configurada e o arquivamento estiver ativado, uma vez por dia o Insight arquivará os dados de desempenho do dia anterior para todos os objetos no local do arquivo. O arquivo de cada dia é mantido na pasta de arquivo em um arquivo separado. O arquivamento acontece em segundo plano e continuará enquanto o Insight estiver em execução.
+
+Os 90 dias mais recentes de arquivos são retidos; arquivos de arquivo com mais de 90 dias são excluídos à medida que os mais novos são criados.

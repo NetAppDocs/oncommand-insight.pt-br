@@ -1,0 +1,35 @@
+---
+permalink: config-admin/installing-a-patch-on-all-data-sources-of-one-type.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de carregar um patch de origem de dados, você pode instalá-lo em todas as fontes de dados do mesmo tipo. 
+---
+= Instalando um patch em um tipo de fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de carregar um patch de origem de dados, você pode instalá-lo em todas as fontes de dados do mesmo tipo.
+
+
+
+== Antes de começar
+
+Você deve ter carregado um arquivo de patch que você deseja instalar em um tipo de fonte de dados.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *patches*.
+. No botão ações, selecione *aplicar patch*.
+. Na caixa de diálogo *aplicar patch de origem de dados*, clique em *Procurar* para localizar o arquivo de patch carregado.
+. Verifique o *Nome do patch*, *Descrição* e *tipos de fonte de dados afetados*.
+. Se o patch selecionado estiver correto, clique em *aplicar Patch*.
++
+Todas as fontes de dados do mesmo tipo são atualizadas com este patch.
+
+

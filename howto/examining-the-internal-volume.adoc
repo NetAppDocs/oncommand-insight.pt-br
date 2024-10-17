@@ -1,0 +1,31 @@
+---
+permalink: howto/examining-the-internal-volume.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Examinando o volume interno
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+image::../media/greedy-vol1.gif[ganancioso vol1]
+
+Na página inicial volume interno, você vê:
+
+* Os gráficos de desempenho do volume interno correspondem ao que foi visto anteriormente para o desempenho do aplicativo para latência e IOPS.
+* Na seção recursos, onde os ativos correlacionados são exibidos, um recurso "ganancioso" é identificado (CDot_Boston:SP1:vol_01).
+
+
+Um recurso ganancioso é identificado pela análise de correlação de insights. Recursos gananciosos/degradados são "colegas" que utilizam o mesmo recurso compartilhado. O recurso ganancioso tem IOPS ou taxas de utilização que afetam negativamente a latência ou IOPS do recurso degradado.
+
+Recursos ambiciosos e degradados podem ser identificados em páginas de destino Máquina Virtual, volume e volume Interno. Um máximo de dois recursos gananciosos serão exibidos em cada Landing page.
+
+Selecionar o ranking de correlação (%) fornece os resultados da análise de recursos gananciosos. Por exemplo, clicar em um valor percentual ganancioso identifica a operação em um ativo que impacta a operação no ativo degradado, semelhante ao que é mostrado no exemplo a seguir.
+
+image::../media/greedy-percentage.gif[percentagem gananciosa]
+
+Quando um recurso degradado é identificado, você pode selecionar a pontuação degradada (%) para identificar a operação e o recurso que está impactando o recurso degradado.
+
+image::../media/guid-13582cf7-aedf-47d1-935e-edc7c5b1b921.gif[guid 13582cf7 aedf 47d1 935e edc7c5b1b921]

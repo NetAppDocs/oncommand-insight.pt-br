@@ -1,0 +1,29 @@
+---
+permalink: config-admin/forcing-annotation-updates.html 
+sidebar: sidebar 
+keywords:  
+summary: Se tiver alterado as anotações e pretender utilizá-las imediatamente nos relatórios, utilize uma das opções de anotação de força. 
+---
+= Forçar atualizações de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se tiver alterado as anotações e pretender utilizá-las imediatamente nos relatórios, utilize uma das opções de anotação de força.
+
+
+
+== Passos
+
+. Na IU da Web, clique em *Admin* e selecione *solução de problemas*.
+. Na parte inferior da página, clique no link *solução de problemas avançada*.
+. Clique na guia *ações*.
+. Selecione uma destas opções:
++
+** *Atualizar anotações DWH* para forçar a atualização de anotações no data warehouse a ser usada para relatórios.
+** *Atualize anotações DWH (incluindo excluídas)* para forçar uma atualização de anotações (incluindo objetos excluídos) no data warehouse a ser usada para relatórios.
+
+
+

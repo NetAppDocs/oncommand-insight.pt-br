@@ -1,0 +1,18 @@
+---
+permalink: config-admin/asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'As páginas de ativos fornecem dados de solução de problemas de desempenho e apresentam informações resumidas sobre um ativo base (como uma máquina virtual ou um volume) e os ativos relacionados que ele usa (como pools de armazenamento, nós de armazenamento e portas de switch conetadas), com links para informações adicionais.' 
+---
+= Dados da página de ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As páginas de ativos fornecem dados de solução de problemas de desempenho e apresentam informações resumidas sobre um ativo base (como uma máquina virtual ou um volume) e os ativos relacionados que ele usa (como pools de armazenamento, nós de armazenamento e portas de switch conetadas), com links para informações adicionais.
+
+A partir do OnCommand Insight 7,3.1, todas as páginas de ativos têm uma página *Principal* e uma página *dados adicionais*. Na página principal estão um resumo do ativo e diferentes seções para gráficos, topologia e outras informações. A página *dados adicionais* permite configurar uma página de painel personalizável para o tipo de ativo atual.
+
+Um círculo vermelho sólido ao lado de uma linha ou mensagem na guia principal da página de ativos indica possíveis problemas com o ambiente monitorado.

@@ -1,0 +1,14 @@
+---
+permalink: howto/finding-assets-querying.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode facilmente encontrar e exibir ativos em seu ambiente usando consultas poderosas. 
+---
+= Encontrando ativos: Consultando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode facilmente encontrar e exibir ativos em seu ambiente usando consultas poderosas.

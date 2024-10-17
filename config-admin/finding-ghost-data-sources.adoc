@@ -1,0 +1,26 @@
+---
+permalink: config-admin/finding-ghost-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você removeu um dispositivo, mas os dados do dispositivo permanecem, você pode localizar quaisquer fontes de dados fantasma para que você possa removê-los. 
+---
+= Encontrar fontes de dados fantasma
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você removeu um dispositivo, mas os dados do dispositivo permanecem, você pode localizar quaisquer fontes de dados fantasma para que você possa removê-los.
+
+
+
+== Passos
+
+. Na IU da Web, clique em *Admin* e selecione *solução de problemas*.
+. Na parte inferior da página na área outras tarefas, clique no link *solução de problemas avançada*.
+. Na guia *relatórios*, clique no link *fontes de dados fantasma*.
++
+O OnCommand Insight produz uma lista de originadores com as informações do dispositivo.
+
+

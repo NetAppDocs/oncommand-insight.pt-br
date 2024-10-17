@@ -1,0 +1,51 @@
+---
+permalink: howto/compare-one-object-s-latency-total-to-the-latency-total-of-the-top-10-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: As etapas a seguir comparam o total de latência de uma única VM com as VMs que relatam o total de latência dos 10 principais em toda a infraestrutura virtual. 
+---
+= Compare o total de latência de um objeto com o total de latência dos 10 principais objetos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As etapas a seguir comparam o total de latência de uma única VM com as VMs que relatam o total de latência dos 10 principais em toda a infraestrutura virtual.
+
+
+
+== Passos
+
+. Adicione um widget com um gráfico de linhas ao novo painel: *Widget* > *Gráfico de linhas*
++
+.. Altere o dispositivo padrão para Virtual Machine: Clique em *Storage* > *Virtual Machine* > *Latency-Total*
++
+O widget exibe a latência total, para todas as VMs, para as 24 horas padrão em um gráfico de área.
+
+.. Crie uma segunda exibição neste widget que mostre a média total da latência para todas as VMs: *Widget* > *Gráfico de linha*
+.. Altere o dispositivo padrão para Virtual Machine: Clique em *Storage* > *Virtual Machine* > *Latency-Total*
++
+O widget exibe o total de latência para o período padrão de 24 horas usando um gráfico de linhas.
+
+.. Clique em *X* na barra *Roll up* e selecione *Show* > *Top* > *10*
+
+
++
+O sistema exibe as 10 principais VMs com base na latência - total. image:../media/guid-7fe726e3-d15f-438a-9d1f-b02fb2daffe9.gif[""]
+
+. Adicione a VM que você deseja comparar com os 10 principais:
++
+.. Clique em * Adicionar*
+.. Altere o dispositivo padrão para Virtual Machine: Clique em *Storage* > *Virtual Machine* > *Latency Total*
+.. Clique em *Filtrar por* > *Nome* > * var1*
+
+
+. Clique em *Mostrar legenda*
+
+
+
+
+== Resultados
+
+Uma legenda identifica cada uma das VMs em análise. Você pode identificar facilmente VM_Exchange_1 e determinar se ele está com latência semelhante às dez principais VMs do ambiente.

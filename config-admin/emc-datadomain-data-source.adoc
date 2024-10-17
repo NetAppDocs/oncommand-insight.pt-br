@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-datadomain-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Esta fonte de dados coleta informações de armazenamento e configuração de sistemas de armazenamento de deduplicação EMC Data Domain. Para adicionar a fonte de dados, você deve usar instruções e comandos de configuração específicos e estar ciente dos requisitos da fonte de dados e das recomendações de uso. 
+---
+= Fonte de dados EMC Data Domain
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta fonte de dados coleta informações de armazenamento e configuração de sistemas de armazenamento de deduplicação EMC Data Domain. Para adicionar a fonte de dados, você deve usar instruções e comandos de configuração específicos e estar ciente dos requisitos da fonte de dados e das recomendações de uso.
+
+
+
+== Terminologia
+
+O OnCommand Insight adquire as seguintes informações de inventário da fonte de dados do domínio de dados EMC. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Array
+ a| 
+Armazenamento
+
+
+
+ a| 
+Porta
+ a| 
+Porta
+
+
+
+ a| 
+Filesys
+ a| 
+Volume interno
+
+
+
+ a| 
+Mtree
+ a| 
+QTree
+
+
+
+ a| 
+Cota
+ a| 
+Cota
+
+
+
+ a| 
+Compartilhamento NFS e CIFS
+ a| 
+Partilha de ficheiros
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Endereço IP do dispositivo domínio de dados
+* Nome de usuário somente leitura e senha para o armazenamento do domínio de dados
+* Porta SSH 22
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Endereço IP
+ a| 
+O endereço IP ou o nome de domínio totalmente qualificado da matriz de armazenamento Data Domain
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+O nome de usuário para a matriz de armazenamento Data Domain
+
+
+
+ a| 
+Palavra-passe
+ a| 
+A palavra-passe para a matriz de armazenamento Data Domain
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Tempo limite de espera do processo SSH (seg.)
+ a| 
+Tempo limite do processo SSH (padrão de 180 segundos)
+
+
+
+ a| 
+Porta SSH
+ a| 
+Porta de serviço SSH
+
+|===

@@ -1,0 +1,27 @@
+---
+permalink: config-admin/checking-the-status-of-server-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Essa opção exibe as informações do servidor OnCommand Insight, incluindo memória de servidor, espaço em disco, sistema operacional e informações de banco de dados da CPU e OnCommand Insight, incluindo o tamanho de dados do InnoDB e o espaço livre em disco onde o banco de dados reside. 
+---
+= Verificando o status dos recursos do servidor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta opção exibe as informações do servidor OnCommand Insight, incluindo memória de servidor, espaço em disco, sistema operacional e informações de banco de dados OnCommand Insight e CPU, incluindo o tamanho de dados InnoDB e o espaço livre em disco onde o banco de dados reside.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin* e selecione *solução de problemas*.
+. Na parte inferior da página na área outras tarefas, clique no link *Portal OnCommand Insight*.
+. Na próxima página no menu Avançado, clique no link *solução de problemas*.
+. Clique em *Status dos recursos do servidor*.
++
+*Para usuários avançados do OnCommand Insight:* o administrador pode executar alguns testes SQL para verificar o tempo de resposta do banco de dados e do servidor a partir do botão no final do resumo de informações. Esta opção exibe um aviso se o recurso do servidor estiver baixo.
+
+

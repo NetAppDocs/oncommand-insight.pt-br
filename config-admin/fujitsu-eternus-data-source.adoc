@@ -1,0 +1,128 @@
+---
+permalink: config-admin/fujitsu-eternus-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados Fujitsu ETERNUS requer o endereço IP do armazenamento. Não pode ser delimitado por vírgulas. 
+---
+= Fonte de dados Fujitsu ETERNUS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados Fujitsu ETERNUS requer o endereço IP do armazenamento. Não pode ser delimitado por vírgulas.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados Fujitsu ETERNUS. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Armazenamento
+ a| 
+Armazenamento
+
+
+
+ a| 
+Thin Pool, pool de camadas flexível,
+
+Grupo RAID
+ a| 
+Pool de storage
+
+
+
+ a| 
+Volume padrão, volume de dados Snap (SDV),
+
+Snap Data Pool volume (SDPV),
+
+Volume de provisionamento fino (TPV)
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Um endereço IP do armazenamento ETERNUS, que não pode ser delimitado por vírgulas
+* Nome de usuário e senha no nível de administração SSH
+* Porta 22
+* Certifique-se de que a rolagem da página está desativada. (clienv-show-more-scroll disable)
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Endereço IP do armazenamento ETERNUS
+ a| 
+Endereço IP do armazenamento ETERNUS
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador para armazenamento ETERNUS
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha usada para o esternus
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Tempo limite de espera do processo SSH (seg.)
+ a| 
+Tempo limite do processo SSH (padrão de 600 segundos)
+
+|===

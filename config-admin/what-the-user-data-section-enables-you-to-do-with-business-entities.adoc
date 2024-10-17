@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode definir entidades de negócios para acompanhar e gerar relatórios sobre os dados do seu ambiente em um nível mais granular. A seção dados do usuário em uma página de ativo permite que você altere a entidade de negócios atribuída a um ativo ou remova uma entidade de negócios de um ativo. 
+---
+= Usando a seção dados do usuário para atribuir ou modificar entidades de negócios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode definir entidades de negócios para acompanhar e gerar relatórios sobre os dados do seu ambiente em um nível mais granular. A seção dados do usuário em uma página de ativo permite que você altere a entidade de negócios atribuída a um ativo ou remova uma entidade de negócios de um ativo.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize uma página de ativo fazendo uma das seguintes opções:
++
+** Na barra de ferramentas do Insight, clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]em , digite o nome do ativo e selecione-o na lista.
+** Clique em *painéis*, selecione *Painel de ativos*, localize um nome de ativo e clique nele. A página de ativos é exibida.
+
+
+. Você pode fazer o seguinte:
++
+** Para alterar a entidade atribuída ou atribuir uma entidade, clique image:../media/pencil-icon-landing-page-be.gif[""] e selecione uma entidade na lista.
+** Para remover uma entidade de negócios, clique image:../media/trash-can-query.gif[""]em .
++
+[NOTE]
+====
+Não é possível remover uma entidade derivada de um aplicativo atribuído ao ativo.
+
+====
+
+
+

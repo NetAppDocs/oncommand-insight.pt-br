@@ -1,0 +1,156 @@
+---
+permalink: config-admin/pure-storage-flasharray-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A fonte de dados do Pure Storage FlashArray (HTTP) é usada para coletar informações do Pure Storage Flash Array. O Insight suporta tanto inventário quanto coleta de desempenho.' 
+---
+= Fonte de dados Pure Storage FlashArray
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados do Pure Storage FlashArray (HTTP) é usada para coletar informações do Pure Storage Flash Array. O Insight suporta tanto inventário quanto coleta de desempenho.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário a partir da fonte de dados do Pure Storage FlashArray. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Unidade (SSD)
+ a| 
+Disco
+
+
+
+ a| 
+Array
+ a| 
+Armazenamento
+
+
+
+ a| 
+Controlador
+ a| 
+Nó de storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Porta
+ a| 
+Porta
+
+
+
+ a| 
+Mapa LUN (anfitrião, grupo anfitrião, porta de destino)
+ a| 
+Mapa de volume, Máscara de volume
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Endereço IP do sistema de armazenamento
+* Nome de utilizador e palavra-passe da conta de administrador do sistema de armazenamento Pure.
+* Requisito de porta: HTTP/HTTPS 80/443
+
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Host FlashArray
+ a| 
+Endereço IIP ou nome de domínio totalmente qualificado do FlashArray Management Server
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de usuário do FlashArray Management Server
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha para o FlashArray Management Server
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Tipo de ligação
+ a| 
+Servidor de gerenciamento
+
+
+
+ a| 
+Porta TCP
+ a| 
+Porta TCP usada para se conetar ao FlashArray Server (padrão 443 )
+
+
+
+ a| 
+Tempo limite da ligação (seg.)
+ a| 
+Tempo limite da ligação (predefinição 60 segundos)
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 60 minutos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre polls perfromance (padrão 300 segundos)
+
+|===

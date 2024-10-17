@@ -1,0 +1,56 @@
+---
+permalink: howto/observe-an-objects-behavior-over-time.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode observar o comportamento de um único objeto para determinar se o objeto está operando dentro dos níveis operacionais esperados. 
+---
+= Observe o comportamento de um objeto ao longo do tempo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode observar o comportamento de um único objeto para determinar se o objeto está operando dentro dos níveis operacionais esperados.
+
+
+
+== Passos
+
+. Use uma consulta para identificar a VM que será objeto de análise: *Consulta* > * Nova consulta* > *Máquina virtual* > *"nome"*
++
+Deixando o campo nome em branco retorna todas as VMs. Selecione a VM que pretende utilizar neste exercício. Você pode selecioná-lo rolando pela lista de VMs.
+
+. Crie um novo painel para as informações que você deseja coletar. Na barra de ferramentas, clique em *Dashboards* > * novo painel*.
+. No novo Painel, selecione *variável* > *texto*.
++
+.. Adicione o nome da VM da consulta como``$var1`` valor.
+.. Clique na caixa de verificação.
+
+
++
+A variável é usada para alternar facilmente entre diferentes conjuntos de objetos que você deseja analisar. Em outras etapas de sua análise, você pode reutilizar essa variável para análise adicional em relação à VM única inicialmente escolhida. Variáveis tornam-se mais úteis ao identificar vários objetos.
+
+. Adicione um widget de gráfico de linha ao novo painel: *Widget* > *Gráfico de linha*.
++
+.. Altere o tipo de ativo padrão para máquina virtual: Clique em *Máquina virtual* > *latência total*.
+.. Clique em *Filtrar por* > *Nome* > * var1*.
+.. Altere o período de tempo no painel de instrumentos: *Substituir o tempo do painel* > *ligado* > *7 dias*.
+
+
++
+Pode alterar a duração do visor utilizando qualquer uma das seleções predefinidas ou especificando um intervalo de tempo personalizado.
+
++
+O painel exibe o *IOPS-total* da VM pelo período de tempo especificado.
+
+. Atribua um nome ao widget e salve o widget.
+
+
+
+
+== Resultados
+
+Seu widget deve conter dados semelhantes aos seguintes: image:../media/guid-e7ea8edf-7fcc-4fc8-bd87-d8030e85a988.gif[""]
+
+A VM mostra um período de latência anormalmente alta durante um curto período de tempo nos 7 dias que são exibidos.

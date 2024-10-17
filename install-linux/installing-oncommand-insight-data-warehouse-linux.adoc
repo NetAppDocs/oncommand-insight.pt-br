@@ -1,0 +1,83 @@
+---
+permalink: install-linux/installing-oncommand-insight-data-warehouse-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A instalação é auto-suficiente e inclui os elementos necessários para executar e operar o Armazém de dados OnCommand Insight (DWH).' 
+---
+= Instalar o Armazém de dados OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A instalação é auto-suficiente e inclui os elementos necessários para executar e operar o Armazém de dados OnCommand Insight (DWH).
+
+
+
+== Antes de começar
+
+Você deve ter concluído todos os pré-requisitos de instalação.
+
+
+
+== Sobre esta tarefa
+
+O Data Warehouse tem recursos de relatórios do Cognos. Se você instalar o Insight em um servidor Linux, você poderá usar esses recursos, no entanto, somente se você instalar o Data Warehouse em um servidor Windows. Para obter informações sobre como instalar o Data Warehouse no Windows e os recursos de relatórios Cognos, consulte o Guia de Instalação _OnCommand Insight para Microsoft Windows_.
+
+
+
+== Passos
+
+. Faça login no servidor de Armazém de dados usando uma conta com sudo Privileges.
+. Navegue até o diretório no servidor onde os arquivos de instalação estão localizados e digite o seguinte comando:
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+Certifique-se de que verifica o número da versão do ficheiro de instalação; o número da versão pode ser diferente do apresentado no comando.
+
+. Você pode exibir sintaxe, argumentos de comando e uso de parâmetros `oci-install.sh` antes de iniciar a instalação:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. Execute o script de instalação:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
++
+Ao instalar o Insight Server ou o Data Warehouse no CentOS 9 Stream, Red Hat Enterprise Linux 9,4 ou Oracle Linux 9,4, você deve primeiro mudar para o diretório que contém o arquivo instalador e depois executar o comando install usando a opção de linha de comando "--install-mysql-dependencies":
+
++
+....
+cd /tmp/oci-7.3.16.1.297-linux-x86_64
+sudo ./oci-install.sh --install-mysql-dependencies
+....
+. Leia o Contrato de Licença, aceite-o e siga as instruções.
+
+
+
+
+== Resultados
+
+Depois de responder a todos os prompts, a instalação começa e deve levar aproximadamente 10 minutos, dependendo dos aplicativos instalados.
+
+
+
+== Sincronizar servidor e DWH
+
+
+IMPORTANT: Depois de instalar o Data Warehouse, você *deve* sincronizar o Data Warehouse com o servidor OnCommand Insight. Siga estes passos:
+
+. No sistema servidor OnCommand Insight, inicie a ferramenta *SecurityAdmin* no modo interativo
++
+ securityadmin -i
+. Altere a senha para os usuários _inventário_ e _dwh_internal_ para senhas de sua escolha. *Tome nota destas palavras-passe*, pois irá exigir as mesmas abaixo.
+. Reinicie o serviço DWH
+. Em *cada conetor* inicie a ferramenta *SecurityAdmin* no modo interativo. Você precisará das senhas anotadas no passo 2 acima.
++
+ securityadmin -i
+. Altere as senhas dos usuários _inventory_ e _dwh_internal_ para as senhas usadas na etapa 2.
+. Reinicie os serviços nos conetores.
+. Adicione os conetores ao DWH, usando as senhas para os usuários _inventário_ e _dwh_internal_ da etapa 2
+

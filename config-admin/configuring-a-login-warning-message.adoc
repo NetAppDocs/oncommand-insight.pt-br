@@ -1,0 +1,42 @@
+---
+permalink: config-admin/configuring-a-login-warning-message.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight permite que os administradores definam uma mensagem de texto personalizada que é exibida quando os usuários fazem login. 
+---
+= Configurando uma mensagem de aviso de login
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight permite que os administradores definam uma mensagem de texto personalizada que é exibida quando os usuários fazem login.
+
+
+
+== Passos
+
+. Para definir a mensagem no servidor OnCommand Insight:
++
+.. Navegue para o menu:Admin[Troubleshooting > Advanced Troubleshooting > Advanced Settings]
+.. Introduza a sua mensagem de início de sessão na área de texto.
+.. Clique na caixa de verificação *Cliente apresenta mensagem de aviso de início de sessão*.
+.. Clique em *Salvar*.
++
+A mensagem será exibida após o login para todos os usuários.
+
+
+
+. Para definir a mensagem no Data Warehouse (DWH) e Reporting (Cognos):
++
+.. Navegue até *informações do sistema* e clique na guia *Aviso de login*.
+.. Introduza a sua mensagem de início de sessão na área de texto.
+.. Clique em *Salvar*.
++
+A mensagem será exibida no início de sessão DWH e Cognos Reporting para todos os utilizadores.
+
+
+
+

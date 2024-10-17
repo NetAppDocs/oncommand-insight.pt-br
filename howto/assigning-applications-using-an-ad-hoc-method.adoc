@@ -1,0 +1,61 @@
+---
+permalink: howto/assigning-applications-using-an-ad-hoc-method.html 
+sidebar: sidebar 
+keywords:  
+summary: Você atribui um aplicativo a um ativo para que possa identificar os recursos do ativo que o aplicativo usa. Se um ativo tem um custo atribuído a ele, você pode identificar o custo que é incorrido pelo aplicativo e se o recurso é medido por tamanho, você pode determinar se o recurso precisará ser reabastecido. 
+---
+= Atribuindo aplicativos a ativos usando um método ad hoc
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você atribui um aplicativo a um ativo para que possa identificar os recursos do ativo que o aplicativo usa. Se um ativo tem um custo atribuído a ele, você pode identificar o custo que é incorrido pelo aplicativo e se o recurso é medido por tamanho, você pode determinar se o recurso precisará ser reabastecido.
+
+
+
+== Sobre esta tarefa
+
+Use o método a seguir para atribuir aplicativos a ativos.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize o ativo (host, máquina virtual, volume ou volume interno) ao qual você deseja aplicar o aplicativo fazendo um dos seguintes procedimentos:
++
+|===
+
+
+| Opção | Descrição 
+
+
+ a| 
+Navegue até a lista de ativos
+ a| 
+Clique em *Dashboard* > *Assets Dashboard* e selecione o ativo.
+
+
+
+ a| 
+Procure o ativo
+ a| 
+Clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]na barra de ferramentas para exibir a caixa *pesquisar ativos*, digite o nome do ativo e, em seguida, selecione o ativo na lista.
+
+|===
+. Na seção *dados do usuário* da página de ativo, posicione o cursor sobre o nome do aplicativo atualmente atribuído ao ativo (se não houver nenhum aplicativo atribuído, *nenhum* será exibido) e clique image:../media/pencil-icon-landing-page-be.gif[""] em (Editar aplicativo).
++
+É apresentada a lista de aplicações disponíveis para o ativo selecionado. As aplicações que estão atualmente associadas ao ativo são precedidas por uma marca de verificação.
+
+. Você pode digitar na caixa pesquisar para filtrar os nomes dos aplicativos ou rolar a lista para baixo.
+. Selecione as aplicações que pretende associar ao ativo.
++
+Você pode atribuir vários aplicativos ao host, à máquina virtual e ao volume interno; no entanto, você só pode atribuir um aplicativo a um volume.
+
+. Clique image:../media/check-box-ok.gif[""] para atribuir o aplicativo ou aplicativos selecionados ao ativo.
++
+Os nomes dos aplicativos aparecem na seção dados do usuário; se o aplicativo estiver associado a uma entidade comercial, o nome da entidade comercial também aparecerá nesta seção.
+
+

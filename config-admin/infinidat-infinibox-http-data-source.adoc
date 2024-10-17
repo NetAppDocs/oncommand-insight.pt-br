@@ -1,0 +1,154 @@
+---
+permalink: config-admin/infinidat-infinibox-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados Infinidat InfiniBox é usada para coletar informações do armazenamento Infinidat InfiniBox. Você deve ter acesso ao nó de gerenciamento InfiniBox. 
+---
+= Fonte de dados Infinidat InfiniBox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados Infinidat InfiniBox (HTTP) é usada para coletar informações do armazenamento Infinidat InfiniBox. Você deve ter acesso ao nó de gerenciamento InfiniBox.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados InfiniBox. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Condução
+ a| 
+Disco
+
+
+
+ a| 
+InfiniBox
+ a| 
+Armazenamento
+
+
+
+ a| 
+Nó
+ a| 
+Nó de storage
+
+
+
+ a| 
+Piscina
+ a| 
+Pool de storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Porta FC
+ a| 
+Porta
+
+
+
+ a| 
+Sistema de ficheiros
+ a| 
+Volume interno
+
+
+
+ a| 
+Sistema de ficheiros
+ a| 
+Partilha de ficheiros
+
+
+
+ a| 
+Exportações do sistema de arquivos
+ a| 
+Partilhar
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Host InfiniBox
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do nó de gerenciamento InfiniBox
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de usuário para InfiniBox Management Node
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha para o nó de gerenciamento InfiniBox
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Porta TCP
+ a| 
+Porta TCP usada para conetar ao InfiniBox Server (padrão 443 )
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 60 minutos)
+
+
+
+ a| 
+Tempo limite da ligação
+ a| 
+Tempo limite da ligação (predefinição 60 segundos)
+
+|===

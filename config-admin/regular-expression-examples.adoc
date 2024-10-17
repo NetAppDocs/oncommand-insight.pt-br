@@ -1,0 +1,337 @@
+---
+permalink: config-admin/regular-expression-examples.html 
+sidebar: sidebar 
+keywords: OnCommand Insight 
+summary: Se você selecionou a abordagem de expressão regular como sua estratégia de nomenclatura de origem, você pode usar os exemplos de expressão regular como guias para suas próprias expressões usadas nos métodos de resolução automática do OnCommand Insight. 
+---
+= Exemplos de expressão regular
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você selecionou a abordagem de expressão regular como sua estratégia de nomenclatura de origem, você pode usar os exemplos de expressão regular como guias para suas próprias expressões usadas nos métodos de resolução automática do OnCommand Insight.
+
+
+
+== Formatando expressões regulares
+
+Ao criar expressões regulares para a resolução automática do OnCommand Insight, você pode configurar o formato de saída inserindo valores em um campo `FORMAT` chamado .
+
+A configuração padrão é `\1`, o que significa que um nome de zona que corresponde à expressão regular é substituído pelo conteúdo da primeira variável criada pela expressão regular. Em uma expressão regular, os valores das variáveis são criados por declarações parênteses. Se ocorrerem várias frases entre parênteses, as variáveis são referenciadas numericamente, da esquerda para a direita. As variáveis podem ser usadas no formato de saída em qualquer ordem. Texto constante também pode ser inserido na saída, adicionando-o ao `FORMAT` campo.
+
+Por exemplo, você pode ter os seguintes nomes de zona para esta convenção de nomenclatura de zona:
+
+[listing]
+----
+[Zone number]_[data center]_[hostname]_[device type]_[interface number]
+----
+* S123_Miami_hostname1_filer_FC1
+* S14_Tampa_hostname2_switch_FC4
+* S3991_Boston_hostname3_windows2K_FC0
+* S44_Raleigh_hostname4_solaris_FC1
+
+
+E você pode querer que a saída esteja no seguinte formato:
+
+[listing]
+----
+
+        [hostname]-[data center]-[device type]
+----
+Para fazer isso, você precisa capturar os campos de nome do host, data center e tipo de dispositivo em variáveis e usá-los na saída. A seguinte expressão regular faria isso:
+
+[listing]
+----
+.*?_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)_.*
+----
+Como existem três conjuntos de parênteses, as variáveis `\1`, `\2` e `\3` seriam preenchidas.
+
+Em seguida, você pode usar o seguinte formato para receber a saída em seu formato preferido:
+
+[listing]
+----
+\2-\1-\3
+----
+Sua saída seria a seguinte:
+
+[listing]
+----
+hostname1-Miami-filer
+hostname2-Tampa-switch
+hostname3-Boston-windows2K
+hostname4-Raleigh-solaris
+----
+Os hífens entre as variáveis fornecem um exemplo de texto constante que é inserido na saída formatada.
+
+
+
+== Exemplo 1 mostrando nomes de zona
+
+Neste exemplo, você usa a expressão regular para extrair um nome de host do nome da zona. Você pode criar uma expressão regular se tiver algo semelhante aos seguintes nomes de zona:
+
+* S0032_myComputer1Name-HBA0
+* S0434_myComputer1Name-HBA1
+* S0432_myComputer1Name-HBA3
+
+
+A expressão regular que você poderia usar para capturar o nome do host seria:
+
+[listing]
+----
+ S[0-9]+_([a-zA-Z0-9]*)[_-]HBA[0-9]
+----
+O resultado é uma correspondência de todas as zonas que começam com S que são seguidas por qualquer combinação de dígitos , seguido por um sublinhado, o nome de host alfanumérico (myComputer1Name), um sublinhado ou hífen, as letras maiúsculas HBA e um único dígito (0-9). O nome de host sozinho é armazenado na variável * 1*.
+
+A expressão regular pode ser dividida em seus componentes:
+
+* "S" representa o nome da zona e inicia a expressão. Isto corresponde apenas a um "S" no início do nome da zona.
+* Os carateres [0-9] entre parênteses indicam que o seguinte "S" deve ser um dígito entre 0 e 9, inclusive.
+* O sinal indica que a ocorrência das informações nos parênteses anteriores deve existir 1 ou mais vezes.
+* O _ (sublinhado) significa que os dígitos após S devem ser seguidos imediatamente por apenas um caractere sublinhado no nome da zona. Neste exemplo, a convenção de nomenclatura de zona usa o sublinhado para separar o nome da zona do nome do host.
+* Após o sublinhado necessário, os parênteses indicam que o padrão contido dentro será armazenado na variável 1.
+* Os carateres entre colchetes [a-zA-Z0-9] indicam que os carateres correspondentes são todas letras (independentemente do caso) e números.
+* O * (asterisco) que segue os colchetes indica que os carateres entre colchetes ocorrem 0 ou mais vezes.
+* Os carateres entre colchetes [_-] (sublinhado e traço) indicam que o padrão alfanumérico deve ser seguido por um sublinhado ou um traço.
+* As letras HBA na expressão regular indicam que esta sequência exata de carateres deve ocorrer no nome da zona.
+* O conjunto final de carateres entre colchetes [0-9] corresponde a um único dígito de 0 a 9, inclusive.
+
+
+
+
+== Exemplo 2
+
+Neste exemplo, pule para o primeiro sublinhado "_", depois combine e e e tudo depois disso até o segundo "_", e então pule tudo depois disso.
+
+*Zona:* `Z_E2FHDBS01_E1NETAPP`
+
+* Nome do anfitrião:* `E2FHDBS01`
+
+*RegExp:* `.*?_(E.*?)_.*?`
+
+
+
+== Exemplo 3
+
+Os parênteses "( )" ao redor da última seção na expressão regular (abaixo) identificam qual parte é o nome do host. Se você quisesse que o VSAN3 fosse o nome do host, seria: [A-zA-Z0-9] ([a-zA-Z0-9]).*
+
+*Zona:* `A_VSAN3_SR48KENT_A_CX2578_SPA0`
+
+* Nome do anfitrião:* `SR48KENT`
+
+*RegExp:* `[a-zA-Z0-9]+_[a-zA-Z0-9]+_([a-zA-Z0-9]+).*`
+
+
+
+== Exemplo 4 mostrando um padrão de nomenclatura mais complicado
+
+Você pode criar uma expressão regular se tiver algo semelhante aos seguintes nomes de zona:
+
+* myComputerName123-HBA1_Symm1_FA3
+* myComputerName123-HBA2_Symm1_FA5
+* myComputerName123-HBA3_Symm1_FA7
+
+
+A expressão regular que você poderia usar para capturá-los seria:
+
+[listing]
+----
+([a-zA-Z0-9]*)_.*
+----
+A `\1` variável conteria somente `myComputerName123` depois de ser avaliada por essa expressão.
+
+A expressão regular pode ser dividida em seus componentes:
+
+* Os parênteses indicam que o padrão contido dentro será armazenado na variável 1.
+* Os carateres entre colchetes [a-zA-Z0-9] significam que qualquer letra (independentemente do caso) ou dígito corresponderá.
+* O * (asterisco) que segue os colchetes indica que os carateres entre colchetes ocorrem 0 ou mais vezes.
+* O caractere _ (sublinhado) na expressão regular significa que o nome da zona deve ter um sublinhado imediatamente após a cadeia alfanumérica correspondente aos colchetes anteriores.
+* O . (ponto) corresponde a qualquer caractere (um curinga).
+* O * (asterisco) indica que o curinga do período anterior pode ocorrer 0 ou mais vezes.
++
+Em outras palavras, a combinação .* indica qualquer caractere, qualquer número de vezes.
+
+
+
+
+
+== Exemplo 5 mostrando nomes de zona sem um padrão
+
+Você pode criar uma expressão regular se tiver algo semelhante aos seguintes nomes de zona:
+
+* myComputerName_HBA1_Symm1_FA1
+* myComputerName123_HBA1_Symm1_FA1
+
+
+A expressão regular que você poderia usar para capturá-los seria:
+
+[listing]
+----
+(.*?)_.*
+----
+A variável 1 conterá _MyComputerName_ (no exemplo do nome da primeira zona) ou _myComputerName123_ (no exemplo do nome da segunda zona). Esta expressão regular combinaria, assim, tudo antes do primeiro sublinhado.
+
+A expressão regular pode ser dividida em seus componentes:
+
+* Os parênteses indicam que o padrão contido dentro será armazenado na variável 1.
+* O .* (asterisco de ponto) corresponde a qualquer caractere, qualquer número de vezes.
+* O * (asterisco) que segue os colchetes indica que os carateres entre colchetes ocorrem 0 ou mais vezes.
+* O personagem ? faz o jogo não-ganancioso. Isso obriga-o a parar de combinar no primeiro sublinhado, em vez do último.
+* Os carateres _.* correspondem ao primeiro sublinhado encontrado e todos os carateres que o seguem.
+
+
+
+
+== Exemplo 6 mostrando nomes de computadores com um padrão
+
+Você pode criar uma expressão regular se tiver algo semelhante aos seguintes nomes de zona:
+
+* Storage1_Switch1_myComputerName123A_A1_FC1
+* Storage2_Switch2_myComputerName123B_A2_FC2
+* Storage3_Switch3_myComputerName123T_A3_FC3
+
+
+A expressão regular que você poderia usar para capturá-los seria:
+
+[listing]
+----
+ .*?_.*?_([a-zA-Z0-9]*[ABT])_.*
+----
+Como a convenção de nomenclatura de zona tem mais de um padrão, podemos usar a expressão acima, que corresponderá a todas as instâncias de um nome de host (MyComputerName no exemplo) que termina com um A, um B ou um T, colocando esse nome de host na variável 1.
+
+A expressão regular pode ser dividida em seus componentes:
+
+* O .* (asterisco de ponto) corresponde a qualquer caractere, qualquer número de vezes.
+* O personagem ? faz o jogo não-ganancioso. Isso obriga-o a parar de combinar no primeiro sublinhado, em vez do último.
+* O caractere sublinhado corresponde ao primeiro sublinhado no nome da zona.
+* Assim, a primeira combinação .*?_ corresponde aos carateres _storage1__ no primeiro exemplo de nome de zona.
+* A segunda combinação .*?_ comporta-se como a primeira, mas corresponde a _Switch1___ no primeiro exemplo de nome de zona.
+* Os parênteses indicam que o padrão contido dentro será armazenado na variável 1.
+* Os carateres entre colchetes [a-zA-Z0-9] significam que qualquer letra (independentemente do caso) ou dígito corresponderá.
+* O * (asterisco) que segue os colchetes indica que os carateres entre colchetes ocorrem 0 ou mais vezes.
+* Os carateres entre colchetes na expressão regular [ABT] correspondem a um único caractere no nome da zona que deve ser A, B ou T.
+* O _ (sublinhado) que segue os parênteses indica que a correspondência de carateres [ABT] deve ser seguida de um sublinhado.
+* O .* (asterisco de ponto) corresponde a qualquer caractere, qualquer número de vezes.
+
+
+O resultado disso faria com que a variável 1 contivesse qualquer cadeia alfanumérica que:
+
+* foi precedido por algum número de carateres alfanuméricos e dois sublinhados
+* foi seguido por um sublinhado (e, em seguida, qualquer número de carateres alfanuméricos)
+* Teve um caráter final de A, B ou T, antes do terceiro sublinhado.
+
+
+
+
+== Exemplo 7
+
+*Zona:* `myComputerName123_HBA1_Symm1_FA1`
+
+* Nome do anfitrião:* `myComputerName123`
+
+*RegExp:* `([a-zA-Z0-9]+)_.*`
+
+
+
+== Exemplo 8
+
+Este exemplo encontra tudo antes do primeiro _.
+
+*Zona:* `MyComputerName_HBA1_Symm1_FA1`
+
+`MyComputerName123_HBA1_Symm1_FA1`
+
+* Nome do anfitrião:* `MyComputerName`
+
+*RegExp:* `(.*?)_.*`
+
+
+
+== Exemplo 9
+
+Este exemplo encontra tudo após o 1st _ e até o segundo _.
+
+*Zona:* `Z_MyComputerName_StorageName`
+
+* Nome do anfitrião:* `MyComputerName`
+
+*RegExp:* `.*?_(.*?)_.*?`
+
+
+
+== Exemplo 10
+
+Este exemplo extrai "MyComputerName123" dos exemplos de zona.
+
+*Zona:* `Storage1_Switch1_MyComputerName123A_A1_FC1`
+
+`Storage2_Switch2_MyComputerName123B_A2_FC2`
+
+`Storage3_Switch3_MyComputerName123T_A3_FC3`
+
+* Nome do anfitrião:* `MyComputerName123`
+
+*RegExp:* `.*?_.*?_([a-zA-Z0-9]+)*[ABT]_.*`
+
+
+
+== Exemplo 11
+
+*Zona:* `Storage1_Switch1_MyComputerName123A_A1_FC1`
+
+* Nome do anfitrião:* `MyComputerName123A`
+
+*RegExp:* `.*?_.*?_([a-zA-z0-9]+)_.*?_`
+
+
+
+== Exemplo 12
+
+O [caret] (circumflex ou caret) *dentro de colchetes* nega a expressão, por exemplo, ["caret"" significa qualquer coisa exceto F maiúscula ou minúscula, e ["caret a-z] significa tudo, exceto a letra minúscula a z, e, no caso acima, qualquer coisa exceto _. O comando format adiciona o "-" ao nome do host de saída.
+
+*Zona:* `mhs_apps44_d_A_10a0_0429`
+
+* Nome do anfitrião:* `mhs-apps44-d`
+
+*RegExp:* ``+([^_]+)_([AB]).*+``formato em OnCommand Insight:
+
+``+([^_]+)_([^_]+).*+``Formato no OnCommand Insight:
+
+
+
+== Exemplo 13
+
+Neste exemplo, o alias de armazenamento é delimitado por "" e a expressão precisa usar "" para definir que realmente existem "" sendo usados na cadeia de carateres, e que esses não são parte da própria expressão.
+
+*Alias de armazenamento:* `\Hosts\E2DOC01C1\E2DOC01N1`
+
+* Nome do anfitrião:* `E2DOC01N1`
+
+*RegExp:* `\\.*?\\.*?\\(.*?)`
+
+
+
+== Exemplo 14
+
+Este exemplo extrai "PD-RV-W-AD-2" dos exemplos de zona.
+
+*Zona:* `PD_D-PD-RV-W-AD-2_01`
+
+* Nome do anfitrião:* `PD-RV-W-AD-2`
+
+*RegExp:* `+[^-]+-(.*-\d+).*+`
+
+
+
+== Exemplo 15
+
+A configuração de formato, neste caso, adiciona o "US-BV-" ao nome do host.
+
+*Zona:* `SRV_USBVM11_F1`
+
+* Nome do anfitrião:* `US-BV-M11`
+
+*RegExp:* `SRV_USBV([A-Za-z0-9]+)_F[12]`
+
+*Formato:* `US-BV-\1`

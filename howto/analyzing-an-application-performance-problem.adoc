@@ -1,0 +1,50 @@
+---
+permalink: howto/analyzing-an-application-performance-problem.html 
+sidebar: sidebar 
+keywords: greedy 
+summary: Este documento descreve as etapas a serem seguidas para solucionar relatórios de problemas de desempenho de um aplicativo que afetam usuários ou administradores. Por exemplo, os usuários estão reclamando que seu aplicativo Exchange está passando por períodos de lentidão ao longo do dia. 
+---
+= Analisando um problema de desempenho de aplicativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este documento descreve as etapas a serem seguidas para solucionar relatórios de problemas de desempenho de um aplicativo que afetam usuários ou administradores. Por exemplo, os usuários estão reclamando que seu aplicativo Exchange está passando por períodos de lentidão ao longo do dia.
+
+
+
+== Sobre esta tarefa
+
+No OnCommand Insight, um aplicativo é uma entidade configurada. Atribua um nome e uma entidade empresarial ao aplicativo e atribua recursos de computação e storage ao aplicativo. Isso permite uma melhor visão completa da integridade da infraestrutura e gerenciamento mais pró-ativo do gerenciamento de ativos de infraestrutura.
+
+
+
+== Passos
+
+. Para começar a investigar o problema, use a barra de ferramentas Insight para realizar uma pesquisa global para o aplicativo Exchange.
++
+image::../media/search-exchange.gif[troca de busca]
+
++
+[TIP]
+====
+Ao executar uma pesquisa, você pode adicionar um descritor de objeto antes do nome do objeto para refinar os resultados da pesquisa.
+
+====
+. Quando você seleciona "Exchange 2016" nos resultados da pesquisa, o sistema exibe a página inicial do aplicativo.
++
+image::../media/exch2016-land-page.png[exch2016 página de terra]
+
++
+Na página inicial do aplicativo, as seguintes informações são de interesse:
+
++
+** No período de 24 horas selecionado, um aumento na latência é mostrado à direita do gráfico de latência.
+** Durante o período de maior latência, não há mudança significativa no nível de IOPS. Parece que o aumento de latência não é causado por um uso mais pesado do aplicativo. Na verdade, não estamos vendo uma alta demanda de IOPS no storage que poderia levar em conta o pico de latência. O aumento da latência pode ser devido a um fator externo.
+** À direita dos gráficos na seção principais contribuidores, clique nos 100% para o volume interno selecionado (CDot_Boston:SP2:vol_01). O sistema mostra que este recurso está contribuindo 100% para o aplicativo Exchange 2016. image:../media/top-contributor.gif[""]
+** Clique no link de navegação deste volume interno (CDot_Boston:SP2:vol_01) para acessar a página inicial do volume interno. A análise do volume interno pode fornecer informações relativas ao pico de latência.
+
+
+

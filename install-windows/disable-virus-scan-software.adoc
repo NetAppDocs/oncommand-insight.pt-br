@@ -1,0 +1,18 @@
+---
+permalink: install-windows/disable-virus-scan-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Se o software antivírus estiver ativo no seu sistema, a instalação do OnCommand Insight falhará. Você pode evitar esse problema desativando o software de verificação de vírus antes da instalação. 
+---
+= Desativação do software de verificação de vírus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se o software antivírus estiver ativo no seu sistema, a instalação do OnCommand Insight falhará. Você pode evitar esse problema desativando o software de verificação de vírus antes da instalação.
+
+Para evitar uma falha de instalação devido ao software de verificação de vírus ativo, durante a instalação de cada componente do OnCommand Insight, você deve desativar completamente todos os scanners de vírus. Após a instalação, os caminhos usados pelo componente Insight (caminhos de instalação, backup e arquivamento) devem ser excluídos da verificação de vírus.
+
+Além disso, você também deve excluir a pasta IBM/DB2 (por exemplo, _C: Arquivos de programas/IBM/DB2_) da verificação antivírus após a instalação.

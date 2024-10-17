@@ -1,0 +1,44 @@
+---
+permalink: install-windows/troubleshooting-an-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você encontrar problemas após uma atualização do OnCommand Insight, talvez seja útil analisar as informações de solução de problemas relacionadas a alguns possíveis problemas. 
+---
+= Solução de problemas de uma atualização
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você encontrar problemas após uma atualização do OnCommand Insight, talvez seja útil analisar as informações de solução de problemas relacionadas a alguns possíveis problemas.
+
+
+
+== Não é possível iniciar o Cognos a partir do menu Iniciar do Windows
+
+A existência de um espaço antes `\SANscreen\cognos` no nome do caminho é um problema. Consulte o seguinte na Comunidade de sucesso do cliente da NetApp para obter mais informações https://forums.netapp.com/thread/62721[]: .
+
+
+
+== Mensagem de erro "'Not a valid Win32 application'"
+
+Este é um problema com o Microsoft Windows. Para resolver esse problema, você deve colocar aspas ao redor do caminho da imagem no Registro. Consulte a seguinte documentação para obter mais informações https://support.microsoft.com/en-us/kb/812486/en-us[]: .
+
+
+
+== Anotações não estão presentes
+
+Quando uma tarefa ETL do Data Warehouse consulta anotações de uma instância do Insight, às vezes recebe uma resposta vazia (um resultado de 0) em erro. Esse erro resulta em anotações para determinados objetos movendo-se para frente e para trás entre um estado "presente" e "não presente" no Data Warehouse. Consulte o seguinte para obter mais informações: https://forums.netapp.com/docs/DOC-44167[]
+
+
+
+== Diferenças nos valores exibidos nos relatórios
+
+Antes de 7,0, os relatórios eram baseados em números inteiros. Eles agora são baseados em decimal; portanto, depois de atualizar, você pode notar um aumento ou diminuição na forma como os valores são exibidos.
+
+
+
+== Os dados não são apresentados nos relatórios
+
+Em 7,0.1, vários nomes de modelos foram alterados (por exemplo, Symmetrix foi alterado para Symmetrix VMAX). Como resultado, se um relatório contiver um filtro para o Symmetrix, você não verá nenhum dado ao executar o relatório. Para alterar o relatório, você deve abrir o relatório com o Explorador de consultas no Report Studio, procurar o nome do modelo, substituí-lo pelo novo nome do modelo e salvar o relatório.

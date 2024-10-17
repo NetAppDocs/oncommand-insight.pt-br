@@ -1,0 +1,29 @@
+---
+permalink: howto/assigning-annotations-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Este guia descreve como criar e personalizar anotações para o seu ambiente que podem ser usadas para consultar, filtrar, notificações de alerta e relatórios. 
+---
+= Criando anotações para sua empresa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este guia descreve como criar e personalizar anotações para o seu ambiente que podem ser usadas para consultar, filtrar, notificações de alerta e relatórios.
+
+Uma anotação é uma nota ou tag que você associa a ativos específicos em seu ambiente. O OnCommand Insight fornece várias anotações que você pode configurar para seus ativos conforme necessário, ou você pode criar suas próprias anotações personalizadas com base nas necessidades da sua empresa.
+
+Os exemplos a seguir são aqueles que normalmente são configurados primeiro em novos ambientes de clientes, para servir como uma linha de base para ações adicionais. Suas próprias necessidades de anotação podem variar, mas as etapas descritas aqui podem ser usadas como um guia para configurar quaisquer anotações que você possa precisar nos ativos que desejar.
+
+Este guia baseia-se nas seguintes premissas:
+
+* Você tem o servidor OnCommand Insight instalado e devidamente licenciado.
+* Você quer explorar as práticas recomendadas, não todas as opções disponíveis.
+* Você entende que estes são apenas exemplos e que suas necessidades específicas podem variar.
+
+
+Este guia orienta-o através da modificação de anotações existentes, bem como da criação de anotações personalizadas
+
+Em nosso ambiente de exemplo, queremos ser capazes de listar ativos de acordo com o Data Center, nível, nível de Serviço e ambiente.

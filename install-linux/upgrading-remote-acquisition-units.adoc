@@ -1,0 +1,45 @@
+---
+permalink: install-linux/upgrading-remote-acquisition-units.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de atualizar o software do servidor Insight, você deve atualizar o software de aquisição remota. 
+---
+= A atualizar o software da unidade de aquisição remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de atualizar o software do servidor Insight, você deve atualizar o software de aquisição remota.
+
+[NOTE]
+====
+É altamente recomendável fazer backup do Vault e do banco de dados antes de atualizar o DWH.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações sobre o cofre.
+
+====
+
+
+== Passos
+
+. Inicie sessão no servidor da unidade de aquisição remota (RAU) utilizando uma conta com sudo Privileges.
+. Transfira o software Insight RAU a partir do site de suporte da NetApp.
+. Navegue até o diretório de download e digite o seguinte comando:
++
+`unzip oci-rau-<version>-linux-x86_64.zip`
+
++
+Certifique-se de que tem o número correto da versão do ficheiro de instalação.
+
+. Você pode exibir sintaxe, argumentos de comando e uso de parâmetros para `oci-install.sh` :
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh --help`
+
+. Execute o script de instalação:
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh`
+
+. Aceite o Contrato de Licença e siga as instruções.
+

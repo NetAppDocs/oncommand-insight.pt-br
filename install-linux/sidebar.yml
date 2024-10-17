@@ -1,0 +1,83 @@
+---
+section: install-linux
+title: Instalação para Linux
+entries:
+- title: Pré-requisitos de instalação
+  url: "/install-linux/installation-prerequisites.html"
+  entries:
+  - title: Planejando a implantação
+    url: "/install-linux/planning-the-installation.html"
+    entries:
+    - title: Informações de suporte da fonte de dados
+      url: "/install-linux/data-source-support-information.html"
+    - title: Identificação do dispositivo e Planejamento da fonte de dados
+      url: "/install-linux/device-identification-and-data-source-planning.html"
+    - title: Tráfego de rede gerado pelo OnCommand Insight
+      url: "/install-linux/network-traffic-generated-by-oncommand-insight.html"
+  - title: Desinstalar o MariaDB
+    url: "/install-linux/uninstalling-mariadb.html"
+  - title: Requisitos do Insight Server
+    url: "/install-linux/insight-server-requirements.html"
+  - title: Requisitos do servidor do Data Warehouse
+    url: "/install-linux/data-warehouse-server-requirements-linux.html"
+  - title: Requisitos do servidor da Unidade de aquisição Remota
+    url: "/install-linux/remote-acquisition-unit-server-requirements.html"
+  - title: Navegadores suportados pelo OnCommand Insight
+    url: "/install-linux/insight-browser-support.html"
+- title: Instruções de instalação do Insight
+  url: "/install-linux/oncommand-insight-installation-instructions.html"
+  entries:
+  - title: Transferir o instalador do OnCommand Insight
+    url: "/install-linux/downloading-the-oncommand-insight-installer.html"
+  - title: Instalar o servidor OnCommand Insight
+    url: "/install-linux/installing-the-oncommand-insight-server-linux.html"
+  - title: Instalar o Armazém de dados OnCommand Insight
+    url: "/install-linux/installing-oncommand-insight-data-warehouse-linux.html"
+  - title: Instalar uma unidade de aquisição remota
+    url: "/install-linux/installing-a-remote-acquisition-unit-rau-linux.html"
+    entries:
+    - title: Validar a instalação da unidade de aquisição remota
+      url: "/install-linux/validating-the-rau-installation.html"
+  - title: Verificar a instalação
+    url: "/install-linux/checking-the-installation.html"
+    entries:
+    - title: Verificando se novos componentes do Insight estão instalados
+      url: "/install-linux/verifying-new-insight-services-linux.html"
+    - title: Registos de insight
+      url: "/install-linux/insight-logs.html"
+    - title: Acessando a IU da Web
+      url: "/install-linux/opening-insight.html"
+    - title: Instalando suas licenças do Insight
+      url: "/install-linux/installing-your-insight-licenses.html"
+      entries:
+      - title: Licenças OnCommand Insight
+        url: "/install-linux/oncommand-insight-licenses.html"
+  - title: Resolução de problemas de instalações
+    url: "/install-linux/troubleshooting-installations.html"
+    entries:
+    - title: Licenças em falta
+      url: "/install-linux/missing-licenses.html"
+    - title: Enviando uma solicitação de suporte técnico online
+      url: "/install-linux/submitting-an-online-technical-support-request.html"
+- title: Atualizando o Insight
+  url: "/install-linux/upgrading-insight-linux.html"
+  entries:
+  - title: Atualizando o Insight para a versão 7.3.12 ou posterior - Linux
+    url: "/install-linux/upgrading-insight-to-version-7-3-12-or-later-linux.html"
+  - title: Atualizando o software Insight Server
+    url: "/install-linux/upgrading-insight-server-software.html"
+  - title: Atualizando o software Data Warehouse
+    url: "/install-linux/upgrading-data-warehouse.html"
+  - title: A atualizar o software da unidade de aquisição remota
+    url: "/install-linux/upgrading-remote-acquisition-units.html"
+  - title: Migração do Windows para o Linux
+    url: "/install-linux/migrating-from-windows-to-linux.html"
+- title: Desinstalar o OnCommand Insight
+  url: "/install-linux/uninstalling-oncommand-insight.html"
+  entries:
+  - title: Desinstalar o servidor OnCommand Insight
+    url: "/install-linux/uninstalling-insight.html"
+  - title: Desinstalar o Data Warehouse
+    url: "/install-linux/uninstalling-data-warehouse.html"
+  - title: Desinstalar uma unidade de aquisição remota
+    url: "/install-linux/uninstalling-a-remote-acquisition-unit-rau.html"

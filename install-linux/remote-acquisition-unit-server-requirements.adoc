@@ -1,0 +1,69 @@
+---
+permalink: install-linux/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'Tem de instalar uma unidade de aquisição remota (RAU) para adquirir informações de dispositivos SAN que estão atrás de uma firewall, num local remoto, numa rede privada ou em diferentes segmentos de rede. Antes de instalar a RAU, você deve garantir que seu ambiente atenda aos requisitos do sistema operacional RAU, CPU, memória e espaço em disco.' 
+---
+= Requisitos do servidor da Unidade de aquisição Remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tem de instalar uma unidade de aquisição remota (RAU) para adquirir informações de dispositivos SAN que estejam atrás de uma firewall, num local remoto, numa rede privada ou em diferentes segmentos de rede. Antes de instalar a RAU, você deve garantir que seu ambiente atenda aos requisitos do sistema operacional RAU, CPU, memória e espaço em disco.
+
+|===
+
+
+| Componente | Requisito 
+
+
+ a| 
+Sistema operacional
+ a| 
+Um computador que executa uma versão licenciada de uma das seguintes, que não está executando nenhum outro software de nível de aplicativo:
+
+* Red Hat Enterprise Linux 7,9, 8,10, 9,4
+* CentOS 8 Stream, CentOS 9 Stream
+* Oracle Enterprise Linux 7,9, 8,10, 9,4
+
+
+Recomenda-se um servidor dedicado.
+
+
+
+ a| 
+CPU
+ a| 
+4 núcleos de CPU
+
+
+
+ a| 
+Memória
+ a| 
+16 GB DE RAM
+
+
+
+ a| 
+Espaço disponível em disco
+ a| 
+40 GB
+
+
+
+ a| 
+Rede
+ a| 
+Conexão Ethernet de 100 Mbps / 1 Gbps, endereço IP estático, conetividade IP a todos os dispositivos FC e uma porta necessária para o servidor OnCommand Insight (80 ou 443).
+
+
+
+ a| 
+Permissões
+ a| 
+Sudo permissões no servidor RAU
+
+|===

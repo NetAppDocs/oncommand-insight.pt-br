@@ -1,0 +1,74 @@
+---
+permalink: config-admin/creating-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode criar uma consulta para permitir que você pesquise os ativos em seu ambiente em um nível granular. As consultas permitem que você corte dados adicionando filtros e, em seguida, classificando os resultados para visualizar os dados de inventário e desempenho em uma exibição. 
+---
+= Criando uma consulta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar uma consulta para permitir que você pesquise os ativos em seu ambiente em um nível granular. As consultas permitem que você corte dados adicionando filtros e, em seguida, classificando os resultados para visualizar os dados de inventário e desempenho em uma exibição.
+
+
+
+== Sobre esta tarefa
+
+Por exemplo, você pode criar uma consulta para volumes, adicionar um filtro para localizar armazenamentos específicos associados ao volume selecionado, adicionar um filtro para encontrar uma anotação específica, como o Tier 1, nos armazenamentos selecionados e, finalmente, adicionar outro filtro para localizar todos os armazenamentos com IOPS - leitura (IO/s) maior que 25. Quando os resultados são exibidos, você pode classificar as colunas de informações associadas à consulta em ordem crescente ou decrescente.
+
+Quando uma nova fonte de dados é adicionada que adquire ativos ou qualquer anotação ou atribuição de aplicativo é feita, você pode consultar esses ativos, anotações ou aplicativos após as consultas serem indexadas, o que ocorre em um intervalo programado regularmente.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *consultas* e selecione * Nova consulta*.
+. Clique em *Selecionar tipo de recurso* e selecione um tipo de ativo.
++
+Quando um recurso é selecionado para uma consulta, várias colunas padrão são exibidas automaticamente; você pode remover essas colunas ou adicionar novas a qualquer momento.
+
+. Na caixa de texto *Nome*, digite o nome do ativo ou digite uma parte do texto para filtrar os nomes dos ativos.
++
+Você pode usar qualquer uma das seguintes opções sozinho ou combinado para refinar sua pesquisa em qualquer caixa de texto na página Nova consulta:
+
++
+** Um asterisco permite que você procure por tudo. Por exemplo, `vol*rhel` exibe todos os recursos que começam com "vol" e terminam com "rhel".
+** O ponto de interrogação permite procurar um número específico de carateres. Por exemplo, `BOS-PRD??-S12` exibe BOS-PRD12-S12, BOS-PRD13-S12 e assim por diante.
+** O OPERADOR OU permite especificar várias entidades. Por exemplo, `FAS2240 OR CX600 OR FAS3270` encontra vários modelos de armazenamento.
+** O operador NOT permite excluir texto dos resultados da pesquisa. Por exemplo, `NOT EMC*` encontra tudo o que não começa com ""EMC"". Você pode usar `NOT *` para exibir campos que não contêm nenhum valor.
+
+
+. Clique image:../media/check-box-ok.gif[""] em para exibir os ativos.
+. Para adicionar um critério, clique image:../media/more-button.gif[""]em e execute um dos seguintes procedimentos:
++
+** Digite para procurar um critério específico e selecione-o.
+** Role para baixo a lista e selecione um critério.
+** Insira um intervalo de valores se você escolher uma métrica de desempenho como IOPS - leitura (IO/s). As anotações padrão fornecidas pelo Insight são indicadas por image:../media/annotation-icon.gif[""]; é possível ter anotações com nomes duplicados.
+
+
++
+Uma coluna é adicionada à lista resultados da consulta para os critérios e os resultados da consulta nas atualizações da lista.
+
+. Opcionalmente, você pode clicar image:../media/remove-criteria-button.gif[""] para remover uma anotação ou métrica de desempenho dos resultados da consulta.
++
+Por exemplo, se sua consulta mostrar latência máxima e taxa de transferência máxima para datastores e você quiser mostrar apenas latência máxima na lista de resultados da consulta, clique neste botão e desmarque a caixa de seleção *throughput - máximo*. A coluna throughput - Max (MB/s) é removida da lista de resultados da consulta.
+
++
+[NOTE]
+====
+Dependendo do número de colunas exibidas na tabela de resultados da consulta, talvez você não consiga exibir colunas adicionais adicionadas. Você pode remover uma ou mais colunas até que as colunas desejadas fiquem visíveis.
+
+====
+. Clique em *Salvar*, insira um nome para a consulta e clique em *Salvar* novamente.
++
+Se você tiver uma conta com uma função de administrador, poderá criar painéis personalizados. Um painel personalizado pode incluir qualquer um dos widgets da Biblioteca de widgets, vários dos quais permitem representar os resultados da consulta em um painel personalizado. Para obter mais informações sobre painéis personalizados, consulte o _Guia de Introdução ao OnCommand Insight_.
+
+
+
+*Informações relacionadas*
+
+link:importing-and-exporting-user-data.md#["Importar e exportar dados do utilizador"]

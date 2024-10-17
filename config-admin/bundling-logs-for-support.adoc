@@ -1,0 +1,25 @@
+---
+permalink: config-admin/bundling-logs-for-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ao solucionar um problema com o software Insight, você pode gerar rapidamente um arquivo zip (usando o formato "gz") dos Registros e gravações de aquisição para enviar para o suporte ao cliente NetApp.' 
+---
+= Agrupando logs para suporte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao solucionar um problema com o software Insight, você pode gerar rapidamente um arquivo zip (usando o formato "gz") dos Registros e gravações de aquisição para enviar para o suporte ao cliente NetApp.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *Troubleshooting*.
+. Na seção Enviar / coletar dados, clique em *Registros do pacote*.
+. Clique em *Salvar arquivo*.
+. Clique em *OK*.
+

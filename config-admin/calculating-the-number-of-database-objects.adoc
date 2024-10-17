@@ -1,0 +1,24 @@
+---
+permalink: config-admin/calculating-the-number-of-database-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Para determinar o número de objetos no banco de dados OnCommand Insight, use o recurso calcular escala. 
+---
+= Calculando o número de objetos de banco de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para determinar o número de objetos no banco de dados OnCommand Insight, use o recurso calcular escala.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin* e selecione *solução de problemas*.
+. Na parte inferior da página na área outras tarefas, clique no link *solução de problemas avançada*.
+. Na página solução de problemas avançada, clique na guia *relatórios*.
+. Clique em *escala calculada*.
+

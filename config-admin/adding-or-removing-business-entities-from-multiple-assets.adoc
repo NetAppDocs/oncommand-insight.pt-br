@@ -1,0 +1,39 @@
+---
+permalink: config-admin/adding-or-removing-business-entities-from-multiple-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Você pode atribuir entidades de negócios ou remover entidades de negócios de vários ativos usando uma consulta em vez de ter que atribuí-las ou removê-las manualmente. 
+---
+= Atribuir entidades de negócios ou remover entidades de negócios de vários ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atribuir entidades de negócios ou remover entidades de negócios de vários ativos usando uma consulta em vez de ter que atribuí-las ou removê-las manualmente.
+
+
+
+== Antes de começar
+
+Você já deve ter criado as entidades de negócios que deseja adicionar aos ativos desejados.
+
+
+
+== Passos
+
+. Crie uma nova consulta ou abra uma consulta existente.
+. Se desejado, filtre os ativos aos quais você deseja adicionar entidades de negócios.
+. Selecione os ativos desejados na lista ou clique image:../media/select-assets.gif[""] para selecionar *All*.
++
+O botão *ações* é exibido.
+
+. Para adicionar uma entidade de negócio aos ativos selecionados, clique image:../media/actions-button.gif[""]em . Se o tipo de ativo selecionado puder ter entidades de negócio atribuídas a ele, você verá a opção de menu para *Adicionar entidade de negócio*. Selecione esta opção.
+. Selecione a entidade comercial desejada na lista e clique em *Salvar*.
++
+Qualquer nova entidade de negócios que você atribua substitui todas as entidades de negócios que já foram atribuídas ao ativo. A atribuição de aplicativos a ativos também substituirá as entidades de negócios atribuídas da mesma maneira. A atribuição de entidades de negócios ao como ativo também pode substituir quaisquer aplicativos atribuídos a esse ativo.
+
+. Para remover uma entidade de negócio atribuída aos ativos, clique image:../media/actions-button.gif[""] e selecione *Remover entidade de negócio*.
+. Selecione a entidade comercial desejada na lista e clique em *Excluir*.
+

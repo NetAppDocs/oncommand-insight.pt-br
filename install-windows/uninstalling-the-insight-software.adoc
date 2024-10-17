@@ -1,0 +1,22 @@
+---
+permalink: install-windows/uninstalling-the-insight-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve desinstalar as versões antigas do Data Warehouse e do software Remote Acquisition para instalar as novas versões. Você deve fazer isso antes de tentar atualizar qualquer um desses componentes. O software no servidor Insight é desinstalado durante a atualização no local. 
+---
+= Desinstalar o software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve desinstalar as versões antigas do Data Warehouse e do software Remote Acquisition para instalar as novas versões. Você deve fazer isso antes de tentar atualizar qualquer um desses componentes. O software no servidor Insight é desinstalado durante a atualização no local.
+
+[NOTE]
+====
+*É altamente recomendável fazer backup do Vault* antes de desinstalar o OnCommand Insight. *Você deve fazer o backup do Vault* se estiver atualizando o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====

@@ -1,0 +1,29 @@
+---
+permalink: config-admin/deleting-a-data-source-from-the-monitoring-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você tiver removido uma fonte de dados do seu ambiente, também deverá excluí-la do ambiente de monitoramento do OnCommand Insight. 
+---
+= Eliminar uma fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você tiver removido uma fonte de dados do seu ambiente, também deverá excluí-la do ambiente de monitoramento do OnCommand Insight.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
++
+A lista Data Sources (fontes de dados) é aberta.
+
+. Selecione a fonte de dados que deseja excluir.
+. Clique no nome da fonte de dados vinculada.
+. Verifique as informações da fonte de dados selecionada na página de resumo para ter certeza de que ela é a que você deseja excluir.
+. Clique em *Excluir*.
+. Clique em *OK* para confirmar a operação.
+

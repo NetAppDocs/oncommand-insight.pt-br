@@ -1,0 +1,37 @@
+---
+permalink: config-admin/configuring-system-level-event-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight suporta notificações para eventos no nível do sistema, como falhas de unidade de aquisição ou erros de origem de dados. Para receber notificações, você deve configurar o Insight para enviar e-mails quando um ou mais desses eventos ocorrerem. 
+---
+= Configurando notificações de eventos no nível do sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight suporta notificações para eventos no nível do sistema, como falhas de unidade de aquisição ou erros de origem de dados. Para receber notificações, você deve configurar o Insight para enviar e-mails quando um ou mais desses eventos ocorrerem.
+
+
+
+== Antes de começar
+
+Você deve ter configurado destinatários de e-mail para receber notificações em *Admin* > *notificações* > *métodos de envio*.
+
+
+
+== Passos
+
+. Clique em *Admin* > *notificações*.
+. Clique em *Eventos*.
+. Na seção *Eventos de Alerta do sistema* e-mail, selecione o nível de gravidade (*Aviso e acima* ou *crítico*) para a notificação ou escolha *não enviar* se você não quiser receber notificações de eventos no nível do sistema.
+. Clique em *Salvar*.
+. Clique em *Admin* > *Alertas do sistema* para configurar os próprios alertas.
+. Para adicionar um novo alerta, clique em * Adicionar* e dê ao alerta um *Nome* exclusivo. Você também pode clicar no ícone do lado direito para *Editar* um alerta existente.
+. Escolha o *tipo de evento* no qual alertar, por exemplo _Falha da Unidade de aquisição_.
+. Escolha um intervalo *Snooze* para suprimir notificações sobre eventos duplicados do tipo selecionado para o intervalo de tempo selecionado. Se você selecionar _nunca_, receberá notificações repetidas uma vez por minuto até que o evento não esteja mais acontecendo.
+. Escolha um *severidade* (Aviso ou Crítica) para a notificação de evento.
+. As notificações por e-mail serão enviadas para a lista global de destinatários de e-mail por padrão ou você pode clicar no link fornecido para substituir a lista global e enviar notificações para destinatários específicos.
+. Clique em Salvar para adicionar o alerta.
+

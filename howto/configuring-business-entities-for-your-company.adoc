@@ -1,0 +1,123 @@
+---
+permalink: howto/configuring-business-entities-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: Entender os elementos de negócios da sua estrutura corporativa ajuda você a acompanhar o uso dos ativos e gerar relatórios sobre os custos. Aqui vamos configurar as entidades empresariais da sua empresa. 
+---
+= Configurando entidades de negócios para sua empresa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entender os elementos de negócios da sua estrutura corporativa ajuda você a acompanhar o uso dos ativos e gerar relatórios sobre os custos. Aqui vamos configurar as entidades empresariais da sua empresa.
+
+
+
+== Sobre esta tarefa
+
+O OnCommand Insight permite definir entidades de negócios em uma hierarquia que inclui até quatro níveis de granularidade.
+
+* *Tenant*
++
+Usado principalmente por provedores de serviços para associar recursos a um cliente. O nível de inquilino é necessário se a sua empresa for um ISP e você quiser rastrear o uso dos recursos do cliente.
+
+* *Linha de Negócios (LOB)*
++
+Uma linha de negócios ou linha de produtos dentro de uma empresa, por exemplo, armazenamento de dados. A linha de negócios é necessária na hierarquia se os dados para diferentes linhas de produtos precisarem ser rastreados.
+
+* *Unidade de Negócios*
++
+Representa uma unidade de negócios tradicional, como Legal ou Marketing. A Unidade de Negócios é necessária se você precisar rastrear dados para diferentes departamentos. Esse nível da hierarquia é muitas vezes valioso na separação de um recurso que um departamento usa que outros departamentos não.
+
+* *Projeto*
++
+Muitas vezes usado para identificar um projeto específico dentro de uma unidade de negócios para a qual você deseja chargeback de capacidade. Por exemplo, "Patentes" pode ser um nome de projeto para a unidade de negócios Legal e "'Eventos de vendas'" pode ser um nome de projeto para a unidade de negócios de Marketing. Observe que os nomes de nível podem incluir espaços.
+
+
+
+Um exemplo de uma hierarquia de entidade de negócios seria:
+
+image::../media/businessentitieshierarchyexample.gif[businessentitieshierarquyexemplo]
+
+Prática recomendada: Crie uma tabela com cada linha mostrando uma entidade de negócio completa em sua hierarquia:
+
+|===
+
+
+| Locatário | Linha de negócio | Unidade de negócio | Projeto 
+
+
+ a| 
+NetApp Inc
+ a| 
+Storage de dados
+ a| 
+Legal
+ a| 
+Patentes
+
+
+
+ a| 
+NetApp Inc
+ a| 
+Armazenamento de dados
+ a| 
+Marketing
+ a| 
+Eventos de vendas
+
+
+
+ a| 
+N/A.
+ a| 
+N/A.
+ a| 
+Segurança e Segurança
+ a| 
+N/A.
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+
+|===
+[NOTE]
+====
+Você não é obrigado a usar todos os níveis no design de sua hierarquia corporativa. Você pode escolher "N/A" para níveis que você não usa.
+
+====
+Para criar uma hierarquia de entidade de negócios no Insight:
+
+
+
+== Passos
+
+. Faça login no Insight como um usuário com permissões administrativas.
+. Selecione *Manage* > *Business entities*.
+. Clique no botão * Adicionar *
+. Clique na caixa *Tenant* e digite o nome do locatário.
++
+Se você já inseriu locatários para o seu ambiente, uma lista de locatários existentes será exibida a partir da qual você pode escolher. Você também pode escolher N/A se o locatário não se aplicar a esta entidade de negócios.
+
+. Repita para *Line of Business*, *Business Unit* e *Project*.
+. Clique em *Salvar*
+
+
+
+
+== Depois de terminar
+
+Práticas recomendadas:
+
+* Mapeie sua hierarquia de negócios em uma tabela e verifique se os nomes na hierarquia serão auto-explicativos nas visualizações e relatórios do Insight.
+* Crie suas entidades de negócios no Insight antes de criar aplicativos.
+* Identifique e liste todos os aplicativos que serão associados a cada entidade de negócios.
+

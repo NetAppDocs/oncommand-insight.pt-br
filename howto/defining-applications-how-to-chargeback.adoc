@@ -1,0 +1,48 @@
+---
+permalink: howto/defining-applications-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você quiser rastrear dados de custo associados a aplicativos específicos em execução no ambiente, primeiro é necessário definir os aplicativos. 
+---
+= Definição de aplicativos para uso com chargeback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você quiser rastrear dados de custo associados a aplicativos específicos em execução no ambiente, primeiro é necessário definir os aplicativos.
+
+
+
+== Antes de começar
+
+Se você quiser associar o aplicativo a uma entidade de negócios, você já deve ter criado a entidade de negócios.
+
+[NOTE]
+====
+Este exemplo não associa nenhuma aplicação a entidades de negócio.
+
+====
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *Manage* > *Application*
++
+Depois de definir um aplicativo, a página aplicativos exibe o nome do aplicativo, sua prioridade e, se aplicável, a entidade comercial associada ao aplicativo.
+
+. Clique em **Add** (Adicionar)
++
+A caixa de diálogo Adicionar aplicativo é exibida.
+
+. Insira um nome exclusivo para o aplicativo na caixa Nome. Insira as candidaturas identificadas no Relatório: Tours Africanos, vendas comerciais APAC e assim por diante.
+. Clique em *Priority* (prioridade) e selecione a prioridade (crítica, alta, média ou baixa) para a aplicação no seu ambiente.
+. Se você planeja usar este aplicativo com uma entidade de negócios, clique em *entidade de negócio* e selecione a entidade na lista.
+. Você não usará o compartilhamento de volume, clique para desmarcar a caixa *Validar* compartilhamento de volume.
+. Clique em *Salvar*.
++
+As aplicações são apresentadas na página aplicações. Se você clicar no nome do aplicativo, o Insight exibirá a página de ativos do aplicativo. Depois de definir um aplicativo, você pode ir para uma página de ativos para host, máquina virtual, volume, volume interno ou hipervisor para atribuir um aplicativo a um ativo.
+
+

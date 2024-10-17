@@ -1,0 +1,56 @@
+---
+permalink: config-admin/editing-or-removing-applications-in-bulk.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode atribuir vários aplicativos ou remover vários aplicativos de ativos usando uma consulta em vez de ter que atribuí-los ou removê-los manualmente. 
+---
+= Atribuir vários aplicativos ou remover vários aplicativos de ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atribuir vários aplicativos ou remover vários aplicativos de ativos usando uma consulta em vez de ter que atribuí-los ou removê-los manualmente.
+
+
+
+== Antes de começar
+
+Você já deve ter criado uma consulta que encontre todos os ativos que você editar.
+
+
+
+== Passos
+
+. Clique em *consultas* e selecione *Mostrar todas as consultas*.
++
+A página consultas é exibida.
+
+. Clique no nome da consulta que encontra os ativos.
++
+A lista de ativos associados à consulta é exibida.
+
+. Selecione os ativos desejados na lista ou clique image:../media/select-assets.gif[""] para selecionar *All*.
++
+O botão *ações* é exibido.
+
+. Para adicionar um aplicativo aos ativos selecionados, clique image:../media/actions-button.gif[""]em e selecione *Editar aplicativo*.
++
+.. Clique em *Application* e selecione um ou mais aplicativos.
++
+Você pode selecionar vários aplicativos para hosts, volumes internos e máquinas virtuais; no entanto, você pode selecionar apenas um aplicativo para um volume.
+
+.. Clique em *Salvar*.
+
+
+. Para remover um aplicativo atribuído aos ativos, clique image:../media/actions-button.gif[""] e selecione *Remover aplicativo*.
++
+.. Selecione a aplicação ou aplicações que pretende remover.
+.. Clique em *Excluir*.
+
+
++
+Quaisquer novos aplicativos que você atribuir substituem quaisquer aplicativos no ativo que foram derivados de outro ativo. Por exemplo, os volumes herdam aplicativos de hosts e, quando novos aplicativos são atribuídos a um volume, o novo aplicativo tem precedência sobre o aplicativo derivado.
+
+

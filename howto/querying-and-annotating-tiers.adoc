@@ -1,0 +1,67 @@
+---
+permalink: howto/querying-and-annotating-tiers.html 
+sidebar: sidebar 
+keywords:  
+summary: Você usa consultas para associar suas anotações aos ativos apropriados em seu ambiente. Aqui, associaremos esses níveis aos ativos apropriados. 
+---
+= Consultar e anotar camadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você usa consultas para associar suas anotações aos ativos apropriados em seu ambiente. Aqui, associaremos esses níveis aos ativos apropriados.
+
+Anteriormente, configuramos anotações para seus níveis. Nesse exemplo, associaremos camadas a pools de storage e assumiremos que as anotações de nível estejam configuradas da seguinte forma:
+
+|===
+
+
+| Valor | Descrição | Custo por GB 
+
+
+ a| 
+SSD de camada 1
+ a| 
+Array all-flash
+ a| 
+0,5
+
+
+
+ a| 
+SAS de camada 2
+ a| 
+SAS
+ a| 
+0,25
+
+
+
+ a| 
+SATA Tier 3
+ a| 
+SATA
+ a| 
+0,1
+
+|===
+Vamos procurar todos os discos SSD em seu ambiente e associar a anotação ""SSD Tier 1"" a eles.
+
+* Faça login no Insight como um usuário com permissões administrativas
+* Selecione *consultas* > * Nova consulta*
+* Solte o campo *Search for...* e selecione *Storage Pool*. Uma lista de todos os seus pools de armazenamento é exibida.
+* O campo *Name* pode não ser útil desta vez, então vamos usar outro campo. Clique na lista suspensa *mais* e selecione ""tipo de disco com menos desempenho"". Este campo lista os tipos de disco nos quais estamos interessados. Digite "'SSD'" no campo e clique noimage:../media/check-box-ok.gif[""] botão. A lista de resultados da consulta mostra apenas seus pools de armazenamento SSD.
+* Você pode filtrar mais clicando no menu suspenso *mais* e selecionando campos adicionais.
+* Selecione os pools de storage que você deseja associar a esse nível. Quando todos os conjuntos de armazenamento desejados estiverem selecionados, clique no botão *ações* e selecione *Editar anotação*.
+* Na caixa de diálogo *Add Annotation*, selecione a anotação *Tier*.
+* Escolha o *valor* desejado na lista. Para este exemplo, escolha "'Tier 1 SSD'".
+* Clique em *Salvar*.
+* Se a coluna nível não estiver visível na página resultados da consulta, selecione-a deixando cair o botão *colunas* e escolhendo *nível*. Você deve ver a anotação apropriada agora associada aos seus ativos.
+* Salve a consulta clicando no botão *Salvar* no canto superior direito da página consulta e dando-lhe um nome exclusivo e explícito. Por exemplo, "'pools de armazenamento - SSD Tier 1".
+
+
+Se você deseja associar a anotação "'Tier 1 SSD'" a outros ativos, crie uma nova consulta e siga estas etapas para cada tipo de ativo desejado.
+
+Repita essas etapas para os ativos em cada uma das camadas restantes.

@@ -1,0 +1,134 @@
+---
+permalink: config-admin/hitachi-content-platform-hcp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Este coletor de dados suporta a Plataforma de conteúdo Hitachi (HCP) usando a API de Gerenciamento HCP.' 
+---
+= Fonte de dados da Hitachi Content Platform (HCP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este coletor de dados suporta a Plataforma de conteúdo Hitachi (HCP) usando a API de Gerenciamento HCP.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados HCP. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Cluster HCP
+ a| 
+Armazenamento
+
+
+
+ a| 
+Locatário
+ a| 
+Pool de storage
+
+
+
+ a| 
+Namespace
+ a| 
+Volume interno
+
+
+
+ a| 
+Nó
+ a| 
+Nó
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos de inventário
+
+* Endereço IP do servidor HCP
+* Nome de usuário e senha somente leitura para o software HCP e Privileges peer
+
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Host HCP
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do host HCP
+
+
+
+ a| 
+Porta HCP
+ a| 
+A predefinição é 9090
+
+
+
+ a| 
+ID de utilizador HCP
+ a| 
+Nome de usuário para o host HCP
+
+
+
+ a| 
+Palavra-passe HCP
+ a| 
+Senha usada para o host HCP
+
+
+
+ a| 
+Tipo de autenticação HCP
+ a| 
+Escolha HCP_local ou ATIVE_DIRECTORY
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 60 minutos)
+
+
+
+ a| 
+Intervalo de polling de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 900 segundos)
+
+|===

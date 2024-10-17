@@ -1,0 +1,76 @@
+---
+permalink: howto/more-on-dashboard-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: As variáveis do dashboard vêm em vários tipos, podem ser usadas em diferentes campos e devem seguir regras para nomear. Estes conceitos são explicados aqui. 
+---
+= Mais sobre variáveis de dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As variáveis do dashboard vêm em vários tipos, podem ser usadas em diferentes campos e devem seguir regras para nomear. Estes conceitos são explicados aqui.
+
+
+
+== Tipos de variáveis
+
+Uma variável pode ser um dos seguintes tipos:
+
+* Texto*: Cadeia alfanumérica. Este é o tipo de variável padrão.
+
+*Numérico*: Um número ou intervalo de números.
+
+*Boolean*: Use para campos com valores de True/False, Yes/no, 0/1, etc. para a variável booleana, as opções são _Yes_, _no_, _None_, _any_.
+
+*Data*: Uma data ou intervalo de datas.
+
+
+
+== Variáveis genéricas
+
+Você pode definir uma variável genérica ou universal clicando no botão *variável* e selecionando um dos tipos listados acima. Esses tipos são sempre exibidos no topo da lista suspensa. A variável recebe um nome padrão, por exemplo "" var1 dólares", e não está vinculada a uma anotação ou atributo específico.
+
+Configurar uma variável genérica permite que você use essa variável em widgets para filtrar o campo _any_ desse tipo. Por exemplo, se você tiver um widget de tabela mostrando _Name_, _Alias_ e _Vendor_ (que são todos atributos do tipo texto), e "" USD var1" é uma variável de tipo texto, você pode definir filtros para cada um desses campos no widget para usar a variável USD var1. Você pode definir outros widgets para usar var1 dólares para esses ou quaisquer campos de texto.
+
+Na página do seu painel, definir var1 dólares para um valor (por exemplo, "'NetApp'") irá filtrar _todos_ desses campos em _todos_ widgets que são definidos para usar essa variável. Desta forma, você pode atualizar vários widgets ao mesmo tempo para destacar os dados do painel que você escolher à vontade.
+
+Como as variáveis genéricas podem ser usadas para qualquer campo desse tipo, você pode alterar o nome de uma variável genérica sem alterar sua funcionalidade.
+
+[NOTE]
+====
+Todas as variáveis são tratadas como variáveis "genéricas", mesmo aquelas que você cria para um atributo específico, porque todas as variáveis configuradas de um tipo são mostradas quando você define um filtro para quaisquer atributos ou anotações desse tipo. No entanto, a melhor prática é criar uma variável genérica quando você usá-la para filtrar por um valor em vários campos, como no exemplo _Name/Alias/Vendor_ acima.
+
+====
+
+
+== Nomenclatura variável
+
+Nomes das variáveis:
+
+* Deve ser sempre prefixado com um "". Isso é adicionado automaticamente quando você configura uma variável.
+* Não pode conter carateres especiais; apenas as letras a-z e os dígitos 0-9 são permitidos.
+* Não pode ter mais de 20 carateres, incluindo o símbolo "".
+* Não são sensíveis a maiúsculas e minúsculas: O CityName e o cityname são a mesma variável.
+* Não pode ser o mesmo que um nome de variável existente.
+* Não pode ser apenas o símbolo "".
+
+
+
+
+== Widgets que usam variáveis
+
+Variáveis podem ser usadas com os seguintes widgets:
+
+* Gráfico de área
+* Gráfico de barras
+* Gráfico Gráfico caixa
+* Gráfico de linhas
+* Gráfico de dispersão
+* Widget de valor único
+* Gráfico de estrias
+* Gráfico de área empilhada
+* Widget de tabela
+

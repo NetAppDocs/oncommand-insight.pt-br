@@ -1,0 +1,62 @@
+---
+permalink: howto/configure-custom-environment-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: A anotação ambiente é uma anotação personalizada para associar ativos à sua respetiva localização ou utilização ambiental, por exemplo, Lab, R&D, Production, etc. ao criar a anotação ambiente e configurá-la nesses ativos, pode encontrar, filtrar e reportar facilmente os seus ativos de laboratório separadamente dos seus ativos de produção, por exemplo. 
+---
+= Configurar anotações de ambiente personalizadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A anotação ambiente é uma anotação personalizada para associar ativos à sua respetiva localização ou utilização ambiental, por exemplo, Lab, R&D, Production, etc. ao criar a anotação ambiente e configurá-la nesses ativos, pode encontrar, filtrar e reportar facilmente os seus ativos de laboratório separadamente dos seus ativos de produção, por exemplo.
+
+Passos:
+
+* Selecione *Gerenciar* > *Anotações*.
+* Clique no botão * Adicionar * na parte superior da página.
+* Para *Nome*, introduza ''*ambiente*'.
+* Para *Description*, digite ''*Asset environment type*'.
+* Para *tipo*, selecione *Lista*. Novos campos são exibidos para você criar sua lista.
+* Por enquanto, deixe *Add new assets on the fly* desmarcado. Você verificará isso se quiser adicionar novos ambientes à lista de opções ao mesmo tempo que estiver associando-os a ativos.
+* Introduza o Nome e a Descrição do seu primeiro ambiente.
+* Clique em Adicionar* e faça o mesmo para os outros ambientes.
+* Quando terminar, clique em *Save*.
+
+
+Exemplo de anotações de ambiente:
+
+|===
+
+
+| Nome | Descrição 
+
+
+ a| 
+Laboratório
+ a| 
+Laboratório
+
+
+
+ a| 
+Dev
+ a| 
+Desenvolvimento
+
+
+
+ a| 
+PRD
+ a| 
+Produção
+
+
+
+ a| 
+...
+ a| 
+
+|===

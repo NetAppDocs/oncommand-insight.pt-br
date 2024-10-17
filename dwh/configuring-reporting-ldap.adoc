@@ -1,0 +1,147 @@
+---
+permalink: dwh/configuring-reporting-ldap.html 
+sidebar: sidebar 
+keywords:  
+summary: A partir do portal Data Warehouse, o Administrador pode configurar a utilização LDAP para Data Warehouse e Reporting. 
+---
+= Configurando o LDAP para relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir do portal Data Warehouse, o Administrador pode configurar a utilização LDAP para Data Warehouse e Reporting.
+
+
+
+== Antes de começar
+
+Para executar esta tarefa, tem de iniciar sessão no Insight como Administrador.
+
+Para todos os usuários do Secure ative Directory (ou seja, LDAPS), você deve usar o nome do servidor AD exatamente como está definido no certificado. Você não pode usar o endereço IP para login seguro do AD.
+
+
+NOTE: Se você alterou as senhas _Server.keystore_ e/ou _Server.trustore_ usando link:../config-admin/security-management.html["administrador de segurança"]o , reinicie o serviço _SANscreen_ antes de importar o certificado LDAP.
+
+
+
+== Passos
+
+. Faça login no Portal do Armazém de dados em `+https://hostname/dwh+`, onde `hostname` está o nome do sistema no qual o Armazém de dados OnCommand Insight está instalado.
+. No painel de navegação à esquerda, clique em *User Management*.
+. Clique em *Configuração LDAP*.
+. Selecione *Ativar LDAP* para iniciar o processo de autenticação e autorização do utilizador LDAP.
+. Faça quaisquer alterações necessárias para configurar o LDAP.
++
+A maioria dos campos contém valores padrão. As configurações padrão são válidas para o ative Directory.
+
++
+** *Nome principal do usuário atributo*
++
+Atributo que identifica cada usuário no servidor LDAP. O padrão é `userPrincipalName`, que é globalmente único. O OnCommand Insight tenta corresponder o conteúdo deste atributo com o nome de usuário fornecido acima.
+
+** *Atributo de função*
++
+Atributo LDAP que identifica o ajuste do usuário dentro do grupo especificado. A predefinição é `memberOf`.
+
+** * Mail atributo*
++
+Atributo LDAP que identifica o endereço de e-mail do usuário. A predefinição é `mail`. Isso é útil se você quiser se inscrever em relatórios disponíveis no OnCommand Insight. O Insight coleta o endereço de e-mail do usuário na primeira vez que cada usuário faz login e não o procura depois disso.
+
++
+[NOTE]
+====
+Se o endereço de e-mail do usuário mudar no servidor LDAP, certifique-se de atualizá-lo no Insight.
+
+====
+** * Nome distinto atributo*
++
+Atributo LDAP que identifica o nome distinto do usuário. O padrão é `distinguishedName`.
+
+** *Indicação*
++
+Indica se deve seguir o caminho para outros domínios se houver vários domínios na empresa. Tem de utilizar sempre a predefinição `follow`.
+
+** *Tempo limite*
++
+Tempo de espera para uma resposta do servidor LDAP antes do tempo limite, em milissegundos. O padrão é 2.000, o que é adequado em todos os casos e não deve ser modificado.
+
+** *Servidores LDAP*
++
+Este é o endereço IP ou o nome DNS para identificar o servidor LDAP. Para identificar uma porta específica, onde `ldap-server-address` é o nome do servidor LDAP, você pode usar o seguinte formato:
+
++
+[listing]
+----
+ldap://ldap-server-address:port
+----
++
+Para usar a porta padrão, você pode usar o seguinte formato:
+
++
+[listing]
+----
+ldap://ldap-server-address
+----
++
+[NOTE]
+====
+ When entering multiple LDAP servers in this field, separate entries with a comma, and ensure that the correct port number is used in each entry.
+Para importar os certificados LDAP, clique em *Importar certificados* e importe automaticamente ou localize manualmente os arquivos de certificado.
+
+====
+** *Domínio*
++
+Nó LDAP onde o OnCommand Insight deve começar a procurar o usuário LDAP. Normalmente, este é o domínio de nível superior para a organização. Por exemplo:
+
++
+[listing]
+----
+DC=<enterprise>,DC=com
+----
+** *Insight Server admins group*
++
+Grupo LDAP para usuários com o Insight Server Administrator Privileges. A predefinição é `insight.server.admins`.
+
+** *Insight administrators group*
++
+Grupo LDAP para usuários com o Insight Administrator Privileges. A predefinição é `insight.admins`.
+
+** *Grupo de usuários Insight*
++
+Grupo LDAP para usuários com o Insight User Privileges. A predefinição é `insight.users`.
+
+** *Insight guests group*
++
+Grupo LDAP para usuários com o Insight Guest Privileges. A predefinição é `insight.guests`.
+
+** *Grupo de administradores de relatórios*
++
+Grupo LDAP para usuários com o administrador do Insight Reporting Privileges. A predefinição é `insight.report.admins`.
+
+** *Reporting Pro authors group*
++
+Grupo LDAP para usuários com o Insight Reporting Pro authors Privileges. A predefinição é `insight.report.proauthors`.
+
+** *Reporting business authors group*
++
+Grupo LDAP para usuários com o Insight Reporting Business authors Privileges. A predefinição é `insight.report.business.authors`.
+
+** *Reporting business consumers group*
++
+Grupo LDAP para usuários com o Insight Reporting Business consumers Privileges. A predefinição é `insight.report.business.consumers`.
+
+** *Grupo destinatários de relatórios*
++
+Grupo LDAP para usuários com o Insight Reporting Receiver Privileges. A predefinição é `insight.report.recipients`.
+
+
+
+. Insira valores nos campos *Directory lookup user* e *Directory lookup user password* se você tiver feito alguma alteração.
++
+Se não introduzir os valores revistos nestes campos, as alterações não serão guardadas.
+
+. Digite novamente a senha do usuário de pesquisa de diretório no campo *Confirm Directory lookup user password* e clique em *Validate Password* para validar a senha no servidor.
+. Clique em *Atualizar* para salvar as alterações. Clique em *Cancelar* para remover as alterações.
+

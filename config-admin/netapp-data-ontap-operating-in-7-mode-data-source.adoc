@@ -1,0 +1,226 @@
+---
+permalink: config-admin/netapp-data-ontap-operating-in-7-mode-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Para sistemas de storage que usam o software Data ONTAP operando no modo 7, você deve usar a fonte de dados ONTAPI, que usa a CLI para obter números de capacidade. 
+---
+= NetApp Data ONTAP operando na fonte de dados do modo 7
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para sistemas de storage que usam o software Data ONTAP operando no modo 7, você deve usar a fonte de dados ONTAPI, que usa a CLI para obter números de capacidade.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados NetApp Data ONTAP 7-Mode. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Grupo RAID
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Arquivador
+ a| 
+Armazenamento
+
+
+
+ a| 
+Arquivador
+ a| 
+Nó de storage
+
+
+
+ a| 
+Agregado
+ a| 
+Pool de storage
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+
+
+ a| 
+Volume
+ a| 
+Volume interno
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Endereço IP do controlador de storage e do parceiro FAS
+* Porta 443
+* Nome de usuário e senha para o controlador e o parceiro
+* Um nome de usuário e senha personalizados no nível de administrador para controlador e controlador de parceiro com os seguintes recursos de função para o modo 7:
++
+** "api-*": Use isso para permitir que o OnCommand Insight execute todos os comandos da API de armazenamento NetApp.
+** "Login-http-admin": Use isso para permitir que o OnCommand Insight se conete ao armazenamento NetApp via HTTP.
+** "Security-API-vFiler": Use isso para permitir que o OnCommand Insight execute comandos da API de armazenamento NetApp para recuperar informações da unidade do vFiler.
+** "cli-options": Use isso para ler as opções do sistema de armazenamento.
+** "cli-lun": Acesse esses comandos para gerenciar LUNs. Exibe o status (caminho de LUN, tamanho, estado online/offline e estado compartilhado) do LUN ou classe de LUNs fornecidos.
+** "cli-df": Use isso para exibir espaço livre em disco.
+** "cli-ifconfig": Use isso para exibir interfaces e endereços IP.
+
+
+
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Endereço do Filer
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado para o NetApp Filer
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de usuário para o NetApp Filer
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha para o NetApp Filer
+
+
+
+ a| 
+Endereço do Filer de parceiro de HA no cluster
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado para o Filer de parceiro HA
+
+
+
+ a| 
+Nome de usuário do HA Partner Filer no cluster
+ a| 
+Nome de usuário do NetApp HA Partner Filer
+
+
+
+ a| 
+Senha do HA Partner Filer no cluster
+ a| 
+Senha para o NetApp HA Partner Filer
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Tipo de ligação
+ a| 
+Escolha o tipo de conexão
+
+
+
+ a| 
+Porta de ligação
+ a| 
+Porta usada para API NetApp
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===
+
+
+== Conexão de sistemas de armazenamento
+
+Como alternativa ao uso do usuário administrativo padrão para essa fonte de dados, você pode configurar um usuário com direitos administrativos diretamente nos sistemas de storage NetApp para que essa fonte de dados possa adquirir dados de sistemas de storage NetApp.
+
+A conexão com sistemas de armazenamento NetApp exige que o usuário, que é especificado ao adquirir o arquivador principal (no qual o sistema de armazenamento existe), atenda às seguintes condições:
+
+* O usuário deve estar em vfiler0 (arquivador de raiz/pfiler).
++
+Os sistemas de armazenamento são adquiridos ao adquirir o arquivador principal.
+
+* Os comandos a seguir definem as capacidades de função do usuário:
++
+** "api-*": Use isso para permitir que o OnCommand Insight execute todos os comandos da API de armazenamento NetApp. Este comando é necessário para usar o ZAPI.
+** "Login-http-admin": Use isso para permitir que o OnCommand Insight se conete ao armazenamento NetApp via HTTP. Este comando é necessário para usar o ZAPI.
+** "Security-API-vFiler": Use isso para permitir que o OnCommand Insight execute comandos da API de armazenamento NetApp para recuperar informações da unidade do vFiler.
+** "cli-options": Para o comando "options" e usado para o IP do parceiro e licenças habilitadas.
+** " CLI-lun": Acesse esses comandos para gerenciar LUNs. Exibe o status (caminho de LUN, tamanho, estado online/offline e estado compartilhado) do LUN ou classe de LUNs fornecidos.
+** "cli-df": Para comandos "DF -s", "DF -r", "DF -A -r" e usados para exibir espaço livre.
+** "CLI-ifconfig": Para o comando "ifconfig -a" e usado para obter o endereço IP do arquivador.
+** "cli-rdfile": Para o comando "rdfile /etc/netgroup" e usado para obter netgroups.
+** "cli-date": Para o comando "date" e usado para obter a data completa para obter cópias Snapshot.
+** "cli-snap": Para o comando "snap list" e usado para obter cópias Snapshot.
+
+
+
+
+Se as permissões cli-date ou cli-snap não forem fornecidas, a aquisição poderá ser concluída, mas as cópias Snapshot não serão relatadas.
+
+Para adquirir uma fonte de dados do modo 7 com êxito e não gerar avisos no sistema de armazenamento, você deve usar uma das seguintes cadeias de comando para definir suas funções de usuário. A segunda string listada aqui é uma versão simplificada da primeira:
+
+[listing]
+----
+login-http-admin,api-*,security-api-vfile,cli-rdfile,cli-options,cli-df,cli-lun,cli-ifconfig,cli-date,cli-snap,
+or
+login-http-admin,api-*,security-api-vfile,cli-*
+----

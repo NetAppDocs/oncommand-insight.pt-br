@@ -1,0 +1,16 @@
+---
+permalink: install-windows/oncommand-insight-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: Com o OnCommand Insight, você simplifica o gerenciamento operacional de ambientes complexos de nuvem privada e híbrida e TI virtual. O Insight é uma solução única para permitir o gerenciamento e a análise de recursos entre domínios e vários fornecedores em redes, armazenamento e servidores em ambientes físicos e virtuais. 
+---
+= Visão geral do OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Com o OnCommand Insight, você simplifica o gerenciamento operacional de ambientes complexos de nuvem privada e híbrida e TI virtual. O Insight é uma solução única para permitir o gerenciamento e a análise de recursos entre domínios e vários fornecedores em redes, armazenamento e servidores em ambientes físicos e virtuais.
+
+O Insight pode ajudar você a otimizar sua infraestrutura atual, permitindo que você dimensione as operações corretamente para atender às demandas de negócios. Ele simplifica o processo de determinação do que e quando comprar. Ele também reduz os riscos durante migrações complexas de tecnologia, como a movimentação para uma nuvem híbrida, identificando quais workloads são candidatos à migração da nuvem. Com o Insight, você pode gerenciar a infraestrutura DE TI como um serviço completo integrando os recursos em toda a cadeia de fornecimento de serviços DE TI da empresa.

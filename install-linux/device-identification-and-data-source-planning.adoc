@@ -1,0 +1,31 @@
+---
+permalink: install-linux/device-identification-and-data-source-planning.html 
+sidebar: sidebar 
+keywords:  
+summary: Como parte do Planejamento de implantação, você deve coletar informações sobre os dispositivos em seu ambiente. 
+---
+= Identificação do dispositivo e Planejamento da fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como parte do Planejamento de implantação, você deve coletar informações sobre os dispositivos em seu ambiente.
+
+Você precisa do seguinte software, conetividade e informações sobre cada dispositivo em seu ambiente:
+
+* Endereço IP ou nome de host resolvível pelo servidor OCI
+* Nome de início de sessão e palavra-passe
+* Tipo de acesso ao dispositivo, por exemplo, controlador e estação de gerenciamento
++
+[NOTE]
+====
+O acesso somente leitura será suficiente para a maioria dos dispositivos, mas alguns dispositivos exigem permissões de administrador.
+
+====
+* Conetividade de porta para o dispositivo, dependendo dos requisitos da porta de origem de dados
+* Para switches, string de comunidade SNMP somente leitura (ID de usuário ou senha para dar acesso aos switches)
+* Qualquer software de terceiros necessário no dispositivo, por exemplo, Solutions Enabler.
+* Consulte a "referência de origem de dados específica do fornecedor" na Ajuda da IU da Web ou no _Guia de configuração e administração do OnCommand Insight_ para obter mais informações sobre permissões e requisitos de origem de dados.
+

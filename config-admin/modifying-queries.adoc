@@ -1,0 +1,36 @@
+---
+permalink: config-admin/modifying-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode alterar os critérios associados a uma consulta quando quiser alterar os critérios de pesquisa dos ativos que você está consultando. 
+---
+= Modificando consultas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar os critérios associados a uma consulta quando quiser alterar os critérios de pesquisa dos ativos que você está consultando.
+
+
+
+== Passos
+
+. Faça login na IU do Insightweb.
+. Clique em *consultas* e selecione *Mostrar todas as consultas*.
++
+A página consultas é exibida.
+
+. Clique no nome da consulta.
+. Para remover um critério da consulta, clique image:../media/trash-can-query.gif[""]em .
+. Para adicionar um critério à consulta, clique image:../media/more-button.gif[""]em e selecione um critério na lista.
+. Execute um dos seguintes procedimentos:
++
+** Clique em *Salvar* para salvar a consulta com o nome que foi usado inicialmente.
+** Clique em *Salvar como* para salvar a consulta com outro nome.
+** Clique em *Renomear* para alterar o nome da consulta que você usou inicialmente.
+** Clique em *Revert* para alterar o nome da consulta de volta para aquele que você usou inicialmente.
+
+
+

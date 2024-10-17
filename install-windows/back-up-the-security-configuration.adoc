@@ -1,0 +1,20 @@
+---
+permalink: install-windows/back-up-the-security-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando o ambiente do Insight estiver usando uma configuração de segurança não padrão, você deverá fazer backup da configuração de segurança e restaurar a configuração de segurança depois que o novo software for instalado. A configuração de segurança deve ser restaurada antes de a cópia de segurança da base de dados do Data Warehouse ser restaurada. 
+---
+= Fazer backup da configuração de segurança
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando o ambiente do Insight estiver usando uma configuração de segurança não padrão, você deverá fazer backup da configuração de segurança e restaurar a configuração de segurança depois que o novo software for instalado. A configuração de segurança deve ser restaurada antes de a cópia de segurança da base de dados do Data Warehouse ser restaurada.
+
+
+
+== Sobre esta tarefa
+
+Utilize a `securityadmin` ferramenta para criar uma cópia de segurança da configuração e para restaurar a configuração guardada. Para obter mais informações, procure `securityadmin` no Centro de Documentação do OnCommand Insight: http://docs.netapp.com/oci-73/index.jsp[]

@@ -1,0 +1,55 @@
+---
+permalink: howto/custom-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight 7,3 inclui recursos aprimorados de dashboard personalizados para fornecer aos usuários uma visão operacional dos dados importantes para eles e fornecer uma visualização única desses dados. 
+---
+= Criando painéis personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight 7,3 inclui recursos aprimorados de dashboard personalizados para fornecer aos usuários uma visão operacional dos dados importantes para eles e fornecer uma visualização única desses dados.
+
+O OnCommand Insight oferece aos usuários a flexibilidade para criar dados de infraestrutura de visualizações operacionais em PLATAFORMAS DE TI, permitindo que você crie painéis personalizados com uma variedade de widgets, cada um dos quais oferece ampla flexibilidade na exibição e criação de gráficos de seus dados. Neste tutorial, criaremos um dashboard de exemplo para destacar o desempenho da VM.
+
+Este método deve servir apenas como exemplo e não abrange todos os cenários possíveis. Os conceitos e etapas aqui podem ser usados para criar seus próprios painéis personalizados para destacar os dados específicos às suas necessidades específicas.
+
+*Visão geral*
+
+Você cria um painel personalizado por um dos seguintes métodos:
+
+* * Dashboards* > * novo painel*
+* *Dashboards* > *Mostrar todos os dashboards* e clique em * Adicionar*
+
+
+O ecrã novo painel de instrumentos tem vários controlos:
+
+* * Seletor de tempo*: Permite visualizar os dados do painel por um período de tempo de 3 horas até 90 dias usando o seletor de intervalo de datas personalizado. Você pode optar por substituir esse intervalo de tempo global em widgets individuais.
+* *Botão Editar*: Selecionar "'on'" ativará o modo Editar, que permite fazer alterações no painel. Novos painéis abrem no modo Editar por padrão.
+* Botão *Salvar*: Permite salvar, renomear ou excluir o painel.
+* Botão * variável*: Variáveis podem ser adicionadas aos painéis de controle. Alterar a variável atualiza todos os seus widgets de uma só vez. Para obter mais informações sobre variáveis, consulte link:custom-dashboard-concepts.md#["Conceitos personalizados do Dashboard"]
+* *Widget* botão, que permite adicionar qualquer número de tabelas, gráficos ou outros widgets ao painel.
+
+
+Os widgets podem ser redimensionados e realocados para diferentes posições dentro do painel de controle, para lhe dar a melhor visualização de seus dados de acordo com suas necessidades atuais.
+
+*Tipos de widget*
+
+Você pode escolher entre os seguintes tipos de widget:
+
+* Tabela* widget: Uma tabela exibindo dados de acordo com filtros e colunas que você escolher. Os dados da tabela podem ser combinados em grupos que podem ser colapsados e expandidos.
+
+*Gráficos de linha, spline, Area, Stacked Area*: São widgets de gráficos de séries temporais nos quais você pode exibir desempenho e outros dados ao longo do tempo.
+
+* Widget de valor único*: Um widget que permite exibir um único valor que pode ser derivado diretamente de um contador ou calculado usando uma consulta ou expressão. Por exemplo, você pode exibir a soma do total de IOPS de todo o storage em seu ambiente como um único valor na parte superior do painel.
+
+*Gráfico de barras*: Um gráfico para exibir os valores 5, 10, 20 ou 50 superiores ou inferiores.
+
+*Gráfico de caixa*: Um gráfico do mínimo, máximo, mediana e o intervalo entre quartil inferior e superior de dados em um único gráfico.
+
+*Gráfico de dispersão*: Gráficos de dados relacionados como pontos, por exemplo, IOPS e latência. Neste exemplo, você veria rapidamente ativos com alta latência e IOPS baixo.
+
+Além disso, há uma série de widgets legados que você pode escolher. No menu suspenso *Widgets*, selecione **Mostrar mais...**para ver esses widgets.

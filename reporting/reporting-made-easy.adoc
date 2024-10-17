@@ -1,0 +1,38 @@
+---
+permalink: reporting/reporting-made-easy.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode gerar relatórios predefinidos a partir do Portal de relatórios do OnCommand Insight, enviá-los por e-mail para outros usuários e até modificá-los. Vários relatórios permitem que você filtre por dispositivo, entidade de negócios ou nível. As ferramentas de relatórios usam o IBM Cognos como base e oferecem muitas opções de apresentação de dados. 
+---
+= Relatórios simplificados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerar relatórios predefinidos a partir do Portal de relatórios do OnCommand Insight, enviá-los por e-mail para outros usuários e até modificá-los. Vários relatórios permitem que você filtre por dispositivo, entidade de negócios ou nível. As ferramentas de relatórios usam o IBM Cognos como base e oferecem muitas opções de apresentação de dados.
+
+* Os relatórios predefinidos do OnCommand Insight mostram seus dados de inventário, capacidade de storage, chargeback, performance, eficiência de storage e custos de nuvem. Você pode modificar esses relatórios predefinidos e salvar suas modificações.
+
+
+Os dados de relatório disponíveis para você são controlados por várias coisas, incluindo:
+
+* Acesso de login ao Portal de relatórios do OnCommand Insight, que é definido por funções.
+* A instalação do Armazém de dados de avistamento do OnCommand, que armazena os dados para os relatórios.
+
+
+Você pode gerar relatórios em vários formatos, incluindo HTML, PDF, CSV, XML e Excel.
+
+O OnCommand Insight acomoda vários clientes na geração de relatórios, permitindo que você associe usuários a unidades de negócios. Com esse recurso, os administradores podem separar dados ou relatórios de acordo com os atributos de um usuário ou sua afiliação.
+
+[NOTE]
+====
+Com a versão 11.1.2 do Cognos, os URLs de relatório não são considerados "estáveis" e estão sujeitos a alterações. Se você tiver URLs de relatórios marcados com favoritos, esses marcadores podem falhar posteriormente. Mais informações podem ser encontradas aqui: http://queryvision.com/ibm-analytics-11-x-urls-they-are-a-changing/[]
+
+====
+[NOTE]
+====
+O OnCommand Insight não oferece suporte a painéis criados usando Pacotes no IBM Cognos, a menos que use o novo recurso do módulo de dados.
+
+====

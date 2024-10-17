@@ -1,0 +1,29 @@
+---
+permalink: config-admin/device-resolution-fc-identify.html 
+sidebar: sidebar 
+keywords:  
+summary: A tela identificação FC exibe a WWN e WWPN de dispositivos Fibre Channel cujos hosts não foram identificados pela resolução automática do dispositivo. O ecrã também apresenta quaisquer dispositivos que tenham sido resolvidos pela resolução manual do dispositivo. 
+---
+= Resolução do dispositivo Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A tela identificação FC exibe a WWN e WWPN de dispositivos Fibre Channel cujos hosts não foram identificados pela resolução automática do dispositivo. O ecrã também apresenta quaisquer dispositivos que tenham sido resolvidos pela resolução manual do dispositivo.
+
+Os dispositivos que foram resolvidos por resolução manual contêm um status de "OK" e identificam a regra usada para identificar o dispositivo. Os dispositivos em falta têm o status ""não identificados"". A cobertura total para identificação de dispositivos está listada nesta página.
+
+image::../media/fcidentify.gif[fcidentify]
+
+Você executa ações em massa selecionando vários dispositivos no lado esquerdo da tela de identificação FC. As ações podem ser executadas em um único dispositivo, passando o Mouse sobre um dispositivo e selecionando os botões identificar ou desidentificar na extrema direita da lista.
+
+O link cobertura total exibe uma lista do "número de dispositivos identificados/número de dispositivos disponíveis" para sua configuração:
+
+* Alias SRM
+* Alias de armazenamento
+* Alternar alias
+* Zonas
+* Definido pelo utilizador
+

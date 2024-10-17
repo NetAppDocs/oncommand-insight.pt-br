@@ -1,0 +1,155 @@
+---
+permalink: config-admin/emc-isilon-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados SSH Isilon coleta inventário e desempenho do armazenamento nas escalável EMC Isilon. 
+---
+= Fonte de dados EMC Isilon
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados SSH Isilon coleta inventário e desempenho do armazenamento nas escalável EMC Isilon.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados do EMC Isilon. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Condução
+ a| 
+Disco
+
+
+
+ a| 
+Cluster
+ a| 
+Armazenamento
+
+
+
+ a| 
+Nó
+ a| 
+Nó de storage
+
+
+
+ a| 
+Sistema de ficheiros
+ a| 
+Volume interno
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Permissões de administrador para o armazenamento Isilon
+* Acesso validado `telnet` usando a porta 22
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Endereço IP
+ a| 
+O endereço IP ou o nome de domínio totalmente qualificado do cluster Isilon
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+O nome de usuário do cluster Isilon
+
+
+
+ a| 
+Palavra-passe
+ a| 
+A senha para o cluster Isilon
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+
+
+ a| 
+Tempo limite de espera do processo SSH
+ a| 
+Tempo limite do processo SSH (padrão de 60 segundos)
+
+
+
+ a| 
+Porta SSH
+ a| 
+Porta de serviço SSH
+
+|===
+
+
+== Executando comandos CLI
+
+A partir da versão 7.3.11 do OnCommand Insight e do Service Pack 9, a fonte de dados do EMC Isilon contém um aprimoramento que fará com que o Insight execute mais comandos CLI. Se você estiver usando um usuário não-root dentro de sua fonte de dados, você provavelmente terá configurado um arquivo "sudoers" para conceder a essa conta de usuário a capacidade de executar comandos CLI específicos via SSH.
+
+Para que o Insight entenda o recurso "zonas de acesso" da EMC, o Insight agora executará os seguintes novos comandos CLI:
+
+* `sudo isi zone zones list --format json –verbose`
+* `sudo isi zone zones list`
+
+
+O Insight analisa a saída desses comandos e executa mais instâncias de comandos existentes para obter a configuração lógica de objetos como qtrees, cotas e compartilhamentos/exportações nas que residem em zonas de acesso não padrão. O Insight agora relata esses objetos para zonas de acesso não padrão como resultado desse aprimoramento. À medida que o Insight obtém esses dados executando comandos existentes (com opções diferentes), nenhuma alteração de arquivo de sudoers é necessária para que eles funcionem; é somente com a introdução dos novos comandos acima que a alteração é necessária.
+
+Atualize seu arquivo de sudoers para permitir que sua conta de serviço Insight execute esses comandos antes de atualizar para esta versão do Insight. Se não o fizer, as fontes de dados do Isilon falharão.
+
+
+
+== Estatísticas do "sistema de ficheiros"
+
+A partir do OnCommand Insight 7,3.12, o coletor de dados EMC Isilon apresenta estatísticas de "sistema de arquivos" sobre o objeto de nó para o EMC Isilon. As estatísticas de nós existentes relatadas pelo OnCommand Insight são baseadas em "disco" - ou seja, para IOPs e taxa de transferência de um nó de storage, o que os discos nesse nó estão fazendo de forma agregada? Mas para cargas de trabalho em que as leituras são armazenadas em cache na memória e/ou a compactação está em uso, a carga de trabalho do sistema de arquivos pode ser substancialmente maior do que o que realmente atinge os discos - um conjunto de dados que comprime 5:1 poderia, portanto, ter um valor "taxa de transferência de leitura do sistema de arquivos" 5x o nó de armazenamento Leia a taxa de transferência, como este último mede a leitura do disco, que expande 5x quando o nó descompacta quando o nó de dados do cliente.

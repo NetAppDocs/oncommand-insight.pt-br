@@ -1,0 +1,153 @@
+---
+permalink: config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight usa a fonte de dados Brocade Sphereon/Intrepid Switch para descobrir o inventário para switches Brocade Sphereon ou Intrepid. 
+---
+= Fonte de dados do Brocade Sphereon/Intrepid Switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight usa a fonte de dados Brocade Sphereon/Intrepid Switch (SNMP) para descobrir o inventário para switches Brocade Sphereon ou Intrepid.
+
+
+
+== Requisitos
+
+[NOTE]
+====
+Este coletor de dados não está disponível a partir do OnCommand Insight 7,3.11.
+
+====
+* Deve haver conectividade IP para todos os switches na malha. Se você selecionar a caixa de seleção descobrir todos os switches na malha, o OCI identificará todos os switches na malha; no entanto, ele precisará de conectividade IP com esses switches adicionais para detectá-los.
+* String de comunidade somente leitura se estiver usando SNMP V1 ou SNMP V2.
+* Acesso HTTP ao switch para obter informações de zoneamento.
+* Validação de acesso executando o `snmpwalk` utilitário para o switch ( `<install_path\>\bin\)`consulte .
+
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Interrutor Sphereon
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do switch
+
+
+
+ a| 
+Versão SNMP
+ a| 
+Versão SNMP
+
+
+
+ a| 
+Comunidade SNMP
+ a| 
+String de comunidade SNMP somente leitura usada para acessar o switch
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador SMI-S para o comutador (apenas SNMP v3)
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe SMI-S para o comutador (apenas SNMP v3)
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 15 minutos)
+
+
+
+ a| 
+Protocolo Auth SNMP
+ a| 
+Protocolo de autenticação SNMP (apenas SNMPv3)
+
+
+
+ a| 
+Protocolo de privacidade SNMP
+ a| 
+Protocolo de privacidade SNMP (apenas SNMPv3)
+
+
+
+ a| 
+Palavra-passe de privacidade SNMP
+ a| 
+Palavra-passe de privacidade SNMP
+
+
+
+ a| 
+Número SNMP de geometrias
+ a| 
+Número de tentativas de tentativa SNMP
+
+
+
+ a| 
+Tempo limite SNMP (ms)
+ a| 
+Tempo limite SNMP (padrão de 5000 ms)
+
+
+
+ a| 
+Nome da malha
+ a| 
+O nome do malha a ser informado pela fonte de dados. Deixe em branco para relatar o nome da tela como WWN.
+
+
+
+ a| 
+Ativar trapping
+ a| 
+Selecione para ativar a aquisição ao receber uma trap SNMP do dispositivo. Se você selecionar Ativar trapping, você também deve ativar o SNMP.
+
+
+
+ a| 
+Tempo mínimo entre Ttraps (segundos)
+ a| 
+Tempo mínimo entre tentativas de aquisição acionadas por armadilhas (padrão de 10 segundos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

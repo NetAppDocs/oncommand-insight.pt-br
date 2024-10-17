@@ -1,0 +1,285 @@
+---
+permalink: config-admin/cisco-fc-switch-firmware-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O OnCommand Insight usa a fonte de dados SNMP (firmware 2,0 do comutador FC Cisco) para descobrir o inventário dos switches Fibre Channel Cisco MDS, bem como uma variedade de switches FCoE Cisco Nexus nos quais o serviço FC está habilitado. Além disso, você pode descobrir muitos modelos de dispositivos Cisco executados no modo NPV com esta fonte de dados.' 
+---
+= Fonte de dados do firmware do comutador FC Cisco (SNMP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight usa a fonte de dados SNMP (Cisco FC Switch firmware 2,0 ou mais) para descobrir o inventário dos switches Fibre Channel Cisco MDS, bem como uma variedade de switches FCoE Cisco Nexus nos quais o serviço FC está habilitado. Além disso, você pode descobrir muitos modelos de dispositivos Cisco executados no modo NPV com esta fonte de dados.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados do comutador FC Cisco. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Interrutor
+ a| 
+Interrutor
+
+
+
+ a| 
+Porta
+ a| 
+Porta
+
+
+
+ a| 
+VSAN
+ a| 
+Malha
+
+
+
+ a| 
+Zona
+ a| 
+Zona
+
+
+
+ a| 
+Comutador lógico
+ a| 
+Comutador lógico
+
+
+
+ a| 
+Entrada do servidor de nomes
+ a| 
+Entrada do servidor de nomes
+
+
+
+ a| 
+Zona de Roteamento Inter-VSAN (IVR)
+ a| 
+Zona IVR
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Um endereço IP de um switch na malha ou switches individuais
+* Detecção de chassis, para permitir a descoberta de malha
+* Se estiver usando SNMP V2, string de comunidade somente leitura
+* A porta 161 é utilizada para aceder ao dispositivo
+* Validação de acesso usando o `snmpwalk` utilitário para o switch ( `<install_path\>\bin\`consulte )
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+IP do comutador Cisco
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do switch
+
+
+
+ a| 
+Versão SNMP
+ a| 
+A versão SNMP v2 ou posterior é necessária para a aquisição de desempenho
+
+
+
+ a| 
+SNMP Community String
+ a| 
+String de comunidade SNMP somente leitura usada para acessar o switch (não aplicável para SNMP v3)
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador do comutador (apenas SNMP v3)
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe utilizada para o interrutor (apenas SNMPv3)
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 40 minutos)
+
+
+
+ a| 
+Protocolo Auth SNMP
+ a| 
+Protocolo de autenticação SNMP (apenas SNMPv3)
+
+
+
+ a| 
+Protocolo de privacidade SNMP
+ a| 
+Protocolo de privacidade SNMP (apenas SNMPv3)
+
+
+
+ a| 
+Palavra-passe de privacidade SNMP
+ a| 
+Palavra-passe de privacidade SNMP
+
+
+
+ a| 
+Geometrias SNMP
+ a| 
+Número de tentativas de tentativa SNMP
+
+
+
+ a| 
+Tempo limite SNMP (ms)
+ a| 
+Tempo limite SNMP (padrão de 5000 ms)
+
+
+
+ a| 
+Ativar trapping
+ a| 
+Selecione para ativar o trapping. Se você ativar o trapping, você também deve ativar notificações SNMP.
+
+
+
+ a| 
+Tempo mínimo entre armadilhas (seg)
+ a| 
+Tempo mínimo entre tentativas de aquisição acionadas por armadilhas (padrão de 10 segundos)
+
+
+
+ a| 
+Descubra todos os switches de malha
+ a| 
+Selecione para descobrir todos os switches na malha
+
+
+
+ a| 
+Excluir dispositivos
+ a| 
+Lista separada por vírgulas de IPs de dispositivos a excluir da sondagem
+
+
+
+ a| 
+Incluir dispositivos
+ a| 
+Lista separada por vírgulas de IPs de dispositivos a incluir na sondagem
+
+
+
+ a| 
+Verifique o tipo de dispositivo
+ a| 
+Selecione para aceitar apenas os dispositivos que se anunciam explicitamente como dispositivos Cisco
+
+
+
+ a| 
+Tipo Alias Principal
+ a| 
+Forneça uma primeira preferência para a resolução do alias. Escolha uma das seguintes opções:
+
+* *Alias do dispositivo*
++
+Este é um nome amigável para uma porta WWN (pWWN) que pode ser usado em todos os comandos de configuração, conforme necessário. Todos os switches da família Cisco MDS 9000 suportam Serviços de Alias de dispositivos distribuídos (aliases de dispositivos).
+
+* *Nenhuma*
++
+Não relate nenhum alias
+
+* * Descrição do Porto*
++
+Uma descrição para ajudar a identificar a porta em uma lista de portas
+
+* *Alias de zona (todos)*
++
+Um nome fácil de usar para uma porta que pode ser usado apenas para configuração de zoneamento
+
+* *Alias de zona (apenas ativo)*
++
+Um nome fácil de usar para uma porta que pode ser usado apenas para a configuração ativa. Este é o padrão.
+
+
+
+
+
+ a| 
+Tipo Alias secundário
+ a| 
+Forneça uma segunda preferência para a resolução do alias
+
+
+
+ a| 
+Tipo Alias terciárias
+ a| 
+Forneça uma terceira preferência para a resolução do alias
+
+
+
+ a| 
+Ative o suporte do modo Proxy SANTAP
+ a| 
+Selecione se o switch Cisco está usando SANTAP no modo proxy. Se você estiver usando o EMC RecoverPoint, você provavelmente está usando o SANTAP.
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

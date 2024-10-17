@@ -1,0 +1,26 @@
+---
+permalink: config-admin/managing-security-on-the-insight-server.html 
+sidebar: sidebar 
+keywords:  
+summary: A ferramenta securityadmin permite gerenciar opções de segurança no servidor Insight. O gerenciamento de segurança inclui alterar senhas, gerar novas chaves, salvar e restaurar configurações de segurança criadas por você ou restaurar configurações para as configurações padrão. 
+---
+= Gerenciamento da segurança no servidor Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A `securityadmin` ferramenta permite gerenciar opções de segurança no servidor Insight. O gerenciamento de segurança inclui alterar senhas, gerar novas chaves, salvar e restaurar configurações de segurança criadas por você ou restaurar configurações para as configurações padrão.
+
+
+
+== Sobre esta tarefa
+
+Você usa a `securityadmin` ferramenta para gerenciar a segurança:
+
+* Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+Consulte link:../config-admin/securityadmin-tool.html["SecurityAdmin"]a documentação para obter mais informações.

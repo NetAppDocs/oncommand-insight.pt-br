@@ -1,0 +1,42 @@
+---
+permalink: config-admin/expert-view.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A seção Expert View de uma página de ativos permite que você visualize uma amostra de desempenho do ativo base com base em qualquer número de métricas aplicáveis no contexto de um período de tempo escolhido (3 horas, 24 horas, 3 dias, 7 dias ou um período de tempo personalizado) no gráfico de desempenho e quaisquer ativos relacionados a ele.' 
+---
+= Visão do especialista
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seção Expert View de uma página de ativo permite que você visualize uma amostra de desempenho do ativo base com base em qualquer número de métricas aplicáveis no contexto de um período de tempo escolhido (3 horas, 24 horas, 3 dias, 7 dias ou um período de tempo personalizado) no gráfico de desempenho e quaisquer ativos relacionados a ele.
+
+A seguir está um exemplo da seção Expert View em uma página de ativos de volume:
+
+image::../media/expert-view-section.gif[seção de visão especializada]
+
+Você pode selecionar as métricas que deseja exibir no gráfico de desempenho para o período de tempo selecionado.
+
+A seção recursos mostra o nome do ativo base e a cor que representa o ativo base no gráfico de desempenho. Se a seção superior correlacionada não contiver um ativo que você deseja exibir no gráfico de desempenho, você poderá usar a caixa *pesquisar ativos* na seção recursos adicionais para localizar o ativo e adicioná-lo ao gráfico de desempenho. À medida que você adiciona recursos, eles aparecem na seção recursos adicionais.
+
+Também são mostrados na seção recursos, quando aplicável, quaisquer ativos relacionados ao ativo base nas seguintes categorias:
+
+* Topo correlacionado
++
+Mostra os ativos que têm uma alta correlação (porcentagem) com uma ou mais métricas de performance para o ativo base.
+
+* Principais colaboradores
++
+Mostra os ativos que contribuem (porcentagem) para o ativo base.
+
+* Ganancioso
++
+Mostra os ativos que tiram recursos do sistema do ativo através do compartilhamento dos mesmos recursos, como hosts, redes e armazenamento.
+
+* Degradada
++
+Mostra os ativos que estão esgotados dos recursos do sistema devido a este ativo.
+
+

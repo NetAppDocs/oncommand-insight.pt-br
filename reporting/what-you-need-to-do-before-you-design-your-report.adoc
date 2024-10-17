@@ -1,0 +1,23 @@
+---
+permalink: reporting/what-you-need-to-do-before-you-design-your-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de criar seu relatório personalizado, você precisa concluir algumas tarefas pré-requisitos. Se você não concluir estes, os relatórios podem estar imprecisos ou incompletos. 
+---
+= O que você precisa fazer antes de projetar seu relatório
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de criar seu relatório personalizado, você precisa concluir algumas tarefas pré-requisitos. Se você não concluir estes, os relatórios podem estar imprecisos ou incompletos.
+
+Por exemplo, se você não terminar o processo de identificação do dispositivo, seus relatórios de capacidade não serão precisos. Ou, se você não terminar de definir anotações (como camadas, unidades de negócios e data centers), seus relatórios personalizados podem não relatar dados com precisão em todo o domínio e podem mostrar "N/A" para alguns pontos de dados.
+
+Antes de criar seus relatórios, execute as seguintes tarefas:
+
+* Configurar todas as fontes de dados. Para obter detalhes, consulte o _Guia de configuração e administração do OnCommand Insight_.
+* Insira anotações (como camadas, data centers e unidades de negócios) em dispositivos e recursos do ambiente. É benéfico ter anotações estáveis antes de gerar relatórios, porque o OnCommand Insight Data Warehouse coleta informações históricas.
+* Configure o OnCommand Insight Data Warehouse para aceitar os dados do servidor OnCommand Insight no processo de extração, transformação e carregamento (ETL).
+

@@ -1,0 +1,16 @@
+---
+permalink: howto/setting-up-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode configurar o Insight para enviar notificações sobre eventos de gatilho, como política de desempenho, caminho global ou violações de capacidade por e-mail, SNMP ou Syslog. Você também pode configurar o Insight para enviar notificações por e-mail sobre eventos no nível do sistema, como erros de origem de dados ou falhas de unidade de aquisição. 
+---
+= Configurar notificações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o Insight para enviar notificações sobre eventos de gatilho, como política de desempenho, caminho global ou violações de capacidade por e-mail, SNMP ou Syslog. Você também pode configurar o Insight para enviar notificações por e-mail sobre eventos no nível do sistema, como erros de origem de dados ou falhas de unidade de aquisição.
+
+Estas são instruções básicas. Para obter mais detalhes sobre notificações, consulte Configuração e administração > Configuração e administração do Insight > Configurar o Insight.

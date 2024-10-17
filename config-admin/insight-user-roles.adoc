@@ -1,0 +1,21 @@
+---
+permalink: config-admin/insight-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: Cada conta de usuário recebe um dos três níveis de permissão possíveis. 
+---
+= Funções de usuário do Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada conta de usuário recebe um dos três níveis de permissão possíveis.
+
+* Guest permite que você faça login no Insight e visualize as várias páginas.
+* O usuário permite todos os Privileges de nível de convidado, bem como acesso a operações do Insight, como definir políticas e identificar dispositivos genéricos. O tipo de conta de usuário não permite que você execute operações de origem de dados, nem adicionar ou editar quaisquer contas de usuário que não sejam suas.
+* O administrador permite que você execute qualquer operação, incluindo adicionar novos usuários e gerenciar fontes de dados.
+
+
+*Prática recomendada:* limite o número de usuários com permissões de Administrador criando a maioria das contas para usuários ou convidados.

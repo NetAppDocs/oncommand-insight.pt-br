@@ -1,0 +1,31 @@
+---
+permalink: install-windows/restoring-the-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: Para sistemas que executam o arquivamento de desempenho, o processo de atualização restaura apenas sete dias de dados de arquivamento. Você pode restaurar os dados de arquivamento restantes após a atualização ser concluída. 
+---
+= Restaurar o arquivo de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para sistemas que executam o arquivamento de desempenho, o processo de atualização restaura apenas sete dias de dados de arquivamento. Você pode restaurar os dados de arquivamento restantes após a atualização ser concluída.
+
+
+
+== Sobre esta tarefa
+
+Para restaurar o arquivo de desempenho, siga estas etapas.
+
+
+
+== Passos
+
+. Na barra de ferramentas, clique em *Admin* > *Troubleshooting*
+. Na seção Restaurar, em *carregar arquivo de desempenho*, clique em *carregar*.
++
+O carregamento do arquivo é Tratado em segundo plano. O carregamento do arquivo completo pode demorar muito tempo, pois os dados de desempenho arquivados de cada dia são preenchidos no Insight. O estado do carregamento do arquivo é apresentado na secção de arquivo desta página.
+
+

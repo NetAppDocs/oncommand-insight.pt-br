@@ -1,0 +1,86 @@
+---
+permalink: config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve modificar a configuração do Armazém de dados do OnCommand Insight para oferecer suporte a logins de cartão inteligente e certificado para o servidor Cognos. 
+---
+= Configurando o Cognos para login de cartão inteligente e certificado (OnCommand Insight 7.3.10 e posterior)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve modificar a configuração do Armazém de dados do OnCommand Insight para oferecer suporte a logins de cartão inteligente (CAC) e certificado para o servidor Cognos.
+
+
+
+== Antes de começar
+
+Este procedimento destina-se a sistemas que executam o OnCommand Insight 7.3.10 e posterior.
+
+[NOTE]
+====
+Para obter as instruções de CAC e certificado mais atualizadas, consulte os seguintes artigos da base de conhecimento (login de suporte necessário):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["Como configurar a autenticação de cartão de acesso comum (CAC) para o OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Como configurar a autenticação de cartão de acesso comum (CAC) para o armazém de dados OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Como criar e importar um certificado assinado pela autoridade de certificação (CA) para o OnComand Insight e o Data Warehouse 7,3.x do OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["Como criar um certificado autoassinado no OnCommand Insight 7,3.X instalado em um host Windows"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Como importar um certificado assinado pela autoridade de certificação (CA) do Cognos para o datawarehouse 7.3.3 e posterior do OnCommand"]
+
+
+====
+
+
+== Passos
+
+. Adicione autoridades de certificação (CAs) à loja Cognos trustore.
++
+.. Em uma janela de comando, vá para `..\SANscreen\cognos\analytics\configuration\certs\`
+.. Use o `keytool` utilitário para listar as CAs confiáveis: "...". keytool.exe -list -keystore CAMKeystore.jks -storepass <password>
+
+
++
+A primeira palavra em cada linha indica o alias da CA.
+
++
+.. Se não existirem ficheiros adequados, forneça um ficheiro de certificado de CA, normalmente um `.pem` ficheiro.
+.. Para incluir as CAs do cliente com as CAs confiáveis do OnCommand Insight, vá para `..\SANscreen\cognos\analytics\configuration\certs\`.
+.. Use o `keytool` utilitário para importar o `.pem` arquivo: `..\..\ibm-jre\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
++
+`my_alias` Geralmente é um alias que identificaria facilmente a CA na ``keytool -list``operação.
+
+.. Quando for solicitada uma senha, insira a senha do arquivo _/SANscreen/bin/cognos_info.dat_.
+.. Responda `yes` quando solicitado a confiar no certificado.
+
+
+. Para ativar o modo CAC, faça o seguinte:
++
+.. Configure a página de logout do CAC, seguindo as seguintes etapas:
++
+*** Logon no portal Cognos (o usuário deve fazer parte do grupo Administradores do sistema, ou seja, cognos_admin)
+*** (Apenas para 7.3.10 e 7,3.11) clique em Gerenciar -> Configuração -> sistema -> Segurança
+*** (Apenas para 7.3.10 e 7,3.11) Introduza cacLogout.html contra a URL Redirect Logout
+*** Feche o navegador.
+
+
+.. Executar `..\SANscreen\bin\cognos_cac\enableCognosCAC.bat`
+.. Inicie o serviço IBM Cognos. Aguarde que o serviço Cognos seja iniciado.
+
+
+. Para desativar o modo CAC, faça o seguinte:
++
+.. Executar `..\SANscreen\bin\cognos_cac\disableCognosCAC.bat`
+.. Inicie o serviço IBM Cognos. Aguarde que o serviço Cognos seja iniciado.
+.. (Apenas para 7.3.10 e 7,3.11) Desconfigure a página de logout do CAC, seguindo os seguintes passos:
++
+*** Logon no portal Cognos (o usuário deve fazer parte do grupo Administradores do sistema, ou seja, cognos_admin)
+*** Clique em Gerenciar "-> Configuração "-> sistema "-> Segurança
+*** Digite cacLogout.html contra o URL de redirecionamento de logout '-> aplicar
+*** Feche o navegador.
+
+
+
+
+

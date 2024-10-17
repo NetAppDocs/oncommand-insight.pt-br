@@ -1,0 +1,42 @@
+---
+permalink: dwh/running-external-scripts-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: O Data Warehouse permite que os clientes criem trabalhos que podem executar scripts personalizados que preparam dados personalizados no Data Warehouse. 
+---
+= Execução de scripts personalizados no Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Data Warehouse permite que os clientes criem trabalhos que podem executar scripts personalizados que preparam dados personalizados no Data Warehouse.
+
+
+
+== Antes de começar
+
+Para impedir que o script personalizado seja excluído durante uma atualização do Data Warehouse, você não deve armazenar o script no diretório SANscreen.
+
+
+
+== Sobre esta tarefa
+
+O trabalho pode especificar apenas um script. Você pode executar vários scripts e comandos de um script.
+
+
+
+== Passos
+
+. Em Data Warehouse, selecione *DWH Admin* > *Schedule*.
+. Marque a caixa de seleção *Script ativado*.
+. Insira o caminho absoluto do nome do script na caixa de texto *localização do script*.
+. Clique em *Salvar*.
+
+
+
+
+== Resultados
+
+O mecanismo de trabalho do Data Warehouse programará a tarefa para executar um trabalho de "script personalizado". O trabalho está programado para ser executado após um ETL e evitando outros processos em segundo plano conflitantes. O trabalho não é executado por uma operação "construir a partir da história".

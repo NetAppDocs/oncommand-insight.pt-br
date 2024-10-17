@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-features.html 
+sidebar: sidebar 
+keywords:  
+summary: O Armazém de dados OnCommand Insight é uma base de dados independente composta por vários data marts. 
+---
+= Recursos do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Armazém de dados OnCommand Insight é uma base de dados independente composta por vários data marts.
+
+O Data Warehouse inclui os seguintes recursos:
+
+* Dados de configuração e inventário atuais e históricos que permitem criar relatórios de tendências úteis para previsão e Planejamento
+* Vários marts de dados históricos multidimensionais e um mart adicional de dados de inventário atual-somente
+* Um banco de dados otimizado para consultas predefinidas ou consultas definidas pelo usuário
+* Uma plataforma para integração com mecanismos de relatórios e inteligência de negócios de terceiros, incluindo:
++
+** Bancos de dados de gerenciamento de configuração
+** Sistemas de contabilidade financeira
+** Sistemas de gerenciamento de ativos
+
+
+

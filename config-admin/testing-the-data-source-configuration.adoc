@@ -1,0 +1,21 @@
+---
+permalink: config-admin/testing-the-data-source-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Ao adicionar uma fonte de dados, você pode verificar a correção da configuração para se comunicar com o dispositivo antes de salvar ou atualizar essa fonte de dados. 
+---
+= Testando a configuração da fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao adicionar uma fonte de dados, você pode verificar a correção da configuração para se comunicar com o dispositivo antes de salvar ou atualizar essa fonte de dados.
+
+Quando você clica no botão *Teste* no assistente de origem de dados, a comunicação com o dispositivo especificado é marcada. O teste produz um destes resultados:
+
+* APROVADO: A fonte de dados está configurada corretamente.
+* Aviso: O teste estava incompleto, provavelmente devido ao tempo de espera durante o processamento ou a aquisição não está em execução.
+* FALHA: A fonte de dados, conforme configurada, não pode se comunicar com o dispositivo especificado. Verifique as definições de configuração e volte a testar.
+

@@ -1,0 +1,52 @@
+---
+permalink: dwh/restoring-and-upgrading-reports-for-versions-prior-to-6-3.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você estiver atualizando uma versão do Insight anterior a 6,3, será necessário restaurar manualmente os artefatos de relatórios. 
+---
+= Restaurar e atualizar relatórios para versões anteriores a 6,3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você estiver atualizando uma versão do Insight anterior a 6,3, será necessário restaurar manualmente os artefatos de relatórios.
+
+
+
+== Antes de começar
+
+Siga as instruções nos tópicos "Atualizando o Data Warehouse (DWH)" e "fazendo backup de relatórios personalizados e artefatos de relatórios".
+
+
+
+== Passos
+
+. Para restaurar artefatos de relatórios de versões anteriores à versão 6,3, copie o arquivo Export Backup.zip que você criou e armazenou em seu `<install>\cognos\c10_64\deployment` diretório.
+. Abra um navegador e vá para `http://<server>:<port>/reporting` o servidor e a porta que você usou durante a instalação.
+. Digite seu nome de usuário e senha e clique em *Login*.
+. No menu *Iniciar*, selecione *Insight Reporting Administration*.
+. Clique na guia *Configuração*.
++
+Devido a alterações no modelo de dados, os relatórios nos pacotes antigos podem não ser executados e precisam ser atualizados.
+
+. Clique em *Content Administration*.
+. Clique no botão *Nova importação*.
+. Certifique-se de que o arquivo copiado para o diretório de implementação (por exemplo, `backup6.0.zip`) esteja selecionado e clique em *Next*.
+. Se você inseriu uma senha para proteger o arquivo, digite a senha e clique em *OK*.
+. Altere o nome `+Export...+` para `Import Backup` e clique em *Next*.
+. Clique no ícone de lápis ao lado de cada nome de pacote e insira um novo nome de destino, se necessário. Por exemplo, adicione um `_original` sufixo ao nome existente. Em seguida, clique em *OK*.
+. Depois de renomear os nomes dos pacotes de destino para todos os pacotes, selecione todas as pastas azuis e clique em *Next* para continuar.
+. Aceite todos os valores predefinidos.
+. Clique em *Finish* e selecione *Run*.
+. Verifique os detalhes desta importação e clique em *OK*.
+. Clique em *Refresh* para ver o status da importação.
+. Clique em *Fechar* após a conclusão da importação.
+
+
+
+
+== Resultados
+
+Dois conjuntos de pacotes aparecem na guia pastas públicas. Por exemplo, um com um `7.0` sufixo (para a versão mais recente) e um com um sufixo `_original` (ou o que você inseriu durante o procedimento de backup/restauração) que contém seus relatórios antigos. Devido a alterações no modelo de dados, os relatórios nos pacotes antigos podem não ser executados e precisam ser atualizados. As guias do portal agora apontam para a versão atual das páginas do portal.

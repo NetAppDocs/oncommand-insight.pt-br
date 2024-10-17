@@ -1,0 +1,57 @@
+---
+permalink: install-windows/downloading-the-installation-packages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Você deve baixar os pacotes de instalação para Insight, Data Warehouse e a Unidade de aquisição remota (se aplicável) antes do dia em que você escolher atualizar. Os tempos de download dos pacotes (.msi files) variam de acordo com a largura de banda disponível.' 
+---
+= Transferir os pacotes de instalação do OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve baixar os pacotes de instalação para Insight, Data Warehouse e a Unidade de aquisição Remota (se aplicável) antes do dia em que você optar por atualizar. Os tempos de download para os arquivos de pacotes(`.msi`) variam de acordo com a largura de banda disponível.
+
+
+
+== Sobre esta tarefa
+
+Você pode baixar os pacotes de instalação usando o Insight WebUI ou navegando até o link OnCommand Insight apropriado no http://support.netapp.com/NOW/cgi-bin/software[].
+
+Para fazer o download do pacote de instalação a partir do servidor Insight, faça o seguinte:
+
+
+
+== Passos
+
+. Abra a IU da Web do Insight abrindo um navegador da Web e inserindo uma das seguintes opções:
++
+** No servidor Insight: `+https://localhost+`
+** A partir de qualquer local: `+https://IP Address:port or fqdn:port+`
++
+O número da porta é 443 ou a porta que foi configurada quando o servidor Insight foi instalado. O número da porta é padrão para 443 se você não especificar o número da porta no URL.
+
+
+
+. Inicie sessão no Insight.
+. Clique no ícone Ajuda e selecione *verificar atualizações*.
+. Se for detetada uma versão mais recente, siga as instruções na caixa de mensagens.
++
+Você será levado para a página InsightDescription para a versão mais recente.
+
+. Na página *Descrição*, clique em *continuar*.
+. Quando o contrato de licença do usuário final (EULA) for exibido, clique em *Accept*.
+. Clique no link do pacote de instalação para cada componente (servidor Insight, Data Warehouse, Unidade de aquisição Remota), etc.) e clique em *Salvar como* para salvar o pacote de instalação.
++
+Antes de atualizar, deve certificar-se de que copia os pacotes de instalação do Data Warehouse e da Unidade de aquisição Remota para discos locais nos respetivos servidores.
+
+. Clique em *CHECKSUM* e anote os valores numéricos que estão associados a cada pacote de instalação.
+. Verifique se os pacotes de instalação estão completos e sem erros depois de baixá-los.
++
+Transferências de arquivos incompletas podem causar problemas com o processo de atualização.
+
++
+Para gerar valores de hash MD5 para os pacotes de instalação, você pode usar um utilitário de terceiros, como o utilitário da Microsoftlink:HTTP://SUPPORT.MICROSOFT.COM/KB/841290["Verificador de integridade do arquivo"].
+
+

@@ -1,0 +1,60 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-command-line.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode usar o diretório migrar dados MySQL para um diretório diferente. Você pode manter o diretório de dados atual. Você pode usar a opção migrar no menu solução de problemas ou, alternativamente, você pode usar a linha de comando. Este procedimento descreve como utilizar a linha de comando. 
+---
+= Movendo dados MySQL usando a linha de comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o diretório migrar dados MySQL para um diretório diferente. Você pode manter o diretório de dados atual. Você pode usar a opção migrar no menu solução de problemas ou, alternativamente, você pode usar a linha de comando. Este procedimento descreve como utilizar a linha de comando.
+
+
+
+== Sobre esta tarefa
+
+Se você manter o diretório de dados atual, ele será mantido como um backup e renomeado.
+
+Você pode usar o utilitário migrar dados MySQL ou você pode usar uma `java -jar mysqldatamigrator.jar` opção no caminho OnCommand Insight `\bin\mysqldatamigrator` de onde os seguintes parâmetros devem ser usados:
+
+* Parâmetros obrigatórios
++
+** *-path*
++
+O novo caminho de dados para o qual a pasta de dados será copiada.
+
+
+
+* Parâmetros opcionais
++
+** *-myCnf.my .cnf file>*
++
+O caminho para o arquivo .cnf. A predefinição é `<install path>\mysql\my.cnf`. Use este sinalizador somente se um MySQL não-padrão for usado.
+
+** *-doBackup*
++
+Se este sinalizador estiver definido, a pasta de dados atual será renomeada, mas não excluída.
+
+
+
+
+
+
+
+== Passos
+
+. Acesse a ferramenta de linha de comando aqui: `<installation path>` Mysqldatamigrator.jar
+
+
+
+
+== Exemplo de utilização
+
+[listing]
+----
+java -jar mysqldatamigrator.jar -path "C:\<new path>" -doBackup
+----

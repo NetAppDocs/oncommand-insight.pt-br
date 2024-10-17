@@ -1,0 +1,35 @@
+---
+permalink: dwh/monitoring-data-warehouse-health.html 
+sidebar: sidebar 
+keywords: suppress 
+summary: 'O Data Warehouse (DWH) inclui um monitor de integridade que exibe informações sobre o estado da DWH. As mensagens de alarme são apresentadas nas páginas de conetores e trabalhos da DWH, bem como enviadas para o servidor Insight ligado, onde são apresentadas na página Admin.' 
+---
+= Monitoramento da saúde do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Data Warehouse (DWH) inclui um monitor de integridade que exibe informações sobre o estado da DWH. As mensagens de alarme são exibidas nas páginas *Connectors* e *Jobs* da DWH, bem como enviadas para o servidor Insight conetado, onde são exibidas na página *Admin* > *Health*.
+
+A DWH coleta métricas a cada dez minutos e exibe um alarme nas seguintes condições:
+
+* A ligação ao servidor Insight está inativa
+* A utilização do disco é superior a 90%
+* O serviço de relatórios (Cognos) está inativo
+* Uma consulta mantém um bloqueio em qualquer tabela por um tempo prolongado
+* Um trabalho de manutenção está desativado
+* A cópia de segurança automática está desativada
+* Risco de segurança: Chaves de criptografia padrão detetadas
+
+
+Os avisos do monitor de saúde no Data Warehouse podem ser suprimidos por até 30 dias.
+
+Quando a notificação por e-mail está ativada, esses eventos também são relatados por e-mail. Observe que o e-mail não contém anexos.
+
+Esses eventos são registrados no `dwh_troubleshoot.log` arquivo nos seguintes locais:
+
+* Windows: `<install dir>\SANscreen\Wildfly\Standalone\Logs`
+* Linux: `/var/log/netapp/oci/wildfly/`
+

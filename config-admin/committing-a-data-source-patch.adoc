@@ -1,0 +1,45 @@
+---
+permalink: config-admin/committing-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Você usa as informações no resumo dos patches para decidir se o patch está funcionando como esperado e, em seguida, commit o patch para sua rede. 
+---
+= Enviando um patch de origem de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você usa as informações no resumo dos patches para decidir se o patch está funcionando como esperado e, em seguida, commit o patch para sua rede.
+
+
+
+== Antes de começar
+
+Você instalou um patch e precisa decidir se o patch é bem-sucedido e deve ser aprovado.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *patches*.
++
+Se nenhum patch estiver sendo instalado, os patches atualmente em revisão estarão vazios.
+
+. Em *patches atualmente em revisão*, verifique o status dos patches de origem de dados que estão sendo aplicados.
+. Para examinar os detalhes associados a um patch específico, clique no nome vinculado do patch.
+. Nas informações de resumo dos patches, mostradas neste exemplo, verifique a *Recomendação* e *Comentários* para avaliar o progresso do patch.
++
+image::../media/oci-7-patch-approval-gif.gif[caixa de diálogo aprovação do patch]
+
+. Verifique a tabela *fontes de dados afetadas* para ver o status de cada fonte de dados afetada antes e depois do patch.
++
+Se você estiver preocupado que há um problema com uma das fontes de dados sendo corrigida, clique no Nome vinculado na tabela fontes de dados afetadas.
+
+. Se concluir que o patch deve ser aplicado a esse tipo de fonte de dados, clique em *Approve*.
++
+As fontes de dados são alteradas e o patch é removido dos patches atualmente em revisão.
+
+

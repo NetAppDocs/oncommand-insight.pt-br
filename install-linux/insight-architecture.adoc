@@ -1,0 +1,59 @@
+---
+permalink: install-linux/insight-architecture.html 
+sidebar: sidebar 
+keywords:  
+summary: Uma instalação típica do OnCommand Insight inclui aquisição de dados e armazenamento de dados com relatórios, todos facilmente acessíveis a partir de uma IU baseada na web. Para ambientes mais seguros, a aquisição pode ser feita através de uma unidade de aquisição remota. 
+---
+= Arquitetura Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma instalação típica do OnCommand Insight inclui aquisição de dados e armazenamento de dados com relatórios, todos facilmente acessíveis a partir de uma IU baseada na web. Para ambientes mais seguros, a aquisição pode ser feita através de uma unidade de aquisição remota.
+
+Os principais componentes da arquitetura Insight são mostrados no diagrama a seguir:
+
+image::../media/oci-architecture-2024.png[arquitetura oci 2024]
+
+* *Servidor OnCommand Insight*
++
+O servidor OnCommand Insight contém o repositório de dados principal e os componentes de análise. O servidor está continuamente construindo uma topologia de ponta a ponta do ambiente, analisando o ambiente e gerando alertas quando um incidente ou violação é detetado.
+
+* *Aquisição*
++
+O motor de coleta Insight é construído em uma ou mais unidades de aquisição. Cada servidor Insight contém uma unidade de aquisição local e pode suportar unidades de aquisição remotas. Cada unidade é um serviço executado na rede que acessa (através de módulos chamados _fontes de dados_) e coleta dados de dispositivos no data center. As informações recolhidas pelas unidades de aquisição são então enviadas para o servidor para análise.
+
++
+O motor de coleta foi projetado para ser altamente modular e facilmente corrigido.
+
+* *API de integração*
++
+Uma API permite a coleta de dados de agentes externos. Os dados de integração podem ser visualizados na IU da Web usando consultas e widgets. Os painéis podem conter dados "nativos" do Insight e dados de integração. É possível aplicar filtragem, roll-ups e agrupamento aos dados nesses painéis.
+
+* * UI da Web*
++
+A interface de usuário baseada na Web do HTML5 para o Insight permite configurar fontes de dados e seu ambiente de monitoramento, incluindo políticas, limites e alertas. Em seguida, você usa o Painel UIAsset da Web e as páginas de ativos para identificar e pesquisar possíveis problemas. Você pode criar painéis personalizados com uma variedade de widgets, cada um dos quais oferece ampla flexibilidade na exibição, análise e gráficos de seus dados.
+
+* *Data Warehouse*
++
+O Armazém de dados OnCommand Insight é um repositório centralizado que armazena dados de vários servidores Insight e transforma dados em um modelo de dados multidimensional comum para consulta e análise.
+
++
+O Data Warehouse do OnCommand Insight permite o acesso a um banco de dados aberto composto por vários data marts que permitem gerar relatórios personalizados de capacidade e desempenho, como relatórios de chargeback, relatórios de tendências com dados históricos, análises de consumo e relatórios de previsão.
+
++
+O Data Warehouse consolida e prepara dados para relatórios para uma ou várias instalações do Insight. Os dados incluem histórico, tendências, inventário, chargeback, exibição e apresentações de dados para dar suporte ao Planejamento de longo prazo da infraestrutura do data center.
+
+* *Cognos*
++
+O Cognos é o mecanismo de relatórios do Insight, uma ferramenta de business intelligence da IBM que permite visualizar relatórios predefinidos ou criar relatórios personalizados. O relatório Insight gera relatórios a partir dos dados do Data Warehouse.
+
++
+[NOTE]
+====
+Se você instalar o Insight em um servidor Linux, você só poderá usar o Cognos se o Data Warehouse estiver instalado em um servidor Windows. Para obter informações sobre como instalar o Data Warehouse no Windows, consulte o _Guia de Instalação do OnCommand Insight_.
+
+====
+

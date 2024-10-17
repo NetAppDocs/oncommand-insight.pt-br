@@ -1,0 +1,188 @@
+---
+permalink: config-admin/amazon-aws-ec2-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight usa essa fonte de dados para descobrir o inventário e o desempenho do Amazon AWS EC2. 
+---
+= Fonte de dados do Amazon AWS EC2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight usa essa fonte de dados para descobrir o inventário e o desempenho do Amazon AWS EC2.
+
+
+
+== Pré-requisitos:
+
+Para coletar dados de dispositivos Amazon EC2, você deve ter as seguintes informações:
+
+* Tem de ter a ID da chave de acesso do IAM
+* Você deve ter a chave de acesso secreta para sua conta na nuvem do Amazon EC2
+* Tem de ter o privilégio "List Organization" (organização de lista)
+* Porta 433 HTTPS
+* As instâncias EC2 podem ser reportadas como uma máquina virtual ou (menos naturalmente) um host. Os volumes do EBS podem ser reportados como um VirtualDisk usado pela VM, bem como um datastore que fornece a capacidade para o VirtualDisk.
+
+
+As chaves de acesso consistem em uma ID de chave de acesso (por exemplo, AKIAIOSFODNN7EXAMPLE) e uma chave de acesso secreta (por exemplo, wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY). Use as teclas de acesso para assinar solicitações programáticas que você faz para EC se você usar as operações da API Amanzon EC2 SDKs, REST ou Query. Essas chaves são fornecidas com seu contrato da Amazon.
+
+
+
+== Como configurar esta fonte de dados
+
+Para configurar a fonte de dados do Amazon AWS EC2, você precisará do ID da chave de acesso do AWS IAM e da chave de acesso secreta para sua conta da AWS.
+
+Preencha os campos da fonte de dados de acordo com as tabelas abaixo:
+
+
+
+== Configuração:
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Região da AWS
+ a| 
+Escolha a região da AWS
+
+
+
+ a| 
+Função IAM
+ a| 
+Para uso somente quando adquirido em uma AU na AWS. Veja abaixo para obter mais informações sobre as funções do IAM.
+
+
+
+ a| 
+ID da chave de acesso do AWS IAM
+ a| 
+Insira o ID da chave de acesso do AWS IAM. Necessário se você não usar a função IAM.
+
+
+
+ a| 
+Chave de acesso secreta do AWS IAM
+ a| 
+Insira a chave de acesso secreta do AWS IAM. Necessário se você não usar a função IAM.
+
+
+
+ a| 
+Eu entendo que a AWS me cobrará por solicitações de API
+ a| 
+Verifique isso para verificar se a AWS cobra por solicitações de API feitas pelo Insight polling
+
+|===
+
+
+== Configuração avançada:
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Incluir Regiões extra
+ a| 
+Especifique regiões adicionais a serem incluídas na sondagem.
+
+
+
+ a| 
+Função de conta cruzada
+ a| 
+Função para acessar recursos em diferentes contas da AWS.
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 60 minutos)
+
+
+
+ a| 
+Tempo limite da conexão HTTP e do soquete (seg)
+ a| 
+Tempo limite da conexão HTTP (padrão de 300 segundos)
+
+
+
+ a| 
+Inclua tags da AWS
+ a| 
+Marque isso para ativar o suporte para tags AWS nas anotações do Insight
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 1800 segundos)
+
+|===
+
+
+== Mapeamento de tags da AWS para anotações do Insight
+
+A fonte de dados do AWS EC2 inclui uma opção que permite preencher anotações do Insight com tags configuradas na AWS. As anotações devem ser nomeadas exatamente como as tags da AWS. O Insight sempre preencherá anotações de texto com o mesmo nome e fará uma "melhor tentativa" para preencher anotações de outros tipos (número, boolean, etc.). Se a anotação for de um tipo diferente e a fonte de dados não a preencher, pode ser necessário remover a anotação e recriá-la como um tipo de texto.
+
+Observe que a AWS diferencia maiúsculas de minúsculas, enquanto o Insight não diferencia maiúsculas de minúsculas. Então, se você criar uma anotação chamada "PROPRIETÁRIO" no Insight e tags chamadas "PROPRIETÁRIO", "PROPRIETÁRIO" e "proprietário" na AWS, todas as variações da AWS de "proprietário" serão mapeadas para a anotação "PROPRIETÁRIO" do Insight.
+
+Informações relacionadas:
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html["Gerenciando chaves de acesso para usuários do IAM"]
+
+
+
+== Incluir Regiões extra
+
+Na seção AWS Data Collector *Configuração avançada*, você pode definir o campo *incluir regiões extras* para incluir regiões adicionais, separadas por vírgula ou ponto e vírgula. Por padrão, esse campo é definido como *_US-.*_*, que é coletado em todas as regiões da AWS dos EUA. Para coletar em _todas_ regiões, defina este campo como *_.*_*.
+
+Se o campo *incluir regiões extras* estiver vazio, o coletor de dados coletará os ativos especificados no campo *região AWS* conforme especificado na seção *Configuração*.
+
+
+
+== *Coleta de contas AWS Child*
+
+O Insight é compatível com a coleta de contas filhas para a AWS em um único coletor de dados da AWS. A configuração para essa coleção é executada no ambiente AWS:
+
+* Você deve configurar cada conta filho para ter uma função da AWS que permita que o ID da conta principal acesse os detalhes do EC2 da conta crianças.
+* Cada conta filho deve ter o nome da função configurado como a mesma cadeia de carateres
+* Insira esta cadeia de carateres de nome de função na seção Insight AWS Data Collector *Configuração avançada*, no campo *função de conta cruzada*.
+
+
+Prática recomendada: É altamente recomendável atribuir a política AmazonEC2ReadOnlyAccess predefinida da AWS à conta principal do ECS. Além disso, o usuário configurado na fonte de dados deve ter pelo menos a política __AWSOrganizationsReadOnlyAccess__policy predefinida atribuída, a fim de consultar a AWS.
+
+Consulte o seguinte para obter informações sobre como configurar seu ambiente para permitir que o Insight colete de contas de crianças da AWS:
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html["Tutorial: Delegar acesso em contas da AWS usando funções do IAM"]
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html["Configuração da AWS: Fornecendo acesso a um usuário do IAM em outra conta da AWS que você possui"]
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["Criando uma função para delegar permissões a um usuário do IAM"]
+
+
+
+== Funções do IAM
+
+Ao usar a segurança _função_ do IAM, você deve garantir que a função que você cria ou especifica tenha as permissões apropriadas necessárias para acessar seus recursos.
+
+Por exemplo, se você criar uma função do IAM chamada _InstanceEc2ReadOnly_, deverá configurar a política para conceder permissão de acesso à lista somente leitura do EC2 a todos os recursos do EC2 para essa função do IAM. Além disso, você deve conceder acesso ao STS (Security Token Service) para que essa função possa assumir funções entre contas.
+
+Depois de criar uma função do IAM, você pode anexá-la ao criar uma nova instância do EC2 ou qualquer instância existente do EC2.
+
+Depois de anexar a função IAM _InstanceEc2ReadOnly_ a uma instância do EC2, você poderá recuperar a credencial temporária por meio de metadados de instância pelo nome da função IAM e usá-la para acessar recursos da AWS por qualquer aplicativo executado nessa instância do EC2.
+
+
+NOTE: A função IAM pode ser usada somente quando a Unidade de aquisição estiver sendo executada em uma instância da AWS.

@@ -1,0 +1,144 @@
+---
+permalink: config-admin/hpe-nimble-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: O coletor de dados HPE Nimble suporta dados de inventário e desempenho para matrizes de armazenamento HPE Nimble. 
+---
+= Fonte de dados HPE Nimble
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O coletor de dados HPE Nimble suporta dados de inventário e desempenho para matrizes de armazenamento HPE Nimble.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados HPE Nimble. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Array
+ a| 
+Armazenamento
+
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Piscina
+ a| 
+Pool de storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Iniciador
+ a| 
+Alias do host de storage
+
+
+
+ a| 
+Controlador
+ a| 
+Nó de storage
+
+
+
+ a| 
+Interface Fibre Channel
+ a| 
+Controlador
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* A matriz deve ser instalada e configurada e acessível a partir do cliente através do seu nome de domínio totalmente qualificado (FQDN) ou endereço IP de gerenciamento de matriz.
+* O array deve estar executando NimbleOS 2,3.x ou posterior.
+* Você deve ter um nome de usuário e uma senha válidos para o array.
+* A porta 5392 deve estar aberta no array.
+
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Endereço IP de gerenciamento de matriz
+ a| 
+Nome de domínio totalmente qualificado (FQDN) ou endereço IP de gerenciamento de matriz.
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de usuário para a matriz Nimble
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha para a matriz ágil
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Porta
+ a| 
+Porta usada pela API REST do Nimble. A predefinição é 5392.
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 60 minutos)
+
+|===
+Observação: O intervalo padrão de enquete de desempenho é de 300 segundos e não pode ser alterado. Este é o único intervalo suportado pelo Nimble.

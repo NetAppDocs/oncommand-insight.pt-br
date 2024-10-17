@@ -1,0 +1,46 @@
+---
+permalink: config-admin/editing-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode querer alterar a prioridade de um aplicativo, a entidade de negócios associada a um aplicativo ou o status do compartilhamento de volume. 
+---
+= Editar aplicações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez você queira alterar a prioridade de um aplicativo, a entidade de negócios associada a um aplicativo ou o status do compartilhamento de volume.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *Gerenciar* e selecione *aplicativos*.
+. Posicione o cursor sobre a aplicação que pretende editar e clique image:../media/edit-recipient-icon.gif[""]em .
++
+A caixa de diálogo Editar aplicativo é exibida.
+
+. Faça qualquer um dos seguintes procedimentos:
++
+** Clique em *Priority* e selecione uma prioridade diferente.
++
+[NOTE]
+====
+Não é possível alterar o nome da aplicação.
+
+====
+** Clique em *entidade de negócio* e selecione uma entidade de negócio diferente para associar o aplicativo ou selecione *nenhum* para remover a associação do aplicativo com a entidade de negócios.
+** Clique para limpar ou selecione *Validar compartilhamento de volume*.
++
+[NOTE]
+====
+Esta opção só está disponível se você tiver a licença assure.
+
+====
+
+
+. Clique em *Salvar*.
+

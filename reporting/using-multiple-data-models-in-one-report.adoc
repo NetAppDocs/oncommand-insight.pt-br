@@ -1,0 +1,18 @@
+---
+permalink: reporting/using-multiple-data-models-in-one-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Normalmente, você usa um modelo de dados por relatório. No entanto, você pode escrever um relatório que combine dados de vários modelos de dados. 
+---
+= Usando vários modelos de dados em um relatório
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Normalmente, você usa um modelo de dados por relatório. No entanto, você pode escrever um relatório que combine dados de vários modelos de dados.
+
+Para escrever um relatório que combine dados de vários modelos de dados, escolha um dos modelos de dados a utilizar como base e, em seguida, escreva consultas SQL para aceder aos dados a partir dos marts de dados adicionais. Você pode usar o recurso junção SQL para combinar os dados das diferentes consultas em uma única consulta que você pode usar para escrever o relatório.
+
+Por exemplo, digamos que você deseja a capacidade atual para cada storage array e deseja capturar anotações personalizadas nos arrays. Você pode criar o relatório usando o modelo de dados de capacidade de armazenamento. Você pode usar os elementos das tabelas de capacidade e dimensão atuais e adicionar uma consulta SQL separada para acessar as informações de anotações no modelo de dados de inventário. Finalmente, você pode combinar os dados vinculando os dados de armazenamento de inventário à tabela dimensão de armazenamento usando o nome de armazenamento e os critérios de associação.

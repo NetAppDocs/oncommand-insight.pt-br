@@ -1,0 +1,30 @@
+---
+permalink: config-admin/using-annotations-to-monitor-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Ao personalizar o OnCommand Insight para rastrear dados para seus requisitos corporativos, você pode definir notas especializadas, chamadas de anotações e atribuí-las aos seus ativos. Por exemplo, você pode anotar ativos com informações como fim de vida útil do ativo, data center, local de criação, camada de storage ou nível de serviço de volume. 
+---
+= Usando anotações para monitorar seu ambiente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao personalizar o OnCommand Insight para rastrear dados para seus requisitos corporativos, você pode definir notas especializadas, chamadas _anotações_, e atribuí-las aos seus ativos. Por exemplo, você pode anotar ativos com informações como fim de vida útil do ativo, data center, local de criação, camada de storage ou nível de serviço de volume.
+
+O uso de anotações para ajudar a monitorar seu ambiente inclui as seguintes tarefas de alto nível:
+
+* Criar ou editar definições para todos os tipos de anotação.
+* Exibindo páginas de ativos e associando cada ativo com uma ou mais anotações.
++
+Por exemplo, se um ativo estiver sendo alugado e o leasing expirar dentro de dois meses, você pode querer aplicar uma anotação de fim de vida útil ao ativo. Isso ajuda a evitar que outros usem esse ativo por um tempo prolongado.
+
+* Criando regras para aplicar automaticamente anotações a vários ativos do mesmo tipo.
+* Utilizar o utilitário de importação de anotações para importar anotações.
+* Filtrar ativos por suas anotações.
+* Agrupar dados em relatórios com base em anotações e gerar esses relatórios.
++
+Consulte o _Guia de relatórios do OnCommand Insight_ para obter mais informações sobre relatórios.
+
+

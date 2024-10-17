@@ -1,0 +1,109 @@
+---
+permalink: config-admin/locating-required-information-for-new-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Para localizar as informações do modelo de disco, identifique o fornecedor e o número do modelo e execute uma pesquisa na Internet. 
+---
+= Localizar as informações necessárias para o novo modelo de disco
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para localizar as informações do modelo de disco, identifique o fornecedor e o número do modelo e execute uma pesquisa na Internet.
+
+
+
+== Sobre esta tarefa
+
+Localizar informações do modelo de disco é tão simples quanto executar uma pesquisa na Internet. Certifique-se de anotar o nome do fornecedor e o número do modelo do disco antes de pesquisar.
+
+
+
+== Passos
+
+. Recomenda-se usar uma pesquisa avançada na Internet para o fornecedor, modelo e tipo de documento "'PDF'" para encontrar a folha de dados do fornecedor e/ou guia de instalação para a unidade. Essas folhas de dados são geralmente a melhor fonte para informações de disco do fornecedor.
+. As especificações do fornecedor nem sempre fornecem todas as informações necessárias com base no número de modelo completo. Muitas vezes, é útil procurar diferentes partes da cadeia de carateres do número do modelo no site do fornecedor para localizar todas as informações.
+. Localizar o nome do fornecedor do disco, o número do modelo completo, o tamanho e a velocidade do disco e o tipo de interface para definir o novo modelo de disco no OnCommand Insight você pode usar a tabela a seguir como guia para ajudar a anotar essas informações conforme encontrá-las:
++
+|===
+
+
+| Para este campo: | Qual é: | Introduza isto: 
+
+
+ a| 
+Número do modelo (aka Key)
+ a| 
+Obrigatório
+ a| 
+
+
+
+ a| 
+Fornecedor
+ a| 
+Obrigatório
+ a| 
+
+
+
+ a| 
+Velocidade do disco (RPM)
+ a| 
+Obrigatório
+ a| 
+
+
+
+ a| 
+Tamanho (em GB)
+ a| 
+Obrigatório
+ a| 
+
+
+
+ a| 
+Tipo de interface (selecione uma)
+ a| 
+Obrigatório
+ a| 
+ATA, SATA, SATA2, SATA3, FC, SAS, FATA, SSD, OUTROS
+
+
+
+ a| 
+Procure o tempo em ms
+ a| 
+Opcional
+ a| 
+
+
+
+ a| 
+Taxa máxima de transferência em MB/s
+ a| 
+Opcional
+ a| 
+
+
+
+ a| 
+Taxa de transferência de interface em MB/s
+ a| 
+Opcional
+ a| 
+
+
+
+ a| 
+Link para informações de fornecedor/modelo
+ a| 
+Opcional, mas recomendado
+ a| 
+
+|===
+. Insira essas informações no `new_disk_models.txt` arquivo. link:content-of-the-new-disk-models-txt-file.md#["Conteúdo do arquivo new_disk_models.txt"]Consulte para obter formato, ordem e exemplos.
+

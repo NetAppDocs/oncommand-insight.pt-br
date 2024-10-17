@@ -1,0 +1,116 @@
+---
+sidebar: sidebar 
+permalink: collector_hds_ops_center.html 
+keywords: data collector, Hitachi Ops Center 
+summary: Configurar o coletor de dados do HDS Ops Center. 
+---
+= Coletor de dados do Hitachi Ops Center
+:allow-uri-read: 
+
+
+[role="lead"]
+Esse coletor de dados usa o conjunto integrado de aplicativos do Hitachi Ops Center para acessar dados de inventário e desempenho de vários dispositivos de armazenamento. Para descoberta de inventário e capacidade, a instalação do Ops Center deve incluir os componentes "Common Services" e "Administrator". Para a coleta de desempenho, você deve também ter o "Analyzer" implantado.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário a partir deste coletor de dados. Para cada tipo de ativo adquirido, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desse coletor de dados, tenha em mente a seguinte terminologia:
+
+[cols="2*"]
+|===
+| Termo do fornecedor/modelo | Termo de OnCommand Insight 
+
+
+| Sistemas de storage | Armazenamento 
+
+
+| Volume | Volume 
+
+
+| Grupos de paridade | Pool de armazenamento (RAID), grupos de discos 
+
+
+| Disco | Disco 
+
+
+| Pool de storage | Pool de armazenamento (fino, SNAP) 
+
+
+| Grupos de paridade externa | Pool de armazenamento (back-end), grupos de discos 
+
+
+| Porta | Nó de storage → nó do controlador → porta 
+
+
+| Grupos de acolhimento | Mapeamento de volume e Masking 
+
+
+| Pares de volume | Sincronização de armazenamento 
+|===
+Nota: Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para este coletor de dados.
+
+
+
+== Requisitos de inventário
+
+Você deve ter o seguinte para coletar dados de inventário:
+
+* Endereço IP ou nome do host do servidor Ops Center que hospeda o componente "Common Services"
+* Conta de usuário root/sysadmin e senha que existem em todos os servidores que hospedam componentes do Ops Center. A HDS não implementou suporte à API REST para uso por usuários LDAP/SSO até o Ops Center 10,8
+
+
+
+
+== Requisitos de desempenho
+
+Os seguintes requisitos devem ser atendidos para coletar dados de desempenho:
+
+* O módulo "Analyzer" do HDS Ops Center deve ser instalado
+* Os storage arrays devem estar alimentando o módulo "Analyzer" do Ops Center
+
+
+
+
+== Configuração
+
+[cols="2*"]
+|===
+| Campo | Descrição 
+
+
+| Endereço IP do Centro de operações Hitachi | Endereço IP ou nome de domínio totalmente qualificado do servidor Ops Center que hospeda o componente "Serviços comuns" 
+
+
+| Nome de utilizador | Nome de usuário do servidor do Ops Center. 
+
+
+| Palavra-passe | Senha usada para o servidor do Ops Center. 
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+| Tipo de ligação | O padrão é HTTPS (porta 443) 
+
+
+| Substituir a porta TCP | Especifique a porta a ser usada se não for a padrão 
+
+
+| Intervalo de enquete de inventário (min) | Intervalo entre sondagens de inventário. A predefinição é 40. 
+
+
+| Escolha 'Excluir' ou 'incluir' para especificar uma lista | Especifique se deve incluir ou excluir a lista de matrizes abaixo ao coletar dados. 
+
+
+| Filtrar lista de dispositivos | Lista separada por vírgulas de números de série do dispositivo para incluir ou excluir 
+
+
+| Intervalo de enquete de desempenho (seg) | Intervalo entre sondagens de desempenho. A predefinição é 300. 
+|===

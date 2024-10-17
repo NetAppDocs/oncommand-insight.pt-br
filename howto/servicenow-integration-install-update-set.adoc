@@ -1,0 +1,31 @@
+---
+permalink: howto/servicenow-integration-install-update-set.html 
+sidebar: sidebar 
+keywords:  
+summary: Como parte da integração entre ServiceNow e OnCommand Insight, você deve instalar um conjunto de atualizações, que carrega dados pré-configurados no ServiceNow para fornecer ao conetor campos e tabelas específicos para extrair e carregar dados. 
+---
+= Instale o conjunto de atualizações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como parte da integração entre ServiceNow e OnCommand Insight, você deve instalar um conjunto de atualizações, que carrega dados pré-configurados no ServiceNow para fornecer ao conetor campos e tabelas específicos para extrair e carregar dados.
+
+
+
+== Passos
+
+. Navegue até a tabela de conjuntos de atualizações remotas no ServiceNow procurando por "'conjuntos de atualizações recuperados'".
+. Clique em *Import Update Set from XML*.
+. O conjunto de atualizações está no arquivo .zip do conetor Python baixado anteriormente para sua unidade local (em nosso exemplo, a `C:\OCI2SNOW` pasta) `\update_sets` na subpasta. Clique em *escolha Arquivo* e selecione o arquivo .xml nesta pasta. Clique em *Upload*.
+. Quando o conjunto de atualizações for carregado, abra-o e clique em *Preview Update Set*.
++
+Se forem detetados erros, tem de os corrigir antes de poder confirmar o conjunto de atualizações.
+
+. Se não houver erros, clique em *Commit Update Set*.
++
+Uma vez que o conjunto de atualizações tenha sido confirmado, ele será exibido na página *conjuntos de atualizações do sistema* > *fontes de atualização*.
+
+

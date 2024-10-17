@@ -1,0 +1,33 @@
+---
+permalink: config-admin/updating-expired-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: Se uma ou mais licenças do Insight expirarem, você poderá atualizar as licenças rapidamente usando o mesmo procedimento que fez para instalar as licenças originalmente. 
+---
+= A atualizar licenças expiradas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se uma ou mais licenças do Insight expirarem, você poderá atualizar as licenças rapidamente usando o mesmo procedimento que fez para instalar as licenças originalmente.
+
+
+
+== Passos
+
+. Em um editor de texto, como o bloco de Notas, abra o novo arquivo de licença que você recebeu do suporte da NetApp e copie o texto da chave de licença para a área de transferência do Windows.
+. Abra o OnCommand Insight no seu navegador.
+. Clique em *Admin* na barra de ferramentas.
+. Clique em *Configuração*.
+. Clique na guia *licenças*.
+. Clique em *Atualizar licença*.
+. Copie o texto da chave de licença na caixa de texto *Licença*.
+. Selecione a operação *Update (mais comum)*.
++
+Esta operação adiciona suas novas licenças a quaisquer licenças do Insight atualmente ativas.
+
+. Clique em *Salvar*.
+. Se você estiver usando o modelo de licenciamento do Insight Consumption, marque a caixa *Ativar o envio de informações de uso para o NetApp* na seção uso. O proxy deve estar configurado e habilitado corretamente para o seu ambiente.
+

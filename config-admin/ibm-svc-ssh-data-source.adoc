@@ -1,0 +1,247 @@
+---
+permalink: config-admin/ibm-svc-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados SVC da IBM coleta dados de inventário e desempenho usando SSH, suportando uma variedade de dispositivos que executam o sistema operacional SVC. A lista de dispositivos suportados inclui modelos como o SVC, o v7000, o V5000 e o v3700. Consulte a matriz de suporte da fonte de dados Insight para ver os modelos suportados e versões de firmware. 
+---
+= Fonte de dados IBM SVC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados SVC da IBM coleta dados de inventário e desempenho usando SSH, suportando uma variedade de dispositivos que executam o sistema operacional SVC. A lista de dispositivos suportados inclui modelos como o SVC, o v7000, o V5000 e o v3700. Consulte a matriz de suporte da fonte de dados Insight para ver os modelos suportados e versões de firmware.
+
+
+
+== Terminologia
+
+O OnCommand Insight adquire as seguintes informações de inventário da fonte de dados do IBM SVC. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Condução
+ a| 
+Disco
+
+
+
+ a| 
+Cluster
+ a| 
+Armazenamento
+
+
+
+ a| 
+Nó
+ a| 
+Nó de storage
+
+
+
+ a| 
+Grupo Mdisk
+ a| 
+Pool de storage
+
+
+
+ a| 
+VDisk
+ a| 
+Volume
+
+
+
+ a| 
+Mdisk
+ a| 
+LUN de back-end
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos de inventário
+
+* Endereço IP de cada cluster SVC
+* Porta 22 disponível
+* Par de chaves públicas e privadas que você gera com o Insight ou reutiliza um par de chaves já em uso em seu SVC
++
+Se você estiver reutilizando um par de chaves existente, você deve convertê-los do formato Putty para o formato OpenSSH.
+
+* Chave pública instalada no cluster SVC
+* A chave privada precisa ser identificada na fonte de dados
+* Validação de acesso: Abra `ssh` a sessão para o cluster SVC usando a chave privada
+
+
+[NOTE]
+====
+Nenhum software de terceiros precisa ser instalado.
+
+====
+
+
+== Requisitos de desempenho
+
+* Console SVC, que é obrigatório para qualquer cluster SVC e necessário para o pacote de fundação de descoberta SVC.
+* Nível de acesso administrativo necessário apenas para copiar arquivos de dados de desempenho de nós de cluster para o nó de configuração.
++
+[NOTE]
+====
+Como esse nível de acesso não é necessário para o pacote de descoberta de fundação SVC, o usuário de fundação SVC pode não funcionar com êxito.
+
+====
+* Porta 22 necessária
+* Uma chave SSH privada e pública deve ser gerada para esse usuário e a chave privada armazenada para que ela seja acessível a partir da Unidade de aquisição. Se o usuário base SVC tiver as permissões adequadas, o mesmo usuário e chave funcionará. A mesma chave SSH pode ser usada para dados de inventário e desempenho.
+* Ative a coleta de dados conetando-se ao cluster SVC por SSH e executando: `svctask startstats -interval 1`
++
+[NOTE]
+====
+Alternativamente, ative a coleta de dados usando a interface do usuário de gerenciamento SVC.
+
+====
+
+
+
+
+== Explicação do número de série principal
+
+Tradicionalmente, o Insight é capaz de relatar o número de série do storage array ou os números de série do nó de storage individual. No entanto, algumas arquiteturas de storage array não se alinham claramente a isso. Um cluster de SVC pode ser composto por 1-4 dispositivos e cada dispositivo tem 2 nós. Se o próprio dispositivo tiver um número de série, esse número de série não é o número de série do cluster nem dos nós.
+
+O atributo "número de série pai" no objeto de nó de armazenamento é preenchido adequadamente para matrizes IBM SVC quando os nós individuais ficam dentro de um appliance/gabinete intermediário que é apenas parte de um cluster maior.
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+IP de cluster/s.
+ a| 
+Endereço IP do nome de domínio totalmente qualificado para o armazenamento SVC
+
+
+
+ a| 
+Escolha 'Senha' ou 'Arquivo de chave OpenSSH' para especificar o tipo de credencial
+ a| 
+O tipo de credencial usado para se conetar ao dispositivo via SSH
+
+
+
+ a| 
+Nome Utilizador Stock
+ a| 
+Nome de usuário para a CLI SVC
+
+
+
+ a| 
+Palavra-passe de inventário
+ a| 
+Senha para a CLI SVC
+
+
+
+ a| 
+Caminho completo para chave privada de inventário
+ a| 
+Caminho completo para o arquivo de chave privada Inventory
+
+
+
+ a| 
+Nome de utilizador de desempenho
+ a| 
+Nome de usuário para a CLI SVC para a coleção de desempenho
+
+
+
+ a| 
+Palavra-passe de desempenho
+ a| 
+Senha para a CLI SVC para coleta de desempenho
+
+
+
+ a| 
+Caminho completo para chave privada de desempenho
+ a| 
+Caminho completo para o arquivo de chave privada Performance
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 40 minutos)
+
+
+
+ a| 
+Excluir dispositivos
+ a| 
+Lista separada por vírgulas de IDs de dispositivo a excluir da coleção de inventário
+
+
+
+ a| 
+Tempo limite de espera do processo SSH (seg.)
+ a| 
+Tempo limite do processo SSH (padrão de 200 segundos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+
+
+ a| 
+O desempenho exclui dispositivos
+ a| 
+Lista separada por vírgulas de IDs de dispositivo a excluir da coleção de desempenho
+
+
+
+ a| 
+Tempo limite de espera do processo SSH de desempenho (seg)
+ a| 
+Tempo limite do processo SSH (padrão de 200 segundos)
+
+
+
+ a| 
+Para limpar os arquivos de estatísticas despejados
+ a| 
+Selecione para limpar os arquivos de estatísticas despejados
+
+|===

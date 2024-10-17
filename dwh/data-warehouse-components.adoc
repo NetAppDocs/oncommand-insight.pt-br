@@ -1,0 +1,19 @@
+---
+permalink: dwh/data-warehouse-components.html 
+sidebar: sidebar 
+keywords:  
+summary: O Data Warehouse contém vários componentes. 
+---
+= Componentes do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Data Warehouse contém vários componentes.
+
+* Portal do Armazém de dados
+* Portal de relatórios do OnCommand Insight
+* Ferramentas de criação de relatórios
+

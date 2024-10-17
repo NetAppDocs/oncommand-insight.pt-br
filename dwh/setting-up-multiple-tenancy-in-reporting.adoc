@@ -1,0 +1,77 @@
+---
+permalink: dwh/setting-up-multiple-tenancy-in-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O Data Warehouse da OnCommand Insight acomoda vários clientes (geralmente abreviados para "alocação a vários clientes" ou "alocação a vários clientes") em relatórios, permitindo que você associe usuários a uma ou mais entidades de negócios. Com esse recurso, os administradores podem separar dados ou relatórios de acordo com os atributos do usuário ou afiliação do usuário.' 
+---
+= Configuração de alocação múltipla em relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Data Warehouse da OnCommand Insight acomoda alocação múltipla (muitas vezes abreviada para "locação múltipla" ou "locação múltipla") nos relatórios, permitindo que você associe usuários a uma ou mais entidades de negócios. Com esse recurso, os administradores podem separar dados ou relatórios de acordo com os atributos do usuário ou afiliação do usuário.
+
+As entidades de negócios usam uma hierarquia para fins de chargeback de capacidade usando os seguintes valores:
+
+* Locatário: Usado principalmente por provedores de serviços para associar recursos a um cliente, por exemplo, NetApp.
+* Linha de Negócios (LOB): Uma linha de negócios dentro de uma empresa, por exemplo, "hardware" ou "Software".
+* Unidade de negócio: Uma unidade de negócio tradicional como "vendas" ou "Marketing".
+* Projeto: Um projeto ao qual você pode querer atribuir o estorno de capacidade.
+
+
+O processo de configuração de alocação múltipla envolve as seguintes etapas principais:
+
+* Configure uma conta de usuário do Data Warehouse.
+* Crie um grupo no Portal de relatórios.
+* Atribua usuários a um ou mais grupos, que representam entidades de negócios.
+* Atribua usuários a uma ou mais entidades de negócios. Por exemplo, os usuários associados ao "NetApp" obtêm acesso a todas as entidades de negócios que têm o "NetApp" como locatário.
+* Teste se os usuários podem ver apenas os relatórios que devem ver.
+
+
+Os pontos a seguir resumem como os usuários acessam os dados de relatórios:
+
+* Um usuário, não atribuído a nenhum grupo, obtém acesso a todos os dados.
+* Um usuário, atribuído a qualquer grupo, não poderá obter acesso a Registros sem entidade comercial.
+
+
+Por exemplo, você pode ter os seguintes departamentos e precisar separar relatórios para usuários dentro desses departamentos.
+
+|===
+
+
+| Utilizador | Engenharia | Suporte | Finanças | Legal 
+
+
+ a| 
+User1
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+User2
+ a| 
+ a| 
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+User3
+ a| 
+ a| 
+X
+ a| 
+ a| 
+
+|===

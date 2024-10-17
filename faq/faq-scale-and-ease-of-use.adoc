@@ -1,0 +1,46 @@
+---
+permalink: faq/faq-scale-and-ease-of-use.html 
+sidebar: sidebar 
+keywords:  
+summary: Este FAQ responde a perguntas comuns sobre o dimensionamento do OnCommand Insight e a facilidade de uso. 
+---
+= Escala e facilidade de uso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este FAQ responde a perguntas comuns sobre o dimensionamento do OnCommand Insight e a facilidade de uso.
+
+
+
+== Como o OCI escala?
+
+A OCI é líder no que diz respeito à interoperabilidade e ao número de ativos que pode adquirir com uma pegada mínima. Em sua essência, o OCI requer 2 servidores virtuais ou físicos: Um para o servidor operacional que descobre todos os ativos do data center e outro para seu Data Warehouse consolidado para relatórios históricos de longo prazo. A cobertura empresarial do OCI suporta centenas de arrays, dezenas de milhares de máquinas virtuais, 100.000 caminhos Fibre Channel e mais de 10.000 portas Fibre Channel, tudo em uma única instância de servidor.
+
+
+
+== Quantas pessoas são necessárias para gerenciar o aplicativo OCI?
+
+O OCI pode ser gerenciado por uma única pessoa. Mas o OCI tem recursos que podem ser usados por várias personas no ambiente de negócios, cada uma com funções diferentes, cada uma com necessidades diferentes de relatórios, solução de problemas ou análise. Todos os esforços são feitos para minimizar a manutenção da ferramenta - desde menus de integridade e notificação que exibem problemas de configuração até a descoberta automática de hosts físicos conetados a uma malha. Anotações flexíveis trazem contexto de negócios para os dados do ecossistema para todos os tipos de usuários. De administradores de storage, malha e virtualização a planejadores de capacidade, analistas de negócios e executivos, o OCI reúne o compartilhamento de informações entre silos e tecnologias de negócios em um único painel.
+
+
+
+== O OCI suporta relatórios personalizados?
+
+Sim. O OCI fornece relatórios através da ferramenta de inteligência de negócios IBM Cognos, que permite criar seus próprios relatórios totalmente personalizados a partir de dados coletados no Data Warehouse do OCI.
+
+
+
+== Como é fácil criar relatórios personalizados?
+
+O relatório OCI oferece recursos para usuários iniciantes e avançados. O OCI fornece uma série de recursos de criação de relatórios, incluindo a criação de relatórios "drag and drop" e relatórios baseados em consulta SQL para o envolvimento mais avançado do usuário ou serviço profissional. A solução de Business Intelligence integrada da OCI (IBM Cognos) evita erros comuns, como a capacidade de contagem dupla. Com um complemento de relatórios, widgets, consultas e dashboards prontos para uso, há ofertas para atender aos requisitos de relatórios de qualquer pessoa.
+
+Os clientes também podem encontrar modelos de relatórios disponíveis para download na loja da comunidade OCI.
+
+
+
+== O OCI pode mostrar desempenho e disponibilidade com simplicidade de "semáforo"?
+
+Sim. O OCI Data Warehouse e relatórios permitem relatórios com melhorias de cor - por exemplo, vermelho/amarelo/verde "'estilo condicional" de valores. A geração de uma fonte colorida ou fundo em um relatório pode ser implementada tanto pelos usuários finais quanto pelos Serviços profissionais. As bibliotecas de widgets OCIs permitem que métricas de desempenho específicas de negócios sejam exibidas em painéis.

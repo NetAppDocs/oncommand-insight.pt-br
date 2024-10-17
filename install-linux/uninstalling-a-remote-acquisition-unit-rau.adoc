@@ -1,0 +1,34 @@
+---
+permalink: install-linux/uninstalling-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: Pode desinstalar uma unidade de aquisição remota quando já não precisar dela. 
+---
+= Desinstalar uma unidade de aquisição remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode desinstalar uma unidade de aquisição remota quando já não precisar dela.
+
+[NOTE]
+====
+*É altamente recomendável fazer backup do Vault* antes de desinstalar o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+
+
+== Passos
+
+. Inicie sessão no servidor da Unidade de aquisição Remota utilizando uma conta com sudo Privileges.
+. Certifique-se de que todas as janelas OnCommand Insight estão fechadas.
+. Você pode exibir sintaxe, argumentos de comando e uso de parâmetros `uninstall.sh` digitando o seguinte comando: `sudo /usr/bin/oci-uninstall.sh --help`
+. Digite o seguinte comando: `sudo /usr/bin/oci-uninstall.sh`
++
+O script de desinstalação é executado. Siga as instruções.
+
+

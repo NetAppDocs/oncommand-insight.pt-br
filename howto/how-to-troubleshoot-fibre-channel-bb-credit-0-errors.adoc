@@ -1,0 +1,68 @@
+---
+permalink: howto/how-to-troubleshoot-fibre-channel-bb-credit-0-errors.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O Fibre Channel usa créditos de buffer a buffer (BB credits) para controlar o fluxo de transmissão. O valor de crédito é decretado quando um quadro é enviado de uma porta e o valor de crédito é reabastecido quando a porta recebe uma resposta. Se os créditos BB na porta não forem reabastecidos, o fluxo de transmissão pode ser afetado. As portas precisam de memória, ou buffers, para armazenar temporariamente quadros até que sejam montados em sequência e entregues. O número de buffers é o número de quadros que uma porta pode armazenar e é chamado de crédito de buffer.' 
+---
+= Solução de problemas de erros de crédito BB de Fibre Channel 0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Fibre Channel usa créditos de buffer a buffer (créditos BB) para controlar o fluxo de transmissão. O valor de crédito é decretado quando um quadro é enviado de uma porta e o valor de crédito é reabastecido quando a porta recebe uma resposta. Se os créditos BB na porta não forem reabastecidos, o fluxo de transmissão pode ser afetado. As portas precisam de memória, ou buffers, para armazenar temporariamente quadros até que sejam montados em sequência e entregues. O número de buffers é o número de quadros que uma porta pode armazenar e é chamado de crédito de buffer.
+
+Como os créditos disponíveis para uma determinada abordagem de porta zero, um erro avisa que a porta irá parar de receber transmissões quando zero for atingido e não será retomada até que os créditos BB sejam reabastecidos.
+
+As políticas de desempenho do Insight permitem definir limites nas métricas de porta a seguir.
+
+|===
+
+
+ a| 
+BB crédito zero - Rx
+
+
+
+ a| 
+Número de vezes que a contagem de crédito de buffer a buffer de recebimento foi transferida para zero durante o período de amostragem
+
+
+
+ a| 
+BB crédito zero - TX
+
+
+
+ a| 
+Número de vezes que a contagem de crédito de buffer a buffer de transmissão foi transferida para zero durante o período de amostragem
+
+
+
+ a| 
+BB crédito zero - total
+
+
+
+ a| 
+Número de vezes que este porto teve que parar de transmitir porque o porto anexado estava fora de créditos para fornecer
+
+
+
+ a| 
+BB crédito zero duração - TX
+
+
+
+ a| 
+Tempo em milissegundos durante o qual o crédito TX BB foi zero durante o intervalo de amostragem
+
+|===
+Erros de crédito BB podem ser causados por alguns dos seguintes cenários:
+
+* Se uma determinada implementação tiver uma alta porcentagem de quadros FC de tamanhos significativamente menor do que o tamanho máximo, então mais BB_Credits podem ser necessários.
+* A carga de trabalho muda para o seu ambiente que pode afetar portas ou dispositivos conectados a eles, como nós de storage.
+
+
+Você pode usar as páginas de ativos de malha, switch e porta para monitorar seu ambiente Fibre Channel. As páginas de ativos de porta apresentam informações resumidas sobre o recurso, sua topologia (o dispositivo e suas conexões), gráficos de desempenho e tabelas de recursos associados. Ao solucionar problemas de Fibre Channel, o gráfico de desempenho para cada ativo de porta é útil porque mostra tráfego para a porta de maior contribuinte selecionada. As páginas de ativos de porta também mostram métricas de crédito de buffer a buffer e erros de porta neste gráfico, com o Insight exibindo um gráfico de desempenho separado para cada métrica.

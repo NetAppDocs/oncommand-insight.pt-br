@@ -1,0 +1,55 @@
+---
+permalink: config-admin/modifying-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Talvez você queira alterar o nome, a descrição ou os valores de uma anotação ou excluir uma anotação que não deseja mais usar. 
+---
+= Modificar anotações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez você queira alterar o nome, a descrição ou os valores de uma anotação ou excluir uma anotação que não deseja mais usar.
+
+
+
+== Passos
+
+. Faça login na IU do OnCommand Insightweb.
+. Clique em *Gerenciar* e selecione *Anotações*.
++
+É apresentada a página Anotações.
+
+. Posicione o cursor sobre a anotação que pretende editar e clique image:../media/edit-recipient-icon.gif[""]em .
++
+A caixa de diálogo *Edit Annotation* (Editar anotação) é exibida.
+
+. Pode efetuar as seguintes modificações numa anotação:
++
+.. Altere o nome, a descrição ou ambos.
++
+No entanto, note que pode introduzir um máximo de 255 carateres para o nome e descrição e não pode alterar o tipo de qualquer anotação. Além disso, para anotações no nível do sistema, não é possível alterar o nome ou a descrição; no entanto, pode adicionar ou remover valores se a anotação for um tipo de lista.
+
++
+[NOTE]
+====
+Se uma anotação personalizada for publicada no Data Warehouse e você renomeá-la, você perderá dados históricos.
+
+====
+.. Para adicionar outro valor a uma anotação do tipo de lista, clique image:../media/add-annotation-icon.gif[""]em .
+.. Para remover um valor de uma anotação do tipo de lista, clique image:../media/trash-can-query.gif[""]em .
++
+Não é possível eliminar um valor de anotação se esse valor estiver associado a uma anotação contida numa regra de anotação, consulta ou política de desempenho.
+
+
+
+. Clique em *Salvar* quando terminar.
+
+
+
+
+== Depois de terminar
+
+Se você vai usar anotações no Data Warehouse, você precisa forçar uma atualização de anotações no Data Warehouse. Consulte o _Guia de Administração do Armazém de dados do OnCommand Insight_.

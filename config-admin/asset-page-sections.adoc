@@ -1,0 +1,14 @@
+---
+permalink: config-admin/asset-page-sections.html 
+sidebar: sidebar 
+keywords:  
+summary: Uma página de ativo exibe várias seções contendo informações relevantes para o ativo. As seções que você vê dependem do tipo de ativo. 
+---
+= Seções da página de ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma página de ativo exibe várias seções contendo informações relevantes para o ativo. As seções que você vê dependem do tipo de ativo.

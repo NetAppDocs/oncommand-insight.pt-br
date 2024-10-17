@@ -1,0 +1,28 @@
+---
+permalink: dwh/etl-frequency.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Você deve executar o processo Extract, Transform e Load (ETL) pelo menos uma vez por dia; no entanto, você escolhe executar ETL várias vezes, se necessário.' 
+---
+= Dados de frequência e data ETL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve executar o processo de extração, transformação e carga (ETL) pelo menos uma vez por dia; no entanto, você escolhe executar ETL várias vezes, se necessário.
+
+Por padrão, o mecanismo de relatórios Cognos trata todos os fatos de capacidade e desempenho como aditivos. Como resultado, existe o risco de contar os dados de capacidade dupla se o processo ETL for executado várias vezes por dia sem os filtros de tempo adequados.
+
+Dois elementos de dados de data na dimensão Data estão relacionados com o processo ETL diário. A dimensão Data, que é usada em vários modelos de dados, inclui os seguintes elementos de dados que são afetados pelo ETL:
+
+* *É Representante do dia*
++
+O elemento de dados "is Day Representative" é definido para um valor de 1 (true) durante a primeira execução do processo ETL durante um determinado dia. Se o primeiro processo ETL for executado às 1:00 da manhã, o Representante do dia é definido como 1 para todos os dados carregados durante o processo ETL das 1:00 da manhã. Se um segundo ETL for programado mais tarde (por exemplo, 1:00 p.m.), o Representante do dia é definido como 0 (falso) para os dados carregados durante esse processo ETL.
+
+* *É mais recente*
++
+O membro "é mais recente" é definido para um valor de 1 (verdadeiro) após cada processo ETL ser concluído. Se o primeiro processo de ETL for executado às 1:00 da manhã, o is latest é definido como 1 para todos os dados carregados durante o processo ETL 1:00 da manhã. Se outro processo ETL for agendado posteriormente (por exemplo, 1:00 p.m.), o is latest (Retest) é definido como 1 para os dados carregados durante o processo ETL das 1 p.m. O processo ETL também define a carga ETL das 1:00 a.m. é a entrada mais recente para 0 (false).
+
+

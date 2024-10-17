@@ -1,0 +1,80 @@
+---
+permalink: config-admin/netapp-clustered-data-ontap-for-unified-manager-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Esta fonte de dados coleta dados do ONTAP 8,1.x do banco de dados do Gerenciador Unificado (UM) 6,0. Usando essa fonte de dados, o Insight descobre todos os clusters configurados e preenchidos em UM. Para eficiência, o Insight não chama ZAPIs no próprio cluster. O desempenho não é suportado nesta fonte de dados.' 
+---
+= NetApp Clustered Data ONTAP para fonte de dados do Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Essa fonte de dados coleta dados do ONTAP 8,1.x do banco de dados do Unified Manager (UM) mais de 6,0. Usando essa fonte de dados, o Insight descobre todos os clusters configurados e preenchidos em UM. Para eficiência, o Insight não chama ZAPIs no próprio cluster. O desempenho não é suportado nesta fonte de dados.
+
+
+
+== Configuração
+
+[NOTE]
+====
+Este coletor de dados já não está disponível a partir do OnCommand Insight 7,3.11.
+
+====
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+IP do Unified Manager
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do Unified Manager
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de usuário do Unified Manager
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Senha do Unified Manager
+
+
+
+ a| 
+Porta
+ a| 
+Porta usada para comunicação com o Unified Manager (padrão 3306)
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 15 minutos)
+
+
+
+ a| 
+Excluir clusters
+ a| 
+Lista separada por vírgulas de IPs de cluster a excluir
+
+|===

@@ -1,0 +1,124 @@
+---
+permalink: config-admin/qlogic-fc-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Para a configuração, a fonte de dados do QLogic FC Switch (SNMP) requer o endereço de rede do dispositivo FC Switch, especificado como endereço IP e uma cadeia de carateres da comunidade SNMP somente leitura usada para acessar o dispositivo.' 
+---
+= Fonte de dados do comutador QLogic FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para a configuração, a fonte de dados do QLogic FC Switch (SNMP) requer o endereço de rede do dispositivo FC Switch, especificado como endereço IP e uma cadeia de carateres da comunidade SNMP _somente leitura_ usada para acessar o dispositivo.
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Interrutor SANsurfer
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado para o switch SANSurfer
+
+
+
+ a| 
+Versão SNMP
+ a| 
+Versão SNMP
+
+
+
+ a| 
+Comunidade SNMP
+ a| 
+SNMP Community String
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador para o interrutor SANSurfer
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe para o interrutor SANSurfer
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 15 minutos)
+
+
+
+ a| 
+Protocolo Auth SNMP
+ a| 
+Protocolo de autenticação SNMP (apenas SNMPv3)
+
+
+
+ a| 
+Geometrias SNMP
+ a| 
+Número de tentativas de tentativa SNMP
+
+
+
+ a| 
+Tempo limite SNMP (ms)
+ a| 
+Tempo limite SNMP (padrão de 5000 ms)
+
+
+
+ a| 
+Ativar trapping
+ a| 
+Selecione para ativar o trapping
+
+
+
+ a| 
+Tempo mínimo entre armadilhas (seg)
+ a| 
+Tempo mínimo entre tentativas de aquisição acionadas por armadilhas (padrão de 10 segundos)
+
+
+
+ a| 
+Nome da malha
+ a| 
+O nome do malha a ser informado pela fonte de dados. Deixe em branco para relatar o nome da tela como WWN.
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

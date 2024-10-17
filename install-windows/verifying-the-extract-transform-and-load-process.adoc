@@ -1,0 +1,32 @@
+---
+permalink: install-windows/verifying-the-extract-transform-and-load-process.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de atualizar, você deve garantir que o processo de extração, transformação e carregamento esteja recuperando dados dos bancos de dados do OnCommand Insight, transformando os dados e salvando-os nos marts de dados. 
+---
+= Verificando o agendamento extrair, transformar e carregar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de atualizar, você deve garantir que o processo de extração, transformação e carregamento (ETL) esteja recuperando dados dos bancos de dados do OnCommand Insight, transformando os dados e salvando-os nos marts de dados.
+
+
+
+== Passos
+
+. Faça login no portal Data Warehouse em `+https://fqdn/dwh+`.
+. No painel de navegação à esquerda, clique em *Agendar*.
+. Clique em *Editar horário*.
+. Selecione *Daily* ou *Weekly* na lista *Type*.
++
+Recomenda-se agendar ETL para ser executado uma vez por dia.
+
+. Verifique se a hora selecionada é a hora em que você deseja que o trabalho seja executado.
++
+Isso garante que o trabalho de compilação seja executado automaticamente.
+
+. Clique em *Salvar*.
+

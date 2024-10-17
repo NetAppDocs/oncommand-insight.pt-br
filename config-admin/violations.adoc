@@ -1,0 +1,18 @@
+---
+permalink: config-admin/violations.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode usar a seção violações de uma página de ativo para ver as violações, se houver, que ocorrem em seu ambiente como resultado de uma política de desempenho atribuída a um ativo. As políticas de desempenho monitoram os limites da rede e permitem detetar imediatamente uma violação de um limite, identificar a implicação e analisar o impactos e a causa raiz do problema de uma forma que permita uma correção rápida e eficaz. 
+---
+= Violações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a seção violações de uma página de ativo para ver as violações, se houver, que ocorrem em seu ambiente como resultado de uma política de desempenho atribuída a um ativo. As políticas de desempenho monitoram os limites da rede e permitem detetar imediatamente uma violação de um limite, identificar a implicação e analisar o impactos e a causa raiz do problema de uma forma que permita uma correção rápida e eficaz.
+
+O exemplo a seguir mostra a seção aViolações que é exibida em uma página de ativo para um hypervisor:
+
+image::../media/violations-section.gif[seção de violações]

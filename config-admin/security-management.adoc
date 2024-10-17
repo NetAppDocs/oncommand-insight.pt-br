@@ -1,0 +1,1026 @@
+---
+permalink: config-admin/security-management.html 
+sidebar: sidebar 
+keywords: SecurityAdmin, security, password, keystore, truststore, trustore, 
+summary: A ferramenta de segurança do OnCommand Insight inclui recursos que permitem que os ambientes Insight operem com segurança aprimorada, incluindo criptografia, hash de senha e a capacidade de alterar senhas internas de usuário e pares de chaves que criptografam e descriptografam senhas. 
+---
+= Segurança do Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight fornece recursos que permitem que os ambientes Insight operem com segurança aprimorada. Esses recursos incluem criptografia, hash de senha e a capacidade de alterar senhas internas de usuário e pares de chaves que criptografam e descriptografam senhas. Você pode gerenciar esses recursos em todos os servidores no ambiente Insight usando a ferramenta SecurityAdmin.
+
+
+
+== O que é a ferramenta SecurityAdmin?
+
+A ferramenta de administração de segurança suporta alterações no conteúdo dos cofres, bem como fazer alterações coordenadas na instalação do OnCommand Insight.
+
+Os principais usos para a ferramenta SecurityAdmin são para *Backup* e *Restore* da configuração de segurança (ou seja, Vault) e senhas. Por exemplo, você pode fazer backup do Vault em uma Unidade de aquisição local e restaurá-lo em uma Unidade de aquisição remota, garantindo a coordenação de senhas em todo o seu ambiente. Ou se você tiver vários servidores OnCommand Insight em seu ambiente, talvez queira fazer um backup do Vault do servidor e restaurá-lo para outros servidores para manter as senhas iguais. Estes são apenas dois exemplos de como o SecurityAdmin pode ser usado para garantir a coesão em seus ambientes.
+
+[NOTE]
+====
+É altamente recomendável *fazer backup do Vault* sempre que você fizer backup de um banco de dados OnCommand Insight. Se não o fizer, pode resultar em perda de acesso.
+
+====
+A ferramenta fornece os modos *interactive* e *command line*.
+
+Muitas operações da SecurityAdmin Tool alteram o conteúdo do Vault e também fazem alterações na instalação, garantindo que o Vault e a instalação permaneçam sincronizados.
+
+Por exemplo,
+
+* Quando você altera uma senha de usuário do Insight, a entrada do usuário na tabela SANscreen.Users será atualizada com o novo hash.
+* Quando você altera a senha de um usuário MySQL, a instrução SQL apropriada será executada para atualizar a senha do usuário na instância MySQL.
+
+
+Em algumas situações, haverá várias alterações feitas na instalação:
+
+* Quando você modifica o usuário dwh MySQL, além de atualizar a senha no banco de dados MySQL, várias entradas de Registro para ODBC também serão atualizadas.
+
+
+Nas seções a seguir, o termo "mudanças coordenadas" é usado para descrever essas mudanças.
+
+
+
+== Modos de execução
+
+* Operação normal/padrão - o Serviço de servidor SANscreen deve estar em execução
++
+Para o modo de execução padrão, a ferramenta SecurityAdmin requer que o serviço *servidor SANscreen* esteja em execução. O servidor é usado para autenticação, e muitas alterações coordenadas na instalação são feitas fazendo chamadas para o servidor.
+
+* Operação direta - o Serviço de servidor SANscreen pode estar em execução ou parado.
++
+Quando executado em uma instalação do OCI Server ou DWH, a ferramenta também pode ser executada no modo "direto". Neste modo, a autenticação e as alterações coordenadas são realizadas usando o banco de dados. O serviço servidor não é usado.
+
++
+O funcionamento é o mesmo que o modo normal, com as seguintes exceções:
+
+* A autenticação é suportada apenas para utilizadores de administração que não sejam de domínio. (Usuários cuja senha e funções estão no banco de dados, não LDAP).
+* A operação "Substituir chaves" não é suportada.
+* A etapa de re-criptografia da restauração do Vault é ignorada.
+* A ferramenta também pode ser executada mesmo quando o acesso ao servidor e ao banco de dados não é possível (por exemplo, porque a senha raiz no cofre está incorreta).
++
+Quando executado neste modo, a autenticação não é possível e, portanto, nenhuma operação com uma alteração coordenada para a instalação pode ser executada.
+
++
+O modo de recuperação pode ser utilizado para:
+
+* determine quais entradas do vault estão erradas (usando a operação verificar)
+* substitua a senha raiz incorreta pelo valor correto. (Isso não altera a senha. O utilizador tem de introduzir a palavra-passe atual.)
+
+
+
+NOTE: Se a senha raiz no cofre estiver incorreta e a senha não for conhecida e não houver backup do cofre com a senha raiz correta, a instalação não poderá ser recuperada usando a ferramenta SecurityAdmin. A única maneira de recuperar a instalação é redefinir a senha da instância MySQL seguindo o procedimento documentado em https://dev.mysql.com/doc/refman/8.4/en/resetting-permissions.html[]. Depois de executar o procedimento de reinicialização, use a operação de senha armazenada correta para inserir a nova senha no cofre.
+
+
+
+== Comandos
+
+
+
+=== Comandos irrestritos
+
+Comandos irrestritos fazem quaisquer alterações coordenadas na instalação (exceto armazenamentos confiáveis). Comandos irrestritos podem ser executados sem autenticação do usuário.
+
+[cols="25a,75a"]
+|===
+
+
+ a| 
+Comando
+ a| 
+Descrição
+
+
+
+ a| 
+backup-vault
+ a| 
+Crie um arquivo zip contendo o cofre. O caminho relativo para os arquivos do Vault corresponderá ao caminho do Vault relativo à raiz da instalação.
+
+* wildfly/standalone/configuration/vault/*
+* acq/conf/vault/*
+
+
+
+
+ a| 
+verifique se há teclas padrão
+ a| 
+Verifique se as chaves do Vault correspondem às do Vault padrão usado em instâncias anteriores a 7.3.16.
+
+
+
+ a| 
+palavra-passe guardada correta
+ a| 
+Substitua uma senha (incorreta) armazenada no cofre pela senha correta conhecida pelo usuário.
+
+Isso pode ser usado quando o Vault e a instalação não são consistentes. *Observe que não altera a senha real na instalação.*
+
+
+
+ a| 
+alterar-confiança-store-password
+ a| 
+Altere a senha usada para um armazenamento de confiança e armazene a nova senha no cofre. A palavra-passe atual da loja de confiança tem de ser "conhecida".
+
+
+
+ a| 
+verifique-keystore
+ a| 
+verifique se os valores no cofre estão corretos:
+
+* Para usuários do OCI, o hash da senha corresponde ao valor no banco de dados
+* Para usuários MySQL, pode ser feita uma conexão de banco de dados
+* para keystores, o keystore pode ser carregado e suas chaves (se houver) lidas
+
+
+
+
+ a| 
+teclas de lista
+ a| 
+listar as entradas no cofre (sem mostrar o valor armazenado)
+
+|===
+
+
+=== Comandos restritos
+
+A autenticação é necessária para qualquer comando não oculto que faça alterações coordenadas na instalação:
+
+[cols="25a,75a"]
+|===
+
+
+ a| 
+Comando
+ a| 
+Descrição
+
+
+
+ a| 
+restaurar-vault-backup
+ a| 
+Substitui o Vault atual pelo Vault contido no arquivo de backup especificado.
+
+Executa todas as ações coordenadas para atualizar a instalação para corresponder às senhas no cofre restaurado:
+
+* Atualize as senhas de usuário de comunicação OCI
+* Atualize as senhas do usuário MySQL, incluindo root
+* para cada keystore, se a senha do keystore for "conhecida", atualize o keystore usando as senhas do cofre restaurado.
+
+
+Quando executado no modo normal, também lê cada valor criptografado da instância, descriptografa-o usando o serviço de criptografia do Vault atual, recriptografa-o usando o serviço de criptografia do Vault restaurado e armazena o valor recriptografado.
+
+
+
+ a| 
+sincronize-com-cofre
+ a| 
+Executa todas as ações coordenadas para atualizar a instalação para corresponder às senhas de usuário no cofre restaurado:
+
+* Atualiza as senhas de usuário de comunicação OCI
+* Atualiza as senhas do usuário MySQL, incluindo root
+
+
+
+
+ a| 
+alterar palavra-passe
+ a| 
+Altera a senha no cofre e executa as ações coordenadas.
+
+
+
+ a| 
+substitua as chaves
+ a| 
+Crie um novo cofre vazio (que terá chaves diferentes do existente). Em seguida, copie as entradas do Vault atual para o novo Vault. Em seguida, lê cada valor encriptado da instância, desencripta-o utilizando o serviço de encriptação do cofre atual, encripta-o novamente utilizando o serviço de encriptação do cofre restaurado e armazena o valor reencriptado.
+
+|===
+
+
+=== Comandos ocultos
+
+A ferramenta SA fornece os seguintes comandos que não requerem autenticação, mas que fazem alterações coordenadas na instalação.
+
+[cols="25a,75a"]
+|===
+
+
+ a| 
+atualização de teclas de lista (servidor)
+ a| 
+Se o usuário não tiver autenticado, autentique usando a conta e a senha internas _no cofre atual. Em seguida, substitua o Vault atual pelo Vault no arquivo de backup e execute as ações coordenadas.
+
+
+
+ a| 
+atualização (aquisição)
+ a| 
+Substitua o Vault atual pelo Vault no arquivo de backup e execute as ações coordenadas.
+
+|===
+
+
+== Ações coordenadas
+
+
+
+=== Cofre do servidor
+
+[cols="25a,75a"]
+|===
+
+
+ a| 
+_interno
+ a| 
+Atualizar hash de senha para usuário no banco de dados
+
+
+
+ a| 
+aquisição
+ a| 
+Atualizar hash de senha para usuário no banco de dados
+
+Se o cofre de aquisição estiver presente, atualize também a entrada no cofre de aquisição
+
+
+
+ a| 
+dwh_internal
+ a| 
+Atualizar hash de senha para usuário no banco de dados
+
+
+
+ a| 
+cognos_admin
+ a| 
+Atualizar hash de senha para usuário no banco de dados
+
+Se DWH e Windows, atualize SANscreen/cognos/analytics/Configuration/SANscreenAP.properties para definir a propriedade cognos.admin como a senha.
+
+
+
+ a| 
+raiz
+ a| 
+Execute SQL para atualizar a senha do usuário na instância do MySQL
+
+
+
+ a| 
+inventário
+ a| 
+Execute SQL para atualizar a senha do usuário na instância do MySQL
+
+
+
+ a| 
+dwh
+ a| 
+Execute SQL para atualizar a senha do usuário na instância do MySQL
+
+Se DWH e Windows, atualize o Registro do Windows para definir as seguintes entradas relacionadas a ODBC para a nova senha:
+
+* HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node ODBC.INI/dwh_Capacity/PWD
+* HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node ODBC/dwh_Capacity_Efficiency/PWD
+* HKEY_LOCAL_MACHINE_SOFTWARE/Wow6432Node ODBC.INI/dwh_fs_util/PWD
+* HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node ODBC.INI/dwh_inventory/PWD
+* HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node ODBC.INI/dwh_performance/PWD
+* HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node ODBC/dwh_ports/PWD
+* HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node ODBC.INI/dwh_sa/PWD
+* HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node ODBC.INI/dwh_cloud_cost/PWD
+
+
+
+
+ a| 
+dwhuser
+ a| 
+Execute SQL para atualizar a senha do usuário na instância do MySQL
+
+
+
+ a| 
+hosts
+ a| 
+Execute SQL para atualizar a senha do usuário na instância do MySQL
+
+
+
+ a| 
+keystore_password
+ a| 
+Reescreva o keystore com a nova senha - wildfly/standalone/Configuration/Server.keystore
+
+
+
+ a| 
+truststore_password
+ a| 
+Reescreva o keystore com a nova senha - wildfly/standalone/Configuration/Server.trustore
+
+
+
+ a| 
+key_password
+ a| 
+Reescreva o keystore com a nova senha - wildfly/standalone/Configuration/sso.jks
+
+
+
+ a| 
+cognos_archive
+ a| 
+Nenhum
+
+|===
+
+
+=== Aquisição do Vault
+
+[cols="25a,75a"]
+|===
+
+
+ a| 
+aquisição
+ a| 
+Nenhum
+
+
+
+ a| 
+truststore_password
+ a| 
+Reescreva o keystore com a nova senha (se existir) - acq/conf/cert/client.keystore
+
+|===
+
+
+== Executando a ferramenta Security Admin - linha de comando
+
+A sintaxe para executar a ferramenta SA no modo de linha de comando é:
+
+[listing]
+----
+securityadmin [-s | -au] [-db] [-lu <user> [-lp <password>]] <additional-options>
+
+where
+
+-s                      selects server vault
+-au                     selects acquisition vault
+
+-db                     selects direct operation mode
+
+-lu <user>              user for authentication
+-lp <password>          password for authentication
+<addition-options>      specifies command and command arguments as described below
+----
+Notas:
+
+* A opção "-i" pode não estar presente na linha de comando (uma vez que seleciona o modo interativo).
+* para as opções "-s" e "-au":
++
+** "-s" não é permitido numa RAU
+** "-au" não é permitido na DWH
+** se nenhum dos dois estiver presente, então
++
+*** O cofre do servidor é selecionado em servidor, DWH e Dual
+*** O cofre de aquisição é selecionado na RAU
+
+
+
+
+* As opções -lu e -lp são usadas para autenticação do usuário.
++
+** Se o <user> for especificado e o <password> não for, o usuário será solicitado a digitar a senha.
+** Se o <user> não for fornecido e a autenticação for necessária, o usuário será solicitado a fornecer o <user> e o <password>.
+
+
+
+
+
+
+=== Comandos:
+
+[cols="25a,75a"]
+|===
+
+
+ a| 
+Comando
+ a| 
+Utilização
+
+
+
+ a| 
+palavra-passe guardada correta
+ a| 
+[listing]
+----
+securityadmin [-s | -au] [-db] -pt <key> [<value>]
+
+ where
+
+-pt             specifies the command ("put")
+<key>           is the key
+<value>         is the value.  If not present, user will be prompted for value
+----
+
+
+ a| 
+backup-vault
+ a| 
+[listing]
+----
+securityadmin [-s | -au] [-db] -b [<backup-dir>]
+
+where
+
+-b              specified command
+<backup-dir>    is the output directory.  If not present, default location of SANscreen/backup/vault is used
+                The backup file will be named ServerSecurityBackup-yyyy-MM-dd-HH-mm.zip
+----
+
+
+ a| 
+backup-vault
+ a| 
+[listing]
+----
+securityadmin [-s | -au] [-db] -ub <backup-file>
+
+where
+
+-ub             specified command ("upgrade-backup")
+<backup-file>   The location to write the backup file
+----
+
+
+ a| 
+teclas de lista
+ a| 
+[listing]
+----
+securityadmin [-s | -au] [-db] -l
+
+where
+
+-l              specified command
+----
+
+
+ a| 
+teclas de verificação
+ a| 
+[listing]
+----
+securityadmin [-s | -au] [-db] -ck
+
+where
+
+-ck             specified command
+
+exit code:
+  1     error
+  2     default key(s)
+  3     unique keys
+----
+
+
+ a| 
+verificar-keystore (servidor)
+ a| 
+[listing]
+----
+securityadmin [-s] [-db] -v
+
+where
+
+-v              specified command
+----
+
+
+ a| 
+atualização
+ a| 
+[listing]
+----
+securityadmin [-s | -au] [-db] [-lu <user>] [-lp <password>] -u
+
+where
+
+-u              specified command
+
+For server vault, if -lu is not present, then authentication will be performed for <user> =_internal and <password> = _internal's password from vault.
+For acquisition vault, if -lu is not present, then no authentication will be attempted
+----
+
+
+ a| 
+substitua as chaves
+ a| 
+[listing]
+----
+securityadmin [-s | -au] [-db] [-lu <user>] [-lp <password>] -rk
+
+where
+
+-rk              specified command
+----
+
+
+ a| 
+restaurar-vault-backup
+ a| 
+[listing]
+----
+securityadmin [-s | -au] [-db] [-lu <user>] [-lp <password>] -r <backup-file>
+
+where
+
+-r               specified command
+<backup-file>    the backup file location
+----
+
+
+ a| 
+alterar palavra-passe (servidor)
+ a| 
+[listing]
+----
+securityadmin [-s] [-db] [-lu <user>] [-lp <password>] -up -un <user> -p [<password>] [-sh]
+
+where
+
+-up             specified command ("update-password")
+-un <user>        entry ("user") name to update
+-p <password> new password.  If <password not supplied, user will be prompted.
+-sh             for mySQL user, use strong hash
+----
+
+
+ a| 
+alterar palavra-passe para utilizador de aquisição (aquisição)
+ a| 
+[listing]
+----
+securityadmin [-au] [-db] [-lu <user>] [-lp <password>] -up -p [<password>]
+
+where
+
+-up             specified command ("update-password")
+-p <password> new password.  If <password not supplied, user will be prompted.
+----
+
+
+ a| 
+alterar-senha para truststore-_password (aquisição)
+ a| 
+[listing]
+----
+securityadmin [-au] [-db] [-lu <user>] [-lp <password>] -utp -p [<password>]
+
+where
+
+-utp            specified command ("update-truststore-password")
+-p <password> new password.  If <password not supplied, user will be prompted.
+----
+
+
+ a| 
+sincronizar com cofre (servidor)
+ a| 
+[listing]
+----
+securityadmin [-s] [-db] [-lu <user>] [-lp <password>] -sv <backup-file>
+
+where
+
+-sv              specified command
+----
+|===
+
+
+== Executar a ferramenta de administração de segurança - modo interativo
+
+
+
+=== Interativo - Menu principal
+
+Para executar a ferramenta SA no modo interativo, digite o seguinte comando:
+
+ securityadmin -i
+Em um servidor ou instalação dupla, o SecurityAdmin solicitará ao usuário que selecione o servidor ou a unidade de aquisição local.
+
+Detectados nós de servidor e Unidade de aquisição! Selecione o nó cuja segurança precisa ser reconfigurada:
+
+[listing]
+----
+1 - Server
+
+2 - Local Acquisition Unit
+
+9 - Exit
+
+Enter your choice:
+----
+No DWH, "Server" (servidor) é selecionado automaticamente. Numa AU remota, a opção "Acquisition Unit" (Unidade de aquisição) será selecionada automaticamente.
+
+
+
+=== Interactive - servidor: Recuperação de senha root
+
+No modo servidor, a ferramenta SecurityAdmin primeiro verificará se a senha raiz armazenada está correta. Caso contrário, a ferramenta exibirá a tela de recuperação de senha raiz.
+
+[listing]
+----
+ERROR: Database is not accessible
+
+1 - Enter root password
+
+2 - Get root password from vault backup
+
+9 - Exit
+
+Enter your choice:
+----
+Se a opção 1 estiver selecionada, o usuário será solicitado a digitar a senha correta.
+
+ Enter password (blank = don't change)
+ Enter correct password for 'root':
+Se for introduzida a palavra-passe correta, é apresentado o seguinte.
+
+ Password verified.  Vault updated
+Pressionar ENTER exibirá o menu irrestrito do servidor.
+
+Se for introduzida a palavra-passe errada, será apresentado o seguinte
+
+ Password verification failed - Access denied for user 'root'@'localhost' (using password: YES)
+Premir ENTER regressa ao menu de recuperação.
+
+Se a opção 2 estiver selecionada, o usuário será solicitado a fornecer o nome de um arquivo de backup a partir do qual ler a senha correta:
+
+ Enter Backup File Location:
+Se a senha do backup estiver correta, será exibido o seguinte.
+
+ Password verified.  Vault updated
+Pressionar ENTER exibirá o menu irrestrito do servidor.
+
+Se a palavra-passe na cópia de segurança estiver incorreta, será apresentado o seguinte
+
+ Password verification failed - Access denied for user 'root'@'localhost' (using password: YES)
+Premir ENTER regressa ao menu de recuperação.
+
+
+
+=== Interactive - servidor: Senha correta
+
+A ação "corrigir senha" é usada para alterar a senha armazenada no cofre para que ela corresponda à senha real exigida pela instalação. Este comando é útil em situações em que uma mudança na instalação foi feita por algo diferente da ferramenta securityadmin. Os exemplos incluem:
+
+* A senha de um usuário SQL foi modificada pelo acesso direto ao MySQL.
+* Um keystore é substituído ou a senha de um keystore é alterada usando keytool.
+* Um banco de dados OCI foi restaurado e esse banco de dados tem senhas diferentes para os usuários internos
+
+
+"Corrigir senha" primeiro solicitará ao usuário que selecione a senha que deseja armazenar o valor correto.
+
+[listing]
+----
+Replace incorrect stored password with correct password.  (Does not change the required password)
+Select User:  (Enter 'b' to go Back)
+
+1 - _internal
+
+2 - acquisition
+
+3 - cognos_admin
+
+4 - cognos keystore
+
+5 - dwh
+
+6 - dwh_internal
+
+7 - dwhuser
+
+8 - hosts
+
+9 - inventory
+
+10 - sso keystore
+
+11 - server keystore
+
+12 - root
+
+13 - server truststore
+
+14 - AU truststore
+
+Enter your choice:
+----
+Depois de selecionar qual entrada corrigir, o usuário é solicitado a fornecer o valor.
+
+[listing]
+----
+1 - Enter {user} password
+
+2 - Get {user} password from vault backup
+
+9 - Exit
+
+Enter your choice:
+----
+Se a opção 1 estiver selecionada, o usuário será solicitado a digitar a senha correta.
+
+ Enter password (blank = don't change)
+ Enter correct password for '{user}':
+Se for introduzida a palavra-passe correta, é apresentado o seguinte.
+
+ Password verified.  Vault updated
+Pressionar ENTER retornará ao menu irrestrito do servidor.
+
+Se for introduzida a palavra-passe errada, será apresentado o seguinte
+
+....
+Password verification failed - {additional information}
+Vault entry not updated.
+....
+Pressionar ENTER retornará ao menu irrestrito do servidor.
+
+Se a opção 2 estiver selecionada, o usuário será solicitado a fornecer o nome de um arquivo de backup a partir do qual ler a senha correta:
+
+ Enter Backup File Location:
+Se a senha do backup estiver correta, será exibido o seguinte.
+
+ Password verified.  Vault updated
+Pressionar ENTER exibirá o menu irrestrito do servidor.
+
+Se a palavra-passe na cópia de segurança estiver incorreta, será apresentado o seguinte
+
+....
+Password verification failed - {additional information}
+Vault entry not updated.
+....
+Pressionar ENTER exibirá o menu irrestrito do servidor.
+
+
+
+=== Interativo - servidor: Verifique o conteúdo do Vault
+
+Verificar o conteúdo do Vault verificará se o Vault tem chaves que correspondem ao Vault padrão distribuído com versões anteriores do OCI e verificará se cada valor no Vault corresponde à instalação.
+
+Os resultados possíveis para cada chave são:
+
+|===
+
+
+| OK | O valor do cofre está correto 
+
+
+| Não verificado | O valor não pode ser verificado em relação à instalação 
+
+
+| RUIM | O valor não corresponde à instalação 
+
+
+| Em falta | Falta uma entrada esperada. 
+|===
+[listing]
+----
+Encryption keys secure: unique, non-default encryption keys detected
+
+             cognos_admin: OK
+                    hosts: OK
+             dwh_internal: OK
+                inventory: OK
+                  dwhuser: OK
+        keystore_password: OK
+                      dwh: OK
+      truststore_password: OK
+                     root: OK
+                _internal: OK
+          cognos_internal: Not Checked
+             key_password: OK
+              acquisition: OK
+           cognos_archive: Not Checked
+ cognos_keystore_password: Missing
+
+
+Press enter to continue
+----
+
+
+=== Interactive - servidor: Backup
+
+O backup solicitará o diretório no qual o arquivo zip de backup deve ser armazenado. O diretório já deve existir e o nome do arquivo será ServerSecurityBackup-yyyy-mm-dd-hh-mm.zip.
+
+[listing]
+----
+Enter backup directory location [C:\Program Files\SANscreen\backup\vault] :
+
+Backup Succeeded!   Backup File: C:\Program Files\SANscreen\backup\vault\ServerSecurityBackup-2024-08-09-12-02.zip
+----
+
+
+=== Interactive - servidor: Login
+
+A ação de login é usada para autenticar um usuário e obter acesso a operações que modificam a instalação. O usuário deve ter Privileges de administrador. Ao executar com o servidor, qualquer usuário admin pode ser usado; ao executar no modo direto, o usuário deve ser um usuário local em vez de um usuário LDAP.
+
+[listing]
+----
+Authenticating via server. Enter user and password
+
+UserName: admin
+
+Password:
+----
+ou
+
+[listing]
+----
+Authenticating via database.  Enter local user and password.
+
+UserName: admin
+
+Password:
+----
+Se a senha estiver correta e o usuário for um usuário admin, o menu restrito será exibido.
+
+Se a palavra-passe estiver incorreta, será apresentado o seguinte:
+
+[listing]
+----
+Authenticating via database.  Enter local user and password.
+
+UserName: admin
+
+Password:
+
+Login Failed!
+----
+Se o usuário não for um administrador, o seguinte será exibido:
+
+[listing]
+----
+Authenticating via server. Enter user and password
+
+UserName: user
+
+Password:
+
+User 'user' does not have 'admin' role!
+----
+
+
+=== Interativo - servidor: Menu restrito
+
+Depois de o utilizador iniciar sessão, a ferramenta apresenta o Menu restrito.
+
+[listing]
+----
+Logged in as: admin
+Select Action:
+
+2 - Change Password
+
+3 - Verify Vault Contents
+
+4 - Backup
+
+5 - Restore
+
+6 - Change Encryption Keys
+
+7 - Fix installation to match vault
+
+9 - Exit
+
+Enter your choice:
+----
+
+
+=== Interactive - servidor: Alterar senha
+
+A ação "Change Password" (alterar palavra-passe) é utilizada para alterar uma palavra-passe de instalação para um novo valor.
+
+"Change Password" (alterar palavra-passe) solicitará primeiro ao utilizador que selecione a palavra-passe que pretende alterar.
+
+[listing]
+----
+Change Password
+Select User:  (Enter 'b' to go Back)
+
+1 - _internal
+
+2 - acquisition
+
+3 - cognos_admin
+
+4 - cognos keystore
+
+5 - dwh
+
+6 - dwh_internal
+
+7 - dwhuser
+
+8 - hosts
+
+9 - inventory
+
+10 - sso keystore
+
+11 - server keystore
+
+12 - root
+
+13 - server truststore
+
+14 - AU truststore
+
+Enter your choice:
+----
+Depois de selecionar qual entrada corrigir, se o usuário for um usuário MySQL, o usuário será perguntado se deseja hash forte para a senha
+
+[listing]
+----
+MySQL supports SHA-1 and SHA-256 password hashes. SHA-256 is stronger but requires all clients use SSL connections
+
+Use strong password hash? (Y/n): y
+----
+Em seguida, o usuário é solicitado a fornecer a nova senha.
+
+[listing]
+----
+New Password for '{user}':
+If the password is empty, the operation is cancelled.
+
+Password is empty - cancelling operation
+----
+Se for introduzida uma palavra-passe não vazia, é pedido ao utilizador que confirme a palavra-passe.
+
+[listing]
+----
+New Password for '{user}':
+
+Confirm New Password for '{user}':
+
+Password successfully updated for 'dwhuser'!
+----
+Se a alteração não for bem-sucedida, o erro ou a exceção serão exibidos.
+
+
+
+=== Interactive - servidor: Restauração
+
+
+
+=== Interactive - servidor: Alterar chaves de criptografia
+
+A ação alterar chaves de criptografia substituirá a chave de criptografia usada para criptografar as entradas do Vault e substituirá a chave de criptografia usada para o serviço de criptografia do Vault. Como a chave do serviço de criptografia é alterada, os valores criptografados no banco de dados serão recriptografados; eles serão lidos, descriptografados com a chave atual, criptografados com a nova chave e salvos de volta ao banco de dados.
+
+Esta ação não é suportada no modo direto, uma vez que o servidor fornece a operação de reencriptação para algum conteúdo de base de dados.
+
+[listing]
+----
+Replace encryption key with new key and update encrypted database values
+
+Confirm (y/N): y
+
+Change Encryption Keys succeeded! Restart 'Server' Service!
+----
+
+
+=== Interactive - servidor: Corrigir instalação
+
+A ação Fix Installation atualizará a instalação. Todas as senhas de instalação que podem ser alteradas através da ferramenta securityadmin, exceto root, serão definidas para as senhas no cofre.
+
+* As senhas dos usuários internos do OCI serão atualizadas.
+* As senhas dos usuários MySQL, exceto root, serão atualizadas.
+* As senhas dos keystores serão atualizadas.
+
+
+[listing]
+----
+Fix installation - update installation passwords to match values in vault
+
+Confirm:  (y/N): y
+
+Installation update succeeded! Restart 'Server' Service.
+----
+A ação irá parar na primeira atualização mal sucedida e apresentar o erro ou exceção.

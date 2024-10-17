@@ -1,0 +1,26 @@
+---
+permalink: config-admin/managing-security-on-the-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: A ferramenta securityadmin permite gerenciar opções de segurança no servidor Data Warehouse. O gerenciamento de segurança inclui a atualização de senhas internas para usuários internos no servidor DWH, a criação de backups da configuração de segurança ou a restauração de configurações para as configurações padrão. 
+---
+= Gestão da segurança no Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A `securityadmin` ferramenta permite gerenciar opções de segurança no servidor Data Warehouse. O gerenciamento de segurança inclui a atualização de senhas internas para usuários internos no servidor DWH, a criação de backups da configuração de segurança ou a restauração de configurações para as configurações padrão.
+
+
+
+== Sobre esta tarefa
+
+Você usa a `securityadmin` ferramenta para gerenciar a segurança:
+
+* Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+Consulte link:../config-admin/securityadmin-tool.html["SecurityAdmin"]a documentação para obter mais informações.

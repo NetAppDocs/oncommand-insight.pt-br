@@ -1,0 +1,30 @@
+---
+permalink: install-windows/backing-up-the-insight-server-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Faça backup do banco de dados Insight para garantir que você tenha um backup recente se ocorrer um problema após a atualização. Durante a fase de backup e restauração, os dados de desempenho não serão coletados; portanto, o backup deve ocorrer o mais próximo possível do tempo de atualização. 
+---
+= Fazer backup do banco de dados OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Faça backup do banco de dados Insight para garantir que você tenha um backup recente se ocorrer um problema após a atualização. Durante a fase de backup e restauração, os dados de desempenho não serão coletados; portanto, o backup deve ocorrer o mais próximo possível do tempo de atualização.
+
+
+
+== Passos
+
+. Abra o Insight em seu navegador.
+. Clique em *Admin* > *Troubleshooting*.
+. Na página *solução de problemas*, clique em *Backup*.
++
+O tempo para fazer backup do banco de dados pode variar dependendo dos recursos disponíveis (arquitetura, CPU e memória), do tamanho do banco de dados e do número de objetos monitorados no ambiente.
+
++
+Quando a cópia de segurança estiver concluída, ser-lhe-á perguntado se pretende transferir o ficheiro.
+
+. Transfira o ficheiro de cópia de segurança.
+

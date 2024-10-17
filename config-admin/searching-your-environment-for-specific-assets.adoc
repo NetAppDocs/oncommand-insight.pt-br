@@ -1,0 +1,30 @@
+---
+permalink: config-admin/searching-your-environment-for-specific-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode localizar informações sobre ativos específicos usando o recurso de pesquisa. Por exemplo, se um usuário do sistema entrar em Contato com o administrador de armazenamento com uma reclamação sobre um determinado servidor, o administrador pode pesquisar o nome do servidor e exibir uma página de ativo resumindo o status e fornecendo informações adicionais vinculadas. 
+---
+= Pesquisando em seu ambiente por ativos específicos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode localizar informações sobre ativos específicos usando o recurso de pesquisa. Por exemplo, se um usuário do sistema entrar em Contato com o administrador de armazenamento com uma reclamação sobre um determinado servidor, o administrador pode pesquisar o nome do servidor e exibir uma página de ativo resumindo o status e fornecendo informações adicionais vinculadas.
+
+
+
+== Passos
+
+. Abra a IU do OnCommand Insightweb.
+. Na barra de ferramentas, clique image:../media/search-assets-icon.gif[""]em .
++
+A caixa *Search Assets* é exibida.
+
+. Introduza o nome de um ativo ou uma parte do nome.
+. Selecione o recurso desejado nos resultados da pesquisa.
++
+A página de ativos desse recurso é exibida.
+
+

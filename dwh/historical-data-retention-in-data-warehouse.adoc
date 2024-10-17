@@ -1,0 +1,243 @@
+---
+permalink: dwh/historical-data-retention-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Os dados são mantidos no Data Warehouse de acordo com um cronograma. À medida que os dados envelhecem, a retenção do Registro de dados é reduzida. 
+---
+= Como os dados históricos são retidos no Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os dados são mantidos no Data Warehouse de acordo com um cronograma. À medida que os dados envelhecem, a retenção do Registro de dados é reduzida.
+
+O Data Warehouse retém os dados históricos com base nos dados de marts e granularidade dos dados, como mostrado na tabela a seguir.
+
+|===
+
+
+| Data mart | Objeto medido | Granularidade | Período de retenção 
+
+
+ a| 
+Desempenho marts
+ a| 
+Volumes e volumes internos
+ a| 
+Por hora
+ a| 
+14 dias
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Volumes e volumes internos
+ a| 
+Diariamente
+ a| 
+13 meses
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Aplicação
+ a| 
+Por hora
+ a| 
+13 meses
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Host
+ a| 
+Por hora
+ a| 
+13 meses
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho do switch para a porta
+ a| 
+Por hora
+ a| 
+5 semanas
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Alterne o desempenho para host, armazenamento e fita
+ a| 
+Por hora
+ a| 
+13 meses
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Nó de storage
+ a| 
+Por hora
+ a| 
+14 dias
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Nó de storage
+ a| 
+Diariamente
+ a| 
+13 meses
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho da VM
+ a| 
+Por hora
+ a| 
+14 dias
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho da VM
+ a| 
+Diariamente
+ a| 
+13 meses
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho de hipervisor
+ a| 
+Por hora
+ a| 
+14 dias
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho de hipervisor
+ a| 
+Diariamente
+ a| 
+13 meses
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho da VMDK
+ a| 
+Por hora
+ a| 
+14 dias
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho da VMDK
+ a| 
+Diariamente
+ a| 
+13 meses
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho de disco
+ a| 
+Por hora
+ a| 
+14 dias
+
+
+
+ a| 
+Desempenho marts
+ a| 
+Desempenho de disco
+ a| 
+Diariamente
+ a| 
+13 meses
+
+
+
+ a| 
+Capacidade marts
+ a| 
+Todos (exceto volumes individuais)
+ a| 
+Diariamente
+ a| 
+13 meses
+
+
+
+ a| 
+Capacidade marts
+ a| 
+Todos (exceto volumes individuais)
+ a| 
+Representante mensal
+ a| 
+14 meses e mais além
+
+
+
+ a| 
+Marts de inventário
+ a| 
+Volumes individuais
+ a| 
+Estado atual
+ a| 
+1 dia (ou até o próximo ETL)
+
+|===
+Após 13 meses (que é configurável), o Data Warehouse retém apenas um Registro por mês em vez de um Registro por dia para capacidade, desempenho e dados de recursos nas seguintes tabelas de fatos:
+
+* Tabela de factos de estorno (dwh_capacity.chargeback_fact)
+* Tabela de fatos de utilização do sistema de arquivos (dwh_fs_util.fs_util_fact)
+* Tabela de fato do host (dwh_SA.sa_host_fact)
+* Tabela fact capacidade volume interna (dwh_capacity.internal_volume_capacity_fact)
+* Tabela de fatos das portas (dwh_ports.ports_fact)
+* Tabela de fatos de capacidade Qtree (dwh_Capacity.qtree_Capacity_fact)
+* Tabela de fato de capacidade do pool de armazenamento e armazenamento (dwh_Capacity.storage_and_storage_pool_Capacity_fact)
+* Tabela de facto da capacidade de volume (dwh_Capacity.VM_Capacity_fact)
+* Tabelas de fatos de desempenho por hora (storage_node_Hourly_performance_fact) e desempenho diário do nó de armazenamento (storage_node_daily_performance_fact)
+

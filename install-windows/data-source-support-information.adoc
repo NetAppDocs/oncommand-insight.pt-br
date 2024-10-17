@@ -1,0 +1,20 @@
+---
+permalink: install-windows/data-source-support-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Como parte do Planejamento de configuração, você deve garantir que os dispositivos em seu ambiente possam ser monitorados pelo Insight. Para fazer isso, você pode verificar a matriz de suporte da fonte de dados para obter detalhes sobre sistemas operacionais, dispositivos específicos e protocolos. Algumas fontes de dados podem não estar disponíveis em todos os sistemas operacionais. 
+---
+= Informações de suporte da fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como parte do Planejamento de configuração, você deve garantir que os dispositivos em seu ambiente possam ser monitorados pelo Insight. Para fazer isso, você pode verificar a matriz de suporte da fonte de dados para obter detalhes sobre sistemas operacionais, dispositivos específicos e protocolos. Algumas fontes de dados podem não estar disponíveis em todos os sistemas operacionais.
+
+
+
+== Localização da versão mais atualizada da Matriz de suporte da fonte de dados
+
+A matriz de suporte da fonte de dados OnCommand Insight é atualizada com cada versão do Service pack. A versão mais atual do documento pode ser encontrada em https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["Site de suporte da NetApp"] . .

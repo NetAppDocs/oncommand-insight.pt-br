@@ -1,0 +1,40 @@
+---
+permalink: config-admin/managing-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode revisar o status atual de todos os patches de origem de dados que estão sendo aplicados à sua rede. Se você quiser executar uma ação em um patch, clique no nome vinculado nos patches atualmente sob a tabela de revisão. 
+---
+= Gerenciamento de patches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode revisar o status atual de todos os patches de origem de dados que estão sendo aplicados à sua rede. Se você quiser executar uma ação em um patch, clique no nome vinculado nos patches atualmente sob a tabela de revisão.
+
+
+
+== Antes de começar
+
+Você já deve ter carregado e estar instalando pelo menos um patch.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *patches*.
++
+Se nenhum patch estiver sendo instalado, a tabela de patches atualmente em revisão estará vazia.
+
+. Em *patches atualmente em revisão*, verifique o status dos patches de origem de dados que estão sendo aplicados.
+. Para examinar os detalhes associados a um patch específico, clique no nome vinculado do patch.
+. Para o patch selecionado, você pode clicar em qualquer uma dessas opções para executar a próxima ação no patch:
++
+** *Approve patch* commits o patch para as fontes de dados.
+** *Rollback* remove o patch.
+** * Substituir patch* permite que você selecione um patch diferente para essas fontes de dados.
+
+
+

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Termos aplicáveis a objetos ou referências que você pode encontrar nas páginas iniciais de ativos de pool de storage do NetApp Clustered Data ONTAP. 
+---
+= Pool de storage em Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termos aplicáveis a objetos ou referências que você pode encontrar nas páginas iniciais de ativos de pool de storage do NetApp Clustered Data ONTAP.
+
+
+
+== Terminologia do pool de storage do Clustered Data ONTAP
+
+Os termos a seguir se aplicam a objetos ou referências que você pode encontrar nas páginas iniciais de ativos do pool de dados do NetApp Clustered Data ONTAPstorage. Muitos desses termos também se aplicam a outros coletores de dados.
+
+* Armazenamento -- em que matriz de armazenamento esse pool vive. Obrigatório.
+* Type -- um valor descritivo de uma lista de uma lista enumerada de possibilidades. Mais comumente será "agregado" ou "RAID Group"".
+* Nó -- se a arquitetura desse storage array for tal que os pools pertençam a um nó de armazenamento específico, seu nome será visto aqui como um hiperlink para sua própria página inicial.
+* Usa Flash Pool -- valor Sim/não -- este pool baseado em SATA/SAS tem SSDs usados para aceleração de cache?
+* Redundância -- nível RAID ou esquema de proteção. RAID_DP é paridade dupla, RAID_TP é paridade tripla.
+* Capacidade - os valores aqui são a capacidade lógica utilizada, utilizável e a capacidade total lógica, e a porcentagem usada entre eles.
+* Capacidade com excesso de compromisso - se, usando tecnologias de eficiência, você tiver alocado uma soma total de capacidades de volume ou volume interno maior que a capacidade lógica do pool de storage, o valor percentual aqui será maior que 0%.
+* Snapshot -- capacidades de snapshot usadas e totais, se a arquitetura do pool de armazenamento dedicar parte de sua capacidade a segmentos de áreas exclusivamente para snapshots. As configurações do ONTAP em MetroCluster provavelmente exibirão isso, enquanto outras configurações do ONTAP são menores.
+* Utilização -- um valor percentual mostrando a maior porcentagem de ocupado em disco de qualquer disco que contribua com capacidade para esse pool de armazenamento. A utilização do disco não tem necessariamente uma forte correlação com o desempenho do array -- a utilização pode ser alta devido a recompilações de disco, atividades de deduplicação, etc. na ausência de cargas de trabalho orientadas pelo host. Além disso, as implementações de replicação de muitos arrays podem impulsionar a utilização de disco, sem ser mostradas como volume interno ou workload de volume.
+* IOPS -- a soma de IOPs de todos os discos que contribuem com capacidade para esse pool de armazenamento.
+* Taxa de transferência -- a taxa de transferência soma de todos os discos que contribuem para a capacidade deste conjunto de armazenamento.
+

@@ -1,0 +1,41 @@
+---
+permalink: install-windows/increasing-cognos-memory.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de restaurar o banco de dados do Data Warehouse, você deve aumentar a alocação Java para Cognos de 768 MB para 2048 MB para diminuir o tempo de geração do relatório. 
+---
+= Aumentando a memória Cognos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de restaurar o banco de dados do Data Warehouse, você deve aumentar a alocação Java para Cognos de 768 MB para 2048 MB para diminuir o tempo de geração do relatório.
+
+
+
+== Passos
+
+. Abra uma janela de prompt de comando como administrador no servidor Data Warehouse.
+. Navegue até o `disk drive:\install directory\SANscreen\cognos\c10_64\bin64` diretório.
+. Digite o seguinte comando: `cogconfigw`
++
+A janela IBM Cognos Configuration (Configuração do IBM Cognos) é exibida.
+
++
+[NOTE]
+====
+O aplicativo de atalho do IBM Cognos Configuration aponta para `disk drive:\Program Files\SANscreen\cognos\c10_64\bin64\cognosconfigw.bat`. Se o Insight estiver instalado no diretório arquivos de programas (espaço entre), que é o padrão, em vez de ProgramFiles (sem espaço), o `.bat` arquivo não funcionará. Se isso ocorrer, clique com o botão direito do Mouse no atalho do aplicativo e mude `cognosconfigw.bat` para para para `cognosconfig.exe` corrigir o atalho.
+
+====
+. No painel de navegação à esquerda, expanda *ambiente*, expanda *Serviços IBM Cognos* e clique em *IBM Cognos*.
+. Selecione *memória máxima para Tomcat em MB* e altere 768 MB para 2048 MB.
+. Na barra de ferramentas do IBM Cognos Configuration, clique image:../media/cognos-save-icon.gif[""]em (Salvar).
++
+Uma mensagem informativa é exibida para informá-lo sobre as tarefas que o Cognos está executando.
+
+. Clique em *Fechar*.
+. Na barra de ferramentas do IBM Cognos Configuration, clique image:../media/cognos-stop-icon.gif[""]em (Parar).
+. Na barra de ferramentas do IBM Cognos Configuration, clique image:../media/cognos-start-icon.gif[""]em (Iniciar).
+

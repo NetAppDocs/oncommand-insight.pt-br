@@ -1,0 +1,33 @@
+---
+permalink: config-admin/restarting-the-oncommand-insight-server-or-acquisition-unit.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando reiniciar o servidor OnCommand Insight, atualize a página e inicie sessão novamente no portal OnCommand Insight. 
+---
+= Reiniciar o servidor OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando reiniciar o servidor OnCommand Insight, atualize a página e inicie sessão novamente no portal OnCommand Insight.
+
+
+
+== Sobre esta tarefa
+
+[NOTE]
+====
+Ambas as opções só devem ser usadas mediante solicitação do suporte ao Cliente NetApp. Não há confirmação antes de reiniciar.
+
+====
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin* e selecione *solução de problemas*.
+. Na parte inferior da página na área outras tarefas, clique no link *solução de problemas avançada*.
+. Na próxima página no menu Avançado, clique na guia *ações*.
+. Clique em *Restart Server*.
+

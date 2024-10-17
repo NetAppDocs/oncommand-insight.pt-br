@@ -1,0 +1,28 @@
+---
+permalink: reporting/reporting-data-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Sua empresa pode se beneficiar dos dados que são descobertos e armazenados no Data Warehouse da OnCommand Insight. O Armazém de dados OnCommand Insight é um repositório centralizado que armazena dados de várias fontes de informação e os transforma em um modelo de dados multidimensional comum para consultas e análises eficientes. 
+---
+= Modelo de dados de relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sua empresa pode se beneficiar dos dados que são descobertos e armazenados no Data Warehouse da OnCommand Insight. O Armazém de dados OnCommand Insight é um repositório centralizado que armazena dados de várias fontes de informação e os transforma em um modelo de dados multidimensional comum para consultas e análises eficientes.
+
+A partir desse repositório, você pode gerar relatórios personalizados, como chargeback, análise de consumo e relatórios de previsão, que respondem a perguntas como as seguintes:
+
+* Que inventário tenho?
+* Onde está o meu inventário?
+* Quem está usando nossos ativos?
+* Qual é o chargeback para storage alocado para uma unidade de negócios?
+* Quanto espaço tenho nas portas do switch?
+* Por quanto tempo até que eu precise adquirir capacidade de armazenamento adicional?
+* As unidades de negócios estão alinhadas ao longo das camadas de storage adequadas?
+* Como a alocação de storage muda ao longo de um mês, trimestre ou ano?
+
+
+Usando o modelo de dados fornecido com relatórios do OnCommand Insight, você pode usar ferramentas de criação de relatórios para projetar e agendar relatórios.

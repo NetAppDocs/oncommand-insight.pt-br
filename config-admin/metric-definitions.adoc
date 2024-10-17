@@ -1,0 +1,231 @@
+---
+permalink: config-admin/metric-definitions.html 
+sidebar: sidebar 
+keywords:  
+summary: A seção Expert View de uma página de ativo exibe várias métricas com base no período de tempo selecionado para o ativo. Cada métrica é exibida em seu próprio gráfico de desempenho. Você pode adicionar ou remover métricas e ativos relacionados dos gráficos, dependendo dos dados que deseja ver. 
+---
+= Definições de métricas do Expert View
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seção Expert View de uma página de ativo exibe várias métricas com base no período de tempo selecionado para o ativo. Cada métrica é exibida em seu próprio gráfico de desempenho. Você pode adicionar ou remover métricas e ativos relacionados dos gráficos, dependendo dos dados que deseja ver.
+
+|===
+
+
+| Métrica | Descrição 
+
+
+ a| 
+BB crédito zero Rx, TX
+ a| 
+Número de vezes que a contagem de crédito de buffer para buffer de receção/transmissão foi transferida para zero durante o período de amostragem. Esta métrica representa o número de vezes que a porta anexada teve que parar de transmitir porque esta porta estava fora de créditos para fornecer.
+
+
+
+ a| 
+BB crédito zero duração TX
+ a| 
+Tempo em milissegundos durante o qual o crédito BB de transmissão foi zero durante o intervalo de amostragem.
+
+
+
+ a| 
+Taxa de acerto do cache (Total, leitura, escrita) %
+ a| 
+Porcentagem de solicitações que resultam em acertos de cache. Quanto maior o número de acessos versus acessos ao volume, melhor é o desempenho. Esta coluna está vazia para matrizes de armazenamento que não recolhem informações de acerto de cache.
+
+
+
+ a| 
+Utilização de cache (total) %
+ a| 
+Porcentagem total de solicitações de cache que resultam em acertos de cache
+
+
+
+ a| 
+Classe 3 descarta
+ a| 
+Contagem de cartões de transporte de dados de classe 3 Fibre Channel.
+
+
+
+ a| 
+Utilização de CPU (total) %
+ a| 
+Quantidade de recursos de CPU usados ativamente, como uma porcentagem do total disponível (sobre todas as CPUs virtuais).
+
+
+
+ a| 
+Erro CRC
+ a| 
+Número de quadros com verificações de redundância cíclica (CRCs) inválidas detetadas pela porta durante o período de amostragem
+
+
+
+ a| 
+Taxa de quadros
+ a| 
+Taxa de quadros de transmissão em quadros por segundo (FPS)
+
+
+
+ a| 
+Tamanho médio do fotograma (Rx, TX)
+ a| 
+Relação entre o tráfego e o tamanho do quadro. Essa métrica permite identificar se há estruturas suspensas na malha.
+
+
+
+ a| 
+Tamanho do quadro demasiado longo
+ a| 
+Contagem de quadros de transmissão de dados Fibre Channel que são muito longos.
+
+
+
+ a| 
+Tamanho do quadro demasiado curto
+ a| 
+Contagem de quadros de transmissão de dados Fibre Channel que são muito curtos.
+
+
+
+ a| 
+Densidade de e/S (total, leitura, gravação)
+ a| 
+Número de IOPS dividido pela capacidade usada (conforme adquirido da pesquisa de inventário mais recente da fonte de dados) para o elemento volume, volume interno ou armazenamento. Medido em número de operações de e/S por segundo por TB.
+
+
+
+ a| 
+IOPS (total, leitura, gravação)
+ a| 
+Número de solicitações de serviço de e/S de leitura/gravação que passam pelo canal de e/S ou uma parte desse canal por unidade de tempo (medido em e/S por segundo)
+
+
+
+ a| 
+Taxa de transferência IP (total, leitura, gravação)
+ a| 
+Total: Taxa agregada à qual os dados IP foram transmitidos e recebidos em megabytes por segundo. Leitura: Taxa de transferência IP (receber): Taxa média na qual os dados IP foram recebidos em megabytes por segundo.
+
+Write: IP throughput (transmissão): Taxa média na qual os dados IP foram transmitidos em megabytes por segundo.
+
+
+
+ a| 
+Latência (total, leitura, gravação)
+ a| 
+Latência (R&W): Taxa na qual os dados são lidos ou gravados nas máquinas virtuais em um período fixo de tempo. O valor é medido em megabytes por segundo.
+
+Latência: Tempo médio de resposta das máquinas virtuais em um armazenamento de dados.
+
+Latência máxima: O maior tempo de resposta das máquinas virtuais em um armazenamento de dados.
+
+
+
+ a| 
+Falha na ligação
+ a| 
+Número de falhas de link detetadas pela porta durante o período de amostragem.
+
+
+
+ a| 
+Reposição da ligação Rx, TX
+ a| 
+O número de redefinições da ligação de receção ou de transmissão durante o período de amostragem. Essa métrica representa o número de redefinições de link que foram emitidas pela porta anexada a essa porta.
+
+
+
+ a| 
+% De utilização da memória (total)
+ a| 
+Limite para a memória usada pelo host.
+
+
+
+ a| 
+% R/W parcial (total)
+ a| 
+Número total de vezes que uma operação de leitura/gravação cruza um limite de distribuição em qualquer módulo de disco em um LUN RAID 5, RAID 1/0 ou RAID 0 geralmente, os cruzamentos de faixa não são benéficos, porque cada um requer uma e/S adicional Uma porcentagem baixa indica um tamanho eficiente do elemento de distribuição e é uma indicação de alinhamento inadequado de um volume (ou um LUN NetApp).
+
+Para CLARiiON, esse valor é o número de cruzamentos de faixa divididos pelo número total de IOPS.
+
+
+
+ a| 
+Erros de porta
+ a| 
+Relatório de erros de porta durante o período de amostragem/período de tempo determinado.
+
+
+
+ a| 
+Contagem de perda de sinal
+ a| 
+Número de erros de perda de sinal. Se ocorrer um erro de perda de sinal, não existe uma ligação elétrica e existe um problema físico.
+
+
+
+ a| 
+Taxa de swap (taxa total, em taxa, fora taxa)
+ a| 
+Taxa na qual a memória é trocada dentro, fora ou ambos do disco para a memória ativa durante o período de amostragem. Este contador aplica-se a máquinas virtuais.
+
+
+
+ a| 
+Contagem de perdas de sincronização
+ a| 
+Número de erros de perda de sincronização. Se ocorrer um erro de perda de sincronização, o hardware não poderá fazer sentido do tráfego ou bloquear nele. Todo o equipamento pode não estar usando a mesma taxa de dados, ou a ótica ou as conexões físicas podem ser de baixa qualidade. A porta deve ressincronizar após cada erro, o que afeta o desempenho do sistema. Medido em KB/seg
+
+
+
+ a| 
+Taxa de transferência (total, leitura, gravação)
+ a| 
+Taxa na qual os dados estão sendo transmitidos, recebidos ou ambos em um período fixo de tempo em resposta a solicitações de serviço de e/S (medido em MB por segundo).
+
+
+
+ a| 
+Limites de eliminação de tempo limite - TX
+ a| 
+Contagem de quadros de transmissão descartados causada por tempo limite.
+
+
+
+ a| 
+Taxa de tráfego (total, leitura, gravação)
+ a| 
+Tráfego transmitido, recebido ou ambos recebidos durante o período de amostragem, em mebibytes por segundo.
+
+
+
+ a| 
+Utilização de tráfego (Total, leitura, escrita)
+ a| 
+Relação de tráfego recebido/transmitido/total para receber/transmitir/capacidade total, durante o período de amostragem.
+
+
+
+ a| 
+Utilização (Total, leitura, escrita) %
+ a| 
+Percentagem da largura de banda disponível utilizada para transmissão (TX) e receção (Rx).
+
+
+
+ a| 
+Escrever pendente (total)
+ a| 
+Número de solicitações de serviço de e/S de gravação pendentes.
+
+|===

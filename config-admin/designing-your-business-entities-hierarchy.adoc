@@ -1,0 +1,31 @@
+---
+permalink: config-admin/designing-your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: Você precisa entender os elementos de sua estrutura corporativa e o que precisa ser representado nas entidades de negócios porque elas se tornam uma estrutura fixa em seu banco de dados OnCommand Insight. Você pode usar as seguintes informações para configurar suas entidades de negócios. Lembre-se de que você não precisa usar todos os níveis de hierarquia para coletar dados nessas categorias. 
+---
+= Projetando sua hierarquia de entidades empresariais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você precisa entender os elementos de sua estrutura corporativa e o que precisa ser representado nas entidades de negócios porque elas se tornam uma estrutura fixa em seu banco de dados OnCommand Insight. Você pode usar as seguintes informações para configurar suas entidades de negócios. Lembre-se de que você não precisa usar todos os níveis de hierarquia para coletar dados nessas categorias.
+
+
+
+== Passos
+
+. Examine cada nível da hierarquia de entidades de negócios para determinar se esse nível deve ser incluído na hierarquia de entidades de negócios da sua empresa:
++
+** *O nível de Locatário* é necessário se a sua empresa for um ISP e você quiser rastrear o uso dos recursos do cliente.
+** *Linha de Negócios (LOB)* é necessária na hierarquia se os dados para diferentes linhas de produtos precisarem ser rastreados.
+** *Unidade de Negócios* é necessária se você precisar rastrear dados para diferentes departamentos. Esse nível da hierarquia é muitas vezes valioso na separação de um recurso que um departamento usa que outros departamentos não.
+** *Nível Projeto* pode ser usado para trabalho especializado dentro de um departamento. Esses dados podem ser úteis para identificar, definir e monitorar as necessidades de tecnologia de um projeto separado em comparação com outros projetos de uma empresa ou departamento.
+
+
+. Crie um gráfico mostrando cada entidade de negócio com os nomes de todos os níveis dentro da entidade.
+. Verifique os nomes na hierarquia para ter certeza de que eles serão auto-explicativos nas visualizações e relatórios do OnCommand Insight.
+. Identificar todos os aplicativos associados a cada entidade de negócios.
+

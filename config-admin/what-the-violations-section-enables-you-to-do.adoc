@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-violations-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: A seção violações permite que você visualize e gerencie qualquer uma das violações que ocorrem em sua rede como resultado de uma política de desempenho atribuída a um ativo. 
+---
+= Usando a seção violações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seção violações permite que você visualize e gerencie qualquer uma das violações que ocorrem em sua rede como resultado de uma política de desempenho atribuída a um ativo.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize uma página de ativo fazendo uma das seguintes opções:
++
+** Na barra de ferramentas do Insight, clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]em , digite o nome do ativo e selecione-o na lista.
+** Clique em *painéis*, selecione *Painel de ativos*, localize um nome de ativo e clique nele. A página de ativos é exibida. A seção violações exibe o tempo em que a violação ocorreu e uma descrição do limite que foi cruzado, juntamente com um hiperlink para o ativo no qual a violação ocorreu (por exemplo "'2 violações FIR ds-30 com latência - total > 50").
+
+
+. Você pode executar qualquer uma das seguintes tarefas opcionais:
++
+** Use a caixa *filtro* para mostrar apenas violações específicas.
+** Clique em um número de página para navegar pelas violações por página se houver mais de cinco violações na tabela.
+** Altere a ordem de classificação das colunas de uma tabela para ascendente (seta para cima) ou descendente (seta para baixo) clicando na seta no cabeçalho da coluna.
+** Clique no nome do ativo em qualquer descrição para exibir sua página de ativo; um círculo vermelho indica problemas que precisam de mais investigação.
++
+Você pode clicar na política de desempenho, que exibe a caixa de diálogo Editar política, para revisar a política de desempenho e fazer alterações na política, se necessário.
+
+** Clique image:../media/delete-icon.gif[""] para remover uma violação da lista se determinar que o problema já não é motivo de preocupação.
+
+
+

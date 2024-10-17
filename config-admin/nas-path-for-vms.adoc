@@ -1,0 +1,43 @@
+---
+permalink: config-admin/nas-path-for-vms.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight 7,3 dá suporte a caminhos nas para máquinas virtuais e compartilhamentos de storage. Esses caminhos são semelhantes aos caminhos nas para hosts e compartilhamentos de storage. Quando o endereço IP de uma VM tem permissão para acessar um compartilhamento, um caminho nas é criado. 
+---
+= Caminho nas para VMs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight 7,3 dá suporte a caminhos nas para máquinas virtuais e compartilhamentos de storage. Esses caminhos são semelhantes aos caminhos nas para hosts e compartilhamentos de storage. Quando o endereço IP de uma VM tem permissão para acessar um compartilhamento, um caminho nas é criado.
+
+Os caminhos nas para máquinas virtuais são exibidos na página inicial volumes internos. Esta página contém um widget de recursos de armazenamento montados no convidado que identifica os volumes internos aos quais as VMs têm acesso.
+
+* Os caminhos nas são criados quando as máquinas virtuais têm acesso aos compartilhamentos de back-end. Não há confirmação de que as máquinas virtuais acessam os compartilhamentos ou não.
+* O cálculo de correlação é baseado em latências e IOPs e não inclui casos em que as VMs têm caminhos nas para o storage de back-end.
+* O usuário pode consultar o endereço IP compartilhar por iniciador, mas consultar por caminho não é suportado.
+
+
+A tabela recursos de computação do volume Interno agora também exibe VMs com caminhos nas. Para cada VM, CPU e memória, dados de utilização e performance são fornecidos.
+
+
+
+== Impacto no data warehouse
+
+As alterações ao Data Warehouse que estão presentes após a atualização para o OnCommand Insight 7,3 incluem o seguinte:
+
+* A tabela dwh_inventory.nas_logical é removida do data mart do inventário e substituída por uma visualização.
++
+Todos os relatórios do Insight 7,2.x que contêm a tabela de caminho NFS são preservados.
+
+* A tabela dwh_inventory.nas_cr_logical é adicionada ao data mart do inventário e inclui o seguinte:
++
+** Recurso de computação
+** Volume interno
+** Armazenamento
+** Compartilhamento nas
+
+
+

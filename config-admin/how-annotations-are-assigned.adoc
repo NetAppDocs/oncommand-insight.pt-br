@@ -1,0 +1,34 @@
+---
+permalink: config-admin/how-annotations-are-assigned.html 
+sidebar: sidebar 
+keywords:  
+summary: Pode atribuir anotações manualmente ou automaticamente utilizando regras de anotação. O OnCommand Insight também atribui automaticamente algumas anotações na aquisição de ativos e por herança. Quaisquer anotações que você atribuir a um ativo aparecem na seção dados do usuário da página de ativo. 
+---
+= Como as anotações são atribuídas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode atribuir anotações manualmente ou automaticamente utilizando regras de anotação. O OnCommand Insight também atribui automaticamente algumas anotações na aquisição de ativos e por herança. Quaisquer anotações que você atribuir a um ativo aparecem na seção dados do usuário da página de ativo.
+
+As anotações são atribuídas das seguintes formas:
+
+* Pode atribuir uma anotação manualmente a um ativo.
++
+Se uma anotação for atribuída diretamente a um ativo, a anotação aparece como texto normal numa página de ativo. As anotações que são atribuídas manualmente sempre têm precedência sobre anotações que são herdadas ou atribuídas por regras de anotação.
+
+* Você pode criar uma regra de anotação para atribuir automaticamente anotações a ativos do mesmo tipo.
++
+Se a anotação for atribuída por regra, o Insight exibirá o nome da regra ao lado do nome da anotação em uma página de ativo.
+
+* O Insight associa automaticamente um nível de camada a um modelo de camada de storage para agilizar a atribuição de anotações de storage aos seus recursos na aquisição de ativos.
++
+Certos recursos de storage são automaticamente associados a um nível predefinido (camada 1 e camada 2). Por exemplo, o nível de armazenamento Symmetrix é baseado na família Symmetrix e VMAX e está associado ao nível 1. Você pode alterar os valores padrão para atender aos requisitos de nível. Se a anotação for atribuída pelo Insight (por exemplo, Tier), você verá "'System-Defined'" quando posicionar o cursor sobre o nome da anotação em uma página de ativo.
+
+* Alguns recursos (filhos de um ativo) podem derivar a anotação de nível predefinido do ativo (pai).
++
+Por exemplo, se você atribuir uma anotação a um armazenamento, a anotação Tier será derivada de todos os pools de armazenamento, volumes internos, volumes, qtrees e compartilhamentos pertencentes ao armazenamento. Se uma anotação diferente for aplicada a um volume interno do armazenamento, a anotação é posteriormente derivada de todos os volumes, qtrees e compartilhamentos. "'derivado'" aparece ao lado do nome da anotação em uma página de ativo.
+
+

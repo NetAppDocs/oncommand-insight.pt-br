@@ -1,0 +1,54 @@
+---
+permalink: config-admin/what-the-expert-view-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: A seção visualização de especialistas permite que você visualize gráficos de desempenho de um ativo com base em qualquer número de métricas aplicáveis durante um período de tempo escolhido e adicione ativos relacionados para comparar e contrastar o desempenho do ativo e do ativo relacionado em diferentes períodos de tempo. 
+---
+= Usando a seção Expert View
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seção visualização de especialistas permite que você visualize gráficos de desempenho de um ativo com base em qualquer número de métricas aplicáveis durante um período de tempo escolhido e adicione ativos relacionados para comparar e contrastar o desempenho do ativo e do ativo relacionado em diferentes períodos de tempo.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize uma página de ativo fazendo uma das seguintes opções:
++
+** Na barra de ferramentas do Insight, clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]em , digite o nome do ativo e selecione-o na lista.
+** Clique em *painéis*, selecione *Painel de ativos*, localize um nome de ativo e clique nele. A página de ativos é exibida. Por padrão, o gráfico de desempenho mostra duas métricas para o período de tempo selecionado para a página de ativo. Por exemplo, para um storage, o gráfico de desempenho mostra a latência e o total de IOPS por padrão. A seção recursos exibe o nome do recurso e uma seção recursos adicionais, que permite pesquisar ativos. Dependendo do ativo, você também pode ver os ativos nas seções Top Correlated, Top Colaborador, ganancioso e degradado.
+
+
+. Você pode clicar em *Selecionar métricas para mostrar* e selecionar uma métrica para adicionar um gráfico de desempenho para uma métrica.
++
+Um gráfico de desempenho é adicionado para a métrica selecionada. O gráfico exibe os dados do período de tempo selecionado. Você pode alterar o período de tempo clicando em outro período de tempo no canto superior esquerdo da página de ativos.
+
++
+Você pode executar a etapa novamente e clicar para limpar uma métrica. O gráfico de desempenho da métrica é removido.
+
+. Você pode posicionar o cursor sobre o gráfico e alterar os dados de métrica exibidos clicando em qualquer um dos seguintes, dependendo do ativo:
++
+** *Leitura* ou *escrita*
+** **TX**ou *Rx* *Total* é o padrão.
+
+
+. Você pode arrastar o cursor sobre os pontos de dados no gráfico para ver como o valor da métrica muda ao longo do período de tempo selecionado.
+. Na seção *recursos*, você pode fazer qualquer um dos seguintes, se aplicável, para adicionar quaisquer ativos relacionados aos gráficos de desempenho:
++
+** Você pode selecionar um ativo relacionado nas seções superior correlacionado, principais contribuintes, ganancioso ou degradado para adicionar dados desse ativo ao gráfico de desempenho para cada métrica selecionada. Os ativos devem ter uma correlação ou contribuição mínima de 15% para serem mostrados.
++
+Depois de selecionar o ativo, um bloco de cores aparece ao lado do ativo para indicar a cor de seus pontos de dados no gráfico.
+
+** Para qualquer ativo mostrado, você pode clicar no nome do ativo para exibir sua página de ativo, ou você pode clicar na porcentagem que o ativo correlaciona ou contribui para o ativo base para ver mais informações sobre a relação de ativos com o ativo base.
++
+Por exemplo, clicar na porcentagem vinculada ao lado de um ativo correlacionado superior exibe uma mensagem informativa comparando o tipo de correlação que o ativo tem com o ativo base.
+
+** Se a seção superior correlacionada não contiver um ativo que você deseja exibir em um gráfico de desempenho para fins de comparação, você pode usar a caixa *pesquisar ativos* na seção recursos adicionais para localizar outros ativos. Depois de selecionar um ativo, ele é exibido na seção recursos adicionais. Quando já não pretender ver informações sobre o ativo, clique image:../media/trash-can-query.gif[""]em .
+
+
+

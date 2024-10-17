@@ -1,0 +1,12 @@
+---
+permalink: dwh/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guia de Administração do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

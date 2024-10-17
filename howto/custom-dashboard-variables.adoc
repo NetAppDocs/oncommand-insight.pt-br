@@ -1,0 +1,63 @@
+---
+permalink: howto/custom-dashboard-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: As variáveis do dashboard permitem filtrar dados em vários widgets em um painel de controle de forma rápida e fácil. 
+---
+= Variáveis do painel de instrumentos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As variáveis do dashboard permitem filtrar dados em vários widgets em um painel de controle de forma rápida e fácil.
+
+
+
+== Antes de começar
+
+Este exemplo requer que a anotação *Cidade* (também chamada de atributo Cidade) seja definida em vários ativos de armazenamento.
+
+Para obter melhores resultados, defina diferentes cidades em diferentes armazenamentos.
+
+
+
+== Sobre esta tarefa
+
+Variáveis fornecem uma maneira rápida e simples de filtrar os dados mostrados em alguns ou todos os widgets em um painel personalizado. As etapas a seguir guiarão você para criar widgets que usam variáveis e mostrarão como usá-las em seu painel.
+
+
+
+== Passos
+
+. Faça login no Insight como um usuário com permissões administrativas
+. Clique em *Dashboards* > * novo painel*.
+. Antes de adicionar widgets, queremos definir as variáveis que usaremos para filtrar os dados do painel. Clique no botão *variável*.
++
+É apresentada a lista de atributos.
+
+. Digamos que queremos definir o painel para filtrar com base na Cidade. Selecione o atributo *Cidade* na lista.
++
+O campo variável Cidade é criado e adicionado ao painel de controle.
+
+. Em seguida, devemos dizer aos nossos widgets para usar essa variável. A maneira mais simples de ilustrar isso é adicionar um widget de tabela mostrando a coluna Cidade. Clique no botão *Widget* e selecione o widget *Tabela*.
+. Primeiro, adicione o campo Cidade à tabela selecionando-o no botão seletor de colunasimage:../media/column-picker-button.gif[""].
++
+Cidade é um atributo do tipo lista, portanto ele contém uma lista de opções definidas anteriormente. Você também pode escolher atributos texto, boolean ou tipo data.
+
+. Em seguida, clique no botão *Filtrar por* e escolha *Cidade*.
+. Clique em *any* para ver as possíveis opções de filtro para Cidade. Observe que a lista agora inclui ""cidade""" no topo, além de quaisquer opções disponíveis anteriormente. Selecione "Cidade" para usar essa variável de painel.
++
+A opção "Cidade" só aparece aqui se tiver sido definida anteriormente na página principal do painel de instrumentos. Se a variável não tiver sido definida anteriormente, apenas as opções existentes para o filtro serão mostradas. Apenas as variáveis que são aplicáveis ao tipo de atributo selecionado serão exibidas na lista suspensa para esse filtro.
+
++
+image::../media/customdash-variablecitydialog2.gif[customdash variablecitydialog2]
+
+. *Salvar* o widget.
+. Na página do painel, clique em *any* ao lado da variável Cidade e selecione a cidade ou cidades que deseja ver.
++
+Seu widget de tabela é atualizado para mostrar apenas as cidades selecionadas. Você pode alterar os valores na variável Cidade à vontade, e todos os widgets no seu painel que estão definidos para usar a variável Cidade serão atualizados automaticamente para mostrar apenas os dados dos valores selecionados.
+
+. Certifique-se de *Salvar* seu painel quando você o tiver configurado como quiser.
+

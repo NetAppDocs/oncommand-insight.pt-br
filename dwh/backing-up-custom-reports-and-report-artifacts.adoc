@@ -1,0 +1,22 @@
+---
+permalink: dwh/backing-up-custom-reports-and-report-artifacts.html 
+sidebar: sidebar 
+keywords:  
+summary: Se você criou relatórios personalizados em uma versão do Insight anterior a 7,0 e deseja atualizar para a versão mais recente do Insight, faça backup de seus relatórios e artefatos de relatório antes da instalação da atualização e os restaure após a instalação da atualização. Você também deve prestar atenção às pastas que você está usando para armazenar artefatos de relatório. 
+---
+= Fazer backup de relatórios personalizados e artefatos de relatório
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você criou relatórios personalizados em uma versão do Insight anterior a 7,0 e deseja atualizar para a versão mais recente do Insight, faça backup de seus relatórios e artefatos de relatório antes da instalação da atualização e os restaure após a instalação da atualização. Você também deve prestar atenção às pastas que você está usando para armazenar artefatos de relatório.
+
+
+
+== Sobre esta tarefa
+
+Se você fez alterações nos relatórios pré-projetados, crie suas próprias cópias desses relatórios em uma pasta separada. Dessa forma, quando você atualiza os artefatos pré-projetados, você não substitui suas alterações.
+
+Se você tiver relatórios na área Minhas pastas, copie-os para as pastas relatórios personalizados para que eles não sejam perdidos.

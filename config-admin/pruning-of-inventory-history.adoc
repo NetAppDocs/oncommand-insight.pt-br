@@ -1,0 +1,16 @@
+---
+permalink: config-admin/pruning-of-inventory-history.html 
+sidebar: sidebar 
+keywords:  
+summary: A partir da versão 7,3.2, o Insight mantém o histórico de alterações de inventário por 90 dias. Versões anteriores do Insight mantiveram todo o histórico de alterações de inventário a partir do momento da instalação. Após uma atualização de uma versão mais antiga do Insight, o histórico de inventário mais antigo é reduzido para e depois mantido em 90 dias. 
+---
+= Poda do histórico de inventário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir da versão 7,3.2, o Insight mantém o histórico de alterações de inventário (base) por 90 dias. Versões anteriores do Insight mantiveram todo o histórico de alterações de inventário a partir do momento da instalação. Após uma atualização de uma versão mais antiga do Insight, o histórico de inventário mais antigo é reduzido para e depois mantido em 90 dias.
+
+Depois de atualizar para a versão atual do OnCommand Insight, a história é podada para os mais recentes 90 dias. Insight apunta a história em pedaços de 30 dias que ocorrem uma vez por dia, começando com os mais antigos, até que 90 dias de história permaneça. Então, a história é podada diariamente, para manter apenas 90 dias de história de mudança de inventário.

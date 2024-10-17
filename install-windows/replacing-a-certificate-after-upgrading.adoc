@@ -1,0 +1,80 @@
+---
+permalink: install-windows/replacing-a-certificate-after-upgrading.html 
+sidebar: sidebar 
+keywords:  
+summary: Abrir a IU da Web do OnCommand Insight após uma atualização resulta em um aviso de certificação. A mensagem de aviso é exibida porque um certificado autoassinado válido não está disponível após a atualização. Para evitar que a mensagem de aviso seja exibida no futuro, você pode instalar um certificado autoassinado válido para substituir o certificado original. 
+---
+= Substituindo um certificado após atualizar o OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Abrir a IU da Web do OnCommand Insight após uma atualização resulta em um aviso de certificação. A mensagem de aviso é exibida porque um certificado autoassinado válido não está disponível após a atualização. Para evitar que a mensagem de aviso seja exibida no futuro, você pode instalar um certificado autoassinado válido para substituir o certificado original.
+
+
+
+== Antes de começar
+
+Seu sistema deve satisfazer o nível mínimo de bits de criptografia (1024 bits).
+
+
+
+== Sobre esta tarefa
+
+O aviso de certificação não afeta a usabilidade do sistema. No prompt de mensagem, você pode indicar que entende o risco e, em seguida, continuar a usar o Insight.
+
+
+
+== Passos
+
+. Listar o conteúdo do keystore: `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+Consulte link:../config-admin/securityadmin-tool.html["SecurityAdmin"]a documentação para obter mais informações sobre como definir ou alterar a senha do keystore.
+
++
+Deve haver pelo menos um certificado no keystore, `ssl certificate`.
+
+. Eliminar o `ssl certificate`: `keytool -delete -alias ssl certificate -keystore c:\ProgramFiles\SANscreen\wildfly\standalone\configuration\server.keystore`
+. Gerar uma nova chave: `keytool -genkey -alias OCI.hostname.com -keyalg RSA -keysize 2048 -keystore "c:\ProgramFiles\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Quando solicitado o nome e sobrenome, insira o nome de domínio totalmente qualificado (FQDN) que você pretende usar.
+.. Forneça as seguintes informações sobre sua organização e estrutura organizacional:
++
+*** País: Abreviatura ISO de duas letras para o seu país (por exemplo, EUA)
+*** Estado ou Província: Nome do estado ou província onde a sede da sua organização está localizada (por exemplo, Massachusetts)
+*** Localidade: Nome da cidade onde está localizada a sede da sua organização (por exemplo, Waltham)
+*** Nome da organização: Nome da organização que possui o nome de domínio (por exemplo, NetApp)
+*** Nome da unidade organizacional: Nome do departamento ou grupo que usará o certificado (por exemplo, suporte)
+*** Nome do domínio/ Nome comum: O FQDN usado para pesquisas DNS do seu servidor (por exemplo, www.example.com) o sistema responde com informações semelhantes às seguintes: `Is CN=www.example.com, OU=support, O=NetApp, L=Waltham, ST=MA, C=US correct?`
+
+
+.. Digite `Yes` quando o Nome Comum (CN) for igual ao FQDN.
+.. Quando for solicitada a senha da chave, digite a senha ou pressione a tecla Enter para usar a senha existente do keystore.
+
+
+. Gerar um arquivo de solicitação de certificado: `keytool -certreq -alias localhost -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file c:\localhost.csr`
++
+O `c:\localhost.csr` arquivo é o arquivo de solicitação de certificado que foi gerado recentemente.
+
+. Envie o `c:\localhost.csr` arquivo para sua autoridade de certificação (CA) para aprovação.
++
+Uma vez que o arquivo de solicitação de certificado seja aprovado, você deseja que o certificado seja devolvido em `.der` formato. O arquivo pode ou não ser retornado como um `.der` arquivo. O formato de arquivo padrão é `.cer` para os serviços Microsoft CA.
+
+. Importar o certificado aprovado: `keytool -importcert -alias localhost -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Quando for solicitada uma senha, insira a senha do keystore.
++
+O sistema exibe a seguinte mensagem: `Certificate reply was installed in keystore`
+
+
+
+. Reinicie o serviço servidor SANscreen.
+
+
+
+
+== Resultados
+
+O navegador da Web não relata mais avisos de certificado.

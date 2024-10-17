@@ -1,0 +1,68 @@
+---
+permalink: dwh/issue-resolution-with-autosupport-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode enviar logs do ASUP para o suporte técnico para obter assistência na solução de problemas. ASUP para Data Warehouse é configurado para ser executado automaticamente. No Portal do Data Warehouse, você pode desativar o processo de envio automático, optar por incluir um backup do banco de dados do Data Warehouse ou iniciar uma transmissão para o ASUP. 
+---
+= Resolução de problemas com ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode enviar logs do ASUP para o suporte técnico para obter assistência na solução de problemas. ASUP para Data Warehouse é configurado para ser executado automaticamente. No Portal do Data Warehouse, você pode desativar o processo de envio automático, optar por incluir um backup do banco de dados do Data Warehouse ou iniciar uma transmissão para o ASUP.
+
+As informações nos logs são encaminhadas para o suporte técnico usando o protocolo HTTPS. Nenhum dado é encaminhado usando ASUP, a menos que você o configure primeiro no Insight Server.
+
+O Data Warehouse envia os logs para o servidor OnCommand Insight, que é o primeiro conetor listado na página conetores do portal do armazém de dados. O processo automático envia os seguintes arquivos:
+
+* Registros do Data Warehouse, que inclui o seguinte:
++
+** boot.log (incluindo backups)
+** dwh.log (incluindo backups como dwh.log.1)
+** dhw_troubleshoot.log
+** dwh_upgrade.log (incluindo backups)
+** WildFly.log (incluindo backups)
+** ldap.log (incluindo backups)
+** Despejo SQL do banco de dados de gerenciamento do Data Warehouse
+** mysql: my.cnf, .err e logs de consulta lenta
+** status completo do innodb
+
+
+* Logs do Cognos, que incluem o seguinte:
++
+** cognos-logs.zip
++
+Contém os arquivos de log do Cognos `<install>\cognos\c10_64\logs` do diretório. Ele também contém os logs gerados pelo Cognos, bem como o arquivo OnCommand InsightAP.log que contém todos os logs dos usuários que fazem login e saem dos relatórios do OnCommand Insight.
+
+** DailyBackup.zip
++
+Contém o backup dos artefatos de relatório nas pastas públicas. O conteúdo de Minhas pastas não está incluído neste documento.
+
+** cognos``version``_ _``site name``_content_store.zip
++
+Contém um backup completo do Cognos Content Store.
+
+
+
+
+
+Você pode gerar um relatório de solução de problemas manualmente. O arquivo .zip do Relatório de solução de problemas contém as seguintes informações do Data Warehouse:
+
+* boot.log (incluindo backups)
+* dwh.log (incluindo backups como dwh.log.1)
+* dwh_upgrade.log (incluindo backups)
+* wildfly.log (incluindo backups)
+* ldap.log (incluindo backups)
+* Faça o download de arquivos em c: Arquivos de programas/SANscreen/wildfly/standalone/log/dwh
+* Despejo SQL do banco de dados de gerenciamento do Data Warehouse
+* mysql: my.cnf, .err e logs de consulta lenta
+* status completo do innodb
+
+
+[NOTE]
+====
+O ASUP não envia automaticamente um backup do banco de dados do OnCommand Insight para o suporte técnico.
+
+====

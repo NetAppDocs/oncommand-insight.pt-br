@@ -1,0 +1,24 @@
+---
+permalink: config-admin/your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode definir entidades de negócios para acompanhar e gerar relatórios sobre os dados do seu ambiente em um nível mais granular. 
+---
+= Sua hierarquia de entidades empresariais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode definir entidades de negócios para acompanhar e gerar relatórios sobre os dados do seu ambiente em um nível mais granular.
+
+No OnCommand Insight, a hierarquia de entidades empresariais contém estes níveis:
+
+* *O Locatário* é usado principalmente por provedores de serviços para associar recursos a um cliente, por exemplo, NetApp.
+* *Linha de Negócios (LOB)* é uma linha de negócios ou linha de produtos dentro de uma empresa, por exemplo, armazenamento de dados.
+* *Business Unit* representa uma unidade de negócio tradicional, como Legal ou Marketing.
+* *Project* é frequentemente usado para identificar um projeto específico dentro de uma unidade de negócios para a qual você deseja estorno de capacidade. Por exemplo, "Patentes" pode ser um nome de projeto para a unidade de negócios jurídica e "Eventos de vendas" pode ser um nome de projeto para a unidade de negócios de Marketing. Observe que os nomes de nível podem incluir espaços.
+
+
+Você não é obrigado a usar todos os níveis no design de sua hierarquia corporativa.

@@ -1,0 +1,62 @@
+---
+permalink: config-admin/ibm-totalstorage-ds4000-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Esta fonte de dados coleta informações de inventário e desempenho. Existem duas configurações possíveis (firmware 6.x e 7.x), e ambas têm os mesmos valores. A API coleta as estatísticas de dados de volume.' 
+---
+= Fonte de dados IBM TotalStorage DS4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta fonte de dados coleta informações de inventário e desempenho. Existem duas configurações possíveis (firmware 6.x e 7.x), e ambas têm os mesmos valores. A API coleta as estatísticas de dados de volume.
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Lista separada por vírgulas de IPs do controlador SANtricity da matriz
+ a| 
+Endereços IP ou nomes de domínio totalmente qualificados de controladores, separados por vírgulas
+
+|===
+
+
+== Requisitos
+
+* Endereço IP de cada matriz DS5 ou FAStT
+* Validação de acesso: Faça ping no endereço IP de ambos os controladores em cada matriz.
+
+
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 30 minutos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (até 3600 segundos)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

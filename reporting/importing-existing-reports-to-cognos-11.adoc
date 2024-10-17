@@ -1,0 +1,38 @@
+---
+permalink: reporting/importing-existing-reports-to-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode abrir uma especificação de relatório que foi copiada anteriormente para a área de transferência. 
+---
+= Abrindo relatórios (XML) da área de transferência
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode abrir uma especificação de relatório que foi copiada anteriormente para a área de transferência.
+
+
+
+== Sobre esta tarefa
+
+Você entra na interface de usuário do Reporting criando um novo relatório ou abrindo um relatório existente
+
+
+
+== Passos
+
+. Abra o Portal de relatórios do Cognos 11: https://server-name:9300/bi/[]
+. Na barra de ferramentas, clique em image:../media/new-report.gif[""]
+. Clique em *Relatório*
+. Clique no ícone *Pages*image:../media/pages-icon.gif[""]
++
+O ícone *Report* image:../media/report-icon.gif[""]é exibido
+
+. Clique com o botão esquerdo do rato no ícone *Report*
++
+As opções de relatório são exibidas.
+
+. Clique em *abrir relatório da área de transferência*.
+

@@ -1,0 +1,38 @@
+---
+permalink: howto/file-system-utilization-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: O Chargeback para sistemas de arquivos é sempre realizado do ponto de vista do armazenamento. Os storage arrays associados a máquinas virtuais anotados para um grupo de recursos de computação específico serão incluídos nos relatórios de chargeback para esse grupo de recursos. 
+---
+= Chargeback e geração de relatórios do sistema de arquivos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Chargeback para sistemas de arquivos é sempre realizado do ponto de vista do armazenamento. Os storage arrays associados a máquinas virtuais anotados para um grupo de recursos de computação específico serão incluídos nos relatórios de chargeback para esse grupo de recursos.
+
+
+
+== Antes de começar
+
+Todas as máquinas virtuais que você deseja incluir no chargeback da utilização do sistema de arquivos devem ser anotadas com o nome apropriado do grupo de recursos de computação. Os storages associados a essas máquinas virtuais devem ser anotados com as anotações de nível apropriadas. ETL para data warehouse deve ter ocorrido depois que essas anotações estão em vigor.
+
+
+
+== Passos
+
+. Abra um navegador para o servidor de relatórios, geralmente `https://<host or IP>:9300/p2pd``http://<host or IP\>:9300/bi (7.3.3 or later)` e faça login.
+. Escolha o pacote *utilização do sistema de arquivos* e crie um novo relatório.
++
+image::../media/fs-util-pkg.gif[fs útil pkg]
+
+. Arraste e solte itens do(s) seu(s) data mart(s) para criar seu relatório.
++
+O exemplo abaixo é um relatório muito simples. Você pode criar relatórios complexos construídos em torno de suas necessidades específicas de negócios.
+
++
+image::../media/fs-simple-rpt.gif[fs simples rpt]
+
+

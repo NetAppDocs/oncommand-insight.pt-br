@@ -1,0 +1,40 @@
+---
+permalink: howto/node-dashboard-example-widget-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Configurações de widget para o painel de nó com exemplo de variáveis. 
+---
+= Exemplo de configurações do widget do painel do nó
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Configurações de widget para o painel de nó com exemplo de variáveis.
+
+A seguir estão as configurações para cada um dos widgets no exemplo de painel do nó de armazenamento.
+
+Utilização do nó:
+
+image:../media/nodeutilchart.gif[""] image:../media/nodeutiltable.gif[""]
+
+Latência do nó:
+
+image:../media/nodelatencychart.gif[""] image:../media/nodelatencytable.gif[""]
+
+Utilização do pool de storage:
+
+image:../media/poolutilchart.gif[""] image:../media/poolutiltable.gif[""]
+
+Taxa de transferência do pool de storage:
+
+image:../media/poolthroughputchart.gif[""] image:../media/poolthroughputtable.gif[""]
+
+Latência de volume:
+
+image:../media/vollatencychart.gif[""] image:../media/vollatencytable.gif[""]
+
+Volume IOPS:
+
+image:../media/voliopschart.gif[""] image:../media/voliopstable.gif[""]

@@ -1,0 +1,78 @@
+---
+permalink: install-linux/installing-a-remote-acquisition-unit-rau-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pode instalar uma ou mais unidades de aquisição remota (RAUs) no seu ambiente OnCommand Insight. As unidades de aquisição são executadas na rede que acessa (através de módulos chamados de fontes de dados) e coletam dados de diferentes dispositivos no data center.' 
+---
+= Instalar uma unidade de aquisição remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode instalar uma ou mais unidades de aquisição remota (RAUs) no seu ambiente OnCommand Insight. As unidades de aquisição são executadas na rede que acessa (através de módulos chamados de data _sources_) e coletam dados de diferentes dispositivos no data center.
+
+
+
+== Antes de começar
+
+Você deve ter concluído todos os pré-requisitos de instalação.
+
+Pelo menos uma porta deve estar aberta e disponível entre o servidor RAU e o servidor OnCommand Insight para encaminhar as informações de alteração para o servidor. Se você não tiver certeza sobre isso, valide-o abrindo um navegador da Web no computador RAU e direcionando-o para o servidor OnCommand Insight:
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+A porta de aquisição é padrão para 443, mas pode ter sido alterada durante a instalação do servidor. Se a conexão for bem-sucedida, você verá uma página de resposta OnCommand Insight, indicando uma porta aberta e disponível entre a RAU e o servidor OnCommand Insight.
+
+Para ambientes que utilizam a Tradução de endereços de rede ou a Tradução de endereços de porta (NAT/PAT: Ou seja, qualquer tradução de endereços IP), o Insight suporta apenas a inserção de uma RAU entre NAT e o dispositivo.
+
+* Suportado: OnCommand Insight --> NAT --> RAU --> dispositivo
+* Não suportado: Dispositivo OnCommand Insight
+
+
+
+
+== Passos
+
+. Faça login no servidor RAU usando uma conta com sudo Privileges.
+. Navegue até o diretório no servidor onde os arquivos de instalação estão localizados e digite o seguinte comando:
++
+`unzip oci-rau-<version>-linux-x86_64.zip`
+
+. Você pode exibir sintaxe, argumentos de comando e uso de parâmetros para `oci-install.sh`:
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh --help`
+
+. Execute o script de instalação:
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh`
+
+. Leia o Contrato de Licença, aceite-o e siga as instruções.
++
+Depois de responder a todos os prompts, a instalação começa e deve levar aproximadamente 10 minutos, dependendo dos aplicativos instalados.
+
+
+
+Se seus dados começarem a adquirir, você estará tudo definido; _não_ precisará sincronizar o servidor e a RAU conforme indicado abaixo.
+
+
+
+== Sincronizar servidor e RAU
+
+
+IMPORTANT: Se os dados não começarem a adquirir após a instalação da Unidade de aquisição Remota, sincronize a RAU com o servidor OnCommand Insight. Siga estes passos:
+
+. No sistema servidor OnCommand Insight, inicie a ferramenta *SecurityAdmin* no modo interativo
++
+ securityadmin -i
+. Altere a senha do usuário _acquisition_ do Insight Server para uma senha de sua escolha. *Tome nota desta senha*, pois você a exigirá abaixo.
+. Reinicie o servidor/LAU.
+. No sistema de Unidade de aquisição Remota (RAU), inicie a ferramenta *SecurityAdmin* no modo interativo. Você precisará da senha anotada no passo 2 acima.
++
+ securityadmin -i
+. Altere a senha do usuário _acquisition_ para a senha usada na etapa 2.
+. Reinicie a RAU.
+

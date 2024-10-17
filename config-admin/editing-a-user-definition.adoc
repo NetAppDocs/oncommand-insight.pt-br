@@ -1,0 +1,40 @@
+---
+permalink: config-admin/editing-a-user-definition.html 
+sidebar: sidebar 
+keywords:  
+summary: Um usuário com administrador Privileges pode editar uma conta de usuário para alterar o endereço de e-mail ou as funções do OnCommand Insight ou DWH e funções de relatório. 
+---
+= Editar uma definição de utilizador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um usuário com administrador Privileges pode editar uma conta de usuário para alterar o endereço de e-mail ou as funções do OnCommand Insight ou DWH e funções de relatório.
+
+
+
+== Antes de começar
+
+Determine o tipo de conta de usuário (OnCommand Insight, DWH ou uma combinação) que precisa ser alterada.
+
+
+
+== Sobre esta tarefa
+
+Para usuários LDAP, você só pode modificar o endereço de e-mail usando este método.
+
+
+
+== Passos
+
+. Inicie sessão com o administrador Privileges.
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Clique em *Configuração*.
+. Clique na guia *usuários*.
+. Localize a linha que exibe a conta de usuário que você deseja modificar.
+. À direita das informações do usuário, clique no ícone *Editar conta de usuário*.
+. Faça as alterações necessárias.
+. Clique em *Salvar*.
+

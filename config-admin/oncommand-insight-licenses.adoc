@@ -1,0 +1,554 @@
+---
+permalink: config-admin/oncommand-insight-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: O OnCommand Insight opera com licenças que habilitam recursos específicos no Insight Server. 
+---
+= Licenças OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Insight opera com licenças que habilitam recursos específicos no Insight Server.
+
+* *Descubra*
++
+Discover é a licença básica do Insight que suporta inventário. Você deve ter uma licença Discover para usar o OnCommand Insight, e a licença Discover deve ser emparelhada com pelo menos uma das licenças assure, Perform ou Plan.
+
+* * Assegurar*
++
+Uma licença assure fornece suporte para a funcionalidade de garantia, incluindo política de caminho global e SAN e gerenciamento de violações. Uma licença assure também permite que você visualize e gerencie vulnerabilidades.
+
+* *Executar*
++
+Uma licença Perform suporta o monitoramento de desempenho em páginas de ativos, widgets do painel, consultas e assim por diante, bem como o gerenciamento de políticas e violações de desempenho.
+
+* *Plano*
++
+Uma licença Plan suporta funções de Planejamento, incluindo uso e alocação de recursos.
+
+* *Pacote de utilização do host*
++
+Uma licença de utilização do host suporta a utilização do sistema de arquivos em hosts e máquinas virtuais.
+
+* *Criação de relatórios*
++
+Uma licença de criação de relatórios suporta autores adicionais para relatórios. Esta licença requer a licença Plan.
+
+
+
+Os módulos OnCommand Insight são licenciados para prazo anual ou perpétuo:
+
+* Por terabyte de capacidade monitorada para descobrir, assegurar, Planejar, executar módulos
+* Por número de hosts para o pacote de utilização do host
+* Número de unidades adicionais de Pro-autores Cognos necessárias para a criação de relatórios
+
+
+As chaves de licença são um conjunto de strings exclusivas que são geradas para cada cliente. Você pode obter chaves de licença do seu representante da OnCommand Insight.
+
+As licenças instaladas controlam as seguintes opções disponíveis no software:
+
+* *Descubra*
++
+Adquirir e gerenciar inventário (Fundação)
+
++
+Monitore alterações e gerencie políticas de inventário
+
+* * Assegurar*
++
+Exibir e gerenciar políticas e violações de caminho de SAN
+
++
+Visualize e gerencie vulnerabilidades
+
++
+Exibir e gerenciar tarefas e migrações
+
+* *Plano*
++
+Exibir e gerenciar solicitações
+
++
+Exibir e gerenciar tarefas pendentes
+
++
+Visualizar e gerenciar violações de reserva
+
++
+Visualize e gerencie violações de balanceamento de portas
+
+* *Executar*
++
+Monitore dados de desempenho, incluindo dados em widgets do painel, páginas de ativos e consultas
+
++
+Visualizar e gerenciar políticas e violações de desempenho
+
+
+
+As tabelas a seguir fornecem detalhes sobre os recursos disponíveis com e sem a licença Perform para usuários admin e não administradores.
+
+|===
+
+
+| Recurso (admin) | Com a licença de execução | Sem executar licença 
+
+
+ a| 
+Aplicação
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Máquina virtual
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Hipervisor
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Host
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Armazenamento de dados
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+VMDK
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Volume interno
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Volume
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Pool de storage
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Disco
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Armazenamento
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Nó de storage
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Malha
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Porta do switch
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos; "erros de porta" mostra "N/A"
+
+
+
+ a| 
+Porta de armazenamento
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Porta de NPV
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Interrutor
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Switch NPV
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Qtrees
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Cota
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Caminho
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Zona
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Membro da zona
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Dispositivo genérico
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Fita
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Mascaramento
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Sessões ISCSI
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Portais de rede ICSI
+ a| 
+Sim
+ a| 
+Sem dados de desempenho ou gráficos
+
+
+
+ a| 
+Pesquisa
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Administrador
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Painel de instrumentos
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Widgets
+ a| 
+Sim
+ a| 
+Parcialmente disponível (apenas widgets de ativo, consulta e administrador estão disponíveis)
+
+
+
+ a| 
+Painel de violações
+ a| 
+Sim
+ a| 
+Oculto
+
+
+
+ a| 
+Painel ativos
+ a| 
+Sim
+ a| 
+Parcialmente disponível (os widgets de IOPS de armazenamento e IOPS de VM estão ocultos)
+
+
+
+ a| 
+Gerenciar políticas de performance
+ a| 
+Sim
+ a| 
+Oculto
+
+
+
+ a| 
+Gerir anotações
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Gerir regras de anotação
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Gerenciar aplicativos
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Consultas
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+Gerenciar entidades de negócios
+ a| 
+Sim
+ a| 
+Sim
+
+|===
+|===
+
+
+| Recurso | Usuário - com licença de execução | Convidado - com licença de execução | Usuário - sem executar licença | Convidado - sem licença de execução 
+
+
+ a| 
+Painel ativos
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Parcialmente disponível (os widgets de IOPS de armazenamento e IOPS de VM estão ocultos)
+ a| 
+Parcialmente disponível (os widgets de IOPS de armazenamento e IOPS de VM estão ocultos)
+
+
+
+ a| 
+Painel de instrumentos personalizado
+ a| 
+Exibir somente (sem opções de criar, editar ou salvar)
+ a| 
+Exibir somente (sem opções de criar, editar ou salvar)
+ a| 
+Exibir somente (sem opções de criar, editar ou salvar)
+ a| 
+Exibir somente (sem opções de criar, editar ou salvar)
+
+
+
+ a| 
+Gerenciar políticas de performance
+ a| 
+Sim
+ a| 
+Oculto
+ a| 
+Oculto
+ a| 
+Oculto
+
+
+
+ a| 
+Gerir anotações
+ a| 
+Sim
+ a| 
+Oculto
+ a| 
+Sim
+ a| 
+Oculto
+
+
+
+ a| 
+Gerenciar aplicativos
+ a| 
+Sim
+ a| 
+Oculto
+ a| 
+Sim
+ a| 
+Oculto
+
+
+
+ a| 
+Gerenciar entidades de negócios
+ a| 
+Sim
+ a| 
+Oculto
+ a| 
+Sim
+ a| 
+Oculto
+
+
+
+ a| 
+Consultas
+ a| 
+Sim
+ a| 
+Visualizar e editar apenas (sem opção de guardar)
+ a| 
+Sim
+ a| 
+Visualizar e editar apenas (sem opção de guardar)
+
+|===

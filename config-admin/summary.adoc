@@ -1,0 +1,18 @@
+---
+permalink: config-admin/summary.html 
+sidebar: sidebar 
+keywords:  
+summary: A seção Resumo em uma página de ativo exibe um resumo de informações sobre o ativo específico e mostra questões relacionadas ao ativo, indicadas por um círculo vermelho, com hiperlinks para informações adicionais sobre ativos relacionados e para quaisquer políticas de desempenho atribuídas ao ativo. 
+---
+= Resumo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seção Resumo em uma página de ativo exibe um resumo de informações sobre o ativo específico e mostra questões relacionadas ao ativo, indicadas por um círculo vermelho, com hiperlinks para informações adicionais sobre ativos relacionados e para quaisquer políticas de desempenho atribuídas ao ativo.
+
+O exemplo a seguir mostra alguns dos tipos de informações disponíveis na seção Resumo de uma página de ativo para uma máquina virtual. Qualquer item com um círculo vermelho sólido ao lado indica possíveis problemas com o ambiente monitorado.
+
+image::../media/summary-section.gif[seção de resumo]

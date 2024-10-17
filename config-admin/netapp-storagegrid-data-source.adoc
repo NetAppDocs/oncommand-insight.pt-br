@@ -1,0 +1,79 @@
+---
+permalink: config-admin/netapp-storagegrid-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Esta fonte de dados coleta dados de inventário e desempenho para o StorageGRID. 
+---
+= Fonte de dados NetApp StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta fonte de dados coleta dados de inventário e desempenho para o StorageGRID.
+
+
+
+== Requisitos
+
+A seguir estão os requisitos para configurar esta fonte de dados:
+
+* Endereço IP do host StorageGRID
+* Um nome de usuário e senha para um usuário que teve as funções de consulta métrica e Acesso ao locatário atribuídas
+* Porta 443
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Endereço IP do host StorageGRID (MVIP)
+ a| 
+Endereço IP do host do StorageGRID
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome utilizado para iniciar sessão no StorageGRID
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe utilizada para iniciar sessão no StorageGRID
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 60 minutos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 900 segundos)
+
+|===

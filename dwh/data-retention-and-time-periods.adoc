@@ -1,0 +1,100 @@
+---
+permalink: dwh/data-retention-and-time-periods.html 
+sidebar: sidebar 
+keywords:  
+summary: O Armazém de dados OnCommand Insight retém os dados obtidos do processo de extração, transformação e carregamento por diferentes períodos de tempo com base nos diferentes marts de dados e granularidade de tempo dos dados. 
+---
+= Retenção de dados, ETL e períodos de tempo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Data Warehouse da OnCommand Insight retém os dados obtidos do processo de extração, transformação e carga (ETL) por diferentes períodos de tempo com base nos diferentes marts de dados e granularidade de tempo dos dados.
+
+
+
+== Marcas de performance e granularidade horária para volumes e volumes internos
+
+O Armazém de dados OnCommand Insight Registra as médias horárias, máximas horárias e bits de acesso para cada hora do dia (24 pontos de dados) por 14 dias. O bit de acesso é um valor booleano que é verdadeiro se o volume for acessado ou falso se o volume não for acessado durante o intervalo de hora em hora. Todos os 24 pontos de dados para o dia anterior são obtidos durante o primeiro processo ETL do dia.
+
+Você não precisa executar um processo ETL por hora para reunir os pontos de dados por hora. Executar processos adicionais de ETL durante o dia não obtém nenhuma informação de desempenho dos servidores OnCommand Insight.
+
+
+
+== Marcas de performance e granularidade diária de volumes e volumes internos
+
+Todos os dias, quando o ETL é processado, as médias diárias para o dia anterior são calculadas e preenchidas no Data Warehouse. A média diária é um resumo dos 24 pontos de dados do dia anterior. Os marts de dados de desempenho retêm resumos diários de volumes e volumes internos por 13 meses.
+
+
+
+== Capacidade marts e granularidade diária
+
+Os marts da capacidade fornecem medições diárias para vários fatos da capacidade em uma base diária por um período de 13 meses. Os fatos de capacidade no Data Warehouse são atuais a partir da última aquisição de fonte de dados para o dispositivo antes do ETL.
+
+
+
+== Limites de capacidade e granularidade mensal
+
+O Data Warehouse retém dados diários de capacidade por 13 meses. Após o limite de 13 meses ser atingido, os dados de capacidade são resumidos mensalmente. Os dados mensais baseiam-se nos valores refletidos pela data que corresponde à data representativa do mês.
+
+A tabela a seguir mostra quais dados mensais estão incluídos no resumo mensal:
+
+|===
+
+
+| Data | É valor Representante mês | Capacidade alocada 
+
+
+ a| 
+Janeiro de 1
+ a| 
+1 (verdadeiro)
+ a| 
+50 TB
+
+
+
+ a| 
+Janeiro de 2
+ a| 
+0 (Falso)
+ a| 
+52 TB
+
+
+
+ a| 
+...
+ a| 
+...
+ a| 
+...
+
+
+
+ a| 
+Janeiro de 31
+ a| 
+0 (Falso)
+ a| 
+65 TB
+
+
+
+ a| 
+Fev. 1
+ a| 
+1 (verdadeiro)
+ a| 
+65 TB
+
+|===
+Com base na tabela, um relatório mensal mostraria 50 TB alocados para janeiro e 65 TB alocados para fevereiro. Todos os outros valores de capacidade para Janeiro não seriam incluídos no resumo mensal.
+
+
+
+== Inventário mart
+
+O data mart do inventário não é histórico. Cada vez que um processo ETL é executado, o Inventory mart é apagado e reconstruído. Portanto, quaisquer relatórios gerados a partir do Inventory mart não refletem a configuração histórica do inventário.

@@ -1,0 +1,29 @@
+---
+indexpage:
+  title: Documentação do OnCommand Insight
+  summary: O OnCommand Insight simplifica o gerenciamento operacional de infraestruturas
+    DE TI híbridas para ambientes no local e em nuvens públicas e privadas.
+  keywords: oci, insight
+  lead: O OnCommand Insight simplifica o gerenciamento operacional de infraestruturas
+    DE TI híbridas para ambientes no local e em nuvens públicas e privadas.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Instalação (Windows)
+      url: install-windows/installation-prerequisites.html
+    - title: Instalação (Linux)
+      url: install-linux/installation-prerequisites.html
+    - title: Configuração e administração
+      url: config-admin/setting-up-insight.html
+  - title: Relatórios
+    links:
+    - title: Administração do Armazém de dados
+      url: dwh/welcome-to-data-warehouse.html
+    - title: Relatórios
+      url: reporting/welcome-to-oncommand-insight-reporting.html
+  - title: Como fazer e FAQ
+    links:
+    - title: Instruções
+      url: howto/getting-started-with-insight.html
+    - title: Perguntas frequentes
+      url: faq/faq-general-insight-questions.html

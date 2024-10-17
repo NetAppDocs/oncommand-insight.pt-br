@@ -1,0 +1,33 @@
+---
+permalink: config-admin/setting-annotation-rule-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: Por padrão, o OnCommand Insight avalia as regras de anotação sequencialmente; no entanto, você pode configurar a ordem na qual o OnCommand Insight avalia as regras de anotação se desejar que o Insight avalie regras em uma ordem específica. 
+---
+= Definir precedência de regra de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Por padrão, o OnCommand Insight avalia as regras de anotação sequencialmente; no entanto, você pode configurar a ordem na qual o OnCommand Insight avalia as regras de anotação se desejar que o Insight avalie regras em uma ordem específica.
+
+
+
+== Passos
+
+. Faça login na IU do Insightweb.
+. Clique em *Manage* e selecione *Annotation rules*.
++
+A página regras de anotação exibe a lista de regras de anotação existentes.
+
+. Posicione o cursor sobre uma regra de anotação.
++
+As setas de precedência aparecem à direita da regra.
+
+. Para mover uma regra para cima ou para baixo na lista, clique na seta para cima ou na seta para baixo.
++
+Por padrão, novas regras são adicionadas sequencialmente à lista de regras. Anotações definidas manualmente em páginas de ativos individuais têm precedência sobre anotações baseadas em regras quando o Insight avalia as regras de anotação.
+
+

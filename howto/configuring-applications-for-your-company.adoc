@@ -1,0 +1,118 @@
+---
+permalink: howto/configuring-applications-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: Entender os aplicativos usados no ambiente da sua empresa ajuda você a acompanhar o uso dos ativos e gerar relatórios sobre os custos. Aqui configuraremos as aplicações da sua empresa e associaremos-as aos ativos apropriados. 
+---
+= Configurando aplicativos para sua empresa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Compreender as aplicações utilizadas no ambiente da sua empresa ajuda-o a acompanhar a utilização dos ativos e a registar os custos. Aqui vamos configurar as aplicações da sua empresa e associá-las aos ativos apropriados.
+
+
+
+== Sobre esta tarefa
+
+Na seção _Configurando entidades de negócios para sua empresa_, criamos algumas entidades de negócios e recomendamos que você liste todos os aplicativos associados a cada entidade de negócios. O OnCommand Insight permite-nos, então, rastrear dados associados a esses aplicativos para coisas como uso ou relatórios de custos.
+
+Antes de controlar os dados associados aos aplicativos em execução no ambiente, primeiro é necessário definir esses aplicativos e associá-los aos ativos apropriados. Você pode associar aplicativos aos seguintes ativos: Hosts, máquinas virtuais, volumes, volumes internos, qtrees, compartilhamentos e hipervisores.
+
+Neste passo a passo, queremos acompanhar o uso de máquinas virtuais que a equipe de marketing usa para seu e-mail do Exchange. Você se lembrará da tabela a seguir que criamos ao definir nossas entidades de negócios. Vamos adicionar uma coluna a esta Planilha listando os aplicativos usados por cada entidade de negócio. (Esta tabela é apenas um exemplo de Planilha. Você não verá uma coluna "aplicativos" na tabela entidades de negócios no Insight.)
+
+|===
+
+
+| Locatário | Linha de negócio | Unidade de negócio | Projeto | Aplicações 
+
+
+ a| 
+NetApp
+ a| 
+Storage de dados
+ a| 
+Legal
+ a| 
+Patentes
+ a| 
+Oracle Identity Manager, Oracle On Demand, PatentWiz
+
+
+
+ a| 
+NetApp
+ a| 
+Armazenamento de dados
+ a| 
+Marketing
+ a| 
+Eventos de vendas
+ a| 
+Exchange, Oracle Shared Database, Blastoff Event Planner
+
+
+
+ a| 
+N/A.
+ a| 
+N/A.
+ a| 
+Segurança e Segurança
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+ a| 
+
+|===
+*Criando aplicativos no Insight:*
+
+
+
+== Passos
+
+. Faça login no Insight como um usuário com permissões administrativas.
+. Selecione *Manage* > *Applications*
+. Clique no botão * Adicionar *
+. Digite o nome do aplicativo (por exemplo, digite ""Troca""")
+. Selecione uma prioridade para a aplicação
+. Se você deseja associar o aplicativo a uma entidade de negócios, selecione uma na lista suspensa *entidade de negócio*. Caso contrário, você pode deixar isso como "nenhum".
+. Se você quiser garantir que cada host tenha acesso aos mesmos volumes em um cluster, verifique se a caixa *Validar compartilhamento de volume* está marcada. Por exemplo, os hosts em clusters de alta disponibilidade geralmente precisam ser mascarados para os mesmos volumes para permitir o failover; no entanto, os hosts em aplicativos não relacionados geralmente não têm necessidade de acessar os mesmos volumes físicos. Além disso, as políticas regulatórias podem exigir que você impeça explicitamente que aplicativos não relacionados acessem os mesmos volumes físicos por motivos de segurança. Se não utilizar a partilha de volume, desmarque a caixa *Validar partilha de volume*. Isso requer a licença assure.
+. Clique em Guardar.
+. Repita para todas as outras aplicações no seu ambiente.
+
+
+
+
+== Depois de terminar
+
+Vemos que a equipe de marketing usa o aplicativo Exchange. Queremos ver a utilização da máquina virtual para o Exchange, a fim de prever quando precisaremos adicionar mais armazenamento. Vamos associar o aplicativo Exchange a todas as VM do Marketing. A maneira mais fácil de conseguir isso é através de uma consulta.
+
+Ao seguir estas etapas, você pode associar cada um de seus aplicativos aos ativos apropriados.
+
+*Associar aplicações aos ativos:*
+
+Agora que você criou seus aplicativos (e os vinculou a entidades de negócios, conforme desejado), agora podemos associar esses aplicativos a ativos em seu ambiente. Neste exemplo, associaremos o aplicativo Exchange a várias máquinas virtuais em sua empresa. A maneira mais fácil de fazer isso é o que uma consulta.
+
+. Selecione *consultas* > * Nova consulta*.
+. Na lista suspensa *Select Resource Type* (Selecionar tipo de recurso), escolha _Virtual Machine_
+. Vamos assumir que a equipe de Marketing nomeia seus ativos com a string "'_mktg_". Na caixa filtro Nome, digite ""_mktg_ "(sem aspas) e clique no botão aplicar (marca de seleção).
+. A lista de todas as VM com a string "'_mktg_ ""é mostrada.
+. Se desejar, clique no menu suspenso *mais* e adicione filtros adicionais.
+. Selecione as VMs usadas para o Exchange clicando na caixa de seleção ao lado de cada Nome da VM desejado ou selecione todas as VMs clicando na caixa de seleção na parte superior da coluna.
+. Quando as VMs desejadas forem selecionadas, clique no botão *ações* e escolha *Adicionar aplicativo*.
+. Na caixa de diálogo atribuir aplicativo, clique no menu suspenso *aplicativo* e selecione ""Exchange""".
+. Clique em *Salvar*.
+. Repita conforme necessário para associar o aplicativo Exchange a outros ativos (hosts, volumes, etc.)
+

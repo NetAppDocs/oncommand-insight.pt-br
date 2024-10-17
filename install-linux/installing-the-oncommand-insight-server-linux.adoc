@@ -1,0 +1,79 @@
+---
+permalink: install-linux/installing-the-oncommand-insight-server-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: O servidor OnCommand Insight é instalado usando a linha de comando. 
+---
+= Instalar o servidor OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O servidor OnCommand Insight é instalado usando a linha de comando.
+
+
+
+== Antes de começar
+
+Você deve ter concluído todos os pré-requisitos de instalação.
+
+
+
+== Passos
+
+. Faça login no servidor Insight usando uma conta com sudo Privileges.
+. Navegue até o diretório no servidor onde os arquivos de instalação estão localizados e digite o seguinte comando:
++
+`unzip oci-<version>-linux-x86_64.zip`
+
++
+Certifique-se de que verifica o número da versão do ficheiro de instalação; o número da versão pode ser diferente do apresentado no comando.
+
+. Você pode exibir sintaxe, argumentos de comando e uso de parâmetros para `oci-install.sh` :
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh --help`
+
+. Execute o script de instalação:
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh`
+
++
+Ao instalar o Insight Server no CentOS 9 Stream, Red Hat Enterprise Linux 9,4 ou Oracle Linux 9,4, você deve primeiro mudar para o diretório que contém o arquivo do instalador e, em seguida, executar o comando install usando a opção de linha de comando "--install-mysql-dependencies":
+
++
+....
+cd /tmp/oci-7.3.16.1.297-linux-x86_64
+sudo ./oci-install.sh --install-mysql-dependencies
+....
+. Leia o Contrato de Licença, aceite-o e siga as instruções.
+. Se você estiver usando o modelo de licenciamento do Insight Consumption, você deverá habilitar o envio de informações de uso para o NetApp. Digite `Y` neste prompt.
+
+
+
+
+== Resultados
+
+Depois de responder a todos os prompts, a instalação começa e deve levar aproximadamente 10 minutos, dependendo dos aplicativos instalados.
+
+. Se você estiver instalando uma RAU (Remote Acquisition Unit), deverá executar a ferramenta SecurityAdmin para criar uma senha para o usuário _acquisition_. Você precisará dessa senha ao instalar o RAU.
++
+Observação: Se você criou essa senha, _não_ precisará sincronizar o servidor e a RAU conforme indicado abaixo.
+
+
+
+
+
+== Sincronizar servidor com DWH e RAU
+
+
+IMPORTANT: Depois de instalar a Unidade de aquisição Remota e/ou o Armazém de dados, *deve* sincronizar a RAU/DWH com o servidor OnCommand Insight. Siga os passos indicados abaixo:
+
+link:../install-windows/installing-a-remote-acquisition-unit-rau.html#synchronize-server-and-rau["Sincronizar servidor e RAU (Windows)"]
+
+link:../install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html#synchronize-server-and-dwh["Sincronizar servidor e DWH (Windows)"]
+
+link:../install-linux/installing-a-remote-acquisition-unit-rau-linux.html#synchronize-server-and-rau["Sincronizar servidor e RAU (Linux)"]
+
+link:../install-linux/installing-oncommand-insight-data-warehouse-linux.html#synchronize-server-and-dwh["Sincronizar servidor e DWH (Linux)"]

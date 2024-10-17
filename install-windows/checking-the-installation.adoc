@@ -1,0 +1,18 @@
+---
+permalink: install-windows/checking-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode abrir o Insight em um navegador compatível para verificar a instalação. Você também pode querer verificar os arquivos de log do Insight. 
+---
+= Verificar a instalação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode abrir o Insight em um navegador compatível para verificar a instalação. Você também pode querer verificar os arquivos de log do Insight.
+
+Quando abre o Insight pela primeira vez, abre-se a página de configuração da licença. Depois de introduzir as informações da licença, tem de configurar as fontes de dados. Consulte o _Guia de configuração e administração do OnCommand Insight_ para obter informações sobre como inserir definições de origem de dados e configurar usuários e notificações do Insight.
+
+Se você tiver problemas de instalação, entre em Contato com o suporte técnico e forneça as informações solicitadas.

@@ -1,0 +1,222 @@
+---
+permalink: config-admin/emc-vplex-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Para configuração, esta fonte de dados requer um endereço IP do servidor VPLEX e uma conta de domínio de nível administrativo. 
+---
+= Origem de dados EMC VPLEX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configuração, esta fonte de dados requer um endereço IP do servidor VPLEX e uma conta de domínio de nível administrativo.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados VPLEX da EMC. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Cluster
+ a| 
+Armazenamento
+
+
+
+ a| 
+Motor
+ a| 
+Nó de storage
+
+
+
+ a| 
+Dispositivo, extensão do sistema
+ a| 
+Pool de storage de back-end
+
+
+
+ a| 
+Volume virtual
+ a| 
+Volume
+
+
+
+ a| 
+Porta Front-end, porta back-end
+ a| 
+Porta
+
+
+
+ a| 
+Dispositivo distribuído
+ a| 
+Sincronização de armazenamento
+
+
+
+ a| 
+Vista de armazenamento
+ a| 
+Mapa de volume, Máscara de volume
+
+
+
+ a| 
+Volume de armazenamento
+ a| 
+LUN de back-end
+
+
+
+ a| 
+ITLs
+ a| 
+Caminho de back-end
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Um endereço IP do servidor VPLEX
+* Conta de domínio de nível administrativo para o servidor VPLEX
+* Porta 443 (HTTPS). Requer conetividade de saída à porta TCP 443 na estação de gerenciamento VPLEX.
+* Para desempenho, nome de usuário e senha somente leitura para acesso ssh/scp.
+* Para o desempenho, a porta 22 é necessária.
+* Validar acesso: Verifique usando `telnet` para a porta 443. Para uma porta diferente da porta padrão, com qualquer uso do navegador
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Endereço IP da consola de gestão VPLEX
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do Console de Gerenciamento VPLEX
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de usuário para VPLEX CLI
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe utilizada para VPLEX CLI
+
+
+
+ a| 
+Endereço IP remoto de desempenho da consola de gestão VPLEX
+ a| 
+Endereço IP remoto de desempenho da consola de gestão VPLEX
+
+
+
+ a| 
+Nome de utilizador remoto do desempenho
+ a| 
+Desempenho Nome de usuário remoto do VPLEX Management Console
+
+
+
+ a| 
+Palavra-passe remota de desempenho
+ a| 
+Palavra-passe remota de desempenho do VPLEX Management Console
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Porta de comunicação
+ a| 
+Porta usada para VPLEX CLI
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Tempo limite da ligação (seg.)
+ a| 
+Tempo limite da ligação (predefinição 60 segundos)
+
+
+
+ a| 
+Número de geometrias
+ a| 
+Número de tentativas de tentativa de inventário
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 600 segundos)
+
+
+
+ a| 
+Tempo limite de espera do processo SSH de desempenho (seg)
+ a| 
+Tempo limite do processo SSH (padrão de 600 segundos)
+
+
+
+ a| 
+Tempo limite de espera da faixa SSH (seg.)
+ a| 
+Tempo limite de espera do banner SSH (padrão de 20 segundos)
+
+
+
+ a| 
+Número de geometrias
+ a| 
+Número de tentativas de tentativa de desempenho
+
+|===

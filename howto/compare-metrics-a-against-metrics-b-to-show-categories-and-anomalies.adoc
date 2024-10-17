@@ -1,0 +1,25 @@
+---
+permalink: howto/compare-metrics-a-against-metrics-b-to-show-categories-and-anomalies.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode usar um gráfico de dispersão para mostrar dois conjuntos de dados para cada objeto. Por exemplo, você pode especificar IOPS leitura e latência total a serem exibidos para cada objeto. Usando esse gráfico, você pode identificar o objeto que considera problemático com base no IOPS e na latência combinada. 
+---
+= Compare as métricas A com as métricas B para mostrar categorias e anomalias
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar um gráfico de dispersão para mostrar dois conjuntos de dados para cada objeto. Por exemplo, você pode especificar IOPS leitura e latência total a serem exibidos para cada objeto. Usando esse gráfico, você pode identificar o objeto que considera problemático com base no IOPS e na latência combinada.
+
+
+
+== Passos
+
+. Adicione um widget com um gráfico de dispersão ao novo painel: *Widget* > *Gráfico de dispersão*
+. Altere o dispositivo padrão para Máquina Virtual: Clique em *Storage* > *Virtual Machine* > *Latency Total* > *IOPS Read*
++
+O sistema exibe um gráfico de dispersão semelhante ao seguinte: image:../media/guid-a2c666db-f53d-42b8-82ef-62743b8b0fe2.gif[""]
+
+

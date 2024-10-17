@@ -1,0 +1,48 @@
+---
+permalink: config-admin/opening-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de instalar o OnCommand Insight, você deve instalar suas licenças e, em seguida, configurar o Insight para monitorar seu ambiente. Para fazer isso, use um navegador da Web para acessar a IU da Web do Insight. 
+---
+= Acessando a IU da Web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de instalar o OnCommand Insight, você deve instalar suas licenças e, em seguida, configurar o Insight para monitorar seu ambiente. Para fazer isso, use um navegador da Web para acessar a IU da Web do Insight.
+
+
+
+== Passos
+
+. Execute um dos seguintes procedimentos:
++
+** Abra o Insight no servidor Insight:
++
+`+https://fqdn+`
+
+** Abra o Insight de qualquer outro local:
++
+`+https://fqdn:port+`
+
++
+O número da porta é 443 ou outra porta configurada quando o servidor Insight foi instalado. O número da porta é padrão para 443 se você não o especificar no URL.
+
+
+
++
+A caixa de diálogo OnCommand Insight é exibida:image:../media/oci-login-dialog-box.gif[""]
+
+. Digite seu nome de usuário e senha e clique em *Login*.
++
+Se as licenças tiverem sido instaladas, é apresentada a página de configuração da fonte de dados.
+
++
+[NOTE]
+====
+Uma sessão do navegador do Insight que está inativa por 30 minutos é esgotada e você é desconetado automaticamente do sistema. Para maior segurança, é recomendável fechar o navegador após sair do Insight.
+
+====
+

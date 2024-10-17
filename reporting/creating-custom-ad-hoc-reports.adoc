@@ -1,0 +1,21 @@
+---
+permalink: reporting/creating-custom-ad-hoc-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode usar as ferramentas de criação de relatórios para criar relatórios personalizados. Depois de criar relatórios, você pode salvá-los e executá-los em um horário regular. Os resultados dos relatórios podem ser enviados automaticamente por e-mail para você e para os outros. 
+---
+= Criação de relatórios ad hoc personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar as ferramentas de criação de relatórios para criar relatórios personalizados. Depois de criar relatórios, você pode salvá-los e executá-los em um horário regular. Os resultados dos relatórios podem ser enviados automaticamente por e-mail para você e para os outros.
+
+Os exemplos nesta seção mostram o seguinte processo, que pode ser usado para qualquer um dos modelos de dados do OnCommand Insight:
+
+* Identificar uma pergunta a ser respondida com um relatório
+* Determinando os dados necessários para dar suporte aos resultados
+* Selecionar elementos de dados para o relatório
+

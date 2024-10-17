@@ -1,0 +1,22 @@
+---
+permalink: install-windows/verifying-the-rau-service.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Após uma instalação bem-sucedida da unidade de aquisição remota (RAU), o serviço RAU OnCommand Insight deve estar disponível no ambiente de serviços do Microsoft Windows.' 
+---
+= Verificar o serviço da unidade de aquisição remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após uma instalação bem-sucedida da unidade de aquisição remota (RAU), o serviço RAU da OnCommand Insight deve estar disponível no ambiente de serviços do Microsoft Windows.
+
+
+
+== Passos
+
+. Para verificar se a RAU foi adicionada aos serviços do Windows, abra o menu Iniciar do Windows e selecione *Painel de Controle* > *Ferramentas administrativas* > *Serviços*.
+. Localize a *OnCommand Insight Acq - Unidade de aquisição remota (RAU) da OnCommand Insight* na lista.
+

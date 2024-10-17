@@ -1,0 +1,18 @@
+---
+permalink: reporting/colors-used-in-data-model-elements.html 
+sidebar: sidebar 
+keywords:  
+summary: As cores dos elementos do modelo de dados têm indicações diferentes. 
+---
+= Cores usadas em elementos de modelo de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As cores dos elementos do modelo de dados têm indicações diferentes.
+
+* Ativos amarelos: Representam medições.
+* Ativos não amarelos: Representam atributos. Esses valores não agregam.
+

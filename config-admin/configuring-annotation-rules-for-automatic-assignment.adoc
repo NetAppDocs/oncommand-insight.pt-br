@@ -1,0 +1,57 @@
+---
+permalink: config-admin/configuring-annotation-rules-for-automatic-assignment.html 
+sidebar: sidebar 
+keywords:  
+summary: Como alternativa à aplicação manual de anotações a ativos individuais, você pode aplicar automaticamente anotações a vários ativos usando regras de anotação. Anotações definidas manualmente em páginas de ativos individuais têm precedência sobre anotações baseadas em regras quando o Insight avalia as regras de anotação. 
+---
+= Criando regras de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como alternativa à aplicação manual de anotações a ativos individuais, você pode aplicar automaticamente anotações a vários ativos usando regras de anotação. Anotações definidas manualmente em páginas de ativos individuais têm precedência sobre anotações baseadas em regras quando o Insight avalia as regras de anotação.
+
+
+
+== Antes de começar
+
+Você deve ter criado uma consulta para a regra de anotação.
+
+
+
+== Sobre esta tarefa
+
+Embora possa editar os tipos de anotação enquanto cria as regras, deve ter definido os tipos com antecedência.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Clique em *Manage* e selecione *Annotation rules*.
++
+A página regras de anotação exibe a lista de regras de anotação existentes.
+
+. Clique image:../media/add-annotation-icon.gif[""]em .
++
+A caixa de diálogo Adicionar regra é exibida.
+
+. Faça o seguinte:
++
+.. Na caixa *Nome*, insira um nome exclusivo que descreva a regra.
++
+Este nome aparecerá na página regras de anotação.
+
+.. Clique em *consulta* e selecione a consulta que o OnCommand Insight deve usar para aplicar a anotação aos ativos.
+.. Clique em *Annotation* e selecione a anotação que pretende aplicar.
+.. Clique em *value* e selecione um valor para a anotação.
++
+Por exemplo, se você escolher aniversário como anotação, especifique uma data para o valor.
+
+
+
+. Clique em *Salvar*.
+. Clique em *Executar todas as regras* se quiser executar todas as regras imediatamente; caso contrário, as regras são executadas em um intervalo programado regularmente.
+

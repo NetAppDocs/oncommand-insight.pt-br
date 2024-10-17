@@ -1,0 +1,41 @@
+---
+permalink: config-admin/client-configuration-for-smart-card-and-certificate-login.html 
+sidebar: sidebar 
+keywords:  
+summary: As máquinas cliente requerem middleware e modificações nos navegadores para permitir o uso de Smart Cards e para login no certificado. Os clientes que já estão a utilizar cartões inteligentes não devem necessitar de modificações adicionais nas suas máquinas cliente. 
+---
+= Configurar um cliente para suportar Smart Card e login de certificado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As máquinas cliente requerem middleware e modificações nos navegadores para permitir o uso de Smart Cards e para login no certificado. Os clientes que já estão a utilizar cartões inteligentes não devem necessitar de modificações adicionais nas suas máquinas cliente.
+
+
+
+== Antes de começar
+
+[NOTE]
+====
+Para obter as instruções de CAC e certificado mais atualizadas, consulte os seguintes artigos da base de conhecimento (login de suporte necessário):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["Como configurar a autenticação de cartão de acesso comum (CAC) para o OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Como configurar a autenticação de cartão de acesso comum (CAC) para o armazém de dados OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Como criar e importar um certificado assinado pela autoridade de certificação (CA) para o OnComand Insight e o Data Warehouse 7,3.x do OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["Como criar um certificado autoassinado no OnCommand Insight 7,3.X instalado em um host Windows"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Como importar um certificado assinado pela autoridade de certificação (CA) do Cognos para o datawarehouse 7.3.3 e posterior do OnCommand"]
+
+
+====
+
+
+== Sobre esta tarefa
+
+Os seguintes são os requisitos comuns de configuração do cliente:
+
+* Instalando o middleware Smart Card, como o ActivClient ( http://militarycac.com/activclient.htm[]consulte )
+* Modificação do navegador IE ( http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf[]consulte )
+* Modificação do navegador Firefox ( https://militarycac.com/firefox2.htm[]consulte )
+

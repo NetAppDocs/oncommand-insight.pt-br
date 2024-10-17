@@ -1,0 +1,24 @@
+---
+permalink: config-admin/listing-installed-oncommand-insight-packages.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode exibir uma lista dos componentes do OnCommand Insight instalados, incluindo, entre outros, inventário, capacidade, dimensões e as visualizações do Data Warehouse. O suporte ao cliente pode pedir esta informação ou pode querer ver que versões de software foram instaladas e quando foram instaladas. 
+---
+= Listagem de componentes instalados do OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode exibir uma lista dos componentes do OnCommand Insight instalados, incluindo, entre outros, inventário, capacidade, dimensões e as visualizações do Data Warehouse. O suporte ao cliente pode pedir esta informação ou pode querer ver que versões de software foram instaladas e quando foram instaladas.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin* e selecione *solução de problemas*.
+. Na parte inferior da página na área outras tarefas, clique no link *solução de problemas avançada*.
+. Na página solução de problemas avançada, clique na guia *relatórios*.
+. Clique em *Pacotes de Software instalados*.
+

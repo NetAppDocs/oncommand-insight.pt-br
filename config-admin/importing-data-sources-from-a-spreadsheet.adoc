@@ -1,0 +1,53 @@
+---
+permalink: config-admin/importing-data-sources-from-a-spreadsheet.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode importar várias fontes de dados para o OnCommand Insight a partir de uma Planilha. Isso pode ser útil se você já manter seus dispositivos de descoberta em uma Planilha. Esse processo adiciona novas fontes de dados, mas não pode ser usado para atualizar fontes de dados existentes. 
+---
+= Importar fontes de dados de uma Planilha
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode importar várias fontes de dados para o OnCommand Insight a partir de uma Planilha. Isso pode ser útil se você já manter seus dispositivos de descoberta em uma Planilha. Esse processo adiciona novas fontes de dados, mas não pode ser usado para atualizar fontes de dados existentes.
+
+
+
+== Sobre esta tarefa
+
+O OnCommand Insight inclui uma Planilha para ajudar você a criar fontes de dados. Esta folha de cálculo tem os seguintes atributos:
+
+* A folha de cálculo pode ser utilizada com o Microsoft Excel 2003 ou posterior.
+* Cada guia contém um tipo de fonte de dados, por exemplo, Brocade SSH/CLI.
+* Cada linha representa uma instância de uma nova fonte de dados a ser criada.
+
+
+A Planilha inclui uma macro que cria uma nova fonte de dados no OnCommand Insight.
+
+
+
+== Passos
+
+. Localize a folha de cálculo no `<install_directory>/SANscreen/acq/bin/acqcli/SiteSurvey_DataSourceImporter_w_Macro.zip`.
+. Na folha de cálculo, introduza as informações da fonte de dados nas células com cor.
+. Eliminar linhas vazias.
+. A partir da folha de cálculo, execute a `CreateDataSources` macro para criar as fontes de dados.
+. Quando solicitado a fornecer credenciais, digite o nome de usuário e a senha da administração do servidor OnCommand Insight.
++
+Os resultados são registados no registo de aquisição.
+
+. Um prompt pergunta se a máquina que está executando a macro tem o OnCommand Insight instalado.
++
+Selecione uma das seguintes opções:
+
++
+** Não: Selecione "não" se for criado um ficheiro de lote que tem de ser executado na máquina OnCommand Insight. Execute este arquivo em lote a partir do diretório de instalação.
+** Sim: Selecione "Sim" se o OnCommand Insight já estiver instalado e não forem necessárias etapas adicionais para gerar as informações da fonte de dados.
+
+
+. Para verificar a adição das fontes de dados, abra o Insight em seu navegador.
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Verifique a lista fontes de dados para as fontes de dados importadas.
+

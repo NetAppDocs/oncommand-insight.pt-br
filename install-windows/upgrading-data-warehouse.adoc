@@ -1,0 +1,64 @@
+---
+permalink: install-windows/upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de concluir todas as tarefas de pré-requisito, você pode fazer login no servidor do Data Warehouse e executar o pacote de instalação para concluir a atualização. 
+---
+= Atualizando o Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de concluir todas as tarefas de pré-requisito, você pode fazer login no servidor do Data Warehouse e executar o pacote de instalação para concluir a atualização.
+
+
+
+== Sobre esta tarefa
+
+A atualização em linha não é suportada pelo Data Warehouse (DWH). Siga as etapas a seguir para atualizar para a nova versão do software DWH.
+
+[NOTE]
+====
+*Você deve fazer backup do Vault* antes de atualizar o DWH.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+
+
+== Passos
+
+Ao atualizar o Data Warehouse, você deve executar as seguintes ações:
+
+. Depois de instalar a DWH 7,3.16, restaure o Vault e o banco de dados nesta ordem:
++
+.. Cofre
+.. Banco de dados
+
+
+. Inicie sessão no servidor DWH utilizando uma conta com permissões de administrador local do Windows.
+. Faça backup do DWH DB e relatórios usando a interface do portal DWH.
+. Faça backup do cofre. Consulte link:../config-admin/security-management.html["SecurityAdmin"]a documentação.
+. Desinstale o software DWH do servidor.
+. Reinicie o servidor para remover componentes da memória.
+. Instale a nova versão do DWH no servidor.
++
+A instalação demora aproximadamente 2 horas. É uma prática recomendada deixar todas as predefinições selecionadas.
+
+. Restaure o Vault para o servidor DWH.
+. Restaure o banco de dados DWH para o servidor.
+
+
+
+
+== Depois de terminar
+
+Após a atualização, você deve restaurar o banco de dados do Data Warehouse, que pode levar tanto tempo ou mais do que a atualização.
+
+[NOTE]
+====
+Durante uma atualização do OnCommand Insight, não é incomum que um cliente mude para um servidor Insight diferente. Se tiver alterado o servidor Insight, depois de restaurar a base de dados do armazém de dados, os conetores existentes apontarão para o endereço IP ou nome de anfitrião do servidor anterior. É uma prática recomendada excluir o conetor e criar um novo, para evitar possíveis erros.
+
+====

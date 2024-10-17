@@ -1,0 +1,61 @@
+---
+permalink: install-windows/upgrading-remote-acquisition-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: Depois de concluir todas as tarefas de pré-requisito, pode iniciar sessão no servidor da unidade de aquisição remota e executar o pacote de instalação para concluir a atualização. Tem de executar esta tarefa em todos os servidores de aquisição remotos do seu ambiente. 
+---
+= Atualizando servidores de unidade de aquisição remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de concluir todas as tarefas de pré-requisito, pode iniciar sessão no servidor da unidade de aquisição remota e executar o pacote de instalação para concluir a atualização. Tem de executar esta tarefa em todos os servidores de aquisição remotos do seu ambiente.
+
+
+
+== Antes de começar
+
+* Você deve ter atualizado o OnCommand Insight.
+* O pacote de instalação do OnCommand Insight deve estar localizado no servidor.
+
+
+[NOTE]
+====
+Você deve fazer backup do Vault antes de atualizar.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações sobre o cofre.
+
+====
+
+
+== Passos
+
+. Inicie sessão no servidor da unidade de aquisição remota utilizando uma conta com permissões de administrador local do Windows.
+. Faça backup do cofre.
+. Localize o pacote de instalação do Insight (`RAU-x64-version_number-build_number.msi`) usando o Windows Explorer e clique duas vezes nele.
++
+O Assistente de configuração do OnCommand Insight é exibido.
+
+. Afaste a janela de progresso do assistente de instalação do centro da tela e da janela do assistente de instalação para que os erros gerados não fiquem ocultos da exibição.
+. Siga as instruções do Assistente de configuração.
++
+É uma prática recomendada deixar todas as predefinições selecionadas.
+
+
+
+
+
+== Depois de terminar
+
+* Para verificar se a atualização foi bem-sucedida ou se erros são gerados, verifique o log de atualização no seguinte local: `<install directory>\SANscreen\bin\log`.
+* Utilize a `securityadmin` ferramenta para restaurar a segurança guardada
++
+configuração. Para obter mais informações, procure por securityadmin no OnCommand Insight
+
++
+Centro de documentação: http://docs.netapp.com/oci-73/index.jsp[]
+
+* Limpe o cache e o histórico do navegador para garantir que você esteja recebendo os dados mais recentes do servidor.
+

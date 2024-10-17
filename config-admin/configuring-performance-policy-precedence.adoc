@@ -1,0 +1,33 @@
+---
+permalink: config-admin/configuring-performance-policy-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: Por padrão, o Insight avalia sequencialmente as políticas de um objeto. Você pode configurar a ordem na qual o Insight avalia as políticas de desempenho. Por exemplo, se você tiver uma política configurada para interromper o processamento quando ocorrer uma violação para o armazenamento de nível Gold, poderá colocar essa política primeiro na lista e evitar ver mais violações genéricas para o mesmo ativo de armazenamento. 
+---
+= Alterar a precedência de uma política de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Por padrão, o Insight avalia sequencialmente as políticas de um objeto. Você pode configurar a ordem na qual o Insight avalia as políticas de desempenho. Por exemplo, se você tiver uma política configurada para interromper o processamento quando ocorrer uma violação para o armazenamento de nível Gold, poderá colocar essa política primeiro na lista e evitar ver mais violações genéricas para o mesmo ativo de armazenamento.
+
+
+
+== Passos
+
+. Abra o Insight em seu navegador.
+. No menu *Gerenciar*, selecione *políticas de desempenho*.
++
+A página políticas de desempenho é exibida.
+
+. Passe o cursor sobre um nome de política na lista de políticas de desempenho de um tipo de objeto.
++
+As setas de precedência aparecem à direita da política.
+
+. Para mover uma política para cima na lista, clique na seta para cima; para mover uma política para baixo na lista, clique na seta para baixo.
++
+Por padrão, novas políticas são adicionadas sequencialmente à lista de políticas de um objeto.
+
+

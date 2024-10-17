@@ -1,0 +1,35 @@
+---
+permalink: howto/examining-the-greedy-resource.html 
+sidebar: sidebar 
+keywords: greedy,degraded 
+summary: 'Clicar no volume interno identificado como o recurso ganancioso abre a página de destino para o volume CDot_Boston:SP1:vol_01.' 
+---
+= Examinando o recurso ganancioso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Clicar no volume interno identificado como o recurso ganancioso abre a página de destino para o volume CDot_Boston:SP1:vol_01.
+
+Observação nos detalhes do resumo este volume interno é um recurso para um aplicativo diferente (reserva de Viagem) e, embora contido em um pool de armazenamento diferente está no mesmo nó do volume interno do Exchange 2016 (CDot_Boston_N1)
+
+image::../media/cdot-boston-sp1-part1.gif[cdot rio de janeiro sp1 part1]
+
+image::../media/cdot-boston-sp1-part2.gif[cdot rio de janeiro sp1 part2]
+
+A página inicial mostra:
+
+* O volume interno associado a um aplicativo de reserva de Viagem.
+* Um novo pool de armazenamento é identificado nos recursos correlacionados.
+* O volume interno original que você estava examinando (CDot_Boston:SP2:vol_01) é identificado como ""degradado"".
+* No gráfico de desempenho, o aplicativo tem um perfil de latência estável e tem um pico de IOPS aproximadamente ao mesmo tempo em que vemos o pico de latência no aplicativo Exchange.
++
+Isso pode indicar que o pico de latência no aplicativo Exchange provavelmente é causado pelo pico de IOPS nesse volume.
+
+
+
+À direita dos gráficos na seção recurso, observe o recurso degradado correlacionado que é o volume interno do Exchange 2016 (CDot_Boston:SP2:vol_01). Clique na caixa de verificação para incluir o volume interno degradado nos gráficos de desempenho. Alinhar os dois gráficos de desempenho mostra que os picos de latência e IOPS ocorrem quase ao mesmo tempo. Isso nos diz que queremos obter uma melhor compreensão do aplicativo de reserva de Viagem. Precisamos entender por que o aplicativo está passando por um pico tão prolongado de IOPS.
+
+Examinar o pool de armazenamento associado ao aplicativo Viagem Booking pode identificar por que o aplicativo está enfrentando o pico de IOPS. Clique em CDot_Boston:SP1 para visualizar a página inicial do Storage Pool.

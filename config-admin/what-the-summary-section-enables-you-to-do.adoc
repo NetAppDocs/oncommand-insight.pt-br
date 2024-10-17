@@ -1,0 +1,51 @@
+---
+permalink: config-admin/what-the-summary-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Você pode visualizar a seção Resumo para ver informações gerais sobre um ativo. Especificamente, é útil ver se alguma métrica (por exemplo, memória, capacidade e latência) ou qualquer política de desempenho são motivo de preocupação, o que o OnCommand Insight indica exibindo um círculo vermelho ao lado da métrica ou política de desempenho.' 
+---
+= Usando a seção Resumo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar a seção Resumo para ver informações gerais sobre um ativo. Especificamente, é útil ver se alguma métrica (por exemplo, memória, capacidade e latência) ou qualquer política de desempenho são motivo de preocupação, o que o OnCommand Insight indica exibindo um círculo vermelho ao lado da métrica ou da política de desempenho.
+
+
+
+== Passos
+
+. Faça login na IU da Web do OnCommand Insight.
+. Localize uma página de ativo fazendo uma das seguintes opções:
++
+** Na barra de ferramentas do Insight, clique image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]em , digite o nome do ativo e selecione-o na lista.
+** Clique em *painéis*, selecione *Painel de ativos*, localize um nome de ativo e clique nele. A página de ativos é exibida.
+
+
++
+[NOTE]
+====
+As informações exibidas na seção Resumo dependem do tipo de página de ativo que você está visualizando.
+
+====
+. Você pode clicar em qualquer um dos links de ativos para exibir suas páginas de ativos.
++
+Por exemplo, se você estiver exibindo um nó de storage, poderá clicar em um link para exibir a página de ativo do storage ao qual ele está associado ou clicar para exibir a página de ativo do parceiro de HA.
+
+. Você pode visualizar as métricas associadas ao ativo.
++
+Um círculo vermelho ao lado de uma métrica indica que você pode precisar diagnosticar e resolver possíveis problemas.
+
++
+[NOTE]
+====
+Você pode notar que a capacidade de volume pode mostrar mais de 100% em alguns ativos de storage. Isso se deve aos metadados relacionados à capacidade do volume fazer parte dos dados de capacidade consumida reportados pelo ativo.
+
+====
+. Se aplicável, você pode clicar em um link de política de desempenho para exibir a política de desempenho ou as políticas associadas ao ativo.
++
+Se um círculo vermelho aparecer ao lado de uma política de desempenho, isso indica que um ativo cruzou o limite definido da política de desempenho. Você deve examinar a política de desempenho para diagnosticar o problema.
+
+

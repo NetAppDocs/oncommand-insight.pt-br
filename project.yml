@@ -1,0 +1,26 @@
+---
+settings:
+  name: OnCommand Insight
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: pt-br,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: OnCommand Insight docs
+    url: "/index.html"
+  - section: relnotes
+  - section: overview
+  - section: install-linux
+  - section: install-windows
+  - section: config-admin
+  - section: dwh
+  - section: reporting
+  - section: faq
+  - section: howto
+  - title: Matriz de suporte do Data Collector
+    url: "/config-admin/reference_data_collector_support_matrix.html"
+  - title: Avisos legais
+    url: "/legal-notices.html"

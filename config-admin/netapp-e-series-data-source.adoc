@@ -1,0 +1,120 @@
+---
+permalink: config-admin/netapp-e-series-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A fonte de dados do NetApp e-Series coleta informações de inventário e desempenho. Existem duas configurações possíveis (firmware 6.x e firmware 7.x), e ambas têm os mesmos valores.' 
+---
+= Fonte de dados do NetApp e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados do NetApp e-Series coleta informações de inventário e desempenho. Existem duas configurações possíveis (firmware 6.x e firmware 7.x), e ambas têm os mesmos valores.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados NetApp e-Series. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Condução
+ a| 
+Disco
+
+
+
+ a| 
+Grupo de volume
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Storage array
+ a| 
+Armazenamento
+
+
+
+ a| 
+Controlador
+ a| 
+Nó de storage
+
+
+
+ a| 
+Grupo de volume
+ a| 
+Pool de storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* O endereço IP de cada controlador na matriz
+* Requisito de porta 2463
+
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Lista separada por vírgulas de IPs do controlador SANtricity da matriz
+ a| 
+Endereços IP e/ou nomes de domínio totalmente qualificados para os controladores de matriz
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 30 minutos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (até 3600 segundos)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

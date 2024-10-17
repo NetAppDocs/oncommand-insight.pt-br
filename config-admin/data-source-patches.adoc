@@ -1,0 +1,24 @@
+---
+permalink: config-admin/data-source-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Os patches de fonte de dados corrigem problemas com patches existentes e também permitem que você adicione facilmente novos tipos de fonte de dados (fornecedores e modelos). Para cada tipo de fonte de dados na rede, você pode fazer upload de patches de origem de dados. Você também pode instalar, testar e gerenciar o processo de patch. No entanto, apenas um patch pode estar ativo para um tipo de fonte de dados de cada vez.' 
+---
+= Quais são os patches da fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os patches de origem de dados corrigem problemas com patches existentes e também permitem que você adicione facilmente novos tipos de fonte de dados (fornecedores e modelos). Para cada tipo de fonte de dados na rede, você pode fazer upload de patches de origem de dados. Você também pode instalar, testar e gerenciar o processo de patch. No entanto, apenas um patch pode estar ativo para um tipo de fonte de dados de cada vez.
+
+Para cada patch, você pode executar estas tarefas:
+
+* Verifique a comparação antes e depois de cada fonte de dados que recebe o patch.
+* Escreva comentários para explicar decisões ou resumir pesquisas.
+* Faça alterações em uma fonte de dados que não esteja respondendo bem ao patch.
+* Aprove o patch para ser comprometido com o seu servidor Insight.
+* Reverter um patch que não esteja funcionando como você pretendia.
+* Substitua um patch com falha por outro.
+

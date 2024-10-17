@@ -1,0 +1,33 @@
+---
+permalink: config-admin/adding-a-new-data-source-patch-us26313-fr.html 
+sidebar: sidebar 
+keywords:  
+summary: Novas fontes de dados são lançadas como arquivos de patch que podem ser carregados no sistema usando o processo de patch. Esse processo permite que novas fontes de dados estejam disponíveis entre as versões agendadas do OnCommand Insight. 
+---
+= Adicionando uma nova fonte de dados por patch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Novas fontes de dados são lançadas como arquivos de patch que podem ser carregados no sistema usando o processo de patch. Esse processo permite que novas fontes de dados estejam disponíveis entre as versões agendadas do OnCommand Insight.
+
+
+
+== Antes de começar
+
+Você deve ter carregado o arquivo de patch que deseja instalar.
+
+
+
+== Passos
+
+. Na barra de ferramentas Insight, clique em *Admin*.
+. Selecione *patches*.
+. Selecione *ações* > *Instalar Service pack ou patch*.
+. Na caixa de diálogo *Instalar Service Pack ou Patch*, clique em *Procurar* para localizar e selecionar o arquivo de patch que você carregou.
+. Clique em *Next* na caixa de diálogo *Patch Summary*.
+. Reveja as informações *Leia-me* e clique em *seguinte* para continuar.
+. Na caixa de diálogo *Install*, clique em *Finish*.
+

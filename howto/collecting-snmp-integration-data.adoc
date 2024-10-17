@@ -1,0 +1,48 @@
+---
+permalink: howto/collecting-snmp-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados SNMP de integração permite que você colete dados SNMP genéricos no OnCommand Insight. 
+---
+= Coletando dados de integração SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados SNMP de integração permite que você colete dados SNMP genéricos no OnCommand Insight.
+
+
+
+== Pacotes de integração
+
+A fonte de dados de integração SNMP usa um ""Pacote de integração"" para definir quais valores de integração são coletados e quais objetos SNMP fornecem esses valores.
+
+Um Pacote de integração consiste em:
+
+* Um arquivo de configuração JSON (integration.json) que define o conteúdo do payload de integração em termos de objetos SNMP de um tipo de dispositivo específico (switch, roteador, etc.).
+* Uma lista de arquivos MIB dos quais o pacote de integração depende.
+
+
+Um pacote de integração pode definir vários tipos de dados. Por exemplo, ao integrar um host RHEL, um tipo de dados pode ser definido para as informações gerais do sistema, como tempo de atividade, número de usuários e número de processos em execução, um segundo tipo de dados pode ser definido para dados na memória e uso do sistema de arquivos. Em geral, cada tipo de dados deve ser "plano" e não pode conter dados aninhados.
+
+Um único pacote de integração não deve definir mais de 24 tipos de dados. O Insight limita a quantidade de dados de integração coletados. Tentar ingerir mais de 24 relatórios durante um período de um minuto resulta em um erro de taxa.
+
+Os nomes dos tipos de integração devem seguir as seguintes regras:
+
+* O nome não pode começar com os seguintes carateres: _, - ou
+* O nome não pode conter os seguintes carateres:
+* Não pode ter mais de 100 bytes codificados UTF-8
+* Não pode ser nomeado . ou ..
+
+
+
+
+== Formato de arquivo de integração
+
+Um pacote de integração é um arquivo ZIP que contém um arquivo de configuração JSON (integration.json) que define o conteúdo da carga útil de integração em termos de objetos SNMP. Ele também contém uma pasta MIBS que contém todos os arquivos MIB e suas dependências MIB.
+
+O `integration.json` arquivo deve existir no nível superior do arquivo ZIP e os arquivos MIB devem existir no subdiretório "Resources/mibs" dentro do ZIP. O arquivo ZIP também pode conter arquivos, como um "readme.txt", se desejado. Um exemplo de integração estrutura ZIP é:
+
+image::../media/integration-zip.gif[integração zip]

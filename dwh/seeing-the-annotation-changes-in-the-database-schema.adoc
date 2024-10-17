@@ -1,0 +1,45 @@
+---
+permalink: dwh/seeing-the-annotation-changes-in-the-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: O esquema do banco de dados reflete as alterações na tabela específica. 
+---
+= Exibindo alterações de anotação no esquema do banco de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O esquema do banco de dados reflete as alterações na tabela específica.
+
+
+
+== Sobre esta tarefa
+
+Por exemplo, se você adicionar anotações a uma matriz de armazenamento, elas aparecerão na tabela de armazenamento ou troca no inventário ou em outros marts de dados.
+
+Se você atualizar as anotações sobre recursos usando a interface de usuário do OnCommand Insight e iniciar ou aguardar a próxima compilação do Data Warehouse, verá uma nova coluna adicionada ou removida no objeto correspondente no inventário (dwh_inventory) e na tabela de dimensões correspondente também (no data mart apropriado). Você vê os resultados nas seguintes tabelas:
+
+* dwh_inventory.annotation_value
+* dwh_inventory.object_to_annotation
+
+
+
+
+== Passos
+
+. Clique image:../media/oci-7-help-icon-gif.gif[""]na barra de ferramentas Data Warehouse e selecione *Documentação*.
+. Selecione *Esquema de base de dados*.
+. No painel *Database Schema* à esquerda, role até a seção *DWH_INVENTORY* e clique em *switch*.
++
+image::../media/oci-dwh-databaseschema-inventory-switch-gif.gif[Tabela de interrutores de esquema do banco de dados DWH Inventory]
+
+. A tabela *dwh_inventory.switch* reflete as alterações:
++
+image::../media/oci-dwh-databaseschema-capacity-sd-gif.gif[Tabela de dimensões de armazenamento do esquema do banco de dados de capacidade DWH]
+
++
+A coluna de anotação do data center aparece na tabela storage_Dimensions.
+
+

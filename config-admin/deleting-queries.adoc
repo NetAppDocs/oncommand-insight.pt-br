@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode excluir consultas quando elas não coletarem mais informações úteis sobre seus ativos. Não é possível excluir uma consulta se ela for usada em uma regra de anotação. 
+---
+= Eliminar consultas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir consultas quando elas não coletarem mais informações úteis sobre seus ativos. Não é possível excluir uma consulta se ela for usada em uma regra de anotação.
+
+
+
+== Passos
+
+. Faça login na IU do Insightweb.
+. Clique em *consultas* e selecione *Mostrar todas as consultas*.
++
+A página consultas é exibida.
+
+. Posicione o cursor sobre a consulta que deseja excluir e clique image:../media/trash-can-query.gif[""]em .
++
+É apresentada uma mensagem de confirmação, perguntando se pretende eliminar a consulta.
+
+. Clique em *OK*.
+

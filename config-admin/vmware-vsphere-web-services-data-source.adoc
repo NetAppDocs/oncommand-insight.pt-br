@@ -1,0 +1,190 @@
+---
+permalink: config-admin/vmware-vsphere-web-services-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: A fonte de dados do VMware vSphere coleta informações do host ESX e requer Privileges somente leitura em todos os objetos do Centro Virtual. 
+---
+= Fonte de dados do VMware vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados do VMware vSphere (Serviços da Web) coleta informações do host ESX e requer _somente leitura_ Privileges em todos os objetos dentro do Centro Virtual.
+
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados do VMware vSphere. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Disco virtual
+ a| 
+Disco
+
+
+
+ a| 
+Host
+ a| 
+Host
+
+
+
+ a| 
+Máquina virtual
+ a| 
+Máquina virtual
+
+
+
+ a| 
+Armazenamento de dados
+ a| 
+Armazenamento de dados
+
+
+
+ a| 
+LUN
+ a| 
+LUN
+
+
+
+ a| 
+Porta Fibre Channel
+ a| 
+Porta
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Endereço IP do servidor do Virtual Center
+* Nome de usuário e senha somente leitura no Virtual Center
+* Privileges somente leitura em todos os objetos dentro do Centro Virtual.
+* Acesso ao SDK no servidor do Virtual Center
+* Requisitos de porta: HTTP-80 https-443
+* Valide o acesso fazendo login no Virtual Center Client usando seu nome de usuário e senha e verificando se o SDK está habilitado digitando `telnet <vc_ip\> 443`.
+
+
+
+
+== Configuração
+
+|===
+| *Campo* 
+
+
+| *Descrição* 
+
+
+ a| 
+Endereço do Centro Virtual
+
+
+
+ a| 
+Endereço de rede para o servidor Virtual Center ou vSphere, especificado como endereço IP _(nnn.nn.nn.nn_) ou como um nome de host que pode ser resolvido através do DNS.
+
+
+
+ a| 
+Nome de utilizador
+
+
+
+ a| 
+Nome de usuário do servidor VMware.
+
+
+
+ a| 
+Palavra-passe
+
+
+
+ a| 
+Senha para o servidor VMware.
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Tempo limite da ligação (ms)
+ a| 
+Tempo limite da ligação (predefinição 60000 ms)
+
+
+
+ a| 
+Filtrar VMs por
+ a| 
+Escolha como filtrar VMs
+
+
+
+ a| 
+Escolha 'Excluir' ou 'incluir' para especificar uma lista
+ a| 
+Especifique se deve incluir ou excluir a lista de VM abaixo ao coletar dados
+
+
+
+ a| 
+Lista de VMs a filtrar (separadas por vírgulas ou ponto e vírgula separadas se a vírgula for usada no valor)
+ a| 
+Lista de VMs separadas por vírgulas ou separadas por ponto e vírgula para incluir ou excluir da sondagem
+
+
+
+ a| 
+Número de geometrias para solicitações ao vCenter
+ a| 
+Número de tentativas de tentativa de solicitação do vCenter
+
+
+
+ a| 
+Porta de comunicação
+ a| 
+Porta usada para o servidor VMware
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

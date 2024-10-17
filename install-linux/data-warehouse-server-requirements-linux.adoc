@@ -1,0 +1,109 @@
+---
+permalink: install-linux/data-warehouse-server-requirements-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: O servidor do Data Warehouse deve ser executado em um computador compatível com os requisitos estabelecidos de hardware e software. Você deve garantir que o servidor web Apache ou o software de relatório ainda não esteja instalado nesta máquina. 
+---
+= Requisitos do servidor do Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O servidor do Data Warehouse deve ser executado em um computador compatível com os requisitos estabelecidos de hardware e software. Você deve garantir que o servidor web Apache ou o software de relatório ainda não esteja instalado nesta máquina.
+
+[NOTE]
+====
+O dimensionamento do OnCommand Insight tem várias dependências, como número de ativos no seu ambiente, quantidade de dados históricos retidos e muito mais. Os exemplos de dimensionamento de data warehouse a seguir são apenas diretrizes; eles representam alguns dos ambientes em que o Insight foi testado. Alterar qualquer um desses ou outros fatores no ambiente pode alterar os requisitos de dimensionamento do Insight.
+
+====
+Recomenda-se entrar em Contato com seu engenheiro de vendas para obter orientações detalhadas sobre o dimensionamento antes de instalar ou atualizar o Insight.
+
+*Exemplos:*
+
+|===
+
+
+| Fatores ambientais: | Espaço em disco, CPUs e memória testadas: 
+
+
+ a| 
+18 storage arrays3.400 VMs
+
+4.500 portas do switch
+ a| 
+200 GB de disco rígido de disk8 núcleos
+
+32 GB DE RAM
+
+
+
+ a| 
+110 storage arrays11.500 VMs
+
+14.500 portas do switch
+ a| 
+300 GB de disco rígido de disk8 núcleos
+
+48 GB DE RAM
+
+|===
+* Requisitos: *
+
+|===
+
+
+| Componente | Obrigatório 
+
+
+ a| 
+Sistema operacional
+ a| 
+Um computador que executa uma versão licenciada de uma das seguintes, que não está executando nenhum outro software de nível de aplicativo:
+
+* Red Hat Enterprise Linux 7,9, 8,10, 9,4
+* CentOS 8 Stream, CentOS 9 Stream
+* Oracle Enterprise Linux 7,9, 8,10, 9,4
+
+
+
+
+ a| 
+Máquina virtual (VM)
+ a| 
+Esse componente pode ser executado em um ambiente virtual, desde que os recursos de CPU e memória da instância estejam reservados.
+
+
+
+ a| 
+CPU
+ a| 
+8 - 40 núcleos de CPU
+
+
+
+ a| 
+Memória
+ a| 
+32 GB - 2 TB DE RAM
+
+
+
+ a| 
+Espaço disponível em disco
+ a| 
+200 GB - 512 GB de espaço em disco deve haver pelo menos 50 GB de espaço livre em disco `/var/lib` na partição e 25 GB de espaço livre em disco nas `/opt` partições e. `/var/log`
+
+
+
+ a| 
+Rede
+ a| 
+* Conexão Ethernet de 100 Mbps ou 1 Gbps
+* Endereço IP estático
+* Para o processo do servidor DWH OnCommand Insight, portas 80, 443, 1098, 1099, 3873, 8083 e 4444 até 4446
+* Para MySQL, porta 3306
+
+
+|===

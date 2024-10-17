@@ -1,0 +1,35 @@
+---
+permalink: config-admin/modifying-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Pode editar políticas de desempenho existentes e predefinidas para alterar a forma como o Insight monitoriza as condições de interesse para si na sua rede. Por exemplo, você pode querer alterar o limite de uma política. 
+---
+= Editando políticas de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode editar políticas de desempenho existentes e predefinidas para alterar a forma como o Insight monitoriza as condições de interesse para si na sua rede. Por exemplo, você pode querer alterar o limite de uma política.
+
+
+
+== Passos
+
+. Abra o Insight em seu navegador.
+. No menu *Gerenciar*, selecione *políticas de desempenho*.
++
+A página políticas de desempenho é exibida.
+
+. Passe o cursor sobre um nome de política na lista de políticas de desempenho de um objeto.
+. Clique image:../media/oci-edit-threshold-policy-icon.gif[""]em .
++
+A caixa de diálogo Editar política é exibida.
+
+. Faça as alterações necessárias.
++
+Se você alterar qualquer opção que não seja o nome da política, o Insight excluirá todas as violações existentes dessa política.
+
+. Clique em *Salvar.*
+

@@ -1,0 +1,20 @@
+---
+permalink: faq/faq-environment-management.html 
+sidebar: sidebar 
+keywords:  
+summary: Este FAQ responde a perguntas comuns sobre o gerenciamento de ambientes OnCommand Insight. 
+---
+= Gerenciando seu ambiente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este FAQ responde a perguntas comuns sobre o gerenciamento de ambientes OnCommand Insight.
+
+
+
+== Posso dar acesso ao OCI a um usuário específico, ao mesmo tempo em que restringi a exibição a apenas certos recursos (ou seja, . SVM e volumes, VMs, servidores relacionados?
+
+O OCI fornece acesso baseado em funções. Por exemplo, o acesso ao Relatório é controlado por meio dos relatórios do Data Warehouse do OCI. Os relatórios podem ser agendados, enviados por e-mail como PDF, HTML ou CSV, ou para um compartilhamento de arquivos ou até mesmo uma URL que exige que o usuário se autentique antes de visualizar. O acesso baseado no usuário é concedido na forma de administradores, usuários e convidados. O suporte ative Directory/ldap também está disponível.

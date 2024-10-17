@@ -1,0 +1,14 @@
+---
+permalink: dwh/advanced-options.html 
+sidebar: sidebar 
+keywords:  
+summary: O Data Warehouse inclui várias opções avançadas. 
+---
+= Opções avançadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Data Warehouse inclui várias opções avançadas.

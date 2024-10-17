@@ -1,0 +1,31 @@
+---
+permalink: config-admin/copying-table-values.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode copiar valores em tabelas para uso em caixas de pesquisa ou outros aplicativos. 
+---
+= Copiando valores de tabela
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode copiar valores em tabelas para uso em caixas de pesquisa ou outros aplicativos.
+
+
+
+== Sobre esta tarefa
+
+Existem dois métodos que você pode usar para copiar valores de tabelas ou resultados de consulta.
+
+
+
+== Passos
+
+. Método 1: Realce o texto desejado com o Mouse, copie-o e cole-o em campos de pesquisa ou outros aplicativos.
+. Método 2: Para campos de valor único cujo comprimento exceda a largura da coluna da tabela, indicada por elipses (...), passe o cursor sobre o campo e clique no ícone da área de transferência. O valor é copiado para a área de transferência para uso em campos de pesquisa ou outros aplicativos.
++
+Observe que somente valores que são links para ativos podem ser copiados. Observe também que somente campos que incluem valores únicos (ou seja, não listas) têm o ícone de cópia.
+
+

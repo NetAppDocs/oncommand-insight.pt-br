@@ -1,0 +1,116 @@
+---
+permalink: install-windows/installing-the-oncommand-insight-server.html 
+sidebar: sidebar 
+keywords:  
+summary: Pode instalar facilmente o servidor OnCommand Insight utilizando o assistente de configuração do OnCommand Insight. 
+---
+= Instalar o servidor OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode instalar facilmente o servidor OnCommand Insight utilizando o assistente de configuração do OnCommand Insight.
+
+
+
+== Antes de começar
+
+Você deve ter concluído todos os pré-requisitos de instalação.
+
+
+NOTE: Se você estiver atualizando o OnCommand Insight, você *deve fazer backup do Vault antes de desinstalar ou atualizar* sua versão atual.
+
+
+
+== Passos
+
+. Faça login no servidor do Insight usando uma conta com o administrador Privileges.
+. Abra o Windows Explorer e navegue até o diretório onde os arquivos de instalação estão localizados.
+. Clique duas vezes no `.MSI` arquivo que você baixou.
+. Clique em *seguinte* para continuar.
+. Leia o Contrato de Licença, selecione *Aceito os termos na caixa de seleção Contrato de Licença* e clique em *Avançar*.
+. Introduza o nome do cliente e o nome do local na janela *informações do cliente* e clique em *seguinte*.
++
+*Prática recomendada:* Use o nome do cliente como prefixo para o site: Por exemplo, NetApp.
+
+. Introduza uma palavra-passe de administrador. Confirme a palavra-passe.
+. Na janela *informações do cliente: Configurar ASUP* do NetApp, faça o seguinte:
++
+.. Selecione o banco de dados que contém os dados que você deseja carregar para o ASUP, selecionando uma das seguintes opções:
++
+*** *Nenhum backup de banco de dados*: Um backup não é enviado para o ASUP.
+*** *Backup sem dados de desempenho*: Um backup é feito e enviado para o ASUP, mas não inclui dados de desempenho.
+*** *Backup com dados de desempenho*: É feito um backup que inclui dados de desempenho, mas isso pode gerar um arquivo enorme `*.gz`.
+
+
+
+
++
+[NOTE]
+====
+O ASUP é fornecido usando o protocolo HTTPS.
+
+====
++
+.. Em *Logs*, selecione se você não deseja nenhum log, log de base ou logs estendidos, que contêm uma gravação de fonte de dados.
+.. Clique em *seguinte*.
+
+
+. Se você estiver usando o modelo de licenciamento do Insight Consumption, marque a caixa *Ativar o envio de informações de uso para o NetApp* na seção *Enviar informações de uso*.
+. Clique em *seguinte*
+. Na janela *Configurar servidor*, selecione ou defina os parâmetros de configuração apropriados para configurar o servidor OnCommand Insight:
++
+|===
+
+
+| Opção | Descrição 
+
+
+ a| 
+Porta do portal (HTTP)
+ a| 
+Portas usadas pelo servidor OnCommand Insight para oferecer suporte aos serviços da Web do usuário, incluindo um portal para executar tarefas de administração. Use o padrão (80); no entanto, se a porta padrão estiver em uso, altere-a para outra porta.
+
+
+
+ a| 
+Porta do portal (HTTPS)
+ a| 
+Porta usada por unidades de aquisição remota para enviar informações de alteração de SAN para o servidor OnCommand Insight por meio de um canal seguro. Use o padrão (443); no entanto, se a porta padrão estiver em uso, altere-a para outra porta. Você especifica esse mesmo número de porta ao configurar as RAUs.
+
+
+
+ a| 
+Porta de banco de dados interno (SQL)
+ a| 
+Porta usada internamente pelo PC em que o servidor OnCommand Insight está sendo executado, para servir como ponto de acesso ao banco de dados. Use o padrão (3306); no entanto, se a porta padrão estiver em uso, altere-a para outra porta.
+
+|===
+. Clique em *seguinte*.
+. Clique em *Install* para continuar.
++
+A instalação deve levar aproximadamente 20 minutos, dependendo dos aplicativos instalados.
+
+. Clique em *Finish*.
+. Se você estiver instalando uma RAU (Remote Acquisition Unit), deverá executar a ferramenta SecurityAdmin para criar uma senha para o usuário _acquisition_. Você precisará dessa senha ao instalar o RAU.
++
+Observação: Se você criou essa senha, _não_ precisará sincronizar o servidor e a RAU conforme indicado abaixo.
+
+
+
+
+
+== Sincronizar servidor com DWH e RAU
+
+
+IMPORTANT: Depois de instalar a unidade de aquisição remota e/ou o armazém de dados, tem de sincronizar a RAU/DWH com o servidor OnCommand Insight. Siga os passos indicados abaixo:
+
+link:../install-windows/installing-a-remote-acquisition-unit-rau.html#synchronize-server-and-rau["Sincronizar servidor e RAU (Windows)"]
+
+link:../install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html#synchronize-server-and-dwh["Sincronizar servidor e DWH (Windows)"]
+
+link:../install-linux/installing-a-remote-acquisition-unit-rau-linux.html#synchronize-server-and-rau["Sincronizar servidor e RAU (Linux)"]
+
+link:../install-linux/installing-oncommand-insight-data-warehouse-linux.html#synchronize-server-and-dwh["Sincronizar servidor e DWH (Linux)"]

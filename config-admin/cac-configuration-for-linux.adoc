@@ -1,0 +1,26 @@
+---
+permalink: config-admin/cac-configuration-for-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: Algumas modificações são necessárias para habilitar o CAC em um servidor Linux OnCommand Insight. 
+---
+= Habilitando CAC em um servidor Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Algumas modificações são necessárias para habilitar o CAC em um servidor Linux OnCommand Insight.
+
+A CA raiz deve ser importada para o repositório de confiança.
+
+
+
+== Passos
+
+. Navegue para `/opt/netapp/oci/conf/`
+. Editar `wildfly.properties` e alterar o valor de `CLIENT_AUTH_ENABLED` para "verdadeiro"
+. Importe o "'certificado raiz'" que existe em `/opt/netapp/oci/wildfly/standalone/configuration/server.truststore`
+. Reinicie o servidor
+

@@ -1,0 +1,67 @@
+---
+permalink: config-admin/importing-fc-identification-from-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode importar manualmente a identificação do dispositivo Fibre Channel para o recurso de Resolução do dispositivo OnCommand Insight usando uma lista de dispositivos em um arquivo CSV. 
+---
+= Importar a identificação do dispositivo Fibre Channel de um arquivo CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode importar manualmente a identificação do dispositivo Fibre Channel para o recurso de Resolução do dispositivo OnCommand Insight usando uma lista de dispositivos em um arquivo CSV.
+
+
+
+== Antes de começar
+
+Você deve ter um arquivo CSV formatado corretamente para importar as identificações do dispositivo diretamente para o recurso Resolução do dispositivo. O arquivo CSV para dispositivos Fibre Channel requer as seguintes informações:
+
+|===
+
+
+ a| 
+WWN
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Nome
+
+
+
+ a| 
+Tipo
+
+|===
+[NOTE]
+====
+Como prática recomendada, recomenda-se primeiro exportar as informações de identificação de FC para um arquivo CSV, fazer as alterações desejadas nesse arquivo e, em seguida, importar o arquivo de volta para o FC Identify. Isso garante que as colunas esperadas estejam presentes e na ordem correta.
+
+====
+Para importar informações de identificação FC:
+
+
+
+== Passos
+
+. Faça login na IU da Web do Insight.
+. Clique em *Gerenciar* > *Resolução do dispositivo*
+. Selecione a guia *identificação FC*.
+. Clique em *Identify* > *Identify from file*
+. 
++
+.. Navegue até a pasta que contém seus arquivos CSV para importação e selecione o arquivo desejado.
+
+
++
+Os dispositivos inseridos são adicionados à lista de dispositivos na guia identificação FC. A "regra" é identificada como "Manual".
+
+

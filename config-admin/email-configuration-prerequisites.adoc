@@ -1,0 +1,20 @@
+---
+permalink: config-admin/email-configuration-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de configurar o OnCommand Insight para acessar o sistema de e-mail, você precisa descobrir o nome do host ou o endereço IP para identificar o servidor de e-mail e alocar uma conta de e-mail para relatórios do OnCommand Insight. 
+---
+= Pré-requisitos de configuração de e-mail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de configurar o OnCommand Insight para acessar seu sistema de e-mail, você precisa descobrir o nome do host ou o endereço IP para identificar o servidor de e-mail (SMTP ou Exchange) e alocar uma conta de e-mail para relatórios do OnCommand Insight.
+
+Peça ao administrador de e-mail para criar uma conta de e-mail para o OnCommand Insight. Você precisará das seguintes informações:
+
+* O nome do host ou o endereço IP para identificar o servidor de e-mail (SMTP ou Exchange) usado pela sua organização. Você pode encontrar essas informações através do aplicativo que você usa para ler seu e-mail. No Microsoft Outlook, por exemplo, você pode encontrar o nome do servidor exibindo a configuração da sua conta: Ferramentas - Contas de e-mail - Exibir ou alterar a conta de e-mail existente.
+* Nome da conta de e-mail através da qual o OnCommand Insight enviará relatórios regulares. A conta deve ser um endereço de e-mail válido na sua organização. (A maioria dos sistemas de e-mail não enviará mensagens a menos que sejam enviadas de um usuário válido.) Se o servidor de e-mail precisar de um nome de usuário e senha para enviar e-mails, obtenha essas informações do administrador do sistema.
+

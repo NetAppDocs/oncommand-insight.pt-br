@@ -1,0 +1,153 @@
+---
+permalink: config-admin/violin-memory-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A fonte de dados de Matriz de memória Flash (HTTP) Violin 6000-Series coleta informações de rede para análise e validação de matrizes de memória flash Violin série 6000.' 
+---
+= Fonte de dados do Violin Flash Memory Array
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A fonte de dados de Matriz de memória Flash (HTTP) Violin 6000-Series coleta informações de rede para análise e validação de matrizes de memória flash Violin série 6000.
+
+
+
+== Terminologia
+
+[NOTE]
+====
+Este coletor de dados já não está disponível a partir do OnCommand Insight 7,3.11.
+
+====
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados da matriz de memória flash de violino série 6000. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Módulo de memória inteligente para violino (VIMM)
+ a| 
+Disco
+
+
+
+ a| 
+Recipiente
+ a| 
+Armazenamento
+
+
+
+ a| 
+Gateway de memória
+ a| 
+Nó de storage
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+
+
+ a| 
+Iniciador, Grupo Iniciador, alvo
+ a| 
+Mapa de volume, Máscara de volume
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Você precisa de um nome de usuário somente leitura e senha para o armazenamento.
+* Valide o acesso com um navegador da Web usando o endereço IP de armazenamento.
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Endereço IP ou FQDN do Gateway principal da matriz de memória de violino
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do Gateway principal da matriz de memória de violino
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador para o Gateway principal da matriz de memória de violino
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe para o Gateway principal da matriz de memória de violino
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Porta de comunicação
+ a| 
+Porta usada para comunicação com a disposição do violino
+
+
+
+ a| 
+HTTPS ativado
+ a| 
+Selecione para utilizar HTTPS
+
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Tempo limite da ligação (seg.)
+ a| 
+Tempo limite da ligação (predefinição 60 segundos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

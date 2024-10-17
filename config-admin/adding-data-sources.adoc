@@ -1,0 +1,73 @@
+---
+permalink: config-admin/adding-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode adicionar fontes de dados rapidamente, usando a caixa de diálogo Adicionar fonte de dados. 
+---
+= Adicionando fontes de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar fontes de dados rapidamente, usando a caixa de diálogo Adicionar fonte de dados.
+
+
+
+== Passos
+
+. Abra o OnCommand Insight no navegador e faça login como um usuário com permissões administrativas.
+. Selecione *Admin* e escolha *fontes de dados*.
+. Clique no botão * Adicionar *.
++
+O assistente Adicionar fonte de dados é aberto.
+
+. Na seção *Configurações*, insira as seguintes informações:
++
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Introduza um nome de rede exclusivo para esta fonte de dados. NOTA: Apenas letras, números e o caractere sublinhado (_) são permitidos no nome da fonte de dados.
+
+
+
+ a| 
+Fornecedor
+ a| 
+Escolha o fornecedor da fonte de dados na lista suspensa.
+
+
+
+ a| 
+Modelo
+ a| 
+Escolha o modelo da fonte de dados na lista suspensa.
+
+
+
+ a| 
+Para onde correr
+ a| 
+Selecione local ou pode escolher uma unidade de aquisição remota se as RAU estiverem configuradas no seu ambiente.
+
+
+
+ a| 
+O que recolher
+ a| 
+Para a maioria das fontes de dados, essas opções serão Inventário e desempenho. O inventário é sempre selecionado por padrão e não pode ser desselecionado. Observe que algumas fontes de dados podem ter opções diferentes. As opções de coleção selecionadas alteram os campos disponíveis nas secções Configuração e Configuração Avançada.
+
+|===
+. Clique no link *Configuração* e insira as informações básicas de configuração necessárias para a fonte de dados com o tipo de coleta de dados selecionado.
+. Se esse tipo de fonte de dados geralmente exigir informações mais detalhadas para configurá-lo em sua rede, clique no link *Configuração avançada* para inserir informações adicionais.
+. Para obter detalhes sobre as informações de configuração ou de configuração avançada necessárias ou disponíveis para sua fonte de dados específica, consulte o link:vendor-specific-data-source-reference.html["Referência de fonte de dados específica do fornecedor"].
+. Clique no link *Test* para ter certeza de que a fonte de dados está configurada corretamente.
+. Clique em *Salvar*.
+

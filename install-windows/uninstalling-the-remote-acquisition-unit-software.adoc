@@ -1,0 +1,31 @@
+---
+permalink: install-windows/uninstalling-the-remote-acquisition-unit-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Tem de desinstalar a versão existente do software da unidade de aquisição remota antes de poder atualizar para uma nova versão. Deve executar esta tarefa em todos os servidores de unidade de aquisição remota no seu ambiente. 
+---
+= Desinstalar o software da unidade de aquisição remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tem de desinstalar a versão existente do software da unidade de aquisição remota antes de poder atualizar para uma nova versão. Deve executar esta tarefa em todos os servidores de unidade de aquisição remota no seu ambiente.
+
+[NOTE]
+====
+*É altamente recomendável fazer backup do Vault* antes de desinstalar o OnCommand Insight. *Você deve fazer o backup do Vault* se estiver atualizando o OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Ferramenta SecurityAdmin"]as instruções para obter mais informações.
+
+====
+
+
+== Passos
+
+. Inicie sessão no servidor da unidade de aquisição remota.
+. Certifique-se de que todas as janelas OnCommand Insight no servidor estão fechadas.
+. Abra o recurso *Desinstalar um programa* no painel de controle e selecione o programa Unidade de aquisição Remota OnCommand Insight para remoção.
+. Clique em *Uninstall* e siga as instruções.
+

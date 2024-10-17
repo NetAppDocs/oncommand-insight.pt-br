@@ -1,0 +1,18 @@
+---
+permalink: howto/examining-the-server-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: A página inicial do volume mostra o mesmo pico de IOPS conhecido visto em seus ativos correlacionados. 
+---
+= Examinando o volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página inicial do volume mostra o mesmo pico de IOPS conhecido visto em seus ativos correlacionados.
+
+image::../media/server-vol-lp.gif[vol lp. servidor]
+
+Na seção recursos, a VM para o aplicativo de reserva de Viagem é identificada. Clique no link da VM para exibir a página inicial da VM.

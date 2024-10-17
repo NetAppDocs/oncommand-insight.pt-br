@@ -1,0 +1,69 @@
+---
+permalink: config-admin/changing-the-time-segment-of-the-data-displayed.html 
+sidebar: sidebar 
+keywords:  
+summary: Por padrão, uma página de ativo exibe as últimas 24 horas de dados; no entanto, você pode alterar o segmento de dados exibido selecionando outro tempo fixo ou um intervalo de tempo personalizado para exibir menos ou mais dados. 
+---
+= Alterar o intervalo de tempo dos dados apresentados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Por padrão, uma página de ativo exibe as últimas 24 horas de dados; no entanto, você pode alterar o segmento de dados exibido selecionando outro tempo fixo ou um intervalo de tempo personalizado para exibir menos ou mais dados.
+
+
+
+== Sobre esta tarefa
+
+Você pode alterar o segmento de tempo dos dados exibidos usando uma opção localizada em cada página de ativo, independentemente do tipo de ativo.
+
+
+
+== Passos
+
+. Faça login na IU do OnCommand Insightweb.
+. Localize uma página de ativo fazendo uma das seguintes opções:
++
+** Na barra de ferramentas do Insight, clique image:../media/search-assets-icon.gif[""]em , digite o nome do ativo e selecione-o na lista.
+** Clique em *painéis*, selecione *Painel de ativos*, localize um nome de ativo e clique nele. A página de ativos é exibida.
+
+
+. No canto superior esquerdo da página, clique em qualquer um dos seguintes ícones de tempo para alterar o segmento de dados exibidos:
++
+** *3h*
++
+Exibe as últimas três horas de dados.
+
+** *24h*
++
+Apresenta as últimas 24 horas de dados.
+
+** *3d*
++
+Exibe os últimos três dias de dados.
+
+** *7d*
++
+Exibe os últimos sete dias de dados.
+
+** *30d*
++
+Exibe os últimos trinta dias de dados.
+
+** *Personalizado*
++
+Exibe uma caixa de diálogo que permite escolher um intervalo de tempo personalizado. Você pode exibir até 31 dias de dados de cada vez.
+
+
+
+. Se você escolheu *Custom*, faça o seguinte:
++
+.. Clique no campo de data e selecione um mês, dia e ano para a data de início.
+.. Clique na lista hora e selecione uma hora de início.
+.. Repita os dois passos a e b para os dados finais e a hora.
+.. Clique image:../media/check-box-ok.gif[""]em .
+
+
+

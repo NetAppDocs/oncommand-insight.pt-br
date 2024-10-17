@@ -1,0 +1,76 @@
+---
+permalink: reporting/storage-manager-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode usar o Storage Manager Dashboard para o gerenciamento diário de seus serviços de storage. 
+---
+= O que o Storage Manager Dashboard permite fazer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Storage Manager Dashboard para o gerenciamento diário de seus serviços de storage.
+
+O Storage Manager Dashboard fornece uma visualização centralizada que permite comparar e contrastar o uso de recursos ao longo do tempo com os intervalos aceitáveis e os dias anteriores de atividade. Mostrando apenas as principais métricas de performance dos seus serviços de storage, você pode tomar decisões sobre como manter seus data centers.
+
+O dashboard inclui sete componentes que contêm informações contextuais sobre certos aspectos do seu ambiente de storage. Você pode detalhar os aspectos de seus serviços de storage para realizar uma análise aprofundada de uma seção que mais lhe interessa.
+
+
+
+== Resumo
+
+image::../media/oci-storage-mgr-dashboard-gif.gif[gif do painel de gerenciamento de armazenamento do oci]
+
+Esse componente mostra a capacidade de storage usada versus a capacidade utilizável, o total de portas do switch versus o número de portas do switch conetadas e a utilização total de portas do switch conetadas versus a largura de banda total e como cada uma dessas tendências ao longo do tempo. Você pode visualizar a utilização real em comparação com as faixas baixa, média e alta, o que permite comparar e contrastar o uso entre as projeções do Insight e as ações desejadas, com base em um alvo. Para portas de capacidade e switch, você pode configurar esse destino. A previsão é baseada em uma extrapolação da taxa de crescimento atual e da data definida. Quando a capacidade usada prevista, que é baseada na data de projeção de uso futuro, excede o alvo, um alerta (círculo vermelho sólido) aparece ao lado da capacidade.
+
+
+
+== Capacidade das camadas de storage
+
+Esse componente mostra a capacidade do nível usada em comparação com a capacidade alocada ao nível, o que indica como a capacidade usada aumenta ou diminui em um período de 12 meses e quantos meses restam para a capacidade total. O uso da capacidade é exibido com os valores fornecidos para o uso real, a previsão de uso do Insight e um destino para a capacidade, que você pode configurar. Quando a capacidade usada prevista, que é baseada na data de projeção de uso futuro, excede a capacidade alvo, um alerta (círculo vermelho sólido) aparece ao lado de um nível.
+
+Você pode clicar em qualquer camada para exibir o relatório Detalhes de desempenho e capacidade dos pools de storage, que mostra as capacidades gratuitas versus as usadas, o número de dias completos e os detalhes de desempenho (IOPS e tempo de resposta) de todos os pools na camada selecionada. Você também pode clicar em qualquer nome de conjunto de armazenamento ou armazenamento neste relatório para exibir a página de ativos resumindo o estado atual desse recurso.
+
+
+
+== Tráfego de armazenamento diário
+
+Esse componente mostra como o ambiente está se saindo, se houver algum grande crescimento, mudanças ou problemas potenciais em comparação com os seis meses anteriores. Também mostra o tráfego médio versus o tráfego nos sete dias anteriores e no dia anterior. Você pode visualizar quaisquer anormalidades na performance da infraestrutura porque ela fornece informações que destacam variações cíclicas (sete dias anteriores) e sazonais (seis meses anteriores).
+
+Você pode clicar no título (*tráfego de armazenamento diário*) para exibir o relatório Detalhes de tráfego de armazenamento, que mostra o mapa de calor do tráfego de armazenamento por hora para o dia anterior para cada sistema de armazenamento. Clique em qualquer nome de armazenamento neste relatório para exibir a página de ativos resumindo o estado atual desse recurso.
+
+
+
+== Data centers Time to Full
+
+Esse componente mostra todos os data centers em vez de todas as categorias e quanta capacidade resta em cada data center para cada camada de storage com base em taxas de crescimento previstas pelo Insight. O nível de capacidade de nível é mostrado em azul; quanto mais escura a cor, menor o tempo que o nível no local deixou antes de estar cheio.
+
+Você pode clicar em uma seção de um nível para exibir o relatório dias a detalhes completos dos pools de storage, que mostra a capacidade total, a capacidade livre e o número de dias a serem preenchidos para todos os pools na camada selecionada e no data center. Clique em qualquer nome de conjunto de armazenamento ou armazenamento neste relatório para exibir a página de ativos resumindo o estado atual desse recurso.
+
+
+
+== Top 10 aplicações
+
+Este componente mostra as 10 principais aplicações com base na capacidade utilizada. Independentemente de como o nível organiza os dados, essa área exibe a capacidade usada atual e o compartilhamento da infraestrutura. Você pode visualizar o intervalo de experiência do usuário para os sete dias anteriores para ver se os consumidores experimentam tempos de resposta aceitáveis (ou, mais importante, inaceitáveis).
+
+Essa área também mostra tendências, o que indica se os aplicativos atendem aos seus objetivos de nível de serviço (SLO) de desempenho. Você pode visualizar o tempo mínimo de resposta da semana anterior, o primeiro quartil, o terceiro quartil e o tempo máximo de resposta, com uma mediana mostrada contra um SLO aceitável, que você pode configurar. Quando o tempo de resposta médio para qualquer aplicação está fora do intervalo de SLO aceitável, um alerta (círculo vermelho sólido) aparece ao lado da aplicação. Você pode clicar em um aplicativo para exibir a página de ativo resumindo o estado atual desse recurso.
+
+
+
+== Desempenho diário das camadas de armazenamento
+
+Este componente mostra um resumo do desempenho da categoria para o tempo de resposta e IOPS nos sete dias anteriores. Essa performance é comparada a um SLO que você pode configurar. Assim, você pode ver se há oportunidade de consolidar camadas, realinhar workloads nessas camadas ou identificar problemas em categorias específicas. Quando o tempo de resposta mediano ou o IOPS mediano estão fora do intervalo de SLO aceitável, um alerta (círculo vermelho sólido) aparece ao lado de um nível.
+
+Você pode clicar no nome de um nível para exibir o relatório Detalhes de desempenho e capacidade dos pools de storage, que mostra as capacidades livres versus as usadas, o número de dias completos e os detalhes de performance (IOPS e tempo de resposta) de todos os pools no nível selecionado. Clique em qualquer conjunto de armazenamento ou armazenamento neste relatório para exibir a página de ativos resumindo o estado atual desse recurso.
+
+
+
+== Capacidade órfã
+
+Esse componente mostra a capacidade órfã total e a capacidade órfã por nível, comparando-a com faixas aceitáveis para a capacidade utilizável total e mostrando a capacidade real órfã. A capacidade órfã é definida pela configuração e pelo desempenho. _Armazenamento órfão pela configuração_ descreve uma situação em que há armazenamento alocado a um host. No entanto, a configuração não foi executada corretamente e o host não pode acessar o armazenamento. _Órfão pelo desempenho_ é quando o armazenamento está configurado corretamente para ser acessado por um host. No entanto, não houve tráfego de armazenamento.
+
+A barra horizontal empilhada mostra os intervalos aceitáveis. Quanto mais escuro o cinza, mais inaceitável é a situação. A situação real é mostrada com a barra de bronze estreita que mostra a capacidade real que é órfã.
+
+Você pode clicar em um nível para exibir o relatório Detalhes do armazenamento órfão, que mostra todos os volumes identificados como órfãos pela configuração e desempenho do nível selecionado. Clique em qualquer armazenamento, pool de armazenamento ou volume neste relatório para exibir a página de ativos resumindo o estado atual desse recurso.

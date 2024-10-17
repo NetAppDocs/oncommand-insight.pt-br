@@ -1,0 +1,42 @@
+---
+permalink: howto/setting-up-email-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: O Insight pode enviar notificações por e-mail sobre eventos de acionamento, como violações de políticas de desempenho. 
+---
+= Configurando o e-mail para notificações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Insight pode enviar notificações por e-mail sobre eventos de acionamento, como violações de políticas de desempenho.
+
+
+
+== Sobre esta tarefa
+
+Siga estas etapas básicas para configurar notificações de e-mail:
+
+
+
+== Passos
+
+. Clique em *Admin* > *notificações* e vá para a seção *Email*.
+. Na caixa *Server*, insira o nome do servidor SMTP. Você pode inserir um nome de domínio totalmente qualificado ou um endereço IP.
+. Introduza o nome de utilizador SMTP e a palavra-passe (se necessário pelo servidor SMTP).
+. Na caixa *e-mail do remetente*, insira a conta de e-mail do remetente que será identificada como o remetente nas notificações.
++
+Esta conta deve ser uma conta de e-mail válida dentro da sua organização.
+
+. Na caixa *assinatura de e-mail*, insira qualquer texto que você deseja inserir em cada e-mail enviado.
+. Na caixa *destinatários*, clique image:../media/add-email-recipient-icon.gif[""]para inserir um endereço de e-mail e clique em *OK*.
+. Clique em *Salvar*.
++
+Para editar ou remover um endereço de e-mail ou enviar um e-mail de teste, selecione o endereço e clique no botão apropriado que aparece.
+
++
+Observe que você pode configurar o Insight para enviar notificações por e-mail para violações de políticas de desempenho especificadas para indivíduos ou grupos específicos. Por exemplo, você pode enviar violações de ativos de nuvem para um grupo e eventos físicos de host para outro. Aceda a *gerir* > *políticas de desempenho* para configurar notificações de política individuais.
+
+

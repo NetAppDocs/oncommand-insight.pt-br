@@ -1,0 +1,23 @@
+---
+permalink: howto/introduction-to-root-volume-isolation.html 
+sidebar: sidebar 
+keywords:  
+summary: Nos sistemas de storage NetApp, o agregado raiz contém o volume raiz. O volume raiz contém diretórios especiais e arquivos de configuração para gerenciar e controlar o sistema de armazenamento. As operações de gerenciamento e controle podem resultar em uma grande quantidade de atividade no agregado raiz. Quando você consulta o sistema Insight para os 10 principais volumes internos com a maior densidade de e/S, seus resultados podem incluir agregados raiz NetApp como membros dos 10 principais. 
+---
+= Garantir que os relatórios de densidade de e/S descrevam apenas volumes de dados internos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nos sistemas de storage NetApp, o agregado raiz contém o volume raiz. O volume raiz contém diretórios especiais e arquivos de configuração para gerenciar e controlar o sistema de armazenamento. As operações de gerenciamento e controle podem resultar em uma grande quantidade de atividade no agregado raiz. Quando você consulta o sistema Insight para os 10 principais volumes internos com a maior densidade de e/S, seus resultados podem incluir agregados raiz NetApp como membros dos 10 principais.
+
+Ao monitorar seu ambiente, é mais importante determinar quais volumes de dados internos estão produzindo números de alta densidade de e/S. Para identificar com precisão apenas os volumes de dados, você precisa isolar os volumes internos do NetApp das consultas usadas para monitorar a densidade de e/S.
+
+Este guia descreve como identificar facilmente os agregados raiz do NetApp, isolá-los dos resultados de consultas de volume interno e criar regras que excluam quaisquer novos agregados raiz do NetApp à medida que são adicionados ao sistema. Os recursos do Insight a seguir são usados para garantir que seus relatórios de densidade de e/S sejam derivados de volumes de dados internos.
+
+* Uma consulta é criada para identificar todos os agregados raiz NetApp que são monitorados pelo Insight.
+* Uma anotação é atribuída a cada um dos agregados raiz NetApp.
+* É criada uma regra de anotação para excluir os agregados NetApp
+

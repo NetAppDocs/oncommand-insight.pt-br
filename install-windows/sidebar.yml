@@ -1,0 +1,140 @@
+---
+section: install-windows
+title: Instalação para Microsoft Windows
+entries:
+- title: Pré-requisitos de instalação
+  url: "/install-windows/installation-prerequisites.html"
+  entries:
+  - title: Planejando a implantação
+    url: "/install-windows/planning-the-installation.html"
+    entries:
+    - title: Informações de suporte da fonte de dados
+      url: "/install-windows/data-source-support-information.html"
+    - title: Identificação do dispositivo e Planejamento da fonte de dados
+      url: "/install-windows/device-identification-and-data-source-planning.html"
+    - title: Tráfego de rede gerado pelo OnCommand Insight
+      url: "/install-windows/network-traffic-generated-by-oncommand-insight.html"
+  - title: Desativação do software de verificação de vírus
+    url: "/install-windows/disable-virus-scan-software.html"
+  - title: Requisitos do Insight Server
+    url: "/install-windows/insight-server-requirements.html"
+  - title: Requisitos do Data Warehouse e do servidor de relatórios
+    url: "/install-windows/data-warehouse-and-reporting-server-requirements.html"
+  - title: Requisitos do servidor da Unidade de aquisição Remota
+    url: "/install-windows/remote-acquisition-unit-server-requirements.html"
+  - title: Navegadores suportados pelo OnCommand Insight
+    url: "/install-windows/insight-browser-support.html"
+- title: Instruções de instalação do Insight
+  url: "/install-windows/oncommand-insight-installation-instructions.html"
+  entries:
+  - title: Transferir o instalador do OnCommand Insight
+    url: "/install-windows/downloading-the-oncommand-insight-installer.html"
+  - title: Instalar o servidor OnCommand Insight
+    url: "/install-windows/installing-the-oncommand-insight-server.html"
+  - title: Instalação do Armazém de dados e relatórios do OnCommand Insight
+    url: "/install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html"
+    entries:
+    - title: Localizar a documentação do IBM Cognos
+      url: "/install-windows/locating-ibm-cognos-documentation.html"
+    - title: Verificando a instalação do Data Warehouse e Reporting
+      url: "/install-windows/verifying-the-data-warehouse-and-reporting-installation.html"
+  - title: Instalar uma unidade de aquisição remota (RAU)
+    url: "/install-windows/installing-a-remote-acquisition-unit-rau.html"
+    entries:
+    - title: Verificar o serviço da unidade de aquisição remota
+      url: "/install-windows/verifying-the-rau-service.html"
+    - title: Validar a instalação da unidade de aquisição remota
+      url: "/install-windows/validating-the-rau-installation.html"
+  - title: Verificar a instalação
+    url: "/install-windows/checking-the-installation.html"
+    entries:
+    - title: Verificando novos serviços do Insight
+      url: "/install-windows/verifying-new-oncommand-insight-services.html"
+    - title: Registos de insight
+      url: "/install-windows/insight-logs.html"
+    - title: Acessando a IU da Web
+      url: "/install-windows/opening-insight.html"
+    - title: Instalando suas licenças do Insight
+      url: "/install-windows/installing-your-insight-licenses.html"
+      entries:
+      - title: Licenças OnCommand Insight
+        url: "/install-windows/oncommand-insight-licenses.html"
+  - title: Resolução de problemas de instalações
+    url: "/install-windows/troubleshooting-installations.html"
+    entries:
+    - title: Licenças em falta
+      url: "/install-windows/missing-licenses.html"
+    - title: Enviando uma solicitação de suporte técnico online
+      url: "/install-windows/submitting-an-online-technical-support-request.html"
+- title: Atualizando o OnCommand Insight
+  url: "/install-windows/upgrade-insight.html"
+  entries:
+  - title: Atualizando o Insight para a versão 7.3.12 ou posterior - Windows
+    url: "/install-windows/upgrading-insight-to-version-7-3-12-or-later-windows.html"
+  - title: Visão geral do processo de atualização do OnCommand Insight
+    url: "/install-windows/overview-of-insight-upgrade-process.html"
+    entries:
+    - title: Lista de verificação de atualização do OnCommand Insight
+      url: "/install-windows/insight-upgrade-checklist.html"
+  - title: Transferir os pacotes de instalação do OnCommand Insight
+    url: "/install-windows/downloading-the-installation-packages.html"
+  - title: Fazer backup dos bancos de dados
+    url: "/install-windows/backing-up-databases.html"
+    entries:
+    - title: Fazer backup do banco de dados do Data Warehouse
+      url: "/install-windows/backing-up-the-data-warehouse-database.html"
+    - title: Fazer backup do banco de dados OnCommand Insight
+      url: "/install-windows/backing-up-the-insight-server-database.html"
+  - title: Fazer backup da configuração de segurança
+    url: "/install-windows/backing-up-the-security-configuration.html"
+  - title: Fazer backup de relatórios personalizados do Data Warehouse
+    url: "/install-windows/backing-up-custom-data-warehouse-reports.html"
+  - title: Realizar a atualização de software
+    url: "/install-windows/performing-the-software-upgrade.html"
+    entries:
+    - title: Atualizando o Insight
+      url: "/install-windows/upgrading-insight.html"
+    - title: Atualizando o Data Warehouse
+      url: "/install-windows/upgrading-data-warehouse.html"
+      entries:
+      - title: Preservando configurações personalizadas do Cognos durante uma atualização
+          do Data Warehouse
+        url: "/install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html"
+    - title: Atualizando servidores de unidade de aquisição remota
+      url: "/install-windows/upgrading-remote-acquisition-servers.html"
+  - title: Concluir tarefas pós-atualização
+    url: "/install-windows/completing-post-upgrade-tasks.html"
+    entries:
+    - title: Instalando patches de origem de dados
+      url: "/install-windows/installing-data-source-patches.html"
+    - title: Substituindo um certificado após atualizar o OnCommand Insight
+      url: "/install-windows/replacing-a-certificate-after-upgrading.html"
+    - title: Aumentando a memória Cognos
+      url: "/install-windows/increasing-cognos-memory.html"
+    - title: Restaurar a base de dados do Data Warehouse
+      url: "/install-windows/restoring-the-data-warehouse-database.html"
+    - title: Restaurar relatórios personalizados do Data Warehouse
+      url: "/install-windows/restoring-custom-data-warehouse-reports.html"
+    - title: Verificar se o Data Warehouse tem dados históricos
+      url: "/install-windows/verifying-data-warehouse-has-historical-data.html"
+    - title: Restaurar o arquivo de desempenho
+      url: "/install-windows/restoring-the-performance-archive.html"
+    - title: Testar os conetores
+      url: "/install-windows/testing-the-connectors.html"
+    - title: Verificando o agendamento extrair, transformar e carregar
+      url: "/install-windows/verifying-the-extract-transform-and-load-process.html"
+    - title: A atualizar modelos de disco
+      url: "/install-windows/updating-disk-models.html"
+    - title: Verificar se as ferramentas de business intelligence estão em execução
+      url: "/install-windows/verifying-that-business-intelligence-tools-are-running.html"
+  - title: Solução de problemas de uma atualização
+    url: "/install-windows/troubleshooting-an-upgrade.html"
+- title: Desinstalar o software
+  url: "/install-windows/uninstalling-the-insight-software.html"
+  entries:
+  - title: Desinstalar o servidor OnCommand Insight
+    url: "/install-windows/uninstalling-insight.html"
+  - title: Desinstalar o software Data Warehouse
+    url: "/install-windows/uninstalling-the-data-warehouse-software.html"
+  - title: Desinstalar o software da unidade de aquisição remota
+    url: "/install-windows/uninstalling-the-remote-acquisition-unit-software.html"

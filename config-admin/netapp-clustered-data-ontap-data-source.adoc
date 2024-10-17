@@ -1,0 +1,144 @@
+---
+permalink: config-admin/netapp-clustered-data-ontap-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Essa fonte de dados deve ser usada para sistemas de storage que usam o Clustered Data ONTAP e requer uma conta de administrador usada para chamadas de API somente leitura. 
+---
+= Fonte de dados NetApp Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Essa fonte de dados deve ser usada para sistemas de storage que usam o Clustered Data ONTAP e requer uma conta de administrador usada para chamadas de API somente leitura.
+
+
+
+== Terminologia
+
+O OnCommand Insight adquire as seguintes informações de inventário da fonte de dados do Data ONTAP em cluster. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Grupo RAID
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Cluster
+ a| 
+Armazenamento
+
+
+
+ a| 
+Nó
+ a| 
+Nó de storage
+
+
+
+ a| 
+Agregado
+ a| 
+Pool de storage
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+
+
+ a| 
+Volume
+ a| 
+Volume interno
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Conta de administrador usada para chamadas de API somente leitura
+* O IP de destino é o LIF de gerenciamento de cluster
+* Nome de usuário (com nome de função somente leitura para o aplicativo ontapi para o SVM padrão) e senha para fazer login no cluster NetApp
+* Requisitos do porto: 80 ou 443
+* Requisitos de licença: Licença FCP e volumes mapeados/mascarados necessários para descoberta
+
+
+
+
+== Configuração
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+IP de gerenciamento de NetApp
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do cluster NetApp
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome de utilizador para o cluster NetApp
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe para o cluster NetApp
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| *Campo* | *Descrição* 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 20 minutos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+|===

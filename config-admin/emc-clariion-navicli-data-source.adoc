@@ -1,0 +1,183 @@
+---
+permalink: config-admin/emc-clariion-navicli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de configurar essa fonte de dados, verifique se o EMC Navisphere CLI está instalado no dispositivo de destino e no servidor Insight. A versão Navisphere CLI tem de corresponder à versão de firmware do controlador. Para a coleta de dados de desempenho, o Registro de estatísticas deve estar ativado. 
+---
+= Fonte de dados EMC CLARiiON (Navicli)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de configurar essa fonte de dados, verifique se o EMC Navisphere CLI está instalado no dispositivo de destino e no servidor Insight. A versão Navisphere CLI tem de corresponder à versão de firmware do controlador. Para a coleta de dados de desempenho, o Registro de estatísticas deve estar ativado.
+
+
+
+== Sintaxe Navisphere Command Line Interface
+
+[listing]
+----
+naviseccli.exe -h <IP address> -user <user> -password <password> -scope
+<scope,use 0 for global scope> -port <use 443 by default> command
+----
+
+
+== Terminologia
+
+A OnCommand Insight adquire as seguintes informações de inventário da fonte de dados EMC CLARiiON. Para cada tipo de ativo adquirido pelo Insight, a terminologia mais comum usada para esse ativo é mostrada. Ao visualizar ou solucionar problemas desta fonte de dados, tenha em mente a seguinte terminologia:
+
+|===
+
+
+| Termo do fornecedor/modelo | Termo de insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Armazenamento
+ a| 
+Armazenamento
+
+
+
+ a| 
+Processador de armazenamento
+ a| 
+Nó de storage
+
+
+
+ a| 
+Thin Pool, RAID Group
+ a| 
+Pool de storage
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+Estes são apenas mapeamentos de terminologia comuns e podem não representar todos os casos para esta fonte de dados.
+
+====
+
+
+== Requisitos
+
+* Um endereço IP de cada processador de armazenamento CLARiiON
+* Nome de usuário e senha do Navisphere somente leitura para os arrays CLARiiON
+* O Navicli deve ser instalado no servidor Insight/RAU
+* Validação de acesso: Execute o Navicli do servidor Insight para cada array usando o nome de usuário e senha acima.
+* A versão Navicli deve corresponder com o mais novo código FLARE em sua matriz
+* Para obter desempenho, o Registro de estatísticas deve ser ativado.
+* Requisitos do porto: 80, 443
+
+
+
+
+== Configuração
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Armazenamento CLARiiON
+ a| 
+Endereço IP ou nome de domínio totalmente qualificado do armazenamento CLARiiON
+
+
+
+ a| 
+Nome de utilizador
+ a| 
+Nome utilizado para iniciar sessão no dispositivo de armazenamento CLARiiON.
+
+
+
+ a| 
+Palavra-passe
+ a| 
+Palavra-passe utilizada para iniciar sessão no dispositivo de armazenamento CLARiiON.
+
+
+
+ a| 
+Caminho CLI para caminho navicli.exe ou caminho naviseccli.exe
+ a| 
+Caminho completo para o `navicli.exe` executável OU `naviseccli.exe`
+
+|===
+
+
+== Configuração avançada
+
+|===
+
+
+| Campo | Descrição 
+
+
+ a| 
+Intervalo de enquete de inventário (min)
+ a| 
+Intervalo entre pesquisas de inventário (padrão de 40 minutos)
+
+
+
+ a| 
+Usar o Secure Client (naviseccli)
+ a| 
+Selecione para usar o cliente seguro (navseccli)
+
+
+
+ a| 
+Âmbito de aplicação
+ a| 
+O escopo seguro do cliente. O padrão é Global.
+
+
+
+ a| 
+Porta CLI CLARiiON
+ a| 
+Porta usada para CLARiiON CLI
+
+
+
+ a| 
+Tempo limite processo Externo Stock (seg.)
+ a| 
+Tempo limite do processo externo (padrão de 1800 segundos)
+
+
+
+ a| 
+Intervalo de enquete de desempenho (seg)
+ a| 
+Intervalo entre sondagens de desempenho (padrão 300 segundos)
+
+
+
+ a| 
+Tempo limite do processo externo (seg)
+ a| 
+Tempo limite do processo externo (padrão de 1800 segundos)
+
+|===

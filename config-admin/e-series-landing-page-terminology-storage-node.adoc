@@ -1,0 +1,34 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Termos aplicáveis a objetos ou referências que podem ser encontradas nas páginas iniciais de ativos de nós de storage do NetApp e-Series. 
+---
+= Nó de storage e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termos aplicáveis a objetos ou referências que podem ser encontradas nas páginas iniciais de ativos de nós de storage do NetApp e-Series.
+
+
+
+== Terminologia do nó de storage e-Series
+
+Os termos a seguir se aplicam a objetos ou referências que você pode encontrar nas páginas iniciais de ativos de pool de storage do NetApp e-Series. Muitos desses termos também se aplicam a outros coletores de dados.
+
+* Armazenamento -- de que storage array esse nó faz parte. Obrigatório.
+* Parceiro HA -- nas plataformas onde um nó irá falhar para um e apenas um outro nó, ele geralmente será visto aqui.
+* Estado -- integridade do nó. Disponível apenas quando o array estiver saudável o suficiente para ser inventariado por uma fonte de dados.
+* Modelo -- nome do modelo do nó.
+* Versão -- nome da versão do dispositivo.
+* Número de série -- o número de série do nó.
+* Memória -- memória base 2, se disponível.
+* Utilização -- a utilização não está atualmente disponível para o NetApp e-Series.
+* IOPS -- calculado somando todas as IOPs para volumes que pertencem exclusivamente a esse nó.
+* Latência -- um número que representa a latência típica do host ou o tempo de resposta neste controlador. O Insights calcula uma média ponderada de IOPs a partir de volumes que pertencem exclusivamente a esse nó.
+* Throughput -- um número que representa a taxa de transferência conduzida pelo host neste controlador. Calculado somando toda a taxa de transferência para volumes que pertencem exclusivamente a este nó.
+* Processadores -- contagem de CPU.
+

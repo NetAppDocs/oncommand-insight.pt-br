@@ -1,0 +1,31 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Termos aplicáveis a objetos ou referências que você pode encontrar nas páginas iniciais de ativos de storage do NetApp Clustered Data ONTAP. 
+---
+= Storage em cluster Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termos aplicáveis a objetos ou referências que você pode encontrar nas páginas iniciais de ativos de storage do NetApp Clustered Data ONTAP.
+
+
+
+== Terminologia de storage do Clustered Data ONTAP
+
+Os termos a seguir se aplicam a objetos ou referências que você pode encontrar nas páginas iniciais de ativos de storage do NetApp Clustered Data ONTAP. Muitos desses termos também se aplicam a outros coletores de dados.
+
+* Modelo -- Uma lista delimitada por vírgulas dos nomes de modelo de nó único e discreto dentro deste cluster. Se todos os nós nos clusters forem do mesmo tipo de modelo, apenas um nome de modelo aparecerá.
+* Fornecedor -- mesmo nome do fornecedor que você veria se você estivesse configurando uma nova fonte de dados.
+* Número de série -- o número de série da matriz. Em sistemas de storage de arquitetura de cluster, como o NetApp Clustered Data ONTAP, esse número de série pode ser menos útil do que os números de série individuais "'nós de storage".
+* IP -- geralmente será o(s) IP(s) ou nome(s) de host conforme configurado na fonte de dados.
+* Versão de microcódigo -- firmware.
+* Capacidade bruta -- soma de base 2 de todos os discos físicos no sistema, independentemente de sua função.
+* Latência -- uma representação do que o host enfrenta cargas de trabalho, tanto em leituras quanto em gravações. Idealmente, a OCI está fornecendo esse valor diretamente, mas isso geralmente não é o caso. Em vez do array que oferece isso, o OCI geralmente está realizando um cálculo ponderado por IOPs derivado das estatísticas individuais dos volumes internos.
+* Throughput -- agregado a partir de volumes internos.
+* Gerenciamento -- isso pode conter um hiperlink para a interface de gerenciamento do dispositivo. Criado programaticamente pela fonte de dados do Insight como parte dos relatórios de inventário.
+

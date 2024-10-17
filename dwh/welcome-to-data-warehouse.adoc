@@ -1,0 +1,16 @@
+---
+permalink: dwh/welcome-to-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: O Armazém de dados OnCommand Insight é um repositório centralizado que armazena dados de vários servidores OnCommand Insight e transforma dados em um modelo de dados multidimensional comum para consulta e análise. 
+---
+= Bem-vindo ao Armazém de dados OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Armazém de dados OnCommand Insight é um repositório centralizado que armazena dados de vários servidores OnCommand Insight e transforma dados em um modelo de dados multidimensional comum para consulta e análise.
+
+O Data Warehouse do OnCommand Insight permite o acesso a um banco de dados aberto composto por vários data marts que permitem gerar relatórios personalizados de capacidade e desempenho, como relatórios de chargeback, relatórios de tendências com dados históricos, análises de consumo e relatórios de previsão.

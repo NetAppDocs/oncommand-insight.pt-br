@@ -1,0 +1,51 @@
+---
+permalink: config-admin/editing-or-removing-annotations-from-assets-in-bulk.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode editar várias anotações para ativos ou remover várias anotações de ativos usando uma consulta em vez de ter que editá-las ou removê-las manualmente. 
+---
+= Editar ou remover várias anotações de ativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar várias anotações para ativos ou remover várias anotações de ativos usando uma consulta em vez de ter que editá-las ou removê-las manualmente.
+
+
+
+== Antes de começar
+
+Você já deve ter criado uma consulta que encontre todos os ativos que deseja editar.
+
+
+
+== Passos
+
+. Clique em *consultas* e selecione *Mostrar todas as consultas*.
++
+A página consultas é exibida.
+
+. Clique no nome da consulta que encontra os ativos.
++
+A lista de ativos associados à consulta é exibida.
+
+. Selecione os ativos desejados na lista ou clique image:../media/select-assets.gif[""] para selecionar *All*.
++
+O botão *ações* é exibido.
+
+. Para adicionar uma anotação aos ativos ou editar o valor de uma anotação atribuída aos ativos, clique image:../media/actions-button.gif[""]em e selecione *Editar anotação*.
++
+.. Clique em *Anotação* e selecione uma anotação para a qual deseja alterar o valor ou selecione uma nova anotação para atribuí-la a todos os ativos.
+.. Clique em *value* e selecione um valor para a anotação.
+.. Clique em *Salvar*.
+
+
+. Para remover uma anotação atribuída aos ativos, clique image:../media/actions-button.gif[""]em e selecione *Remover anotação*.
++
+.. Clique em *Annotation* e selecione a anotação que pretende remover dos ativos.
+.. Clique em *Excluir*.
+
+
+

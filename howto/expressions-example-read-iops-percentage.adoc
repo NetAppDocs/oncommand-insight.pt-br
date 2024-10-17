@@ -1,0 +1,57 @@
+---
+permalink: howto/expressions-example-read-iops-percentage.html 
+sidebar: sidebar 
+keywords:  
+summary: Usando expressões, você pode visualizar métricas por meios alternativos, como porcentagem do total. 
+---
+= Exemplo de expressões: Ler porcentagem de IOPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usando expressões, você pode visualizar métricas por meios alternativos, como porcentagem do total.
+
+
+
+== Sobre esta tarefa
+
+Neste exemplo, queremos mostrar IOPS de leitura como uma porcentagem do total de IOPS. Você pode pensar nisso como a seguinte fórmula:
+
+* Porcentagem de leitura: (IOPS de leitura/IOPS total) x 100
+
+
+Esses dados podem ser exibidos em um gráfico de linhas no painel. Para fazer isso, siga estas etapas:
+
+
+
+== Passos
+
+. Crie um novo painel ou abra um painel existente no *modo de edição*.
+. Adicione um widget ao painel. Escolha *Gráfico de área*.
++
+O widget abre no modo de edição. Por padrão, uma consulta é exibida mostrando *IOPS - Total* para ativos *Storage*. Se desejar, selecione um tipo de ativo diferente.
+
+. Clique no botão *Converter para expressão*.
++
+A consulta atual é convertida em modo de expressão. Observe que você não pode alterar o tipo de ativo enquanto estiver no modo expressão. Observe que, enquanto você estiver no modo expressão, o botão muda para *Revert to Query*. Clique aqui se desejar voltar ao modo consulta a qualquer momento. Esteja ciente de que alternar entre modos irá redefinir os campos para seus padrões.
+
++
+Por enquanto, permaneça no modo *Expression*.
+
+. A métrica *IOPS - total* está agora no campo variável alfabética "'a'". No campo variável "'b'", clique em *Select* e escolha *IOPS - Read*.
++
+Você pode adicionar até um total de cinco variáveis alfabéticas para sua expressão clicando no botão** seguindo os campos variáveis. Para o nosso exemplo de porcentagem de leitura, precisamos apenas de IOPS total ("'a'") e IOPS de leitura ("'b'").
+
+. No campo *expression*, você usa as letras correspondentes a cada variável para construir sua expressão. Sabemos que _porcentagem de leitura (IOPS/IOPS total) x 100_, então escreveríamos esta expressão como: `(b / a) * 100`
+. O campo *Label* identifica a expressão. Altere o rótulo para ""porcentagem de leitura"", ou algo igualmente significativo para você.
+. Altere o campo *Units* para "'%" ou "'por cento'".
++
+O gráfico exibe a porcentagem de leitura de IOPS ao longo do tempo para os dispositivos de armazenamento escolhidos. Se desejar, você pode definir um filtro ou escolher um método de rollup diferente. Esteja ciente de que se você selecionar *SUM* como o método rollup, todos os valores percentuais serão adicionados juntos, o que pode ser superior a 100%.
+
+. Clique em *Salvar* para salvar o gráfico em seu painel.
++
+Você também pode usar expressões em *Gráfico de linha*, *Gráfico de spline* ou *Gráfico de Área empilhada*.
+
+

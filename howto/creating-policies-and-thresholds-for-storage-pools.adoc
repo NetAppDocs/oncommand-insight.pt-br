@@ -1,0 +1,66 @@
+---
+permalink: howto/creating-policies-and-thresholds-for-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode criar políticas de desempenho que acionam alertas para notificá-lo quando os limites para ativos do pool de storage foram excedidos. 
+---
+= Criação de políticas de desempenho para pools de storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar políticas de desempenho que acionam alertas para notificá-lo quando os limites para ativos do pool de storage foram excedidos.
+
+
+
+== Antes de começar
+
+Esse procedimento pressupõe que você tenha provisionado o pool de storage com thin Provisioning.
+
+
+
+== Sobre esta tarefa
+
+Você deseja criar políticas que monitorem e relatem alterações em um pool de storage que possam contribuir para interrupções. Para o pool de armazenamento físico de thin Provisioning, você deseja monitorar a capacidade física e monitorar a taxa de comprometer-se.
+
+
+
+== Passos
+
+. Abra o OnCommand Insight no seu navegador.
+. Selecione *Gerenciar* > *políticas de desempenho*
++
+É apresentada a página políticas de desempenho. As políticas são organizadas por objeto e são avaliadas na ordem em que aparecem na lista. Se as notificações estiverem ativadas (*Admin* > *notificações*), você poderá configurar o Insight para enviar e-mails quando as políticas de desempenho forem violadas.
+
+. Clique em Adicionar ** para criar uma nova política.
+. Em *Nome da política*, insira um nome de política para o pool de armazenamento.
+. Em *Apply to objects of type*, selecione Storage Pool.
+. Na janela *Apply After (aplicar após) de* introduza a primeira ocorrência.
+. Em *com gravidade*, insira crítico
+. Configure os destinatários de e-mail que você deseja notificar quando os limites forem violados.
++
+Por padrão, os alertas de e-mail sobre violações de política são enviados aos destinatários na lista de e-mails global. Você pode substituir essas configurações para que os alertas de uma política específica sejam enviados para destinatários específicos.
+
++
+Clique no link para abrir a lista de destinatários e, em seguida, clique no botão mais para adicionar destinatários. Os alertas de violação desta política serão enviados a todos os destinatários da lista.
+
+. Em *criar alerta se qualquer um dos seguintes itens for verdadeiro* insira a taxa de capacidade - usado > 85%
+
+
+
+
+== Resultados
+
+Essa configuração faz com que o sistema envie uma mensagem de aviso crítica quando mais de 85% da capacidade física do pool de armazenamento é usada. Usar 100% da memória física resultará em falha do aplicativo.
+
+
+
+== Crie políticas adicionais de pool de armazenamento
+
+
+
+=== Sobre esta tarefa
+
+Crie uma política adicional de taxa de capacidade - usada que gera uma mensagem de aviso quando a capacidade do pool de armazenamento usada excede 75%. Se as notificações estiverem ativadas (*Admin* > *notificações*), você poderá configurar o Insight para enviar e-mails quando as políticas de desempenho forem violadas.

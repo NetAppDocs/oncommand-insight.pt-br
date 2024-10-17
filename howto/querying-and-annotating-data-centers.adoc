@@ -1,0 +1,39 @@
+---
+permalink: howto/querying-and-annotating-data-centers.html 
+sidebar: sidebar 
+keywords:  
+summary: Você usa consultas para associar suas anotações aos ativos apropriados em seu ambiente. Neste exemplo, associaremos anotações do Data Center a ativos selecionados. 
+---
+= Consultar e anotar data centers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você usa consultas para associar suas anotações aos ativos apropriados em seu ambiente. Neste exemplo, associaremos anotações do Data Center a ativos selecionados.
+
+Durante a aquisição da fonte de dados, o Insight reúne (entre outras informações) os nomes de cada ativo que descobre. Para este exemplo, vamos supor que todos os seus storage arrays foram nomeados de acordo com o data center em que residem, como "'SVL_NN_<label>" para arrays residentes em Sunnyvale. Consultas de insight tornam a anotação desses ativos simples.
+
+* Faça login no Insight como um usuário com permissões administrativas
+* Selecione *consultas* > * Nova consulta*
+* Solte o campo *Search for...* e selecione *Storage*. É apresentada uma lista de todas as matrizes de armazenamento.
+* No campo de filtro *Name*, digite "'SVL'" e clique no image:../media/check-box-ok.gif[""] botão (ou pressione Enter). A lista de resultados da consulta agora é atualizada para mostrar apenas os arrays que contêm a cadeia "'SVL'".
+* Ao filtrar, você pode usar qualquer um dos seguintes carateres sozinho ou combinado para refinar sua pesquisa em qualquer caixa de texto na página consulta:
++
+** Um asterisco permite que você procure por tudo. Por exemplo, "vol*rhel" exibe ativos que começam com "vol" e terminam com "rhel".
+** O ponto de interrogação permite procurar um número específico de carateres. Por exemplo, a filtragem para "'SVL-PRD??-S12" exibe SVL-PRD12-S12, SVL-PRD13-S12, e assim por diante.
+** O OPERADOR OU permite especificar várias entidades. Por exemplo, "FAS2240 OU CX600 OU FAS3270" encontra vários modelos de armazenamento.
+
+
+* Selecione os storages que você deseja associar a este data center. Quando todos os arrays desejados forem selecionados, clique no botão *ações* e selecione *Editar anotação*.
+* Na caixa de diálogo *Add Annotation*, selecione a anotação *Data Center*.
+* Escolha o *valor* desejado, por exemplo, "'DC1_SVL'".
+* Clique em *Salvar*.
+* Se a coluna Centro de dados não estiver visível na página resultados da consulta, selecione-a deixando cair o botão *colunas* e escolhendo *Centro de dados*.
+* Se desejar, você pode salvar a consulta para uso futuro clicando no botão *Salvar* no canto superior direito da página consulta e dando-lhe um nome exclusivo e explícito. Por exemplo, "'Storage Arrays - SVL data center'".
+
+
+Se você deseja associar a anotação "SVL" a outros ativos, crie uma nova consulta e siga estas etapas para cada tipo de ativo desejado.
+
+Repita essas etapas para ativos em cada um dos data centers.
